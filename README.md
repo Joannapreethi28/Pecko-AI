@@ -60,6 +60,15 @@ Pass them through `scripts/run_pecko.sh`. Input is `--mic` or `--wav FILE...` (1
 .venv/bin/python -m spine.dashboard data/results/run-<time>/events.jsonl --watch
 ```
 
+## Live demo (one command)
+
+```bash
+scripts/demo.sh          # live mic under the 2 CPU / 2 GB / swap 0 cap + live dashboard; say "Hey Pecko, ..."
+scripts/demo.sh --wav    # fallback: the 4 synthetic questions at real-time speed
+scripts/demo.sh --half-duplex   # if the speaker echo makes Pecko interrupt itself
+```
+The dashboard shows live CPU cores and RAM against the cap, the transcript, and for each turn C (commit), R (first clause PCM ready) and first audio in ms after end of speech, plus the answer path (held / llm / cached). Ctrl+C stops it and prints the per-turn report. Checked 9 Oct 04:20 in the VM: the `--wav` run completed 4/4 turns with speaker on; `--mic` starts and listens (idle 0.03 cores) but a spoken turn through a live mic had not been verified then.
+
 ## How it works (6 lines)
 1. Mic → **Ears**: Silero VAD, sherpa KWS wake word, Moonshine streaming ASR, Smart Turn + text-cue endpointer.
 2. **Brain**: router for common intents, Qwen3-0.6B Q4_K_M on llama.cpp (CPU), KV-cache + early prefill, hold-and-release.
