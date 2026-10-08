@@ -15,6 +15,11 @@ declare -A FLAGS=(
   [no-cache-prompt]="--no-cache-prompt"
   [no-router]="--no-router"
   [fixed800]="--endpointer fixed_800"
+  [full-r2]=""                               # repeat runs: run-to-run noise
+  [no-early-prefill-r2]="--no-early-prefill"
+  [no-hold-r2]="--no-hold"
+  [no-cache-no-prefill]="--no-cache-prompt --no-early-prefill"   # KV cache off without wasted uncached prefills
+  [all-off]="--no-cache-prompt --no-early-prefill --no-router --endpointer fixed_800"   # bottom of the ladder
 )
 ORDER=(full no-hold no-early-prefill no-cache-prompt no-router fixed800)
 (( $# )) && ORDER=("$@")

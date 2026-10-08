@@ -1,0 +1,340 @@
+{"t": 15681.365231096, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "O", "stable": "O", "t": 15681.358669884}}
+{"t": 15681.639817875, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT", "stable": "O", "t": 15681.630867553}}
+{"t": 15681.986057271, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE", "stable": "WHAT", "t": 15681.976853371}}
+{"t": 15681.986159073, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 1, "intent": "question", "t": 15681.976853371}}
+{"t": 15682.339741569, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL", "stable": "WHAT IS THE", "t": 15682.330845149}}
+{"t": 15682.682096202, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF JA", "stable": "WHAT IS THE CAPITAL", "t": 15682.67334076}}
+{"t": 15683.033056107, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF JAPAN", "stable": "WHAT IS THE CAPITAL OF", "t": 15683.024046379}}
+{"t": 15683.153181192, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 1, "text": "WHAT IS THE CAPITAL OF JAPAN", "t_eos": 15682.853227344, "p_done": 0.9854345321655273}}
+{"t": 15683.154672885, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 1, "text": "WHAT IS THE CAPITAL OF JAPAN", "norm": "what is the capital of japan", "t_eos": 15682.853227344, "t_endpoint": 15683.154650959}}
+{"t": 15683.154839339, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 1, "gen": 1, "t": 15683.154831865}}
+{"t": 15683.426492163, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 0, "text": "The capital of Japan is "}}
+{"t": 15683.458216177, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 1, "text": "Tokyo. "}}
+{"t": 15683.512893709, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 2, "text": "", "last": true}}
+{"t": 15683.607188608, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": true, "t": 15683.606803}}
+{"t": 15683.60732834, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": false, "t": 15683.607325}}
+{"t": 15683.607350936, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 1, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15683.428147255, "t_commit": null, "t_pcm_ready": 15683.606730948, "t_first_audio": 15683.606802594, "first_synth_ms": 147.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [147.7], "audio_s": 1.88, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 1, "held_used": false, "first_dur_s": 1.8771428571428572}}
+{"t": 15685.34009313, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW", "stable": "", "t": 15685.33045336}}
+{"t": 15685.680529355, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY", "stable": "HOW", "t": 15685.671694468}}
+{"t": 15686.019912373, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY DAYS", "stable": "HOW MANY", "t": 15686.012159722}}
+{"t": 15686.363272511, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY DAYS ARE IN", "stable": "HOW MANY DAYS", "t": 15686.3534739}}
+{"t": 15686.708977531, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY DAYS ARE IN A LEAP", "stable": "HOW MANY DAYS ARE IN", "t": 15686.699912952}}
+{"t": 15687.012168786, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 2, "text": "HOW MANY DAYS ARE IN A LEAP YEAR", "t_eos": 15686.712535466, "p_done": 0.9875311851501465}}
+{"t": 15687.013180285, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 2, "text": "HOW MANY DAYS ARE IN A LEAP YEAR", "norm": "how many days are in a leap year", "t_eos": 15686.712535466, "t_endpoint": 15687.013160041}}
+{"t": 15687.01355455, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 2, "gen": 2, "t": 15687.013523403}}
+{"t": 15687.325244838, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 2, "gen": 2, "seq": 0, "text": "A leap year has "}}
+{"t": 15687.48537909, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 2, "gen": 2, "seq": 1, "text": "366 days. "}}
+{"t": 15687.528531214, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 2, "gen": 2, "seq": 2, "text": "", "last": true}}
+{"t": 15687.69283769, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": true, "t": 15687.692579}}
+{"t": 15687.692975135, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": false, "t": 15687.692973}}
+{"t": 15687.693002849, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 2, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15687.325371104, "t_commit": null, "t_pcm_ready": 15687.692503244, "t_first_audio": 15687.692579344, "first_synth_ms": 206.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [206.6], "audio_s": 2.77, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 2, "held_used": false, "first_dur_s": 2.7722902494331065}}
+{"t": 15689.470158757, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO", "stable": "", "t": 15689.46137917}}
+{"t": 15689.812150608, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO PAINTED", "stable": "WHO", "t": 15689.803228146}}
+{"t": 15690.151573049, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO PAINTED THE MO", "stable": "WHO PAINTED", "t": 15690.142598147}}
+{"t": 15690.49268639, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO PAINTED THE MONA LI", "stable": "WHO PAINTED THE", "t": 15690.48210401}}
+{"t": 15690.796412021, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 3, "text": "WHO PAINTED THE MONA LISA", "t_eos": 15690.500062869, "p_done": 0.9485659599304199}}
+{"t": 15690.797222314, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 3, "text": "WHO PAINTED THE MONA LISA", "norm": "who painted the mona lisa", "t_eos": 15690.500062869, "t_endpoint": 15690.797072697}}
+{"t": 15690.797455121, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 3, "gen": 3, "t": 15690.797448135}}
+{"t": 15691.061902558, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 3, "gen": 3, "seq": 0, "text": "Leonardo da Vinci. "}}
+{"t": 15691.101463575, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 3, "gen": 3, "seq": 1, "text": "", "last": true}}
+{"t": 15691.147378132, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 3, "playing": true, "t": 15691.146958}}
+{"t": 15691.147475419, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 3, "playing": false, "t": 15691.147474}}
+{"t": 15691.147490047, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 3, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15691.061977904, "t_commit": null, "t_pcm_ready": 15691.146900291, "t_first_audio": 15691.146957582, "first_synth_ms": 84.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [84.7], "audio_s": 1.36, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 3, "held_used": false, "first_dur_s": 1.357687074829932}}
+{"t": 15692.939867168, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "O", "stable": "", "t": 15692.930938778}}
+{"t": 15693.280769982, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "WHY IS THE", "stable": "O", "t": 15693.272024921}}
+{"t": 15693.623640511, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "WHY IS THE BOILING", "stable": "WHY IS THE", "t": 15693.614152555}}
+{"t": 15693.968280459, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "WHY IS THE BOILING POINT", "stable": "WHY IS THE BOILING", "t": 15693.958861561}}
+{"t": 15694.313652708, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "WHY IS THE BOILING POINT OF WA", "stable": "WHY IS THE BOILING POINT", "t": 15694.303588886}}
+{"t": 15694.587624357, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 4, "text": "WHY IS THE BOILING POINT OF WATER", "t_eos": 15694.294979637, "p_done": 0.9875311851501465}}
+{"t": 15694.587876779, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 4, "text": "WHY IS THE BOILING POINT OF WATER", "norm": "why is the boiling point of water", "t_eos": 15694.294979637, "t_endpoint": 15694.587864168}}
+{"t": 15694.587995748, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 4, "gen": 4, "t": 15694.587989496}}
+{"t": 15694.925127226, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 4, "gen": 4, "seq": 0, "text": "Water boils at "}}
+{"t": 15695.053732024, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 4, "gen": 4, "seq": 1, "text": "212 degrees Fahrenheit. "}}
+{"t": 15695.088528434, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 4, "gen": 4, "seq": 2, "text": "", "last": true}}
+{"t": 15695.412084744, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 4, "playing": true, "t": 15695.411805}}
+{"t": 15695.412202501, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 4, "playing": false, "t": 15695.412201}}
+{"t": 15695.412221703, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 4, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15694.925377239, "t_commit": null, "t_pcm_ready": 15695.411739037, "t_first_audio": 15695.411804651, "first_synth_ms": 357.3, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [357.3], "audio_s": 3.05, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 4, "held_used": false, "first_dur_s": 3.05124716553288}}
+{"t": 15697.155564183, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 5, "text": "O", "stable": "", "t": 15697.146067936}}
+{"t": 15697.498533215, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 5, "text": "WHY IS", "stable": "O", "t": 15697.487756716}}
+{"t": 15697.844024083, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 5, "text": "WHY IS THE SK", "stable": "WHY IS", "t": 15697.835107768}}
+{"t": 15698.187015876, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 5, "text": "WHY IS THE SKY B", "stable": "WHY IS THE", "t": 15698.17801559}}
+{"t": 15698.498276061, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 5, "text": "WHY IS THE SKY BLUE", "t_eos": 15698.203458737, "p_done": 0.9889053702354431}}
+{"t": 15698.498428691, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 5, "text": "WHY IS THE SKY BLUE", "norm": "why is the sky blue", "t_eos": 15698.203458737, "t_endpoint": 15698.498414995}}
+{"t": 15698.498975983, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 5, "gen": 5, "t": 15698.498968008}}
+{"t": 15698.823021505, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 5, "gen": 5, "seq": 0, "text": "The sky appears blue because "}}
+{"t": 15699.143188371, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 5, "gen": 5, "seq": 1, "text": "it contains mostly water molecules that refract light, "}}
+{"t": 15699.463245267, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 5, "gen": 5, "seq": 2, "text": "causing the color of the sky. "}}
+{"t": 15699.500743306, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 5, "gen": 5, "seq": 3, "text": "", "last": true}}
+{"t": 15699.52228455, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 5, "playing": true, "t": 15699.52192}}
+{"t": 15699.623538801, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 5, "playing": false, "t": 15699.623535}}
+{"t": 15699.623578485, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 5, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15698.82309626, "t_commit": null, "t_pcm_ready": 15699.521849851, "t_first_audio": 15699.521919853, "first_synth_ms": 378.3, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [378.3, 100.2], "audio_s": 6.08, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 5, "held_used": false, "first_dur_s": 4.470204081632653}}
+{"t": 15701.367019825, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 6, "text": "HOW", "stable": "", "t": 15701.356598629}}
+{"t": 15701.707614251, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 6, "text": "HOW FAR", "stable": "HOW", "t": 15701.69870564}}
+{"t": 15702.048260639, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 6, "text": "HOW FAR IS THE MO", "stable": "HOW FAR", "t": 15702.039229911}}
+{"t": 15702.390857011, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 6, "text": "HOW FAR IS THE MOON FROM", "stable": "HOW FAR IS THE", "t": 15702.380981184}}
+{"t": 15702.735644464, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 6, "text": "HOW FAR IS THE MOON FROM THE EAR", "stable": "HOW FAR IS THE MOON FROM", "t": 15702.726939747}}
+{"t": 15702.840555964, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 6, "text": "HOW FAR IS THE MOON FROM THE EARTH", "t_eos": 15702.542327447, "p_done": 0.9875311851501465}}
+{"t": 15702.84078565, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 6, "text": "HOW FAR IS THE MOON FROM THE EARTH", "norm": "how far is the moon from the earth", "t_eos": 15702.542327447, "t_endpoint": 15702.840769324}}
+{"t": 15702.841403629, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 6, "gen": 6, "t": 15702.84139536}}
+{"t": 15703.115815278, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 6, "gen": 6, "seq": 0, "text": "The distance from the Earth "}}
+{"t": 15703.621714729, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 6, "gen": 6, "seq": 1, "text": "to the Moon is approximately 384,400 kilometers. "}}
+{"t": 15703.663595403, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 6, "gen": 6, "seq": 2, "text": "", "last": true}}
+{"t": 15703.980552025, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 6, "playing": true, "t": 15703.980419}}
+{"t": 15703.980765336, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 6, "playing": false, "t": 15703.980762}}
+{"t": 15703.980786519, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 6, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15703.116294708, "t_commit": null, "t_pcm_ready": 15703.980340102, "t_first_audio": 15703.980418675, "first_synth_ms": 358.1, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [358.1], "audio_s": 5.08, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 6, "held_used": false, "first_dur_s": 5.0803628117913835}}
+{"t": 15705.736203455, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT", "stable": "", "t": 15705.727237654}}
+{"t": 15706.074698767, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE", "stable": "WHAT", "t": 15706.066177482}}
+{"t": 15706.074804444, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 7, "intent": "question", "t": 15706.066177482}}
+{"t": 15706.416271271, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST", "stable": "WHAT IS THE", "t": 15706.407288625}}
+{"t": 15706.758805789, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST PLANE", "stable": "WHAT IS THE LARGEST", "t": 15706.749910902}}
+{"t": 15707.102111254, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN", "stable": "WHAT IS THE LARGEST", "t": 15707.09286397}}
+{"t": 15707.449652591, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN OUR", "stable": "WHAT IS THE LARGEST PLANET IN", "t": 15707.440816414}}
+{"t": 15707.794851432, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN OUR SOLAR", "stable": "WHAT IS THE LARGEST PLANET IN OUR", "t": 15707.785057783}}
+{"t": 15708.137232284, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTE", "stable": "WHAT IS THE LARGEST PLANET IN OUR SOLAR", "t": 15708.128080177}}
+{"t": 15708.306792228, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTEM", "t_eos": 15708.012297487, "p_done": 0.9836374521255493}}
+{"t": 15708.307063042, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 7, "text": "WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTEM", "norm": "what is the largest planet in our solar system", "t_eos": 15708.012297487, "t_endpoint": 15708.306957761}}
+{"t": 15708.307612069, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 7, "gen": 7, "t": 15708.307605537}}
+{"t": 15708.584950027, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 7, "gen": 7, "seq": 0, "text": "The largest planet in our "}}
+{"t": 15708.717531133, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 7, "gen": 7, "seq": 1, "text": "solar system is Jupiter. "}}
+{"t": 15708.753607585, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 7, "gen": 7, "seq": 2, "text": "", "last": true}}
+{"t": 15709.05976591, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 7, "playing": true, "t": 15709.059633}}
+{"t": 15709.059865832, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 7, "playing": false, "t": 15709.059864}}
+{"t": 15709.059885432, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 7, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15708.585216231, "t_commit": null, "t_pcm_ready": 15709.05956847, "t_first_audio": 15709.059633034, "first_synth_ms": 341.0, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [341.0], "audio_s": 2.81, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 7, "held_used": false, "first_dur_s": 2.8099319727891157}}
+{"t": 15710.879990473, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 8, "text": "WHO", "stable": "", "t": 15710.870901196}}
+{"t": 15711.220733396, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 8, "text": "WHO INVENT", "stable": "WHO", "t": 15711.211374486}}
+{"t": 15711.577749842, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 8, "text": "WHO INVENTED THE", "stable": "WHO", "t": 15711.568119956}}
+{"t": 15711.923274338, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 8, "text": "WHO INVENTED THE TELEPHO", "stable": "WHO INVENTED THE", "t": 15711.914378065}}
+{"t": 15712.158767598, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 8, "text": "WHO INVENTED THE TELEPHONE", "t_eos": 15711.862797906, "p_done": 0.9719371795654297}}
+{"t": 15712.158942424, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 8, "text": "WHO INVENTED THE TELEPHONE", "norm": "who invented the telephone", "t_eos": 15711.862797906, "t_endpoint": 15712.158930571}}
+{"t": 15712.159171004, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 8, "gen": 8, "t": 15712.159159007}}
+{"t": 15712.408728705, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 8, "gen": 8, "seq": 0, "text": "The invention of the telephone "}}
+{"t": 15712.564757217, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 8, "gen": 8, "seq": 1, "text": "was by Alexander Graham Bell. "}}
+{"t": 15712.597866943, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 8, "gen": 8, "seq": 2, "text": "", "last": true}}
+{"t": 15712.773661642, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 8, "playing": true, "t": 15712.773588}}
+{"t": 15712.773724577, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 8, "playing": false, "t": 15712.773724}}
+{"t": 15712.773773046, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 8, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15712.408953246, "t_commit": null, "t_pcm_ready": 15712.773527045, "t_first_audio": 15712.773588032, "first_synth_ms": 208.1, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [208.1], "audio_s": 3.2, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 8, "held_used": false, "first_dur_s": 3.197142857142857}}
+{"t": 15714.511537294, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 9, "text": "HOW", "stable": "", "t": 15714.502647294}}
+{"t": 15714.852676455, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 9, "text": "HOW MANY", "stable": "HOW", "t": 15714.843705691}}
+{"t": 15715.208944018, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 9, "text": "HOW MANY CONTINENT", "stable": "HOW MANY", "t": 15715.199076844}}
+{"t": 15715.565175976, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 9, "text": "HOW MANY CONTINENTS ARE", "stable": "HOW MANY", "t": 15715.5554699}}
+{"t": 15715.871840601, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 9, "text": "HOW MANY CONTINENTS ARE THERE", "t_eos": 15715.572902229, "p_done": 0.9749865531921387}}
+{"t": 15715.872147124, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 9, "text": "HOW MANY CONTINENTS ARE THERE", "norm": "how many continents are there", "t_eos": 15715.572902229, "t_endpoint": 15715.872129806}}
+{"t": 15715.872744423, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 9, "gen": 9, "t": 15715.872620253}}
+{"t": 15716.154648085, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 9, "gen": 9, "seq": 0, "text": "There are 7 continents "}}
+{"t": 15716.294292787, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 9, "gen": 9, "seq": 1, "text": "in our solar system. "}}
+{"t": 15716.332168466, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 9, "gen": 9, "seq": 2, "text": "", "last": true}}
+{"t": 15716.473633386, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 9, "playing": true, "t": 15716.47343}}
+{"t": 15716.473716504, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 9, "playing": false, "t": 15716.473715}}
+{"t": 15716.4737344, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 9, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15716.154926842, "t_commit": null, "t_pcm_ready": 15716.47336763, "t_first_audio": 15716.473430418, "first_synth_ms": 178.4, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [178.4], "audio_s": 2.51, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 9, "held_used": false, "first_dur_s": 2.5063038548752834}}
+{"t": 15718.222648434, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 10, "text": "O", "stable": "", "t": 15718.212735685}}
+{"t": 15718.5673111, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 10, "text": "WHAT TO", "stable": "O", "t": 15718.558844144}}
+{"t": 15718.925784339, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 10, "text": "WHAT TO BEES", "stable": "WHAT TO", "t": 15718.917065831}}
+{"t": 15719.258931701, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 10, "text": "WHAT TO BEES MAKE", "t_eos": 15718.966087866, "p_done": 0.9777120351791382}}
+{"t": 15719.260463319, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 10, "text": "WHAT TO BEES MAKE", "norm": "what to bees make", "t_eos": 15718.966087866, "t_endpoint": 15719.260444563}}
+{"t": 15719.26061007, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 10, "gen": 10, "t": 15719.26060311}}
+{"t": 15719.515406697, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 10, "gen": 10, "seq": 0, "text": "Bees make honey. "}}
+{"t": 15719.549892537, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 10, "gen": 10, "seq": 1, "text": "", "last": true}}
+{"t": 15719.624899673, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 10, "playing": true, "t": 15719.624699}}
+{"t": 15719.625053191, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 10, "playing": false, "t": 15719.625052}}
+{"t": 15719.625069175, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 10, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15719.515682567, "t_commit": null, "t_pcm_ready": 15719.624645114, "t_first_audio": 15719.62469948, "first_synth_ms": 108.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [108.7], "audio_s": 1.01, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 10, "held_used": false, "first_dur_s": 1.0137868480725623}}
+{"t": 15721.392511928, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 11, "text": "WHAT", "stable": "", "t": 15721.385341397}}
+{"t": 15721.737083356, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 11, "text": "WHAT IS THE", "stable": "WHAT", "t": 15721.729264849}}
+{"t": 15721.73718176, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 11, "intent": "question", "t": 15721.729264849}}
+{"t": 15722.086006206, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 11, "text": "WHAT IS THE TALLEST", "stable": "WHAT IS THE", "t": 15722.076065899}}
+{"t": 15722.432480922, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 11, "text": "WHAT IS THE TALLEST MOUNTAIN", "stable": "WHAT IS THE TALLEST", "t": 15722.42368451}}
+{"t": 15722.797715748, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 11, "text": "WHAT IS THE TALLEST MOUNTAIN IN THE", "stable": "WHAT IS THE TALLEST MOUNTAIN", "t": 15722.787656642}}
+{"t": 15723.158698843, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 11, "text": "WHAT IS THE TALLEST MOUNTAIN IN THE WORLD", "t_eos": 15722.852378779, "p_done": 0.9889053702354431}}
+{"t": 15723.159398721, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 11, "text": "WHAT IS THE TALLEST MOUNTAIN IN THE WORLD", "norm": "what is the tallest mountain in the world", "t_eos": 15722.852378779, "t_endpoint": 15723.159378865}}
+{"t": 15723.159520627, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 11, "gen": 11, "t": 15723.159514362}}
+{"t": 15723.461978085, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 11, "gen": 11, "seq": 0, "text": "The tallest mountain in the "}}
+{"t": 15723.592410557, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 11, "gen": 11, "seq": 1, "text": "world is Mount Everest. "}}
+{"t": 15723.626424907, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 11, "gen": 11, "seq": 2, "text": "", "last": true}}
+{"t": 15723.755595814, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 11, "playing": true, "t": 15723.755208}}
+{"t": 15723.7556744, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 11, "playing": false, "t": 15723.755673}}
+{"t": 15723.755688942, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 11, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15723.462212727, "t_commit": null, "t_pcm_ready": 15723.755092711, "t_first_audio": 15723.755207967, "first_synth_ms": 162.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [162.2], "audio_s": 2.5, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 11, "held_used": false, "first_dur_s": 2.4965532879818593}}
+{"t": 15725.514352347, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 12, "text": "HOW", "stable": "", "t": 15725.505624591}}
+{"t": 15725.860950174, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 12, "text": "HOW MAN", "stable": "HOW", "t": 15725.852662087}}
+{"t": 15726.209239409, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 12, "text": "HOW MANY HOUR", "stable": "HOW", "t": 15726.201770174}}
+{"t": 15726.550990664, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 12, "text": "HOW MANY HOURS ARE", "stable": "HOW MANY", "t": 15726.542472727}}
+{"t": 15726.897501481, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 12, "text": "HOW MANY HOURS ARE IN A", "stable": "HOW MANY HOURS ARE", "t": 15726.88966627}}
+{"t": 15727.099358359, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 12, "text": "HOW MANY HOURS ARE IN A WEEK", "t_eos": 15726.804987106, "p_done": 0.9854345321655273}}
+{"t": 15727.099536894, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 12, "text": "HOW MANY HOURS ARE IN A WEEK", "norm": "how many hours are in a week", "t_eos": 15726.804987106, "t_endpoint": 15727.099525885}}
+{"t": 15727.099681584, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 12, "gen": 12, "t": 15727.099674206}}
+{"t": 15727.407040753, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 12, "gen": 12, "seq": 0, "text": "A week has 7 "}}
+{"t": 15727.609685185, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 12, "gen": 12, "seq": 1, "text": "days, so 7 hours. "}}
+{"t": 15727.649564, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 12, "gen": 12, "seq": 2, "text": "", "last": true}}
+{"t": 15727.718442442, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 12, "playing": true, "t": 15727.717149}}
+{"t": 15727.794205087, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 12, "playing": false, "t": 15727.794195}}
+{"t": 15727.79427799, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 12, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15727.407106445, "t_commit": null, "t_pcm_ready": 15727.716886206, "t_first_audio": 15727.717149226, "first_synth_ms": 106.7, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [106.7, 76.6], "audio_s": 2.49, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 12, "held_used": false, "first_dur_s": 1.3230839002267574}}
+{"t": 15729.556647514, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 13, "text": "WHAT", "stable": "", "t": 15729.548105191}}
+{"t": 15729.897027815, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 13, "text": "WHAT LANGU", "stable": "WHAT", "t": 15729.887499662}}
+{"t": 15730.24035487, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 13, "text": "WHAT LANGUAGE IS", "stable": "WHAT", "t": 15730.23104703}}
+{"t": 15730.583981634, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 13, "text": "WHAT LANGUAGE IS SPOKEN", "stable": "WHAT LANGUAGE IS", "t": 15730.574758972}}
+{"t": 15730.927820175, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 13, "text": "WHAT LANGUAGE IS SPOKEN IN BRA", "stable": "WHAT LANGUAGE IS SPOKEN", "t": 15730.920060082}}
+{"t": 15731.236793617, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 13, "text": "WHAT LANGUAGE IS SPOKEN IN BRAZIL", "t_eos": 15730.942645584999, "p_done": 0.9889053702354431}}
+{"t": 15731.237265834, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 13, "text": "WHAT LANGUAGE IS SPOKEN IN BRAZIL", "norm": "what language is spoken in brazil", "t_eos": 15730.942645584999, "t_endpoint": 15731.237249144}}
+{"t": 15731.23743427, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 13, "gen": 13, "t": 15731.237427579}}
+{"t": 15731.519518744, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 13, "gen": 13, "seq": 0, "text": "Portuguese.", "last": true}}
+{"t": 15731.644197043, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 13, "playing": true, "t": 15731.644067}}
+{"t": 15731.644309464, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 13, "playing": false, "t": 15731.644308}}
+{"t": 15731.644327146, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 13, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15731.519788322, "t_commit": null, "t_pcm_ready": 15731.644011872, "t_first_audio": 15731.64406702, "first_synth_ms": 123.9, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [123.9], "audio_s": 0.89, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 13, "held_used": false, "first_dur_s": 0.8898412698412699}}
+{"t": 15733.37527974, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 14, "text": "WHAT", "stable": "", "t": 15733.365506315}}
+{"t": 15733.717032097, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 14, "text": "WHAT IS PHOT", "stable": "WHAT", "t": 15733.707760723}}
+{"t": 15733.717129774, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 14, "intent": "question", "t": 15733.707760723}}
+{"t": 15734.067607386, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 14, "text": "WHAT IS PHOTO SYNTH", "stable": "WHAT IS", "t": 15734.058869921}}
+{"t": 15734.409151563, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 14, "text": "WHAT IS PHOTO SYNTHESIS", "stable": "WHAT IS PHOTO", "t": 15734.400579923}}
+{"t": 15734.481460649, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 14, "text": "WHAT IS PHOTO SYNTHESIS", "t_eos": 15734.174579923, "p_done": 0.9865230321884155}}
+{"t": 15734.481655277, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 14, "text": "WHAT IS PHOTO SYNTHESIS", "norm": "what is photo synthesis", "t_eos": 15734.174579923, "t_endpoint": 15734.481642848}}
+{"t": 15734.482365658, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 14, "gen": 14, "t": 15734.48184211}}
+{"t": 15734.767742725, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 14, "gen": 14, "seq": 0, "text": "Photo synthesis is the process "}}
+{"t": 15734.996269779, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 14, "gen": 14, "seq": 1, "text": "of converting light energy into chemical energy. "}}
+{"t": 15735.034673174, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 14, "gen": 14, "seq": 2, "text": "", "last": true}}
+{"t": 15735.277318707, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 14, "playing": true, "t": 15735.276501}}
+{"t": 15735.277433562, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 14, "playing": false, "t": 15735.277431}}
+{"t": 15735.277454222, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 14, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15734.76812798, "t_commit": null, "t_pcm_ready": 15735.276423039, "t_first_audio": 15735.27650132, "first_synth_ms": 279.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [279.7], "audio_s": 4.22, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 14, "held_used": false, "first_dur_s": 4.21859410430839}}
+{"t": 15737.006352985, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "O", "stable": "", "t": 15736.997634904}}
+{"t": 15737.350178559, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS", "stable": "O", "t": 15737.339425941}}
+{"t": 15737.692042369, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS THE FIRST", "stable": "WHO WAS", "t": 15737.683399452}}
+{"t": 15738.041441851, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS THE FIRST PERSON", "stable": "WHO WAS THE FIRST", "t": 15738.03271113}}
+{"t": 15738.383533012, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS THE FIRST PERSON TO", "stable": "WHO WAS THE FIRST PERSON", "t": 15738.373541914}}
+{"t": 15738.728264431, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS THE FIRST PERSON TO WALK", "stable": "WHO WAS THE FIRST PERSON TO", "t": 15738.719245521}}
+{"t": 15739.07690567, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 15, "text": "WHO WAS THE FIRST PERSON TO WALK ON THE MO", "stable": "WHO WAS THE FIRST PERSON TO WALK", "t": 15739.067852461}}
+{"t": 15739.314565559, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 15, "text": "WHO WAS THE FIRST PERSON TO WALK ON THE MOON", "t_eos": 15739.020978540999, "p_done": 0.9816229343414307}}
+{"t": 15739.314834405, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 15, "text": "WHO WAS THE FIRST PERSON TO WALK ON THE MOON", "norm": "who was the first person to walk on the moon", "t_eos": 15739.020978540999, "t_endpoint": 15739.314818381}}
+{"t": 15739.31528217, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 15, "gen": 15, "t": 15739.31526758}}
+{"t": 15739.459677581, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 15, "gen": 15, "seq": 0, "text": "Neil Armstrong. "}}
+{"t": 15739.500751096, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 15, "gen": 15, "seq": 1, "text": "", "last": true}}
+{"t": 15739.543118065, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 15, "playing": true, "t": 15739.542882}}
+{"t": 15739.54322212, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 15, "playing": false, "t": 15739.54322}}
+{"t": 15739.543242577, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 15, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15739.462149238, "t_commit": null, "t_pcm_ready": 15739.542835068, "t_first_audio": 15739.542881698, "first_synth_ms": 80.4, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [80.4], "audio_s": 1.14, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 15, "held_used": false, "first_dur_s": 1.1360090702947845}}
+{"t": 15741.278623412, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 16, "text": "WHAT", "stable": "", "t": 15741.270135171}}
+{"t": 15741.62433385, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 16, "text": "WHAT IS THE", "stable": "WHAT", "t": 15741.615998744}}
+{"t": 15741.624449353, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 16, "intent": "question", "t": 15741.615998744}}
+{"t": 15741.967618684, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 16, "text": "WHAT IS THE SQUARE", "stable": "WHAT IS THE", "t": 15741.959058467}}
+{"t": 15742.321325251, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 16, "text": "WHAT IS THE SQUARE ROOT OF", "stable": "WHAT IS THE SQUARE", "t": 15742.3105168}}
+{"t": 15742.66791276, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 16, "text": "WHAT IS THE SQUARE ROOT OF EIGHTY", "stable": "WHAT IS THE SQUARE ROOT OF", "t": 15742.658879968}}
+{"t": 15743.043853655, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 16, "text": "WHAT IS THE SQUARE ROOT OF EIGHTY ONE", "t_eos": 15742.741615142999, "p_done": 0.9836374521255493}}
+{"t": 15743.044470688, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 16, "text": "WHAT IS THE SQUARE ROOT OF EIGHTY ONE", "norm": "what is the square root of eighty one", "t_eos": 15742.741615142999, "t_endpoint": 15743.044452387}}
+{"t": 15743.044648267, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 16, "gen": 16, "t": 15743.044641049}}
+{"t": 15743.330344683, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 16, "gen": 16, "seq": 0, "text": "The square root of "}}
+{"t": 15743.547356437, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 16, "gen": 16, "seq": 1, "text": "81 is 9.", "last": true}}
+{"t": 15743.679884119, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 16, "playing": true, "t": 15743.677698}}
+{"t": 15743.71790294, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 16, "playing": false, "t": 15743.717899}}
+{"t": 15743.717944633, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 16, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15743.330410077, "t_commit": null, "t_pcm_ready": 15743.6775841, "t_first_audio": 15743.677698089, "first_synth_ms": 129.5, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [129.5, 39.7], "audio_s": 2.11, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 16, "held_used": false, "first_dur_s": 1.4486167800453515}}
+{"t": 15745.465065338, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 17, "text": "WHICH", "stable": "", "t": 15745.456710956}}
+{"t": 15745.810579801, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 17, "text": "WHICH OCE", "stable": "WHICH", "t": 15745.800191543}}
+{"t": 15746.155832303, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 17, "text": "WHICH OCEAN IS THE", "stable": "WHICH", "t": 15746.146529526}}
+{"t": 15746.505427722, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 17, "text": "WHICH OCEAN IS THE LARGE", "stable": "WHICH OCEAN IS THE", "t": 15746.496783403}}
+{"t": 15746.80818502, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 17, "text": "WHICH OCEAN IS THE LARGEST", "t_eos": 15746.514482200999, "p_done": 0.9589470624923706}}
+{"t": 15746.808363774, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 17, "text": "WHICH OCEAN IS THE LARGEST", "norm": "which ocean is the largest", "t_eos": 15746.514482200999, "t_endpoint": 15746.808351869}}
+{"t": 15746.80850821, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 17, "gen": 17, "t": 15746.808497126}}
+{"t": 15747.064295965, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 17, "gen": 17, "seq": 0, "text": "The largest ocean is the "}}
+{"t": 15747.130300313, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 17, "gen": 17, "seq": 1, "text": "Pacific Ocean. "}}
+{"t": 15747.177529206, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 17, "gen": 17, "seq": 2, "text": "", "last": true}}
+{"t": 15747.291505575, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 17, "playing": true, "t": 15747.291353}}
+{"t": 15747.291657412, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 17, "playing": false, "t": 15747.291655}}
+{"t": 15747.291677124, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 17, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15747.065257939, "t_commit": null, "t_pcm_ready": 15747.291220972, "t_first_audio": 15747.291353337, "first_synth_ms": 160.5, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [160.5], "audio_s": 2.31, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 17, "held_used": false, "first_dur_s": 2.306077097505669}}
+{"t": 15749.032941504, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW", "stable": "", "t": 15749.024046863}}
+{"t": 15749.372578796, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW MANY", "stable": "HOW", "t": 15749.362829004}}
+{"t": 15749.713924067, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW MANY PLAYERS", "stable": "HOW MANY", "t": 15749.704932118}}
+{"t": 15750.053771267, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW MANY PLAYERS ARE ON A", "stable": "HOW MANY PLAYERS", "t": 15750.045603596}}
+{"t": 15750.394213574, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW MANY PLAYERS ARE ON A CRICK", "stable": "HOW MANY PLAYERS ARE ON A", "t": 15750.386200108}}
+{"t": 15750.737454778, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 18, "text": "HOW MANY PLAYERS ARE ON A CRICKETIN", "stable": "HOW MANY PLAYERS ARE ON A", "t": 15750.728410106}}
+{"t": 15750.839321145, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 18, "text": "HOW MANY PLAYERS ARE ON A CRICKETINE", "t_eos": 15750.544418681999, "p_done": 0.9865230321884155}}
+{"t": 15750.839480217, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 18, "text": "HOW MANY PLAYERS ARE ON A CRICKETINE", "norm": "how many players are on a cricketine", "t_eos": 15750.544418681999, "t_endpoint": 15750.839467636}}
+{"t": 15750.839586968, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 18, "gen": 18, "t": 15750.839581417}}
+{"t": 15751.084815591, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 18, "gen": 18, "seq": 0, "text": "There are 10 "}}
+{"t": 15751.261642638, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 18, "gen": 18, "seq": 1, "text": "players on a cricket team. "}}
+{"t": 15751.305608897, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 18, "gen": 18, "seq": 2, "text": "", "last": true}}
+{"t": 15751.400895781, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 18, "playing": true, "t": 15751.400762}}
+{"t": 15751.401092885, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 18, "playing": false, "t": 15751.40109}}
+{"t": 15751.401113336, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 18, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15751.084902462, "t_commit": null, "t_pcm_ready": 15751.400631574, "t_first_audio": 15751.400762151, "first_synth_ms": 138.4, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [138.4], "audio_s": 2.1, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 18, "held_used": false, "first_dur_s": 2.0951473922902495}}
+{"t": 15753.235027695, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 19, "text": "WHAT", "stable": "", "t": 15753.226510472}}
+{"t": 15753.58389739, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 19, "text": "WHAT IS THE", "stable": "WHAT", "t": 15753.574555339}}
+{"t": 15753.584001826, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 19, "intent": "question", "t": 15753.574555339}}
+{"t": 15753.925522901, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 19, "text": "WHAT IS THE CAPITAL", "stable": "WHAT IS THE", "t": 15753.916936619}}
+{"t": 15754.273739539, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 19, "text": "WHAT IS THE CAPITAL OF A", "stable": "WHAT IS THE CAPITAL", "t": 15754.264455701}}
+{"t": 15754.640530568, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 19, "text": "WHAT IS THE CAPITAL OF AUSTRALI", "stable": "WHAT IS THE CAPITAL OF", "t": 15754.632319745}}
+{"t": 15754.883329072, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 19, "text": "WHAT IS THE CAPITAL OF AUSTRALIA", "t_eos": 15754.588553712, "p_done": 0.978554368019104}}
+{"t": 15754.883524846, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 19, "text": "WHAT IS THE CAPITAL OF AUSTRALIA", "norm": "what is the capital of australia", "t_eos": 15754.588553712, "t_endpoint": 15754.883512184}}
+{"t": 15754.88376992, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 19, "gen": 19, "t": 15754.88376319}}
+{"t": 15755.117020864, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 19, "gen": 19, "seq": 0, "text": "The capital of Australia is "}}
+{"t": 15755.15055149, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 19, "gen": 19, "seq": 1, "text": "Canberra. "}}
+{"t": 15755.187827181, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 19, "gen": 19, "seq": 2, "text": "", "last": true}}
+{"t": 15755.423452788, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 19, "playing": true, "t": 15755.423264}}
+{"t": 15755.423637104, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 19, "playing": false, "t": 15755.423634}}
+{"t": 15755.423657921, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 19, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15755.117544498, "t_commit": null, "t_pcm_ready": 15755.42309889, "t_first_audio": 15755.42326369, "first_synth_ms": 271.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [271.6], "audio_s": 2.12, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 19, "held_used": false, "first_dur_s": 2.1172789115646258}}
+{"t": 15757.205974155, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN", "stable": "", "t": 15757.197319036}}
+{"t": 15757.552879369, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU", "stable": "CAN", "t": 15757.545175263}}
+{"t": 15757.55307247, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 20, "intent": "request", "t": 15757.545175263}}
+{"t": 15757.895995297, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU SUGGEST", "stable": "CAN YOU", "t": 15757.887249996}}
+{"t": 15758.239862064, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU SUGGEST A", "stable": "CAN YOU SUGGEST", "t": 15758.230533095}}
+{"t": 15758.581612333, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU SUGGEST A QUICK BRE", "stable": "CAN YOU SUGGEST A", "t": 15758.573693383}}
+{"t": 15758.923086079, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU SUGGEST A QUICK BREAKFAST", "stable": "CAN YOU SUGGEST A QUICK", "t": 15758.91380714}}
+{"t": 15759.276709274, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 20, "text": "CAN YOU SUGGEST A QUICK BREAKFAST IDE", "stable": "CAN YOU SUGGEST A QUICK BREAKFAST", "t": 15759.267503356}}
+{"t": 15759.487375075, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 20, "text": "CAN YOU SUGGEST A QUICK BREAKFAST IDEA", "t_eos": 15759.193879387, "p_done": 0.9823201894760132}}
+{"t": 15759.487852108, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 20, "text": "CAN YOU SUGGEST A QUICK BREAKFAST IDEA", "norm": "can you suggest a quick breakfast idea", "t_eos": 15759.193879387, "t_endpoint": 15759.487831613}}
+{"t": 15759.488434729, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 20, "gen": 20, "t": 15759.488426387}}
+{"t": 15759.776061935, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 20, "gen": 20, "seq": 0, "text": "A quick breakfast idea could "}}
+{"t": 15760.230025514, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 20, "gen": 20, "seq": 1, "text": "be a bowl of fresh fruit salad with a slice of whole grain bread. "}}
+{"t": 15760.265314932, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 20, "gen": 20, "seq": 2, "text": "", "last": true}}
+{"t": 15760.572432522, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 20, "playing": true, "t": 15760.572091}}
+{"t": 15760.572554728, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 20, "playing": false, "t": 15760.572552}}
+{"t": 15760.572575176, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 20, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15759.776156425, "t_commit": null, "t_pcm_ready": 15760.572020526, "t_first_audio": 15760.572090869, "first_synth_ms": 341.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [341.6], "audio_s": 5.13, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 20, "held_used": false, "first_dur_s": 5.128662131519274}}
+{"t": 15762.36970708, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 21, "text": "O", "stable": "", "t": 15762.361400873}}
+{"t": 15762.712178692, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 21, "text": "WHAT CA", "stable": "O", "t": 15762.703704354}}
+{"t": 15763.054452279, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 21, "text": "WHAT CAST DO", "stable": "WHAT", "t": 15763.04525818}}
+{"t": 15763.400808558, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 21, "text": "WHAT CAST DO PLANT", "stable": "WHAT CAST DO", "t": 15763.392504317}}
+{"t": 15763.747979229, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 21, "text": "WHAT CAST DO PLANTS TAKE", "stable": "WHAT CAST DO", "t": 15763.739556856}}
+{"t": 15764.081983622, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 21, "text": "WHAT CAST DO PLANTS TAKE IN", "t_eos": 15763.788836722, "p_done": 0.7652381658554077}}
+{"t": 15764.082627267, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 21, "text": "WHAT CAST DO PLANTS TAKE IN", "norm": "what cast do plants take in", "t_eos": 15763.788836722, "t_endpoint": 15764.082598127}}
+{"t": 15764.082746708, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 21, "gen": 21, "t": 15764.082740333}}
+{"t": 15764.38849847, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 21, "gen": 21, "seq": 0, "text": "Plants take in sunlight, "}}
+{"t": 15764.482377284, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 21, "playing": true, "t": 15764.481945}}
+{"t": 15764.666876177, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 21, "gen": 21, "seq": 1, "text": "water, and nutrients from the soil. "}}
+{"t": 15764.701835699, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 21, "gen": 21, "seq": 2, "text": "", "last": true}}
+{"t": 15764.814696856, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 21, "playing": false, "t": 15764.814692}}
+{"t": 15764.814736836, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 21, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15764.388574502, "t_commit": null, "t_pcm_ready": 15764.481890869, "t_first_audio": 15764.481944751, "first_synth_ms": 93.1, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [93.1, 146.8], "audio_s": 3.48, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 21, "held_used": false, "first_dur_s": 1.2737868480725623}}
+{"t": 15766.557362119, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW", "stable": "", "t": 15766.548054064}}
+{"t": 15766.896617466, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW MANY", "stable": "HOW", "t": 15766.888792314}}
+{"t": 15767.237563768, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW MANY LEGS", "stable": "HOW MANY", "t": 15767.2282548}}
+{"t": 15767.580215983, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW MANY LEGS DOES AN", "stable": "HOW MANY LEGS", "t": 15767.572002407}}
+{"t": 15767.935970354, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW MANY LEGS DOES AN INSEC", "stable": "HOW MANY LEGS DOES AN", "t": 15767.928491576}}
+{"t": 15768.292721757, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 22, "text": "HOW MANY LEGS DOES AN INSECT HAVE", "stable": "HOW MANY LEGS DOES AN", "t": 15768.283700325}}
+{"t": 15768.428733792, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 22, "text": "HOW MANY LEGS DOES AN INSECT HAVE", "t_eos": 15768.131927428, "p_done": 0.9589470624923706}}
+{"t": 15768.428910815, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 22, "text": "HOW MANY LEGS DOES AN INSECT HAVE", "norm": "how many legs does an insect have", "t_eos": 15768.131927428, "t_endpoint": 15768.428898596}}
+{"t": 15768.42906224, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 22, "gen": 22, "t": 15768.429055639}}
+{"t": 15768.671707778, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 22, "gen": 22, "seq": 0, "text": "An insect has six legs. "}}
+{"t": 15768.706559285, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 22, "gen": 22, "seq": 1, "text": "", "last": true}}
+{"t": 15768.8692876, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 22, "playing": true, "t": 15768.868934}}
+{"t": 15768.870713381, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 22, "playing": false, "t": 15768.870708}}
+{"t": 15768.870751661, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 22, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15768.672094283, "t_commit": null, "t_pcm_ready": 15768.868777761, "t_first_audio": 15768.868934076, "first_synth_ms": 193.0, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [193.0], "audio_s": 1.7, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 22, "held_used": false, "first_dur_s": 1.700997732426304}}
+{"t": 15770.5995253, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "O", "stable": "", "t": 15770.590852451}}
+{"t": 15770.940406508, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "WHAT IS", "stable": "O", "t": 15770.932640702}}
+{"t": 15770.940622219, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 23, "intent": "question", "t": 15770.932640702}}
+{"t": 15771.281301156, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "WHAT IS THE CHEMIC", "stable": "WHAT IS", "t": 15771.271857527}}
+{"t": 15771.622317636, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "WHAT IS THE CHEMICAL SY", "stable": "WHAT IS THE", "t": 15771.6125247}}
+{"t": 15771.969715719, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "WHAT IS THE CHEMICAL SYMBOL", "stable": "WHAT IS THE CHEMICAL", "t": 15771.961468967}}
+{"t": 15772.333431907, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 23, "text": "WHAT IS THE CHEMICAL SYMBOL FOR GOL", "stable": "WHAT IS THE CHEMICAL SYMBOL", "t": 15772.324053112}}
+{"t": 15772.512843739, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 23, "text": "WHAT IS THE CHEMICAL SYMBOL FOR GOLD", "t_eos": 15772.220804871, "p_done": 0.9893293380737305}}
+{"t": 15772.513512704, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 23, "text": "WHAT IS THE CHEMICAL SYMBOL FOR GOLD", "norm": "what is the chemical symbol for gold", "t_eos": 15772.220804871, "t_endpoint": 15772.513495302}}
+{"t": 15772.51363828, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 23, "gen": 23, "t": 15772.513629276}}
+{"t": 15772.665509363, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 23, "gen": 23, "seq": 0, "text": "Au", "last": true}}
+{"t": 15772.705730828, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 23, "playing": true, "t": 15772.70567}}
+{"t": 15772.705930595, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 23, "playing": false, "t": 15772.705928}}
+{"t": 15772.705951731, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 23, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15772.665792078, "t_commit": null, "t_pcm_ready": 15772.705619832, "t_first_audio": 15772.705670032, "first_synth_ms": 39.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [39.6], "audio_s": 0.35, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 23, "held_used": false, "first_dur_s": 0.352562358276644}}
+{"t": 15774.537184999, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL", "stable": "", "t": 15774.527728065}}
+{"t": 15774.88787981, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL ME", "stable": "TELL", "t": 15774.880159435}}
+{"t": 15775.231215857, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL ME A FUN", "stable": "TELL ME", "t": 15775.2240245}}
+{"t": 15775.579256213, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL ME A FUN FACT", "stable": "TELL ME A FUN", "t": 15775.570896746}}
+{"t": 15775.932051119, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL ME A FUN FACT ABOUT", "stable": "TELL ME A FUN FACT", "t": 15775.923736118}}
+{"t": 15776.28922492, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 24, "text": "TELL ME A FUN FACT ABOUT ELEPHANT", "stable": "TELL ME A FUN FACT ABOUT", "t": 15776.280655393}}
+{"t": 15776.48973385, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 24, "text": "TELL ME A FUN FACT ABOUT ELEPHANTS", "t_eos": 15776.199592529, "p_done": 0.9901295900344849}}
+{"t": 15776.489882115, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 24, "text": "TELL ME A FUN FACT ABOUT ELEPHANTS", "norm": "tell me a fun fact about elephants", "t_eos": 15776.199592529, "t_endpoint": 15776.48987074}}
+{"t": 15776.490171582, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 24, "gen": 24, "t": 15776.490005411}}
+{"t": 15776.784374558, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 24, "gen": 24, "seq": 0, "text": "Elephants have a lot "}}
+{"t": 15777.090799669, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 24, "gen": 24, "seq": 1, "text": "of legs and are known for their large ears. "}}
+{"t": 15777.133121413, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 24, "gen": 24, "seq": 2, "text": "", "last": true}}
+{"t": 15777.296794238, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 24, "playing": true, "t": 15777.296682}}
+{"t": 15777.296916276, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 24, "playing": false, "t": 15777.296915}}
+{"t": 15777.296934355, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 24, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 15776.784751627, "t_commit": null, "t_pcm_ready": 15777.296593247, "t_first_audio": 15777.296682129, "first_synth_ms": 205.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [205.2], "audio_s": 3.14, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 24, "held_used": false, "first_dur_s": 3.140952380952381}}
