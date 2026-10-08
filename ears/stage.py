@@ -101,6 +101,7 @@ class Ears:
         self.state = "IDLE"
         self.turn = 0
         self._armed = False
+        self._wake_disabled = False  # set by disable_wake(): every utterance counts, no "hey pecko"
         self._playing = False
         self._is_noisy = False
         self._barge_in_frame_count = 0
@@ -206,6 +207,12 @@ class Ears:
 
     def push_to_talk(self) -> None:
         """Demo-safety fallback: force-arm regardless of the wake phrase."""
+        self._armed = True
+
+    def disable_wake(self) -> None:
+        """Live demo fallback when the wake word won't trigger (e.g. a weak VM
+        mic): treat every utterance as addressed to Pecko, not just the next one."""
+        self._wake_disabled = True
         self._armed = True
 
     def on_playback_state(self, playing: bool) -> None:
@@ -322,6 +329,8 @@ class Ears:
     # --- utterance lifecycle ---------------------------------------------
     def _begin_utterance(self) -> None:
         self.turn += 1
+        if self._wake_disabled:
+            self._armed = True
         self.asr.begin_utterance()
         self._sent_tentative_final = False
         self._sent_intent_hint = False

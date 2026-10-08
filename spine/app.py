@@ -244,11 +244,13 @@ def run_wav(app: Pecko, path: Path, tail_s: float, wake: bool) -> None:
             break
 
 
-def run_mic(app: Pecko) -> None:
+def run_mic(app: Pecko, wake: bool = True) -> None:
     """Live loop. The audio callback only copies + stamps; the Ears thread does the model work."""
     from ears.audio_io import open_mic_stream
     from ears.clock import Clock
 
+    if not wake:
+        app.ears.disable_wake()
     frames: queue.Queue = queue.Queue(maxsize=200)
 
     def on_frame(frame, t):
@@ -258,7 +260,8 @@ def run_mic(app: Pecko) -> None:
             pass   # Ears fell behind; dropping is better than unbounded RAM
 
     with open_mic_stream(on_frame, Clock()):
-        print('Pecko is listening. Say "hey Pecko, ..." (Ctrl-C to quit).', flush=True)
+        hint = '"hey Pecko, ..."' if wake else "your question (no wake word)"
+        print(f"Pecko is listening. Say {hint} (Ctrl-C to quit).", flush=True)
         while True:
             frame, t = frames.get()
             app.ears.feed(frame, t)
@@ -273,7 +276,7 @@ def main() -> None:
     ap.add_argument("--ears-tier", type=int, default=None,
                     help="Ears ASR tier if different (2 = Zipformer 20M, much lighter than Moonshine)")
     ap.add_argument("--port", type=int, default=8080)
-    ap.add_argument("--no-wake", action="store_true", help="WAV runs: skip the wake word (push-to-talk)")
+    ap.add_argument("--no-wake", action="store_true", help="skip the wake word (WAV: first turn; mic: every turn)")
     ap.add_argument("--no-audio", action="store_true", help="no speaker (Voice still synthesizes)")
     ap.add_argument("--no-hold", action="store_true", help="disable hold-and-release (ablation)")
     # ablation switches (defaults = shipped behaviour; see data/results/ablation-e2e-summary.md)
@@ -298,7 +301,7 @@ def main() -> None:
     try:
         start_all(app, args.tier, args.ears_tier)
         if args.mic:
-            run_mic(app)
+            run_mic(app, wake=not args.no_wake)
         else:
             for wav in args.wav:
                 run_wav(app, wav, args.tail, wake=not args.no_wake)
