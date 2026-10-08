@@ -1,0 +1,24 @@
+{"t": 17459.006334839, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "PECKLE", "stable": "PECKLE", "t": 17459.000501834}}
+{"t": 17459.283336455, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE", "stable": "PECKLE", "t": 17459.274081405}}
+{"t": 17459.283450062, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 1, "intent": "question", "t": 17459.274081405}}
+{"t": 17459.629973503, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPIT", "stable": "WHAT IS THE", "t": 17459.620054898}}
+{"t": 17459.978665481, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF", "stable": "WHAT IS THE", "t": 17459.96874279}}
+{"t": 17460.323555878, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "stable": "WHAT IS THE CAPITAL OF", "t": 17460.311057589}}
+{"t": 17460.493551107, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "t_eos": 17460.129799924, "p_done": 0.8971817493438721}}
+{"t": 17460.493807916, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "norm": "what is the capital of france", "t_eos": 17460.129799924, "t_endpoint": 17460.493792875}}
+{"t": 17460.493995626, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 1, "gen": 1, "t": 17460.493988111}}
+{"t": 17460.737065271, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 0, "text": "The capital of France is ", "held": true}}
+{"t": 17460.773569204, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 1, "text": "Paris. "}}
+{"t": 17460.81591685, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 2, "text": "", "last": true}}
+{"t": 17460.977258711, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": true, "t": 17461.21112}}
+{"t": 17462.74223977, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": false, "t": 17462.742235}}
+{"t": 17462.742283318, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 1, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 17460.737310798, "t_commit": 17460.737308617, "t_pcm_ready": 17460.961260528, "t_first_audio": 17461.211119656127, "first_synth_ms": 187.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [187.2], "audio_s": 1.83, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 1, "held_used": true, "first_dur_s": 1.8310657596371882}}
+{"t": 17464.510778822, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "THAN", "stable": "", "t": 17464.499404595}}
+{"t": 17464.85434274, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "THANK YOU", "stable": "O", "t": 17464.844002692}}
+{"t": 17464.854442472, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 2, "intent": "thanks", "t": 17464.844002692}}
+{"t": 17465.82075343, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 2, "text": "THANK YOU", "norm": "thank you", "t_eos": 17464.618002692, "t_endpoint": 17465.820722216}}
+{"t": 17465.820837068, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 2, "gen": 3, "t": 17465.82083042}}
+{"t": 17465.820874827, "src": "brain", "dst": ["voice"], "msg": {"type": "cached", "turn": 2, "gen": 3, "clip": "thanks", "last": true}}
+{"t": 17465.82431399, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": true, "t": 17466.058504}}
+{"t": 17466.641362268, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": false, "t": 17466.641358}}
+{"t": 17466.641404683, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 2, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 17465.82092965, "t_commit": null, "t_pcm_ready": 17465.821161012, "t_first_audio": 17466.05850405571, "first_synth_ms": 0.0, "first_layer": "L4", "hits": {"L4": 1}, "phrases": 1, "synth_ms": [], "audio_s": 0.91, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 3, "held_used": false, "first_dur_s": 0.905079365079365}}

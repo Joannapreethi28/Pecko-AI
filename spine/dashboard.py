@@ -28,6 +28,9 @@ class DashboardState:
         self.completed = self.failed = 0
         self.cache_hits = 0
         self.last_event = ""
+        self.t_eos = {}      # real loop: turn -> end-of-speech time
+        self.raw = {}        # real loop: turn -> {"C"/"R"/"first audio": t}
+        self.path = ""
 
     def update(self, event):
         name, extra = event.get("event"), event.get("extra", {})
@@ -54,6 +57,42 @@ class DashboardState:
             self.state = "Aborted"
         elif name == "run_end":
             self.state = "Aborted" if extra.get("aborted") else "Finished"
+        # Real loop (spine.app) events
+        elif name == "resources":
+            self.pressure = {**self.pressure, "snapshot": extra, "delta": {"mean_cores": extra.get("mean_cores")}}
+        elif name == "wake_detected":
+            self.state = "Listening"
+        elif name == "t_eos":
+            self.turn, self.state = event.get("turn"), "Thinking"
+            self.t_eos[event.get("turn")] = event["t"]
+        elif name == "endpoint" and event.get("turn") not in self.t_eos and extra.get("delay_s") is not None:
+            # some turns log no t_eos line; endpoint carries the delay since end of speech
+            self.turn = event.get("turn")
+            self.t_eos[self.turn] = event["t"] - extra["delay_s"]
+        elif name == "asr_final":
+            self.turn = event.get("turn")
+            self.transcript = clean(extra.get("text", ""))
+            self.state = "Thinking"
+        elif name == "final_valid":
+            self.path = clean(extra.get("path", ""))
+        elif name in ("commit", "pcm_ready"):
+            self._mark("C" if name == "commit" else "R", event)
+        elif name == "turn_done":
+            self.completed += 1
+            self.state = "Idle"
+        if name == "first_audio_out":
+            self._mark("first audio", event)
+
+    def _mark(self, key, event):
+        self.raw.setdefault(event.get("turn"), {}).setdefault(key, event["t"])
+
+    @property
+    def marks(self):
+        """Latest turn's C / R / first audio in ms after its end of speech."""
+        t0, raw = self.t_eos.get(self.turn), self.raw.get(self.turn, {})
+        if t0 is None:
+            return {}
+        return {k: (raw[k] - t0) * 1000 for k in ("C", "R", "first audio") if k in raw}
 
     def terminal(self):
         snap = self.pressure.get("snapshot") or {}
@@ -68,7 +107,9 @@ class DashboardState:
                 f"RAM: {display(None if memory is None else memory / 2**20, ' MiB')} / "
                 f"{display(None if cap is None else cap / 2**20, ' MiB')}\n"
                 f"Package energy: {display(energy.get('gross_j'), ' J')}\n"
-                f"Pipeline completions {self.completed}  |  failures {self.failed}  |  cache hits {self.cache_hits}\n")
+                + (f"Last turn (ms after end of speech): " + "  ".join(f"{k} {v:.0f}" for k, v in self.marks.items())
+                   + (f"  [{self.path}]" if self.path else "") + "\n" if self.marks else "")
+                + f"Pipeline completions {self.completed}  |  failures {self.failed}  |  cache hits {self.cache_hits}\n")
 
 
 def write_dashboard(output: Path, report: dict, events: list[dict], resources: dict | None = None):
