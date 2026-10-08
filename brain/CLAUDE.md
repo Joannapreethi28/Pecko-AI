@@ -1,4 +1,5 @@
 # BRAIN (Sir Jabin's role)
+**Every session: read `gotcha.md` (mistakes not to repeat) and `handoff_brain.md` (where Brain is right now) first. Update both before you stop.** Build plan: `../docs/superpowers/plans/2026-10-08-brain-stage.md`.
 Read `SPEC.md` (build spec), `../docs/CONTRACT.md`, and `../docs/solution.md` §3, §5, §6, §7 first.
 
 ## Mission

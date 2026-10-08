@@ -1,0 +1,35 @@
+{
+  "samples": 8,
+  "accounting": {},
+  "regime_changes": 0,
+  "counter_reset_or_missing": false,
+  "energy": {
+    "available": false,
+    "gross_j": null,
+    "domains": [],
+    "scope": "whole CPU packages",
+    "wrap_assumption": "less than one full counter wrap between samples",
+    "errors": [
+      "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+      "No readable RAPL package domains"
+    ]
+  },
+  "turns": {
+    "0": {
+      "gross_package_j": null
+    },
+    "1": {
+      "gross_package_j": null
+    },
+    "2": {
+      "gross_package_j": null
+    }
+  },
+  "error": null,
+  "interval_s": 0.2,
+  "instrumentation_cost": "Sampler runs inside the application process/cgroup; its cost is included.",
+  "memory_peak_scope": "cgroup lifetime, including model warm-up",
+  "window": "after stage warm-up through pre-shutdown sampling",
+  "synthetic": true,
+  "run_id": "placeholder-contract-scenarios"
+}

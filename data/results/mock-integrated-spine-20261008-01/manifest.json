@@ -1,0 +1,29 @@
+{
+  "run_id": "integrated-synthetic-demo",
+  "platform": "synthetic",
+  "configuration": "mock-stages-and-simulated-pressure",
+  "synthetic": true,
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "pressure",
+      "t_eos": 326259.211762,
+      "not_started": false,
+      "timeout_s": 8
+    },
+    {
+      "turn": 1,
+      "case_id": "recovery",
+      "t_eos": 326260.4221139,
+      "not_started": false,
+      "timeout_s": 8
+    },
+    {
+      "turn": 2,
+      "case_id": "steady",
+      "t_eos": 326263.0271764,
+      "not_started": false,
+      "timeout_s": 8
+    }
+  ]
+}

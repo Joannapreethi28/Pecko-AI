@@ -1,0 +1,63 @@
+{
+  "run_id": "placeholder-contract-scenarios",
+  "platform": "portable-development",
+  "configuration": "all-placeholder-engines",
+  "synthetic": true,
+  "cases": [
+    {
+      "case_id": "ordinary",
+      "text": "Hello Pecko",
+      "timeout_s": 3
+    },
+    {
+      "case_id": "hesitation-and-correction",
+      "eos_offset_s": 0.05,
+      "timeout_s": 3,
+      "script": [
+        {
+          "at_s": 0,
+          "type": "partial",
+          "text": "Set the time",
+          "stable": "Set the"
+        },
+        {
+          "at_s": 0.01,
+          "type": "tentative_final",
+          "text": "Set it for Tuesday"
+        },
+        {
+          "at_s": 0.02,
+          "type": "cancel"
+        },
+        {
+          "at_s": 0.03,
+          "type": "partial",
+          "text": "Actually Wednesday",
+          "stable": "Actually"
+        },
+        {
+          "at_s": 0.06,
+          "type": "final",
+          "text": "Set it for Wednesday"
+        }
+      ]
+    },
+    {
+      "case_id": "prompt-revision",
+      "eos_offset_s": 0.02,
+      "timeout_s": 3,
+      "script": [
+        {
+          "at_s": 0,
+          "type": "tentative_final",
+          "text": "Explain the cache"
+        },
+        {
+          "at_s": 0.03,
+          "type": "final",
+          "text": "Explain the prompt cache"
+        }
+      ]
+    }
+  ]
+}

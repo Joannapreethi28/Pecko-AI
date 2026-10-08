@@ -1,0 +1,37 @@
+{
+  "baseline_run": "synthetic-wav-ingress-r3-c1",
+  "candidate_run": "synthetic-wav-ingress-r3-c2",
+  "synthetic": true,
+  "expected_pairs": 1,
+  "comparison_issues": [],
+  "measured_comparison_ready": false,
+  "measured_paired_gain_s": {
+    "mean": null,
+    "p50": null
+  },
+  "latency_percentile_reduction_s": {
+    "p50": null,
+    "p90": null
+  },
+  "timeout_scored_paired_gain_s": {
+    "p50": 0.0,
+    "p90": 0.0
+  },
+  "note": "Positive gain favors the candidate. Timeout scores are declared failure penalties, not observed latency. No unmatched cases are dropped.",
+  "pairs": [
+    {
+      "case_id": "tone-fixture",
+      "issues": [],
+      "baseline_success": false,
+      "candidate_success": false,
+      "observed_gain_s": null,
+      "timeout_scored_gain_s": 0,
+      "baseline_issues": [
+        "missing_sustained_content_audio"
+      ],
+      "candidate_issues": [
+        "missing_sustained_content_audio"
+      ]
+    }
+  ]
+}

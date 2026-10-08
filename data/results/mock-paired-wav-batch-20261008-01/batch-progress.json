@@ -1,0 +1,65 @@
+{
+  "runs": [
+    {
+      "repeat": 1,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-1-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-1-baseline\\report.json"
+    },
+    {
+      "repeat": 1,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-1-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-1-candidate\\report.json"
+    },
+    {
+      "repeat": 2,
+      "position": 1,
+      "configuration": "candidate",
+      "plan": "repeat-2-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-2-candidate\\report.json"
+    },
+    {
+      "repeat": 2,
+      "position": 2,
+      "configuration": "baseline",
+      "plan": "repeat-2-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-2-baseline\\report.json"
+    },
+    {
+      "repeat": 3,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-3-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-3-baseline\\report.json"
+    },
+    {
+      "repeat": 3,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-3-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-3-candidate\\report.json"
+    }
+  ],
+  "expected_runs": 6
+}

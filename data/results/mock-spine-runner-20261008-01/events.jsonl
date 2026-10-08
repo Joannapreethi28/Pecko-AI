@@ -1,0 +1,29 @@
+{"stage": "spine", "event": "run_start", "turn": null, "t": 325239.6166174, "extra": {"synthetic": true, "platform": "synthetic", "configuration": "mock-stages"}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 325239.6171461, "extra": {}}
+{"stage": "brain", "event": "ready", "turn": null, "t": 325239.6171768, "extra": {}}
+{"stage": "ears", "event": "ready", "turn": null, "t": 325239.6171916, "extra": {}}
+{"stage": "spine", "event": "case_start", "turn": 0, "t": 325239.6172087, "extra": {"case_id": "ordinary"}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 325239.619772, "extra": {"source": "ears", "message_type": "final"}}
+{"stage": "voice", "event": "mock_text_received", "turn": 0, "t": 325239.6201923, "extra": {"text": "This is a mock reply from Pecko.", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 325239.6202724, "extra": {"source": "brain", "message_type": "chunk"}}
+{"stage": "spine", "event": "commit", "turn": 0, "t": 325239.6204, "extra": {"gen": 0}}
+{"stage": "voice", "event": "mock_release", "turn": 0, "t": 325239.6204694, "extra": {"gen": 0, "synthetic": true, "blocks": 1, "audio": false}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 325239.6205534, "extra": {"source": "voice", "message_type": "playback_state"}}
+{"stage": "spine", "event": "turn_end", "turn": 0, "t": 325239.6205905, "extra": {"gen": 0, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "case_start", "turn": 1, "t": 325239.620634, "extra": {"case_id": "correction-text"}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 325239.6230609, "extra": {"source": "ears", "message_type": "final"}}
+{"stage": "voice", "event": "mock_text_received", "turn": 1, "t": 325239.6231739, "extra": {"text": "This is a mock reply from Pecko.", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 325239.6232269, "extra": {"source": "brain", "message_type": "chunk"}}
+{"stage": "spine", "event": "commit", "turn": 1, "t": 325239.6232653, "extra": {"gen": 0}}
+{"stage": "voice", "event": "mock_release", "turn": 1, "t": 325239.6233145, "extra": {"gen": 0, "synthetic": true, "blocks": 1, "audio": false}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 325239.6233821, "extra": {"source": "voice", "message_type": "playback_state"}}
+{"stage": "spine", "event": "turn_end", "turn": 1, "t": 325239.6234173, "extra": {"gen": 0, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "case_start", "turn": 2, "t": 325239.6234549, "extra": {"case_id": "short"}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 325239.6264595, "extra": {"source": "ears", "message_type": "final"}}
+{"stage": "voice", "event": "mock_text_received", "turn": 2, "t": 325239.6265668, "extra": {"text": "This is a mock reply from Pecko.", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 325239.6266236, "extra": {"source": "brain", "message_type": "chunk"}}
+{"stage": "spine", "event": "commit", "turn": 2, "t": 325239.6266619, "extra": {"gen": 0}}
+{"stage": "voice", "event": "mock_release", "turn": 2, "t": 325239.626706, "extra": {"gen": 0, "synthetic": true, "blocks": 1, "audio": false}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 325239.6267694, "extra": {"source": "voice", "message_type": "playback_state"}}
+{"stage": "spine", "event": "turn_end", "turn": 2, "t": 325239.626803, "extra": {"gen": 0, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "run_end", "turn": null, "t": 325239.6288619, "extra": {"aborted": null, "synthetic": true}}

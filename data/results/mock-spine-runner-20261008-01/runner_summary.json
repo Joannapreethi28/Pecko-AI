@@ -1,0 +1,27 @@
+{
+  "run_id": "mock-multi-turn",
+  "synthetic": true,
+  "aborted": null,
+  "expected_cases": 3,
+  "completed_cases": 3,
+  "outcomes": [
+    {
+      "turn": 0,
+      "case_id": "ordinary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 1,
+      "case_id": "correction-text",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 2,
+      "case_id": "short",
+      "status": "completed",
+      "reason": null
+    }
+  ]
+}

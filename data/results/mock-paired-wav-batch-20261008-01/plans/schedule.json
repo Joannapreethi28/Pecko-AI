@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "repeats": 3,
+  "configurations": [
+    "baseline",
+    "candidate"
+  ],
+  "synthetic": true,
+  "schedule": [
+    {
+      "repeat": 1,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-1-configuration-1.json"
+    },
+    {
+      "repeat": 1,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-1-configuration-2.json"
+    },
+    {
+      "repeat": 2,
+      "position": 1,
+      "configuration": "candidate",
+      "plan": "repeat-2-configuration-2.json"
+    },
+    {
+      "repeat": 2,
+      "position": 2,
+      "configuration": "baseline",
+      "plan": "repeat-2-configuration-1.json"
+    },
+    {
+      "repeat": 3,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-3-configuration-1.json"
+    },
+    {
+      "repeat": 3,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-3-configuration-2.json"
+    }
+  ],
+  "note": "Labels do not implement a baseline. Bind each plan to its actual engine profile; preserve input and frozen conditions."
+}

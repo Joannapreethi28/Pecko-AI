@@ -1,0 +1,1 @@
+{ "name": "team-board", "version": "0.1.0", "description": "Pecko team board: roles' handoff status, Brain modules, latest pushes to main, contract guard", "types": "./types/index.d.ts", "author": { "name": "Team Plumbers" } }

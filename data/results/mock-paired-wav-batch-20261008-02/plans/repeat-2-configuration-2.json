@@ -1,0 +1,24 @@
+{
+  "run_id": "synthetic-wav-ingress-r2-c2",
+  "platform": "portable-development",
+  "configuration": "candidate",
+  "synthetic": true,
+  "conditions": {
+    "llm_id": "placeholder-no-LLM",
+    "cpu_limit": "unenforced",
+    "memory_limit": "unenforced",
+    "input_set_id": "synthetic-tone-only",
+    "warmup": true
+  },
+  "cases": [
+    {
+      "case_id": "tone-fixture",
+      "wav": "C:\\Users\\Efanio Jens\\Desktop\\Pecko\\data\\results\\mock-wav-ingress-20261008-01\\synthetic-tone.wav",
+      "reference_text": "This is supplied reference text",
+      "eos_offset_s": 0.12,
+      "timeout_s": 3
+    }
+  ],
+  "repeat": 2,
+  "seed": 42
+}

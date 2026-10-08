@@ -1,0 +1,25 @@
+{
+  "samples": 5,
+  "accounting": {},
+  "regime_changes": 0,
+  "counter_reset_or_missing": false,
+  "energy": {
+    "available": false,
+    "gross_j": null
+  },
+  "turns": {
+    "0": {
+      "gross_package_j": null
+    }
+  },
+  "error": null,
+  "interval_s": 0.2,
+  "instrumentation_cost": "Sampler runs inside the application process/cgroup; its cost is included.",
+  "memory_peak_scope": "cgroup lifetime, including model warm-up",
+  "window": "after stage warm-up through pre-shutdown sampling",
+  "synthetic": true,
+  "run_id": "synthetic-wav-ingress-r2-c1",
+  "started_turns": 1,
+  "cpu_s_per_started_turn": null,
+  "energy_per_started_turn": null
+}

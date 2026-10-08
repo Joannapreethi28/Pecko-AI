@@ -1,0 +1,27 @@
+{
+  "run_id": "placeholder-contract-scenarios",
+  "synthetic": true,
+  "aborted": null,
+  "expected_cases": 3,
+  "completed_cases": 3,
+  "outcomes": [
+    {
+      "turn": 0,
+      "case_id": "ordinary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 1,
+      "case_id": "hesitation-and-correction",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 2,
+      "case_id": "prompt-revision",
+      "status": "completed",
+      "reason": null
+    }
+  ]
+}

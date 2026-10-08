@@ -1,0 +1,15 @@
+{
+  "run_id": "synthetic-wav-ingress-r2-c2",
+  "synthetic": true,
+  "aborted": null,
+  "expected_cases": 1,
+  "completed_cases": 1,
+  "outcomes": [
+    {
+      "turn": 0,
+      "case_id": "tone-fixture",
+      "status": "completed",
+      "reason": null
+    }
+  ]
+}

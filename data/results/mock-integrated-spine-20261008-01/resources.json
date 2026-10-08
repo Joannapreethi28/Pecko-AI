@@ -1,0 +1,57 @@
+{
+  "samples": 28,
+  "accounting": {
+    "wall_s": 4.230559299991,
+    "regime_changed": false,
+    "cpu_s": 3.384435,
+    "mean_cores": 0.7999970594921574,
+    "cpu_psi_some_fraction": 0.1787704524084106,
+    "oom_kill_delta": 0,
+    "memory_peak_bytes": 400000000
+  },
+  "regime_changes": 0,
+  "counter_reset_or_missing": false,
+  "energy": {
+    "available": false,
+    "gross_j": null
+  },
+  "turns": {
+    "0": {
+      "wall_s": 1.209934799990151,
+      "regime_changed": false,
+      "cpu_s": 0.967944,
+      "mean_cores": 0.7999968262817791,
+      "cpu_psi_some_fraction": 0.5999976197113343,
+      "oom_kill_delta": 0,
+      "memory_peak_bytes": 400000000,
+      "gross_package_j": null
+    },
+    "1": {
+      "wall_s": 2.605013200023677,
+      "regime_changed": false,
+      "cpu_s": 2.084004,
+      "mean_cores": 0.799997481771324,
+      "cpu_psi_some_fraction": 0.009997262201881853,
+      "oom_kill_delta": 0,
+      "memory_peak_bytes": 400000000,
+      "gross_package_j": null
+    },
+    "2": {
+      "wall_s": 0.41336110001429915,
+      "regime_changed": false,
+      "cpu_s": 0.330688,
+      "mean_cores": 0.7999978710830813,
+      "cpu_psi_some_fraction": 0.009996102680820872,
+      "oom_kill_delta": 0,
+      "memory_peak_bytes": 400000000,
+      "gross_package_j": null
+    }
+  },
+  "error": null,
+  "interval_s": 0.2,
+  "instrumentation_cost": "Sampler runs inside the application process/cgroup; its cost is included.",
+  "memory_peak_scope": "cgroup lifetime, including model warm-up",
+  "window": "after stage warm-up through pre-shutdown sampling",
+  "synthetic": true,
+  "run_id": "integrated-synthetic-demo"
+}

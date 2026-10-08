@@ -1,0 +1,6 @@
+# Brain stage + its tests. Install: pip install -r brain/requirements.txt
+pytest>=8
+rapidfuzz>=3
+pyyaml>=6
+psutil>=5.9
+huggingface_hub>=0.30   # dev only: `hf download` for models; never used at runtime

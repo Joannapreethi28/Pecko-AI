@@ -1,0 +1,27 @@
+{
+  "run_id": "integrated-synthetic-demo",
+  "synthetic": true,
+  "aborted": null,
+  "expected_cases": 3,
+  "completed_cases": 3,
+  "outcomes": [
+    {
+      "turn": 0,
+      "case_id": "pressure",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 1,
+      "case_id": "recovery",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "turn": 2,
+      "case_id": "steady",
+      "status": "completed",
+      "reason": null
+    }
+  ]
+}

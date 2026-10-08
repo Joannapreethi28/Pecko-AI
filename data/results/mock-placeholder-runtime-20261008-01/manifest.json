@@ -1,0 +1,29 @@
+{
+  "run_id": "placeholder-contract-scenarios",
+  "platform": "portable-development",
+  "configuration": "all-placeholder-engines",
+  "synthetic": true,
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "ordinary",
+      "t_eos": 327412.1773939,
+      "not_started": false,
+      "timeout_s": 3
+    },
+    {
+      "turn": 1,
+      "case_id": "hesitation-and-correction",
+      "t_eos": 327412.23046489997,
+      "not_started": false,
+      "timeout_s": 3
+    },
+    {
+      "turn": 2,
+      "case_id": "prompt-revision",
+      "t_eos": 327412.2709602,
+      "not_started": false,
+      "timeout_s": 3
+    }
+  ]
+}

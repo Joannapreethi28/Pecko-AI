@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "stages": {
+    "ears": {
+      "adapter": "wav-placeholder"
+    },
+    "brain": {
+      "adapter": "placeholder"
+    },
+    "voice": {
+      "adapter": "placeholder"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "integrated-synthetic-demo",
+  "platform": "synthetic",
+  "configuration": "mock-stages-and-simulated-pressure",
+  "synthetic": true,
+  "cases": [
+    {
+      "case_id": "pressure",
+      "text": "Show the constrained turn",
+      "timeout_s": 8
+    },
+    {
+      "case_id": "recovery",
+      "text": "Show recovery after the pressure falls",
+      "timeout_s": 8
+    },
+    {
+      "case_id": "steady",
+      "text": "Finish the demonstration",
+      "timeout_s": 8
+    }
+  ]
+}

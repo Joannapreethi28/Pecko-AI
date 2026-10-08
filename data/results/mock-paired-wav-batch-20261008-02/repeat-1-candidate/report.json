@@ -1,0 +1,67 @@
+{
+  "run_id": "synthetic-wav-ingress-r1-c2",
+  "platform": "portable-development",
+  "configuration": "candidate",
+  "synthetic": true,
+  "conditions": {
+    "llm_id": "placeholder-no-LLM",
+    "cpu_limit": "unenforced",
+    "memory_limit": "unenforced",
+    "input_set_id": "synthetic-tone-only",
+    "warmup": true
+  },
+  "expected_turns": 1,
+  "successful_turns": 0,
+  "failed_or_incomplete_turns": 1,
+  "unexpected_turns": [],
+  "headline_ready": false,
+  "run_issues": [],
+  "verification_note": "Log completeness only; labels, sustained-content flags, caps and quality require independent verification.",
+  "headline_latency_s": {
+    "p50": null,
+    "p90": null
+  },
+  "timeout_scored_latency_s": {
+    "p50": 3.0,
+    "p90": 3.0
+  },
+  "scoring_note": "Failed/missing turns score max(declared timeout, observed latency); not measured latency.",
+  "gap_s": {
+    "known_turns": 0,
+    "total": null
+  },
+  "critical_path_counts": {
+    "commit": 1,
+    "answer_ready": 0,
+    "tie": 0
+  },
+  "percentile_method": "linear interpolation at (n-1)*q",
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "tone-fixture",
+      "success": false,
+      "timeout_s": 3,
+      "input_sha256": "4055ad32cdb5c6a42fcfa5390a842126f373a4d7e9b7bb97082327b9b1e7dbe3",
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 3,
+      "commit_s": 0.09370269998908043,
+      "pcm_ready_s": 0.0936199999996461,
+      "limiting_dependency": "commit",
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 0,
+      "timeline": {
+        "endpoint_s": 0.09251019998919219,
+        "asr_final_s": 0.0925590000115335,
+        "prompt_ready_s": 0.09336549998261034,
+        "first_token_s": 0.0934144000057131,
+        "first_chunk_s": 0.09346579998964444
+      }
+    }
+  ]
+}

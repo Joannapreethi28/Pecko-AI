@@ -1,0 +1,12 @@
+{"text": "How many legs does a spider have?", "kind": "plain"}
+{"text": "What is the speed of light?", "kind": "plain"}
+{"text": "Who painted the Mona Lisa?", "kind": "plain"}
+{"text": "What is, um, the largest ocean on earth?", "kind": "hesitation"}
+{"text": "Can you tell me, uh, how many minutes are in a day?", "kind": "hesitation"}
+{"text": "How do you say, hmm, good night in Spanish?", "kind": "hesitation"}
+{"text": "What is the capital of Spain, no wait, of Italy?", "kind": "correction"}
+{"text": "How far is the sun, I mean the moon, from the earth?", "kind": "correction"}
+{"text": "Hello Pecko", "kind": "router"}
+{"text": "Thank you", "kind": "router"}
+{"text": "Why do cats purr?", "kind": "plain"}
+{"text": "What is the freezing point of water in Celsius?", "kind": "plain"}

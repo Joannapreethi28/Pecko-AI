@@ -1,0 +1,22 @@
+{
+  "run_id": "synthetic-wav-ingress-r2-c1",
+  "platform": "portable-development",
+  "configuration": "baseline",
+  "synthetic": true,
+  "conditions": {
+    "llm_id": "placeholder-no-LLM",
+    "cpu_limit": "unenforced",
+    "memory_limit": "unenforced",
+    "input_set_id": "synthetic-tone-only",
+    "warmup": true
+  },
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "tone-fixture",
+      "t_eos": 337514.210373,
+      "not_started": false,
+      "timeout_s": 3
+    }
+  ]
+}

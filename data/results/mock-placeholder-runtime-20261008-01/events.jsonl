@@ -1,0 +1,87 @@
+{"stage": "spine", "event": "run_start", "turn": null, "t": 327412.1723001, "extra": {"synthetic": true, "platform": "portable-development", "configuration": "all-placeholder-engines"}}
+{"stage": "voice", "event": "placeholder_start", "turn": null, "t": 327412.172797, "extra": {"engine": false, "synthetic": true}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 327412.172959, "extra": {}}
+{"stage": "brain", "event": "placeholder_start", "turn": null, "t": 327412.1731048, "extra": {"engine": false, "synthetic": true}}
+{"stage": "brain", "event": "ready", "turn": null, "t": 327412.1732018, "extra": {}}
+{"stage": "ears", "event": "placeholder_start", "turn": null, "t": 327412.1735263, "extra": {"engine": false, "synthetic": true}}
+{"stage": "ears", "event": "ready", "turn": null, "t": 327412.173668, "extra": {}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.1746045, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.1772072, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "case_start", "turn": 0, "t": 327412.1773264, "extra": {"case_id": "ordinary"}}
+{"stage": "ears", "event": "endpoint", "turn": 0, "t": 327412.177801, "extra": {"synthetic": true}}
+{"stage": "ears", "event": "asr_final", "turn": 0, "t": 327412.1780321, "extra": {"text": "Hello Pecko", "synthetic": true}}
+{"stage": "spine", "event": "transcript", "turn": 0, "t": 327412.1798443, "extra": {"text": "Hello Pecko", "final": true}}
+{"stage": "brain", "event": "prompt_ready", "turn": 0, "t": 327412.1799632, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 0, "t": 327412.1799799, "extra": {"gen": 0, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 0, "t": 327412.1800265, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 327412.1800573, "extra": {"source": "ears", "message_type": "final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 0, "t": 327412.1801126, "extra": {"gen": 0, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 0, "t": 327412.180128, "extra": {"gen": 0, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 327412.1801542, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "spine", "event": "commit", "turn": 0, "t": 327412.1801753, "extra": {"gen": 0}}
+{"stage": "voice", "event": "placeholder_release", "turn": 0, "t": 327412.1802022, "extra": {"gen": 0, "audio": false, "synthetic": true}}
+{"stage": "ears", "event": "placeholder_playback_feedback", "turn": 0, "t": 327412.1802522, "extra": {"playing": false, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 327412.1802656, "extra": {"source": "voice", "message_type": "playback_state", "playing": false}}
+{"stage": "spine", "event": "turn_end", "turn": 0, "t": 327412.1802813, "extra": {"gen": 0, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.1803096, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "turn_resources", "turn": 0, "t": 327412.1803641, "extra": {"gross_package_j": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.1803846, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "case_start", "turn": 1, "t": 327412.1804011, "extra": {"case_id": "hesitation-and-correction"}}
+{"stage": "spine", "event": "transcript", "turn": 1, "t": 327412.1817464, "extra": {"text": "Set the time", "final": false}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.1817887, "extra": {"source": "ears", "message_type": "partial", "playing": null}}
+{"stage": "brain", "event": "prompt_ready", "turn": 1, "t": 327412.1964292, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 327412.1965003, "extra": {"gen": 0, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 1, "t": 327412.1965519, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.1965757, "extra": {"source": "ears", "message_type": "tentative_final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 327412.1966311, "extra": {"gen": 0, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 1, "t": 327412.1966551, "extra": {"gen": 0, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.1966887, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.2045973, "extra": {"source": "ears", "message_type": "cancel", "playing": null}}
+{"stage": "spine", "event": "transcript", "turn": 1, "t": 327412.2163028, "extra": {"text": "Actually Wednesday", "final": false}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.2164227, "extra": {"source": "ears", "message_type": "partial", "playing": null}}
+{"stage": "ears", "event": "endpoint", "turn": 1, "t": 327412.2495364, "extra": {"synthetic": true}}
+{"stage": "ears", "event": "asr_final", "turn": 1, "t": 327412.2496764, "extra": {"text": "Set it for Wednesday", "synthetic": true}}
+{"stage": "spine", "event": "transcript", "turn": 1, "t": 327412.2498565, "extra": {"text": "Set it for Wednesday", "final": true}}
+{"stage": "brain", "event": "prompt_ready", "turn": 1, "t": 327412.2500353, "extra": {"gen": 1, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 327412.2500723, "extra": {"gen": 1, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 1, "t": 327412.2501178, "extra": {"gen": 1, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.2501607, "extra": {"source": "ears", "message_type": "final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 327412.2502553, "extra": {"gen": 1, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 1, "t": 327412.2503281, "extra": {"gen": 1, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.2504457, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "spine", "event": "commit", "turn": 1, "t": 327412.250488, "extra": {"gen": 1}}
+{"stage": "voice", "event": "placeholder_release", "turn": 1, "t": 327412.2505323, "extra": {"gen": 1, "audio": false, "synthetic": true}}
+{"stage": "ears", "event": "placeholder_playback_feedback", "turn": 1, "t": 327412.2506111, "extra": {"playing": false, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 1, "t": 327412.2506411, "extra": {"source": "voice", "message_type": "playback_state", "playing": false}}
+{"stage": "spine", "event": "turn_end", "turn": 1, "t": 327412.2507594, "extra": {"gen": 1, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.2508141, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "turn_resources", "turn": 1, "t": 327412.2508597, "extra": {"gross_package_j": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.2508966, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "case_start", "turn": 2, "t": 327412.2509279, "extra": {"case_id": "prompt-revision"}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 327412.2549897, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 327412.2550567, "extra": {"gen": 0, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 327412.2551034, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 327412.2551301, "extra": {"source": "ears", "message_type": "tentative_final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 327412.2551905, "extra": {"gen": 0, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 2, "t": 327412.2552166, "extra": {"gen": 0, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 327412.2552493, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "ears", "event": "endpoint", "turn": 2, "t": 327412.2855187, "extra": {"synthetic": true}}
+{"stage": "ears", "event": "asr_final", "turn": 2, "t": 327412.2856419, "extra": {"text": "Explain the prompt cache", "synthetic": true}}
+{"stage": "spine", "event": "transcript", "turn": 2, "t": 327412.2858298, "extra": {"text": "Explain the prompt cache", "final": true}}
+{"stage": "brain", "event": "prompt_mismatch", "turn": 2, "t": 327412.2875831, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 327412.2877071, "extra": {"gen": 1, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 327412.2877411, "extra": {"gen": 1, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 327412.2877912, "extra": {"gen": 1, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 327412.2878384, "extra": {"source": "ears", "message_type": "final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 327412.2879244, "extra": {"gen": 1, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 2, "t": 327412.2879511, "extra": {"gen": 1, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 327412.287979, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "spine", "event": "commit", "turn": 2, "t": 327412.2880087, "extra": {"gen": 1}}
+{"stage": "voice", "event": "placeholder_release", "turn": 2, "t": 327412.2880458, "extra": {"gen": 1, "audio": false, "synthetic": true}}
+{"stage": "ears", "event": "placeholder_playback_feedback", "turn": 2, "t": 327412.2881056, "extra": {"playing": false, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 2, "t": 327412.2881372, "extra": {"source": "voice", "message_type": "playback_state", "playing": false}}
+{"stage": "spine", "event": "turn_end", "turn": 2, "t": 327412.288169, "extra": {"gen": 1, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.2882071, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "turn_resources", "turn": 2, "t": 327412.2882398, "extra": {"gross_package_j": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 327412.2884631, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null, "domains": [], "scope": "whole CPU packages", "wrap_assumption": "less than one full counter wrap between samples", "errors": ["[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'", "No readable RAPL package domains"]}}}
+{"stage": "spine", "event": "run_end", "turn": null, "t": 327412.291303, "extra": {"aborted": null, "synthetic": true}}

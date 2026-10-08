@@ -1,0 +1,106 @@
+{
+  "run_id": "placeholder-contract-scenarios",
+  "platform": "portable-development",
+  "configuration": "all-placeholder-engines",
+  "synthetic": true,
+  "expected_turns": 3,
+  "successful_turns": 0,
+  "failed_or_incomplete_turns": 3,
+  "unexpected_turns": [],
+  "headline_ready": false,
+  "run_issues": [],
+  "verification_note": "Log completeness only; labels, sustained-content flags, caps and quality require independent verification.",
+  "headline_latency_s": {
+    "p50": null,
+    "p90": null
+  },
+  "timeout_scored_latency_s": {
+    "p50": 3.0,
+    "p90": 3.0
+  },
+  "scoring_note": "Failed/missing turns score max(declared timeout, observed latency); not measured latency.",
+  "gap_s": {
+    "known_turns": 0,
+    "total": null
+  },
+  "critical_path_counts": {
+    "commit": 3,
+    "answer_ready": 0,
+    "tie": 0
+  },
+  "percentile_method": "linear interpolation at (n-1)*q",
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "ordinary",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 3,
+      "commit_s": 0.0030583000043407083,
+      "pcm_ready_s": 0.0029219999560154974,
+      "limiting_dependency": "commit",
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 0,
+      "timeline": {
+        "endpoint_s": 0.0002796999760903418,
+        "asr_final_s": 0.000477899971883744,
+        "prompt_ready_s": 0.0026542999548837543,
+        "first_token_s": 0.00269499997375533,
+        "first_chunk_s": 0.002748899976722896
+      }
+    },
+    {
+      "turn": 1,
+      "case_id": "hesitation-and-correction",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 3,
+      "commit_s": 0.02269499999238178,
+      "pcm_ready_s": 0.022596199996769428,
+      "limiting_dependency": "commit",
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 1,
+      "timeline": {
+        "endpoint_s": 0.021568299969658256,
+        "asr_final_s": 0.02174549998017028,
+        "prompt_ready_s": 0.022203899978194386,
+        "first_token_s": 0.022250999987591058,
+        "first_chunk_s": 0.022304999991320074
+      }
+    },
+    {
+      "turn": 2,
+      "case_id": "prompt-revision",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 3,
+      "commit_s": 0.023706499952822924,
+      "pcm_ready_s": 0.023638599959667772,
+      "limiting_dependency": "commit",
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 1,
+      "timeline": {
+        "endpoint_s": 0.022857499949168414,
+        "asr_final_s": 0.02298839995637536,
+        "prompt_ready_s": 0.023401399957947433,
+        "first_token_s": 0.023430299945175648,
+        "first_chunk_s": 0.0234745999914594
+      }
+    }
+  ]
+}

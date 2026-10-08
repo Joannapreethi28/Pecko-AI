@@ -1,0 +1,42 @@
+{"stage": "spine", "event": "run_start", "turn": null, "t": 337701.1428681, "extra": {"synthetic": true, "platform": "portable-development", "configuration": "baseline"}}
+{"stage": "voice", "event": "placeholder_start", "turn": null, "t": 337701.1432545, "extra": {"engine": false, "synthetic": true}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 337701.143387, "extra": {}}
+{"stage": "brain", "event": "placeholder_start", "turn": null, "t": 337701.1434516, "extra": {"engine": false, "synthetic": true}}
+{"stage": "brain", "event": "ready", "turn": null, "t": 337701.1434966, "extra": {}}
+{"stage": "ears", "event": "placeholder_start", "turn": null, "t": 337701.1442557, "extra": {"engine": false, "synthetic": true}}
+{"stage": "ears", "event": "ready", "turn": null, "t": 337701.1443252, "extra": {}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 337701.1443808, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null}}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 337701.1452949, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null}}}
+{"stage": "spine", "event": "case_start", "turn": 0, "t": 337701.1454, "extra": {"case_id": "tone-fixture"}}
+{"stage": "ears", "event": "input_clip", "turn": 0, "t": 337701.1468249, "extra": {"path": "C:\\Users\\Efanio Jens\\Desktop\\Pecko\\data\\results\\mock-wav-ingress-20261008-01\\synthetic-tone.wav", "sha256": "4055ad32cdb5c6a42fcfa5390a842126f373a4d7e9b7bb97082327b9b1e7dbe3", "frames": 3200, "duration_s": 0.2, "sample_rate": 16000, "eos_offset_s": 0.12, "pcm_sha256": "735036f989ec88179989aaa2dd30f2ca7f29ce99d6ffcd697c2699dce51359f9", "asr": "reference-text-placeholder", "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.1729787, "extra": {"offset_frames": 0, "samples": 320, "t_capture": 337701.1469198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.1889908, "extra": {"offset_frames": 320, "samples": 320, "t_capture": 337701.16691980005, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.2077008, "extra": {"offset_frames": 640, "samples": 320, "t_capture": 337701.1869198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.2331055, "extra": {"offset_frames": 960, "samples": 320, "t_capture": 337701.2069198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.2528861, "extra": {"offset_frames": 1280, "samples": 320, "t_capture": 337701.22691980004, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.2697648, "extra": {"offset_frames": 1600, "samples": 320, "t_capture": 337701.2469198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.3016665, "extra": {"offset_frames": 1920, "samples": 320, "t_capture": 337701.2669198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.3177723, "extra": {"offset_frames": 2240, "samples": 320, "t_capture": 337701.28691980004, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.3280057, "extra": {"offset_frames": 2560, "samples": 320, "t_capture": 337701.3069198, "synthetic": true}}
+{"stage": "ears", "event": "audio_frame", "turn": 0, "t": 337701.3501683, "extra": {"offset_frames": 2880, "samples": 320, "t_capture": 337701.3269198, "synthetic": true}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 337701.3504162, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null}}}
+{"stage": "ears", "event": "wav_replay_end", "turn": 0, "t": 337701.3506011, "extra": {"samples": 3200, "synthetic": true}}
+{"stage": "ears", "event": "endpoint", "turn": 0, "t": 337701.3506433, "extra": {"source": "reference-placeholder", "synthetic": true}}
+{"stage": "ears", "event": "asr_final", "turn": 0, "t": 337701.3506683, "extra": {"source": "reference-placeholder", "synthetic": true}}
+{"stage": "spine", "event": "transcript", "turn": 0, "t": 337701.350879, "extra": {"text": "This is supplied reference text", "final": true}}
+{"stage": "brain", "event": "prompt_ready", "turn": 0, "t": 337701.3511843, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "brain", "event": "first_token", "turn": 0, "t": 337701.3512265, "extra": {"gen": 0, "tokenizer": "synthetic-byte-IDs", "synthetic": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 0, "t": 337701.3512725, "extra": {"gen": 0, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 337701.3513165, "extra": {"source": "ears", "message_type": "final", "playing": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 0, "t": 337701.3513784, "extra": {"gen": 0, "seq": 0, "synthetic": true}}
+{"stage": "voice", "event": "pcm_ready", "turn": 0, "t": 337701.3514042, "extra": {"gen": 0, "seq": 0, "pcm": "synthetic bytes", "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 337701.3514373, "extra": {"source": "brain", "message_type": "chunk", "playing": null}}
+{"stage": "spine", "event": "commit", "turn": 0, "t": 337701.3514694, "extra": {"gen": 0}}
+{"stage": "voice", "event": "placeholder_release", "turn": 0, "t": 337701.3515089, "extra": {"gen": 0, "audio": false, "synthetic": true}}
+{"stage": "ears", "event": "placeholder_playback_feedback", "turn": 0, "t": 337701.351575, "extra": {"playing": false, "synthetic": true}}
+{"stage": "spine", "event": "routed", "turn": 0, "t": 337701.3515986, "extra": {"source": "voice", "message_type": "playback_state", "playing": false}}
+{"stage": "spine", "event": "turn_end", "turn": 0, "t": 337701.3516275, "extra": {"gen": 0, "success": true, "reason": null, "gap_s": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 337701.3516591, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null}}}
+{"stage": "spine", "event": "turn_resources", "turn": 0, "t": 337701.3516857, "extra": {"gross_package_j": null}}
+{"stage": "spine", "event": "pressure", "turn": null, "t": 337701.3519471, "extra": {"snapshot": null, "delta": null, "energy": {"available": false, "gross_j": null}}}
+{"stage": "spine", "event": "run_end", "turn": null, "t": 337701.354368, "extra": {"aborted": null, "synthetic": true}}

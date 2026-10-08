@@ -1,0 +1,29 @@
+{
+  "run_id": "mock-multi-turn",
+  "platform": "synthetic",
+  "configuration": "mock-stages",
+  "synthetic": true,
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "ordinary",
+      "t_eos": 325239.6172241,
+      "not_started": false,
+      "timeout_s": 2
+    },
+    {
+      "turn": 1,
+      "case_id": "correction-text",
+      "t_eos": 325239.6206588,
+      "not_started": false,
+      "timeout_s": 2
+    },
+    {
+      "turn": 2,
+      "case_id": "short",
+      "t_eos": 325239.6234773,
+      "not_started": false,
+      "timeout_s": 2
+    }
+  ]
+}

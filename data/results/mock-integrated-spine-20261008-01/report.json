@@ -1,0 +1,105 @@
+{
+  "run_id": "integrated-synthetic-demo",
+  "platform": "synthetic",
+  "configuration": "mock-stages-and-simulated-pressure",
+  "synthetic": true,
+  "expected_turns": 3,
+  "successful_turns": 0,
+  "failed_or_incomplete_turns": 3,
+  "unexpected_turns": [],
+  "headline_ready": false,
+  "verification_note": "Log completeness only; labels, sustained-content flags, caps and quality require independent verification.",
+  "headline_latency_s": {
+    "p50": null,
+    "p90": null
+  },
+  "timeout_scored_latency_s": {
+    "p50": 8.0,
+    "p90": 8.0
+  },
+  "scoring_note": "Failed/missing turns score max(declared timeout, observed latency); not measured latency.",
+  "gap_s": {
+    "known_turns": 0,
+    "total": null
+  },
+  "critical_path_counts": {
+    "commit": 0,
+    "answer_ready": 0,
+    "tie": 0
+  },
+  "percentile_method": "linear interpolation at (n-1)*q",
+  "turns": [
+    {
+      "turn": 0,
+      "case_id": "pressure",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 8,
+      "commit_s": 0.0010798000148497522,
+      "pcm_ready_s": null,
+      "limiting_dependency": null,
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 0,
+      "timeline": {
+        "endpoint_s": null,
+        "asr_final_s": null,
+        "prompt_ready_s": null,
+        "first_token_s": null,
+        "first_chunk_s": null
+      }
+    },
+    {
+      "turn": 1,
+      "case_id": "recovery",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 8,
+      "commit_s": 0.001865199999883771,
+      "pcm_ready_s": null,
+      "limiting_dependency": null,
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 0,
+      "timeline": {
+        "endpoint_s": null,
+        "asr_final_s": null,
+        "prompt_ready_s": null,
+        "first_token_s": null,
+        "first_chunk_s": null
+      }
+    },
+    {
+      "turn": 2,
+      "case_id": "steady",
+      "success": false,
+      "issues": [
+        "missing_sustained_content_audio"
+      ],
+      "failure_reason": null,
+      "observed_first_audio_s": null,
+      "timeout_scored_latency_s": 8,
+      "commit_s": 0.0032981999684125185,
+      "pcm_ready_s": null,
+      "limiting_dependency": null,
+      "device_and_dispatch_s": null,
+      "gap_s": null,
+      "generation": 0,
+      "timeline": {
+        "endpoint_s": null,
+        "asr_final_s": null,
+        "prompt_ready_s": null,
+        "first_token_s": null,
+        "first_chunk_s": null
+      }
+    }
+  ]
+}

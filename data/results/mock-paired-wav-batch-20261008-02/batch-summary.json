@@ -1,0 +1,92 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "repeats": 3,
+  "expected_runs": 6,
+  "runs_recorded": 6,
+  "aborted_runs": 0,
+  "measured_comparison_ready": false,
+  "runs": [
+    {
+      "repeat": 1,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-1-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-1-baseline\\report.json"
+    },
+    {
+      "repeat": 1,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-1-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-1-candidate\\report.json"
+    },
+    {
+      "repeat": 2,
+      "position": 1,
+      "configuration": "candidate",
+      "plan": "repeat-2-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-2-candidate\\report.json"
+    },
+    {
+      "repeat": 2,
+      "position": 2,
+      "configuration": "baseline",
+      "plan": "repeat-2-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-2-baseline\\report.json"
+    },
+    {
+      "repeat": 3,
+      "position": 1,
+      "configuration": "baseline",
+      "plan": "repeat-3-configuration-1.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-3-baseline\\report.json"
+    },
+    {
+      "repeat": 3,
+      "position": 2,
+      "configuration": "candidate",
+      "plan": "repeat-3-configuration-2.json",
+      "aborted": null,
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "report": "repeat-3-candidate\\report.json"
+    }
+  ],
+  "comparisons": [
+    {
+      "repeat": 1,
+      "measured_comparison_ready": false,
+      "file": "comparison-repeat-1.json",
+      "expected_pairs": 1
+    },
+    {
+      "repeat": 2,
+      "measured_comparison_ready": false,
+      "file": "comparison-repeat-2.json",
+      "expected_pairs": 1
+    },
+    {
+      "repeat": 3,
+      "measured_comparison_ready": false,
+      "file": "comparison-repeat-3.json",
+      "expected_pairs": 1
+    }
+  ],
+  "independence_note": "Repeated recordings are not independent speakers/turns for cutoff-confidence claims."
+}

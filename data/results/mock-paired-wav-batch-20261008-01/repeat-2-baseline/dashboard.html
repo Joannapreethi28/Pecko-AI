@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pecko · Run dashboard</title><style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101820;color:#eef4f7}body{max-width:1080px;margin:0 auto;padding:40px 24px}
+h1{font-size:42px;margin:8px 0}h2{font-size:22px}h3{font-size:17px}small,.muted{color:#a6bac5;font-weight:400}small{float:right}
+.badge{color:#f5cc76;font-size:12px;letter-spacing:1.5px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:28px 0}
+.card,article{background:#1a2833;border:1px solid #304451;border-radius:12px;padding:20px;margin-bottom:12px}.card b{display:block;font-size:26px;margin:8px 0}
+.barrow{display:flex;align-items:center;gap:12px;margin:12px 0;font-size:13px}.barrow span{width:80px}.barrow b{width:110px;text-align:right}.track{height:12px;background:#304451;flex:1;border-radius:4px;overflow:hidden}
+.commit,.ready{height:100%}.commit{background:#62c7c2}.ready{background:#94a7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere}footer{color:#a6bac5;font-size:13px;margin-top:32px}
+</style><header><div class="badge">SYNTHETIC · NO HARDWARE RESULT</div><h1>Pecko <span class="muted">/ Run review</span></h1>
+<p>synthetic-wav-ingress-r2-c1 · portable-development · baseline</p></header>
+<section class="cards"><div class="card">Expected turns<b>1</b>1 failed/incomplete traces</div>
+<div class="card">First-audio p50<b>Unavailable</b>p90 Unavailable</div>
+<div class="card">CPU used<b>Unavailable</b>Includes Spine instrumentation</div>
+<div class="card">Package energy<b>Unavailable</b>Whole packages, not cgroup-only</div></section>
+<article><h2>Last state</h2><pre>PECKO  |  SYNTHETIC
+Finished  |  turn 0  |  T0
+Transcript: This is supplied reference text
+CPU: Unavailable  RAM: Unavailable / Unavailable
+Package energy: Unavailable
+Pipeline completions 1  |  failures 0  |  cache hits 0
+</pre></article>
+<h2>Turn timing</h2><p class="muted">Times are relative to labelled speech end. Negative values indicate preparation before speech ended. Missing readings remain unavailable.</p>
+<article><h3>tone-fixture <small>Turn 0</small></h3><div class="barrow"><span>Commit</span><div class="track"><div class="commit" style="width:100.00%"></div></div><b>0.092 s</b></div><div class="barrow"><span>PCM ready</span><div class="track"><div class="ready" style="width:99.96%"></div></div><b>0.092 s</b></div><p>First content audio: Unavailable · Gaps: Unavailable</p><p class="muted">missing_sustained_content_audio</p></article><footer>Commit and PCM-ready bars expose the later dependency. Failure timeout scores are separate from measured latency. Synthetic logs and incomplete runs cannot supply headline numbers. No external resources are loaded.</footer></html>
