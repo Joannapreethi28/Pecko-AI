@@ -161,13 +161,15 @@ def build(args, out_dir: Path) -> tuple[Pecko, Any]:
                            log_path=out_dir / "llama-server.log")
 
     app.brain = BrainStage(app.from_brain, StageLog("brain", shared, app.on_brain_log),
-                           LlamaClient(port=args.port), tier=args.tier, router=Router.load(),
+                           LlamaClient(port=args.port), tier=args.tier,
+                           router=None if args.no_router else Router.load(),
+                           early_prefill=not args.no_early_prefill, cache_prompt=not args.no_cache_prompt,
                            server_factory=server_factory, hold_release=not args.no_hold)
     app.voice = VoiceStage(on_event=app.from_voice, tier=args.tier, audio=not args.no_audio,
                            barge_in=not args.half_duplex)
     vlog.add_sink(lambda rec: shared.stream.write(json.dumps(rec) + "\n"))   # Voice lines into the run log
     ears_tier = args.tier if args.ears_tier is None else args.ears_tier
-    app.ears = Ears(tier=ears_tier, out_stream=LineSink(app.from_ears))   # never loads Moonshine at T2/T3
+    app.ears = Ears(tier=ears_tier, out_stream=LineSink(app.from_ears), endpointer_mode=args.endpointer)   # never loads Moonshine at T2/T3
     app.ears._elog = EventLog(events)   # Ears diagnostics (t_eos, endpoint, asr_final) into the run log
     return app, events
 
@@ -274,6 +276,14 @@ def main() -> None:
     ap.add_argument("--no-wake", action="store_true", help="WAV runs: skip the wake word (push-to-talk)")
     ap.add_argument("--no-audio", action="store_true", help="no speaker (Voice still synthesizes)")
     ap.add_argument("--no-hold", action="store_true", help="disable hold-and-release (ablation)")
+    # ablation switches (defaults = shipped behaviour; see data/results/ablation-e2e-summary.md)
+    ap.add_argument("--no-early-prefill", action="store_true",
+                    help="ablation: no prefill from partials/tentative_final (also disables hold-and-release)")
+    ap.add_argument("--no-cache-prompt", action="store_true",
+                    help="ablation: llama-server cache_prompt off (no system-prompt KV reuse)")
+    ap.add_argument("--no-router", action="store_true", help="ablation: no answer cache/router, every turn to the LLM")
+    ap.add_argument("--endpointer", default="fusion", choices=("fusion", "fixed_800", "fixed_400"),
+                    help="ablation: Ears endpointer (fixed_* = plain silence timer, no tentative_final)")
     ap.add_argument("--half-duplex", action="store_true", help="ignore barge-in (if echo stops Pecko)")
     ap.add_argument("--tail", type=float, default=15.0, help="seconds of silence after each WAV")
     ap.add_argument("--out", type=Path, default=None, help="run folder (default data/results/run-<time>)")
