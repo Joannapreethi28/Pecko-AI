@@ -24,7 +24,7 @@ Read in this order: `brain/CLAUDE.md` → this file → `brain/gotcha.md` (G1-G1
 | 12 ablation | CODE DONE, not run | `brain/ablate.py`, `ablation_turns.jsonl` |
 | 9 bake-off | RUN, quality pending | all 4 models measured under the cap (RESULTS.md). T0 provisionally Qwen3-0.6B. Blind sheet built: a teammate scores `data/results/blind_scores.csv` (never show `blind_scores_key.csv`), then `python -m brain.score_sheet --tally` |
 | 11 hold-and-release | DONE | commit b54f2c1; contract v2.1 approved by all four (CONTRACT.md) |
-| 12 ablation | RUN (Q4 all configs + Q8) | RESULTS.md; history cache bug FIXED (block trim + idle base warm-up): sys_cache first-chunk p90 813 → 324 ms. TODO: re-run to get wasted % with the fixed metric |
+| 12 ablation | RUN (Q4 all configs + Q8) | RESULTS.md; history cache bug FIXED (block trim + idle base warm-up): sys_cache first-chunk p90 813 → 324 ms. Re-run with fixed metric: wasted 10.3 / 11.1 / 19.2% (stable / tentative / router), early_tentative p50 178 ms |
 | 10 real run | NOT STARTED | live T0→T2→T3→T0 switch timing under the cap |
 
 Tests (Ubuntu VM, after Voice merge): 223 pass, 5 skipped (1 Windows-only, 3 live, 1 Piper model missing). Needs `pip install -r voice/requirements.txt` + `sudo apt install libportaudio2`. Live tests with llama-server on :8080: 3/3 pass.

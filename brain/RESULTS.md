@@ -37,7 +37,11 @@ Decision (rule in SPEC.md; **provisional until the blind quality scores are in**
 | **after history fix**: + system-prompt KV cache | 115 / 143 ms | 271 / **324** ms | re-measure | 36 | was 290 / 813 ms; prompt computed ≈ 24 tokens/turn on turns 5-12 (was 90-100) |
 | **after history fix**: + tentative_final prefill | 38 / 41 ms | 205 / 222 ms | re-measure | 36 | was 177 / 213 ms, see finding 5 |
 
-Cgroup `memory.peak` (server + harness, whole run): Q4 981 MB, Q8 933 MB, Q4 after history fix 848 MB; `oom_kill 0` both.
+| **after history fix, re-run** (fixed metric): + early prefill (stable) | 76 / 96 ms | 221 / 260 ms | 10.3% | 36 | 9 base warm-ups, 128 tokens total (not in wasted %) |
+| **after history fix, re-run**: + tentative_final prefill | 36 / 40 ms | 178 / 220 ms | 11.1% | 36 | 9 warm-ups, 54 tokens |
+| **after history fix, re-run**: + router / cache-first | 36 / 40 ms | 178 / 202 ms | 19.2% | 36 | 9 warm-ups, 90 tokens |
+
+Cgroup `memory.peak` (server + harness, whole run): Q4 981 MB, Q8 933 MB, Q4 after history fix 848 MB, re-run 838 MB; `oom_kill 0` both.
 
 Findings:
 1. **(FIXED 9 Oct, see rows "after history fix")** **History rewrite breaks the cache.** In `sys_cache`, from turn 5 on `cache_n` falls back to ≈ 106-110 (system prompt only) and 90-100 tokens are recomputed per turn → the 671 ms p90. Likely the history window drops the oldest turn and shifts everything after the system prompt. Early prefill hides it (recompute happens during speech), but T2 (speculation off) would pay it. Not fixed yet.
@@ -46,3 +50,4 @@ Findings:
 4. Not understood yet (do not quote): Q8 `early_tentative` wasted 0.0% vs Q4 10.8% on the same turns; Q8 cgroup peak lower than Q4 despite the larger file (the Q4 run also ran 3 more configs).
 5. **History fix** (`brain/prompt.py`: on overflow cut history to the last 1 turn in one block, not a sliding window; `brain/stage.py`: after a trim, prefill the new base prompt while idle). `sys_cache` first-chunk p90 813 → 324 ms. `early_tentative` first-chunk p50 got 28 ms slower (177 → 205 ms) although first_token is unchanged (36 → 38 ms): the shorter history changes the replies, and mean first-clause length went 3.58 → 3.83 words. That is a content difference, not proven to be pipeline cost; re-run with a fixed reply set to separate the two. Wasted % for these rows needs a re-run: the run counted the new base warm-ups as wasted (100% / 21.5%); `ablate.measure()` now excludes `prefill kind=base` and reports it as `warm_tokens`. Raw: `data/results/ablation_q4-histfix-ubuntu-vm-cg.jsonl`.
 6. Brain stops the stream at the 2-sentence limit, so `gen_done` then has no server timings (prompt_n = cache_n = 0). Latency events are unaffected; cache stats on those turns are missing.
+7. **Re-run with the fixed metric** (`ablation_q4-histfix2-ubuntu-vm-cg.jsonl`): `early_tentative` first chunk p50 178 ms, the same as before the fix (177 ms). So the 205 ms in the first after-fix run was run-to-run/content variation, not a cost of the fix. Wasted prefill is 10-19%; `early_stable` rose from 0.0% to 10.3% and router from 11.9% to 19.2% vs the pre-fix run (not explained yet: likely different history → different stable-prefix agreement; do not quote as a cause).
