@@ -169,6 +169,27 @@ def build(args, out_dir: Path) -> tuple[Pecko, Any]:
     return app, events
 
 
+def sample_resources(log: EventLog, stop: threading.Event, period: float = 0.5) -> None:
+    """Live proof of the cap for the dashboard: cgroup limits + usage every `period` s (off the
+    first-audio path; a sleeping thread). Logs `spine resources` lines; silent off Linux."""
+    from spine.resources import own_cgroup, read_snapshot, usage_delta
+
+    try:
+        path = own_cgroup()
+    except OSError as e:
+        log.emit("spine", "resources_unavailable", None, error=str(e))
+        return
+    before = read_snapshot(path)
+    while not stop.wait(period):
+        snap = read_snapshot(path)
+        d = usage_delta(before, snap)
+        log.emit("spine", "resources", None, t=snap.t, mean_cores=d["mean_cores"], cpu_max=snap.cpu_max,
+                 memory_current=snap.memory_current, memory_peak=snap.memory_peak,
+                 memory_max=snap.memory_max, swap_max=snap.swap_max, oom_kill=snap.oom_kill,
+                 cgroup=path.name)
+        before = snap
+
+
 def start_all(app: Pecko, tier: int) -> None:
     t0 = now()
     app.ears.start()
@@ -249,6 +270,8 @@ def main() -> None:
     out = args.out or ROOT / "data" / "results" / time.strftime("run-%Y%m%d-%H%M%S")
     out.mkdir(parents=True, exist_ok=True)
     app, events = build(args, out)
+    stop = threading.Event()
+    threading.Thread(target=sample_resources, args=(app.log, stop), name="spine-resources", daemon=True).start()
     try:
         start_all(app, args.tier)
         if args.mic:
@@ -259,6 +282,7 @@ def main() -> None:
     except KeyboardInterrupt:
         pass
     finally:
+        stop.set()
         stop_all(app)
         events.close()
         print(f"run log: {out}/events.jsonl  bus: {out}/bus.jsonl", flush=True)
