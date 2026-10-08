@@ -21,7 +21,7 @@ import psutil
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from common.clock import VirtualClock
+from ears.clock import VirtualClock
 from ears.audio_io import WavFrameSource
 from ears.normalize import ends_with_dangling_word
 from ears.stage import Ears
