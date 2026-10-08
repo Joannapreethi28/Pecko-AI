@@ -1,4 +1,4 @@
-> **Original role brief (v1).** The build spec is `SPEC.md` in this folder; the shared contract is `../docs/CONTRACT.md` (v2). Research ideas below are folded into the master ablation in `../docs/solution.md` §6.
+> **Original role brief (v1).** The build spec is `SPEC.md` in this folder; the shared contract is `../docs/CONTRACT.md` (v2). Research ideas below are folded into the master ablation in `../docs/solution.md` §7.
 
 # ROLE 3: VOICE (speaking)
 

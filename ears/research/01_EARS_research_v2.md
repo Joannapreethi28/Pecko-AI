@@ -11,7 +11,7 @@ Honesty note: every number here is from vendor pages or papers unless marked *me
 Ears turns mic audio into one `final` text message. **The moment it sends that message is the biggest latency number we control.** Brain and Voice cannot start before it.
 
 Four jobs:
-1. **Wake word**: sleep until "hey nova" (or push-to-talk).
+1. **Wake word**: sleep until "hey Pecko" (or push-to-talk).
 2. **VAD**: label every 32 ms frame as speech or silence.
 3. **Streaming ASR**: turn speech into `partial` text while the user talks.
 4. **End-of-turn**: decide "finished" vs "just pausing", then send `final`.
@@ -66,7 +66,7 @@ Threads (2-core budget):
 | Porcupine | Typed in their Console | Needs AccessKey | **Rejected** (account required) |
 | ASR + string match | Anything | Yes | Rejected (ASR always on burns idle CPU) |
 
-Usage: rare 2+ syllable phrase ("hey nova") with 2-3 pronunciation variants; KWS runs only when VAD says speech; ~8 s follow-up window after each reply; **push-to-talk key as demo safety net**. Ignore wake word while Voice is playing (v2).
+Usage: rare 2+ syllable phrase ("hey Pecko") with 2-3 pronunciation variants; KWS runs only when VAD says speech; ~8 s follow-up window after each reply; **push-to-talk key as demo safety net**. Ignore wake word while Voice is playing (v2).
 
 ---
 

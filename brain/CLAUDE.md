@@ -1,5 +1,5 @@
 # BRAIN (Sir Jabin's role)
-Read `SPEC.md` (build spec), `../docs/CONTRACT.md`, and `../docs/solution.md` §3, §5.2, §6, §7 first.
+Read `SPEC.md` (build spec), `../docs/CONTRACT.md`, and `../docs/solution.md` §3, §5, §6, §7 first.
 
 ## Mission
 Take `partial`/`tentative_final`/`final` from Ears, return short spoken-style `chunk`s to Voice as fast as possible. First chunk speed matters far more than long-answer quality. A router answers common intents without the LLM.
@@ -21,4 +21,4 @@ Take `partial`/`tentative_final`/`final` from Ears, return short spoken-style `c
 8. Model tiers T0/T1/T2 switch between turns only; measure switch time + peak memory.
 
 ## Do not
-Use Laya/CLM/Jev as the generator (rejected, see docs/solution.md §12) · enable thinking · rewrite the system prompt between turns · use draft-model speculative decoding · claim a speed/RAM number we did not measure.
+Use Laya/CLM/Jev as the generator (rejected, see docs/solution.md §10) · enable thinking · rewrite the system prompt between turns · use draft-model speculative decoding · claim a speed/RAM number we did not measure.

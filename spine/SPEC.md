@@ -4,7 +4,7 @@
 **Enforcement (live, shown to judges):**
 ```bash
 sudo systemd-run --scope -p AllowedCPUs=2,3 -p CPUQuota=200% \
-  -p MemoryMax=2G -p MemorySwapMax=0 --unit=pecko ./run_nova.sh
+  -p MemoryMax=2G -p MemorySwapMax=0 --unit=pecko ./scripts/run_pecko.sh
 systemctl status pecko.scope ; systemd-cgtop            # live CPU/RAM for judges
 cat /sys/fs/cgroup/system.slice/pecko.scope/{cpu.max,memory.max,memory.peak,memory.events}
 # degradation demo (announced): lower the cap between turns
