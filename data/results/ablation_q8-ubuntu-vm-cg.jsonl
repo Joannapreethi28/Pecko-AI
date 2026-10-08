@@ -1,0 +1,528 @@
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5168.320658615, "extra": {"ms": 935.3, "base_tokens": 84}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "ready", "turn": -1, "t": 5168.321252502, "extra": {"tier": "T0"}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 1, "t": 5171.469773214, "extra": {"gen": 1, "chars": 476}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 1, "t": 5171.608594741, "extra": {"gen": 1, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 1, "t": 5171.707389757, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 1, "t": 5171.75659796, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 19, "cache_n": 84, "predicted_n": 4, "decode_tps": 27.1}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 2, "t": 5174.486317911, "extra": {"gen": 2, "chars": 590}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 2, "t": 5174.630563452, "extra": {"gen": 2, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 2, "t": 5174.841907501, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 2, "t": 5175.568105541, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 20, "cache_n": 106, "predicted_n": 23, "decode_tps": 24.5}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 3, "t": 5177.922960928, "extra": {"gen": 3, "chars": 761}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 3, "t": 5178.096798584, "extra": {"gen": 3, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 3, "t": 5178.271982294, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 3, "t": 5178.317040555, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 21, "cache_n": 148, "predicted_n": 6, "decode_tps": 26.7}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 4, "t": 5181.842674331, "extra": {"gen": 4, "chars": 896}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 4, "t": 5182.006571656, "extra": {"gen": 4, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 4, "t": 5182.243979613, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 4, "t": 5182.457466969, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 22, "cache_n": 174, "predicted_n": 11, "decode_tps": 24.4}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 5, "t": 5187.589535897, "extra": {"gen": 5, "chars": 952}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 5, "t": 5188.337933049, "extra": {"gen": 5, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 5, "t": 5188.56544253, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 5, "t": 5189.062237343, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 121, "cache_n": 87, "predicted_n": 18, "decode_tps": 24.8}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 6, "t": 5193.017008257, "extra": {"gen": 6, "chars": 942}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 6, "t": 5193.762282699, "extra": {"gen": 6, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 6, "t": 5193.930566913, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 6, "t": 5193.979501889, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 119, "cache_n": 87, "predicted_n": 6, "decode_tps": 26.5}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 7, "t": 5198.315677091, "extra": {"gen": 7, "chars": 956}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 7, "t": 5199.069355083, "extra": {"gen": 7, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 7, "t": 5199.275862378, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 7, "t": 5199.620583254, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 124, "cache_n": 87, "predicted_n": 14, "decode_tps": 25.4}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 8, "t": 5204.775697386, "extra": {"gen": 8, "chars": 974}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 8, "t": 5205.563928184, "extra": {"gen": 8, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 8, "t": 5205.766589618, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 8, "t": 5207.787036991, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 131, "cache_n": 87, "predicted_n": 51, "decode_tps": 22.9}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 9, "t": 5208.909205997, "extra": {"gen": 9, "chars": 1082}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 9, "t": 5209.852724901, "extra": {"gen": 9, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 9, "t": 5209.932367656, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 9, "t": 5209.9324077, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 154, "cache_n": 88, "predicted_n": 3, "decode_tps": 35.4}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 10, "t": 5211.055362692, "extra": {"gen": 10, "chars": 1045}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 10, "t": 5211.896956786, "extra": {"gen": 10, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 10, "t": 5211.98027131, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 10, "t": 5212.024713088, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 142, "cache_n": 90, "predicted_n": 4, "decode_tps": 31.4}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 11, "t": 5213.954874652, "extra": {"gen": 11, "chars": 972}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 11, "t": 5214.719335925, "extra": {"gen": 11, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 11, "t": 5214.915967751, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 11, "t": 5215.312533388, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 128, "cache_n": 87, "predicted_n": 15, "decode_tps": 24.9}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 12, "t": 5219.253098774, "extra": {"gen": 12, "chars": 853}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_token", "turn": 12, "t": 5219.798906342, "extra": {"gen": 12, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 12, "t": 5220.006992265, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 12, "t": 5220.213920414, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 90, "cache_n": 87, "predicted_n": 11, "decode_tps": 26.5}}
+{"config": "sys_cache", "rep": 0, "stage": "brain", "event": "stopped", "turn": -1, "t": 5220.253863972, "extra": {}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5220.51034018, "extra": {"ms": 255.5, "base_tokens": 84}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "ready", "turn": -1, "t": 5220.510552883, "extra": {"tier": "T0"}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1001, "t": 5223.636794039, "extra": {"gen": 1, "chars": 476}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1001, "t": 5223.767261608, "extra": {"gen": 1, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1001, "t": 5223.847984946, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1001, "t": 5223.890214571, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 19, "cache_n": 84, "predicted_n": 4, "decode_tps": 32.6}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1002, "t": 5226.611780964, "extra": {"gen": 2, "chars": 590}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1002, "t": 5226.776783912, "extra": {"gen": 2, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1002, "t": 5226.982167788, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1002, "t": 5227.736416063, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 20, "cache_n": 106, "predicted_n": 23, "decode_tps": 23.9}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1003, "t": 5230.089604272, "extra": {"gen": 3, "chars": 761}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1003, "t": 5230.24130104, "extra": {"gen": 3, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1003, "t": 5230.405501709, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1003, "t": 5230.453166313, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 21, "cache_n": 148, "predicted_n": 6, "decode_tps": 28.4}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1004, "t": 5233.967855875, "extra": {"gen": 4, "chars": 896}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1004, "t": 5234.130860383, "extra": {"gen": 4, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1004, "t": 5234.367816963, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1004, "t": 5234.592771094, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 22, "cache_n": 174, "predicted_n": 11, "decode_tps": 23.8}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1005, "t": 5239.740660363, "extra": {"gen": 5, "chars": 952}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1005, "t": 5240.597161674, "extra": {"gen": 5, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1005, "t": 5240.812737452, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1005, "t": 5241.331796044, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 121, "cache_n": 87, "predicted_n": 18, "decode_tps": 24.4}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1006, "t": 5245.270710102, "extra": {"gen": 6, "chars": 942}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1006, "t": 5245.334943965, "extra": {"gen": 6, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1006, "t": 5245.519700076, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1006, "t": 5245.567788174, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 205, "predicted_n": 6, "decode_tps": 25.8}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1007, "t": 5249.883583038, "extra": {"gen": 7, "chars": 956}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1007, "t": 5249.945192292, "extra": {"gen": 7, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1007, "t": 5250.196771397, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1007, "t": 5250.564289253, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 210, "predicted_n": 14, "decode_tps": 22.6}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1008, "t": 5255.702068194, "extra": {"gen": 8, "chars": 974}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1008, "t": 5255.765282139, "extra": {"gen": 8, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1008, "t": 5256.001147046, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1008, "t": 5258.217900836, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 1, "cache_n": 217, "predicted_n": 51, "decode_tps": 20.8}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1009, "t": 5259.363996402, "extra": {"gen": 9, "chars": 1082}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1009, "t": 5259.42673949, "extra": {"gen": 9, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1009, "t": 5259.525969873, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1009, "t": 5259.526010961, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 241, "predicted_n": 3, "decode_tps": 30.3}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1010, "t": 5260.686757519, "extra": {"gen": 10, "chars": 1045}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1010, "t": 5260.754243602, "extra": {"gen": 10, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1010, "t": 5260.848049727, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1010, "t": 5260.895104431, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 231, "predicted_n": 4, "decode_tps": 28.5}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1011, "t": 5262.81161289, "extra": {"gen": 11, "chars": 972}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1011, "t": 5262.86633291, "extra": {"gen": 11, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1011, "t": 5263.115123919, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1011, "t": 5263.512326537, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 214, "predicted_n": 15, "decode_tps": 23.2}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1012, "t": 5267.462634164, "extra": {"gen": 12, "chars": 853}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1012, "t": 5267.521727522, "extra": {"gen": 12, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1012, "t": 5267.781551257, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1012, "t": 5268.002519648, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 11, "decode_tps": 22.9}}
+{"config": "sys_cache", "rep": 1, "stage": "brain", "event": "stopped", "turn": -1, "t": 5268.035468449, "extra": {}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5268.278641817, "extra": {"ms": 241.9, "base_tokens": 84}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "ready", "turn": -1, "t": 5268.279009677, "extra": {"tier": "T0"}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2001, "t": 5271.383971271, "extra": {"gen": 1, "chars": 476}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2001, "t": 5271.522143272, "extra": {"gen": 1, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2001, "t": 5271.618672919, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2001, "t": 5271.667490575, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 19, "cache_n": 84, "predicted_n": 4, "decode_tps": 27.3}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2002, "t": 5274.396818326, "extra": {"gen": 2, "chars": 590}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2002, "t": 5274.538977639, "extra": {"gen": 2, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2002, "t": 5274.745132505, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2002, "t": 5275.466716288, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 20, "cache_n": 106, "predicted_n": 23, "decode_tps": 24.8}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2003, "t": 5277.804048162, "extra": {"gen": 3, "chars": 761}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2003, "t": 5277.959739522, "extra": {"gen": 3, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2003, "t": 5278.158539197, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2003, "t": 5278.205249295, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 21, "cache_n": 148, "predicted_n": 6, "decode_tps": 24.5}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2004, "t": 5281.741820853, "extra": {"gen": 4, "chars": 896}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2004, "t": 5281.909511965, "extra": {"gen": 4, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2004, "t": 5282.1243464, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2004, "t": 5282.366400253, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 22, "cache_n": 174, "predicted_n": 11, "decode_tps": 24.1}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2005, "t": 5287.53398605, "extra": {"gen": 5, "chars": 952}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2005, "t": 5287.581041803, "extra": {"gen": 5, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2005, "t": 5287.818544917, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2005, "t": 5288.387807707, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 207, "predicted_n": 18, "decode_tps": 22.3}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2006, "t": 5292.333632468, "extra": {"gen": 6, "chars": 942}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2006, "t": 5292.392931134, "extra": {"gen": 6, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2006, "t": 5292.593494013, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2006, "t": 5292.643441987, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 205, "predicted_n": 6, "decode_tps": 24.0}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2007, "t": 5297.124737227, "extra": {"gen": 7, "chars": 956}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2007, "t": 5297.174971367, "extra": {"gen": 7, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2007, "t": 5297.408262566, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2007, "t": 5297.813865173, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 210, "predicted_n": 14, "decode_tps": 21.9}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2008, "t": 5302.952499546, "extra": {"gen": 8, "chars": 974}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2008, "t": 5303.012232808, "extra": {"gen": 8, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2008, "t": 5303.253332708, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2008, "t": 5305.264649894, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 1, "cache_n": 217, "predicted_n": 51, "decode_tps": 22.6}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2009, "t": 5306.398916876, "extra": {"gen": 9, "chars": 1082}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2009, "t": 5306.449202383, "extra": {"gen": 9, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2009, "t": 5306.550295725, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2009, "t": 5306.550335099, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 241, "predicted_n": 3, "decode_tps": 29.7}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2010, "t": 5307.662437186, "extra": {"gen": 10, "chars": 1045}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2010, "t": 5307.721657705, "extra": {"gen": 10, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2010, "t": 5307.821964986, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2010, "t": 5307.878695082, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 231, "predicted_n": 4, "decode_tps": 25.5}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2011, "t": 5309.793925816, "extra": {"gen": 11, "chars": 972}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2011, "t": 5309.858990993, "extra": {"gen": 11, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2011, "t": 5310.10591823, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2011, "t": 5310.521596874, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 214, "predicted_n": 15, "decode_tps": 22.6}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2012, "t": 5314.490694727, "extra": {"gen": 12, "chars": 853}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2012, "t": 5314.548824752, "extra": {"gen": 12, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2012, "t": 5314.792433428, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2012, "t": 5315.037551052, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 11, "decode_tps": 22.5}}
+{"config": "sys_cache", "rep": 2, "stage": "brain", "event": "stopped", "turn": -1, "t": 5315.051637589, "extra": {}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5315.345215826, "extra": {"ms": 292.8, "base_tokens": 84}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "ready", "turn": -1, "t": 5315.3456947, "extra": {"tier": "T0"}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5316.209820525, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 84, "prompt_ms": 56.462}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5316.600009252, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 89, "prompt_ms": 45.634}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5317.012423084, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 90, "prompt_ms": 45.856}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5317.422690483, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 91, "prompt_ms": 47.31}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5317.832497898, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 92, "prompt_ms": 48.212}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 1, "t": 5318.253222679, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 93, "prompt_ms": 69.186}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 1, "t": 5318.484144623, "extra": {"gen": 1, "chars": 476}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 1, "t": 5318.533263558, "extra": {"gen": 1, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 1, "t": 5318.625471883, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 1, "t": 5318.671004134, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 102, "predicted_n": 4, "decode_tps": 29.1}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 2, "t": 5319.562851599, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 106, "prompt_ms": 68.688}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 2, "t": 5319.941459489, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 113, "prompt_ms": 47.625}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 2, "t": 5320.348166981, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 114, "prompt_ms": 45.589}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 2, "t": 5320.750778349, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 115, "prompt_ms": 48.143}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 2, "t": 5321.179319146, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 116, "prompt_ms": 76.139}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 2, "t": 5321.4010484, "extra": {"gen": 2, "chars": 590}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 2, "t": 5321.442390623, "extra": {"gen": 2, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 2, "t": 5321.650745549, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 2, "t": 5322.328394554, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 125, "predicted_n": 23, "decode_tps": 26.0}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 3, "t": 5323.241229436, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 148, "prompt_ms": 69.17}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 3, "t": 5323.619333981, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 155, "prompt_ms": 46.713}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 3, "t": 5324.007505118, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 156, "prompt_ms": 34.782}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 3, "t": 5324.486863183, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 158, "prompt_ms": 112.134}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 3, "t": 5324.67421284, "extra": {"gen": 3, "chars": 761}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 3, "t": 5324.720395564, "extra": {"gen": 3, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 3, "t": 5324.89421938, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 3, "t": 5324.941455331, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 168, "predicted_n": 6, "decode_tps": 27.1}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5325.854677629, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 174, "prompt_ms": 76.654}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5326.216816462, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 181, "prompt_ms": 40.191}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5326.627571465, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 182, "prompt_ms": 44.274}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5327.02252077, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 183, "prompt_ms": 39.669}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5327.439733256, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 184, "prompt_ms": 48.374}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5327.83199222, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 185, "prompt_ms": 40.847}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 4, "t": 5328.289532376, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 186, "prompt_ms": 95.354}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 4, "t": 5328.492834498, "extra": {"gen": 4, "chars": 896}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 4, "t": 5328.542572074, "extra": {"gen": 4, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 4, "t": 5328.753820661, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 4, "t": 5328.96834165, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 195, "predicted_n": 11, "decode_tps": 25.9}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5329.865726077, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 188, "prompt_ms": 48.854}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5330.263881119, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 47.434}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5330.670922103, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 51.665}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5331.071166899, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 47.945}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5331.473804851, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 49.461}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5331.873603599, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 48.824}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5332.279811452, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 49.226}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5332.67470407, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 48.913}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5333.078557285, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 196, "prompt_ms": 47.494}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5333.487967523, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 47.599}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 5, "t": 5333.930878197, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 198, "prompt_ms": 89.975}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 5, "t": 5334.140379553, "extra": {"gen": 5, "chars": 952}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 5, "t": 5334.194069133, "extra": {"gen": 5, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 5, "t": 5334.413082365, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 5, "t": 5334.994122859, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 207, "predicted_n": 18, "decode_tps": 22.5}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5335.897332161, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 49.637}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5336.288461427, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 44.073}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5336.695879277, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 51.002}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5337.090646015, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 44.835}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5337.495385894, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 48.143}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5337.897876352, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 47.671}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5338.302919952, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 49.741}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 6, "t": 5338.771845127, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 196, "prompt_ms": 118.092}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 6, "t": 5338.950752932, "extra": {"gen": 6, "chars": 942}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 6, "t": 5339.006385568, "extra": {"gen": 6, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 6, "t": 5339.208505946, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 6, "t": 5339.258075639, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 205, "predicted_n": 6, "decode_tps": 23.9}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5340.15609869, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 49.585}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5340.552226712, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 48.974}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5340.953500402, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 48.737}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5341.356553641, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 40.644}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5341.768892987, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 195, "prompt_ms": 51.307}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5342.162685042, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 47.241}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5342.564652416, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 46.473}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5342.968483902, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 48.742}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 7, "t": 5343.440121545, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 200, "prompt_ms": 104.7}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 7, "t": 5343.632588975, "extra": {"gen": 7, "chars": 956}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 7, "t": 5343.694040691, "extra": {"gen": 7, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 7, "t": 5343.949940115, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 7, "t": 5344.344478775, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 210, "predicted_n": 14, "decode_tps": 21.5}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5345.252204131, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 49.67}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5345.653857898, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 50.101}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5346.058868762, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 200, "prompt_ms": 52.701}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5346.453965824, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 201, "prompt_ms": 48.33}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5346.861311989, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 54.161}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5347.256494147, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 48.679}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5347.656480856, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 204, "prompt_ms": 49.97}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5348.063448707, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 205, "prompt_ms": 53.459}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5348.459807828, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 206, "prompt_ms": 51.142}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5348.860423432, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 207, "prompt_ms": 51.402}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 8, "t": 5349.307492212, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 208, "prompt_ms": 93.531}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 8, "t": 5349.512027768, "extra": {"gen": 8, "chars": 974}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 8, "t": 5349.562811061, "extra": {"gen": 8, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 8, "t": 5349.793301031, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 8, "t": 5351.946068206, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 1, "cache_n": 217, "predicted_n": 51, "decode_tps": 21.4}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 9, "t": 5352.841166348, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 241, "prompt_ms": 45.929}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 9, "t": 5353.089273078, "extra": {"gen": 9, "chars": 1082}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 9, "t": 5353.146709907, "extra": {"gen": 9, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 9, "t": 5353.248209358, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 9, "t": 5353.248252138, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 241, "predicted_n": 3, "decode_tps": 29.2}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 10, "t": 5354.13893096, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 231, "prompt_ms": 52.62}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 10, "t": 5354.379941423, "extra": {"gen": 10, "chars": 1045}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 10, "t": 5354.440334684, "extra": {"gen": 10, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 10, "t": 5354.549747291, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 10, "t": 5354.597493551, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 231, "predicted_n": 4, "decode_tps": 25.4}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 11, "t": 5355.492105047, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 50.572}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 11, "t": 5355.880282038, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 42.119}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 11, "t": 5356.34028091, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 204, "prompt_ms": 101.044}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 11, "t": 5356.538240661, "extra": {"gen": 11, "chars": 972}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 11, "t": 5356.601338095, "extra": {"gen": 11, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 11, "t": 5356.864309009, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 11, "t": 5357.283889703, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 214, "predicted_n": 15, "decode_tps": 22.0}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5358.173615692, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 159, "prompt_ms": 49.363}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5358.564890558, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 160, "prompt_ms": 44.578}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5358.981273757, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 161, "prompt_ms": 60.609}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5359.375238598, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 162, "prompt_ms": 53.377}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5359.779397476, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 163, "prompt_ms": 57.916}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5360.174116855, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 164, "prompt_ms": 52.816}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5360.567237724, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 165, "prompt_ms": 44.825}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prefill", "turn": 12, "t": 5361.035672937, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 166, "prompt_ms": 106.595}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "prompt_ready", "turn": 12, "t": 5361.224785949, "extra": {"gen": 12, "chars": 853}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_token", "turn": 12, "t": 5361.275553631, "extra": {"gen": 12, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "first_chunk", "turn": 12, "t": 5361.489925775, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "gen_done", "turn": 12, "t": 5361.734679784, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 11, "decode_tps": 24.0}}
+{"config": "early_tentative", "rep": 0, "stage": "brain", "event": "stopped", "turn": -1, "t": 5361.750685768, "extra": {}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5362.023921995, "extra": {"ms": 272.2, "base_tokens": 84}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "ready", "turn": -1, "t": 5362.024307356, "extra": {"tier": "T0"}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5362.886912473, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 84, "prompt_ms": 59.088}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5363.272724107, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 89, "prompt_ms": 42.646}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5363.686872149, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 90, "prompt_ms": 42.262}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5364.110115231, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 91, "prompt_ms": 55.897}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5364.505769746, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 92, "prompt_ms": 51.702}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1001, "t": 5364.947109907, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 93, "prompt_ms": 90.371}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1001, "t": 5365.156095209, "extra": {"gen": 1, "chars": 476}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1001, "t": 5365.213679785, "extra": {"gen": 1, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1001, "t": 5365.312107696, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1001, "t": 5365.356354576, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 102, "predicted_n": 4, "decode_tps": 27.6}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1002, "t": 5366.23933964, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 106, "prompt_ms": 76.368}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1002, "t": 5366.607554866, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 113, "prompt_ms": 44.079}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1002, "t": 5367.015774061, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 114, "prompt_ms": 50.792}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1002, "t": 5367.420827259, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 115, "prompt_ms": 47.9}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1002, "t": 5367.860907955, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 116, "prompt_ms": 87.996}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1002, "t": 5368.07031556, "extra": {"gen": 2, "chars": 590}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1002, "t": 5368.12111068, "extra": {"gen": 2, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1002, "t": 5368.349807597, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1002, "t": 5369.096266255, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 125, "predicted_n": 23, "decode_tps": 23.6}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1003, "t": 5370.012381266, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 148, "prompt_ms": 65.158}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1003, "t": 5370.400136736, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 155, "prompt_ms": 48.916}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1003, "t": 5370.789535016, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 156, "prompt_ms": 37.891}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1003, "t": 5371.253648419, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 158, "prompt_ms": 96.774}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1003, "t": 5371.456436953, "extra": {"gen": 3, "chars": 761}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1003, "t": 5371.50038331, "extra": {"gen": 3, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1003, "t": 5371.667591091, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1003, "t": 5371.719881116, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 168, "predicted_n": 6, "decode_tps": 27.4}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5372.652773824, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 174, "prompt_ms": 75.605}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5373.083537422, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 181, "prompt_ms": 60.272}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5373.480055371, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 182, "prompt_ms": 53.244}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5373.876906066, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 183, "prompt_ms": 49.755}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5374.272632033, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 184, "prompt_ms": 44.213}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5374.746082331, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 185, "prompt_ms": 83.299}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1004, "t": 5375.149761329, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 186, "prompt_ms": 87.532}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1004, "t": 5375.361411262, "extra": {"gen": 4, "chars": 896}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1004, "t": 5375.410403817, "extra": {"gen": 4, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1004, "t": 5375.669681562, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1004, "t": 5375.983826191, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 195, "predicted_n": 11, "decode_tps": 19.2}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5376.986990564, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 188, "prompt_ms": 74.017}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5377.358317824, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 50.778}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5377.763785846, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 55.637}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5378.17038504, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 61.528}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5378.568486629, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 58.302}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5378.980417306, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 70.126}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5379.418533066, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 55.663}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5379.85382357, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 73.999}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5380.231079613, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 196, "prompt_ms": 50.543}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5380.632031748, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 51.674}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1005, "t": 5381.104213377, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 198, "prompt_ms": 94.446}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1005, "t": 5381.308986089, "extra": {"gen": 5, "chars": 952}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1005, "t": 5381.357814187, "extra": {"gen": 5, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1005, "t": 5381.592785948, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1005, "t": 5382.166041862, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 207, "predicted_n": 18, "decode_tps": 22.3}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5383.031858066, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 48.527}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5383.423177204, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 46.175}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5383.831228289, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 53.467}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5384.226183203, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 47.041}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5384.622538384, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 43.23}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5385.033001515, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 48.79}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5385.439674287, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 54.594}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1006, "t": 5385.890797162, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 196, "prompt_ms": 102.925}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1006, "t": 5386.085217812, "extra": {"gen": 6, "chars": 942}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1006, "t": 5386.133954125, "extra": {"gen": 6, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1006, "t": 5386.336855122, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1006, "t": 5386.387585903, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 205, "predicted_n": 6, "decode_tps": 23.7}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5387.24843584, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 47.01}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5387.640361156, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 44.042}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5388.048194018, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 50.65}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5388.452471436, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 52.559}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5388.845981312, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 195, "prompt_ms": 46.225}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5389.250092327, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 42.304}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5389.66027557, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 52.777}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5390.053789385, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 44.927}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1007, "t": 5390.521372527, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 200, "prompt_ms": 112.249}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1007, "t": 5390.707329592, "extra": {"gen": 7, "chars": 956}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1007, "t": 5390.762585032, "extra": {"gen": 7, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1007, "t": 5391.008607551, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1007, "t": 5391.376214957, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 210, "predicted_n": 14, "decode_tps": 22.8}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5392.279874935, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 45.298}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5392.6848351, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 55.518}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5393.076526401, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 200, "prompt_ms": 46.572}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5393.477092278, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 201, "prompt_ms": 45.621}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5393.879975248, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 46.717}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5394.283872407, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 44.588}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5394.689097714, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 204, "prompt_ms": 48.733}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5395.089789374, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 205, "prompt_ms": 48.386}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5395.489721544, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 206, "prompt_ms": 45.811}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5395.935790275, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 207, "prompt_ms": 58.102}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1008, "t": 5396.375766823, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 208, "prompt_ms": 98.526}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1008, "t": 5396.612240239, "extra": {"gen": 8, "chars": 974}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1008, "t": 5396.663419094, "extra": {"gen": 8, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1008, "t": 5396.900008403, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1008, "t": 5399.004512833, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 1, "cache_n": 217, "predicted_n": 51, "decode_tps": 21.8}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1009, "t": 5399.880367161, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 241, "prompt_ms": 51.548}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1009, "t": 5400.120511779, "extra": {"gen": 9, "chars": 1082}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1009, "t": 5400.176606926, "extra": {"gen": 9, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1009, "t": 5400.270947745, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1009, "t": 5400.270999592, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 241, "predicted_n": 3, "decode_tps": 32.0}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1010, "t": 5401.13739058, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 231, "prompt_ms": 52.881}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1010, "t": 5401.377359971, "extra": {"gen": 10, "chars": 1045}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1010, "t": 5401.428747516, "extra": {"gen": 10, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1010, "t": 5401.536852803, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1010, "t": 5401.580326242, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 231, "predicted_n": 4, "decode_tps": 26.4}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1011, "t": 5402.475015512, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 43.386}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1011, "t": 5402.875955524, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 50.468}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1011, "t": 5403.321629853, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 204, "prompt_ms": 94.148}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1011, "t": 5403.526418398, "extra": {"gen": 11, "chars": 972}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1011, "t": 5403.57748902, "extra": {"gen": 11, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1011, "t": 5403.811742318, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1011, "t": 5404.27085724, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 214, "predicted_n": 15, "decode_tps": 21.6}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5405.144433566, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 159, "prompt_ms": 40.483}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5405.549931636, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 160, "prompt_ms": 50.931}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5405.949326256, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 161, "prompt_ms": 49.418}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5406.341902468, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 162, "prompt_ms": 41.692}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5406.750788322, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 163, "prompt_ms": 46.49}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5407.15633473, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 164, "prompt_ms": 50.798}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5407.551873595, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 165, "prompt_ms": 44.583}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prefill", "turn": 1012, "t": 5408.009577376, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 166, "prompt_ms": 102.984}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "prompt_ready", "turn": 1012, "t": 5408.206582395, "extra": {"gen": 12, "chars": 853}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_token", "turn": 1012, "t": 5408.251609811, "extra": {"gen": 12, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "first_chunk", "turn": 1012, "t": 5408.459168569, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "gen_done", "turn": 1012, "t": 5408.682756118, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 11, "decode_tps": 25.5}}
+{"config": "early_tentative", "rep": 1, "stage": "brain", "event": "stopped", "turn": -1, "t": 5408.684783675, "extra": {}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "warm_up", "turn": -1, "t": 5408.923737734, "extra": {"ms": 237.8, "base_tokens": 84}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "ready", "turn": -1, "t": 5408.924043258, "extra": {"tier": "T0"}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5409.791131941, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 84, "prompt_ms": 60.19}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5410.180227631, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 89, "prompt_ms": 46.934}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5410.582478475, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 90, "prompt_ms": 46.452}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5410.982992142, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 91, "prompt_ms": 46.295}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5411.378891889, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 92, "prompt_ms": 41.142}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2001, "t": 5411.820710385, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 93, "prompt_ms": 83.435}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2001, "t": 5412.035728861, "extra": {"gen": 1, "chars": 476}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2001, "t": 5412.077595133, "extra": {"gen": 1, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2001, "t": 5412.174632124, "extra": {"gen": 1, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2001, "t": 5412.223188665, "extra": {"gen": 1, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 102, "predicted_n": 4, "decode_tps": 27.5}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2002, "t": 5413.134504435, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 106, "prompt_ms": 73.318}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2002, "t": 5413.510400706, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 113, "prompt_ms": 48.761}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2002, "t": 5413.90568699, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 114, "prompt_ms": 43.023}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2002, "t": 5414.321387003, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 115, "prompt_ms": 49.653}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2002, "t": 5414.759411605, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 116, "prompt_ms": 86.798}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2002, "t": 5414.979955587, "extra": {"gen": 2, "chars": 590}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2002, "t": 5415.029893888, "extra": {"gen": 2, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2002, "t": 5415.26713911, "extra": {"gen": 2, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2002, "t": 5415.991367623, "extra": {"gen": 2, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 125, "predicted_n": 23, "decode_tps": 23.9}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2003, "t": 5416.890075877, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 148, "prompt_ms": 76.991}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2003, "t": 5417.254648312, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 155, "prompt_ms": 44.593}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2003, "t": 5417.658131991, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 156, "prompt_ms": 38.475}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2003, "t": 5418.127117068, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 158, "prompt_ms": 106.245}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2003, "t": 5418.319858675, "extra": {"gen": 3, "chars": 761}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2003, "t": 5418.375316089, "extra": {"gen": 3, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2003, "t": 5418.547805609, "extra": {"gen": 3, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2003, "t": 5418.588526785, "extra": {"gen": 3, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 168, "predicted_n": 6, "decode_tps": 28.2}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5419.507770008, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 174, "prompt_ms": 73.299}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5419.887938104, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 181, "prompt_ms": 52.348}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5420.2865528, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 182, "prompt_ms": 50.377}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5420.688285232, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 183, "prompt_ms": 50.899}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5421.0930715, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 184, "prompt_ms": 54.343}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5421.491222642, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 185, "prompt_ms": 51.68}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2004, "t": 5421.931222333, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 186, "prompt_ms": 90.423}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2004, "t": 5422.140480665, "extra": {"gen": 4, "chars": 896}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2004, "t": 5422.197146128, "extra": {"gen": 4, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2004, "t": 5422.459655457, "extra": {"gen": 4, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2004, "t": 5422.679555287, "extra": {"gen": 4, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 195, "predicted_n": 11, "decode_tps": 22.8}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5423.530356321, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 188, "prompt_ms": 43.848}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5423.934521031, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 49.054}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5424.334920474, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 44.942}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5424.733782936, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 43.719}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5425.145343394, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 55.942}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5425.533450138, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 43.46}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5425.944019187, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 51.866}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5426.344472674, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 51.856}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5426.739054008, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 196, "prompt_ms": 44.272}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5427.155716182, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 60.471}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2005, "t": 5427.593455026, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 198, "prompt_ms": 97.162}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2005, "t": 5427.793839065, "extra": {"gen": 5, "chars": 952}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2005, "t": 5427.854765057, "extra": {"gen": 5, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2005, "t": 5428.100833065, "extra": {"gen": 5, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2005, "t": 5428.647489347, "extra": {"gen": 5, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 207, "predicted_n": 18, "decode_tps": 22.6}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5429.525592808, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 189, "prompt_ms": 50.522}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5429.92335157, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 190, "prompt_ms": 52.582}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5430.316882357, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 44.751}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5430.725979147, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 52.693}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5431.124307009, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 50.713}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5431.518489507, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 45.044}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5431.927138025, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 195, "prompt_ms": 51.664}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2006, "t": 5432.372966542, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 196, "prompt_ms": 96.45}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2006, "t": 5432.575460291, "extra": {"gen": 6, "chars": 942}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2006, "t": 5432.63071969, "extra": {"gen": 6, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2006, "t": 5432.828252974, "extra": {"gen": 6, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2006, "t": 5432.877030577, "extra": {"gen": 6, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 205, "predicted_n": 6, "decode_tps": 24.4}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5433.742878825, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 191, "prompt_ms": 46.311}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5434.144404953, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 192, "prompt_ms": 52.267}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5434.547151541, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 193, "prompt_ms": 52.989}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5434.950340527, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 194, "prompt_ms": 52.537}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5435.342493584, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 195, "prompt_ms": 38.005}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5435.750413371, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 197, "prompt_ms": 52.119}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5436.161393138, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 59.683}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5436.55866538, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 55.145}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2007, "t": 5437.026396881, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 200, "prompt_ms": 123.996}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2007, "t": 5437.200933059, "extra": {"gen": 7, "chars": 956}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2007, "t": 5437.25070732, "extra": {"gen": 7, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2007, "t": 5437.544569287, "extra": {"gen": 7, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2007, "t": 5437.960345485, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 210, "predicted_n": 14, "decode_tps": 19.7}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5438.835808091, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 198, "prompt_ms": 45.965}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5439.232539288, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 48.69}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5439.628408046, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 200, "prompt_ms": 44.31}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5440.033661793, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 201, "prompt_ms": 48.897}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5440.440046818, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 44.593}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5440.838961037, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 46.572}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5441.242950733, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 204, "prompt_ms": 50.09}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5441.637743599, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 205, "prompt_ms": 44.685}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5442.045483779, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 206, "prompt_ms": 51.671}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5442.464735763, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 207, "prompt_ms": 70.09}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2008, "t": 5442.901200338, "extra": {"kind": "tentative", "prompt_n": 10, "cache_n": 208, "prompt_ms": 96.906}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2008, "t": 5443.103593679, "extra": {"gen": 8, "chars": 974}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2008, "t": 5443.15194224, "extra": {"gen": 8, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2008, "t": 5443.46292133, "extra": {"gen": 8, "words": 4, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2008, "t": 5445.62866121, "extra": {"gen": 8, "status": "ok", "chunks": 4, "prompt_n": 1, "cache_n": 217, "predicted_n": 51, "decode_tps": 20.6}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2009, "t": 5446.494271093, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 241, "prompt_ms": 49.719}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2009, "t": 5446.744963443, "extra": {"gen": 9, "chars": 1082}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2009, "t": 5446.789851161, "extra": {"gen": 9, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2009, "t": 5446.875747943, "extra": {"gen": 9, "words": 1, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2009, "t": 5446.875790019, "extra": {"gen": 9, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 241, "predicted_n": 3, "decode_tps": 35.1}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2010, "t": 5447.767146331, "extra": {"kind": "tentative", "prompt_n": 1, "cache_n": 231, "prompt_ms": 55.652}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2010, "t": 5448.005346463, "extra": {"gen": 10, "chars": 1045}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2010, "t": 5448.060237927, "extra": {"gen": 10, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2010, "t": 5448.163197252, "extra": {"gen": 10, "words": 2, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2010, "t": 5448.214003848, "extra": {"gen": 10, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 231, "predicted_n": 4, "decode_tps": 26.1}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2011, "t": 5449.129491137, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 50.608}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2011, "t": 5449.522408817, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 48.768}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2011, "t": 5450.013553703, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 204, "prompt_ms": 118.023}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2011, "t": 5450.193832524, "extra": {"gen": 11, "chars": 972}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2011, "t": 5450.254424392, "extra": {"gen": 11, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2011, "t": 5450.498523211, "extra": {"gen": 11, "words": 3, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2011, "t": 5450.930860925, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 214, "predicted_n": 15, "decode_tps": 22.2}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5451.84547772, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 159, "prompt_ms": 46.975}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5452.243722601, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 160, "prompt_ms": 50.391}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5452.642829195, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 161, "prompt_ms": 49.154}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5453.037553997, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 162, "prompt_ms": 43.39}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5453.444374777, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 163, "prompt_ms": 49.532}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5453.843925294, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 164, "prompt_ms": 43.366}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5454.241240088, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 165, "prompt_ms": 40.329}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prefill", "turn": 2012, "t": 5454.690740593, "extra": {"kind": "tentative", "prompt_n": 11, "cache_n": 166, "prompt_ms": 89.403}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "prompt_ready", "turn": 2012, "t": 5454.90001113, "extra": {"gen": 12, "chars": 853}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_token", "turn": 2012, "t": 5454.951682808, "extra": {"gen": 12, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "first_chunk", "turn": 2012, "t": 5455.188613819, "extra": {"gen": 12, "words": 5, "held": false}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "gen_done", "turn": 2012, "t": 5455.393573902, "extra": {"gen": 12, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 11, "decode_tps": 24.9}}
+{"config": "early_tentative", "rep": 2, "stage": "brain", "event": "stopped", "turn": -1, "t": 5455.401911876, "extra": {}}
