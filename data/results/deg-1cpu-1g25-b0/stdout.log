@@ -1,0 +1,4 @@
+B0 cap: CPUs 4 (quota 100%), memory 1280M, swap 0  -> unit baseline-031943
+Running as unit: baseline-031943.scope; invocation ID: 965d5b46c7a644f490a00d632c6558c5
+run log: data/results/deg-1cpu-1g25-b0/events.jsonl
+data/results/deg-1cpu-1g25-b0 exit 0

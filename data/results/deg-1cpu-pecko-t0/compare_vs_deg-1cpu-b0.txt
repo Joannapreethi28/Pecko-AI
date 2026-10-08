@@ -1,0 +1,58 @@
+Pecko: deg-1cpu-pecko-t0   B0: deg-1cpu-b0   (ms after end of speech t_eos)
+turn | P C/endp Pecko 1st | B0 endpt  B0 1st | B0-Pecko | transcript (Pecko / B0) -> answer
+   1 |      406       967 |      803    1977 |     1009 | 'WHAT IS THE CAPITAL OF JAPAN' / 'WHAT IS THE CAPITAL OF JAPAN'
+       Pecko: 'The capital of Japan is Tokyo. '   B0: 'The capital of Japan is Tokyo.'
+   2 |      358      1191 |      803    3176 |     1985 | 'HOW MANY DAYS ARE IN A LEAP YEAR' / 'HOW MANY DAYS ARE IN A LEAP YEAR'
+       Pecko: 'There are 366 days in a leap year. '   B0: 'There are 365 days in a non-leap year and 366 days in a leap year.'
+   3 |      298       716 |      802    2499 |     1783 | 'WHO PAINTED THE MONA LISA' / 'WHO PAINTED THE MONA LISA'
+       Pecko: 'Leonardo da Vinci. '   B0: 'Vincent van Gogh.'
+   4 |      294      1327 |      803    3880 |     2553 | 'WHY IS THE BOILING POINT OF WATER' / 'WHY IS THE BOILING POINT OF WATER'
+       Pecko: 'Water boils at 212 degrees Fahrenheit. '   B0: 'The boiling point of water is 212 degrees Fahrenheit, which is the temperature at which water turns into steam.'
+   5 |      291      3598 |      803    3546 |      -52 | 'WHY IS THE SKY BLUE' / 'WHY IS THE SKY BLUE'
+       Pecko: "The sky appears blue because of the way light is scattered by the Earth's atmosphere. "   B0: 'The sky is blue because it contains mostly nitrogen and oxygen molecules, which are gases that allow light to pass through the atmosphere.'
+   6 |      308      1422 |      803    3340 |     1918 | 'HOW FAR IS THE MOON FROM THE EARTH' / 'PACKO HOW FAR IS THE MOON FROM THE EARTH'
+       Pecko: 'The distance from the Earth to the Moon is approximately 384,400 kilometers. '   B0: 'The Moon is approximately 384,400 kilometers away from Earth.'
+   7 |      316      1410 |      802    3455 |     2045 | 'WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTEM' / 'WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTEM'
+       Pecko: 'The largest planet in our solar system is Jupiter. '   B0: 'The largest planet in our solar system is Jupiter.'
+   8 |      293       953 |      803    2489 |     1536 | 'WHO INVENTED THE TELEPHONE' / 'WHO INVENTED THE TELEPHONE'
+       Pecko: 'The invention of the telephone was by Thomas Edison. '   B0: 'The inventor of the telephone is John Logie Hendon.'
+   9 |      301      1053 |      803    2643 |     1590 | 'HOW MANY CONTINENTS ARE THERE' / 'HOW MANY CONTINENTS ARE THERE'
+       Pecko: 'There are 7 continents in our solar system. '   B0: 'There are 7 continents in our solar system.'
+  10 |      296       760 |      803    2718 |     1958 | 'WHAT TO BEES MAKE' / 'WHAT TO BEES MAKE'
+       Pecko: 'Bees make honey. '   B0: 'Bees make honey.'
+  11 |      305       940 |      803    2383 |     1444 | 'WHAT IS THE TALLEST MOUNTAIN IN THE WORLD' / 'WHAT IS THE TALLEST MOUNTAIN IN THE WORLD'
+       Pecko: 'The tallest mountain in the world is Mount Everest. '   B0: 'The tallest mountain in the world is Mount McKinley.'
+  12 |      302      1092 |      803    2576 |     1484 | 'HOW MANY HOURS ARE IN A WEEK' / 'HOW MANY HOURS ARE IN A WEEK'
+       Pecko: 'A week has 7 days, so there are 7 hours in a week. '   B0: 'There are 7 hours in a week.'
+  13 |      295       944 |      803    2624 |     1680 | 'WHAT LANGUAGE IS SPOKEN IN BRAZIL' / 'WHAT LANGUAGE IS SPOKEN IN BRAZIL'
+       Pecko: 'Portuguese is spoken in Brazil. '   B0: 'Portuguese.'
+  14 |      338      1229 |      803    2491 |     1262 | 'WHAT IS PHOTO SYNTHESIS' / 'WHAT IS PHOTO SYNTHESIS'
+       Pecko: 'Photo synthesis is the process of converting light energy into chemical energy. '   B0: 'Photography synthesis is the process of creating images from light.'
+  15 |      293      1027 |      803    2470 |     1443 | 'WHO WAS THE FIRST PERSON TO WALK ON THE MOON' / 'PACKO WHO WAS THE FIRST PERSON TO WALK ON THE MOON'
+       Pecko: 'Neil Armstrong was the first person to walk on the moon. '   B0: 'Palo Alto.'
+  16 |      343      1221 |      803    2817 |     1596 | 'WHAT IS THE SQUARE ROOT OF EIGHTY ONE' / 'WHAT IS THE SQUARE ROOT OF EIGHTY ONE'
+       Pecko: 'The square root of eighty-one is 9.'   B0: '√81 = 9.'
+  17 |      294       855 |      803    2319 |     1464 | 'WHICH OCEAN IS THE LARGEST' / 'WHICH OCEAN IS THE LARGEST'
+       Pecko: 'The largest ocean is the Atlantic Ocean. '   B0: 'The largest ocean is the Atlantic Ocean.'
+  18 |      295       990 |      803    2721 |     1731 | 'HOW MANY PLAYERS ARE ON A CRICKETINE' / 'HOW MANY PLAYERS ARE ON A CRICKETIN'
+       Pecko: 'There are 10 players on a cricket team. '   B0: 'There are 12 players on a cricket team.'
+  19 |      296      1029 |      803    2877 |     1848 | 'WHAT IS THE CAPITAL OF AUSTRALIA' / 'WHAT IS THE CAPITAL OF AUSTRALIA'
+       Pecko: 'The capital of Australia is Canberra. '   B0: 'The capital of Australia is Canberra.'
+  20 |      294      1492 |      803    2879 |     1387 | 'CAN YOU SUGGEST A QUICK BREAKFAST IDEA' / 'CAN YOU SUGGEST A QUICK BREAKFAST IDEA'
+       Pecko: 'A quick breakfast idea could be a bowl of cereal with a banana and a slice of toast. '   B0: 'A quick breakfast idea: a cup of coffee, a banana, and a toast.'
+  21 |      301       908 |      803    2591 |     1683 | 'WHAT CAST DO PLANTS TAKE IN' / 'WHAT CAST TWO PLANTS TAKE IN'
+       Pecko: 'Plants take in sunlight. '   B0: 'Two plants that take time to grow.'
+  22 |      299       997 |      803    2841 |     1844 | 'HOW MANY LEGS DOES AN INSECT HAVE' / 'HOW MANY LEGS DOES AN INSECT HAVE'
+       Pecko: 'An insect has 6 legs. '   B0: 'An insect has 6 legs.'
+  23 |      299       582 |      803    1961 |     1379 | 'WHAT IS THE CHEMICAL SYMBOL FOR GOLD' / 'WHAT IS THE CHEMICAL SYMBOL FOR GOLD'
+       Pecko: 'Au'   B0: 'Au'
+  24 |      295      1458 |      803    3169 |     1711 | 'TELL ME A FUN FACT ABOUT ELEPHANTS' / 'TELL ME A FUN FACT ABOUT ELEPHANTS'
+       Pecko: 'Elephants have a strong sense of smell, which helps them detect the presence of other animals in their vast and complex habitat. '   B0: 'Elephants have a special ability called "gait," where they walk in a pattern called a "walking step."'
+
+first audio  Pecko: n=24 p50 1027 ms  p90 1458 ms  max 3598 ms
+first audio  B0   : n=24 p50 2643 ms  p90 3455 ms  max 3880 ms
+paired gap (B0 - Pecko): n=24 p50 1596 ms  p90 1985 ms  min -52 ms   Pecko faster in 23/24 pairs
+failures (no first audio, kept in n): none
+Pecko: CPU-s/turn 1.21 | peak RAM 836 MiB (incl. load) | max RAM during turns 836 MiB | J/turn n/a | cap cpu.max 100000 100000 memory.max 2147483648 | oom_kill 0
+B0   : CPU-s/turn 2.05 | peak RAM 974 MiB (incl. load) | max RAM during turns 974 MiB | J/turn n/a | cap cpu.max 100000 100000 memory.max 2147483648 | oom_kill 0
+B0 exact cpu.stat per turn (speech start -> first audio): [1.246, 2.453, 1.772, 3.138, 2.801, 2.6, 2.725, 1.762, 1.9, 1.966, 1.639, 1.838, 1.896, 1.75, 1.758, 2.093, 1.585, 1.991, 2.15, 2.171, 1.856, 2.115, 1.236, 2.458]

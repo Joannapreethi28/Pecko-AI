@@ -1,0 +1,18 @@
+Running as unit: tierswitch-032634.scope; invocation ID: ce1091cfd1f94582a140f7698de20092
+using clip: data/clips/synthetic24/q01.wav
+{"stage": "ears", "event": "ready", "turn": null, "t": 0.0, "extra": {}}
+{"stage": "ears", "event": "tier_switch", "turn": null, "t": 3.0400000000000023, "extra": {"tier": 1, "switch_time_s": 0.0}}
+
+=== MEASURED (scripts/test_tier_switch.py, this machine, this run) ===
+clip: q01.wav
+T0 (moonshine-small) load time: 2.717 s
+T0 RSS before load: 104.8 MB
+T0 peak RSS during load: 499.4 MB
+T0 transcript: ''
+T0->T1 (moonshine-tiny) switch time (unload+reload via set_tier): 1.432 s
+RSS right before switch: 509.3 MB
+peak RSS during switch: 646.1 MB
+T1 transcript: ''
+T0 transcribed non-empty: False
+T1 transcribed non-empty: False
+exit 0

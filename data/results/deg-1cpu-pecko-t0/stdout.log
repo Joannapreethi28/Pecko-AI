@@ -1,0 +1,5 @@
+cap: CPUs 4 (quota 100%), memory 2G, swap 0  -> unit pecko-031248
+show it live: systemd-cgtop  |  cat /sys/fs/cgroup/.../pecko-031248.scope/{cpu.max,memory.max,memory.peak}
+Running as unit: pecko-031248.scope; invocation ID: 41aae11ce59245f4ba3ddf38e39b1f00
+run log: data/results/deg-1cpu-pecko-t0/events.jsonl  bus: data/results/deg-1cpu-pecko-t0/bus.jsonl
+exit 0

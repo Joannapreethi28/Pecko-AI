@@ -1,0 +1,869 @@
+{"stage": "spine", "event": "resources", "turn": null, "t": 14366.439724078, "extra": {"mean_cores": 0.8637705506523989, "cpu_max": "100000 100000", "memory_current": 155000832, "memory_peak": 155000832, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 153767936, "memory_file": 40960}}
+{"stage": "ears", "event": "ready", "turn": null, "t": 14366.861202609, "extra": {}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14366.94127877, "extra": {"mean_cores": 0.8905928049810455, "cpu_max": "100000 100000", "memory_current": 181141504, "memory_peak": 181141504, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 179417088, "memory_file": 49152}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14367.517745186, "extra": {"mean_cores": 0.8062152227793642, "cpu_max": "100000 100000", "memory_current": 288157696, "memory_peak": 288157696, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 285515776, "memory_file": 49152}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14368.019288486, "extra": {"mean_cores": 0.7728903965009605, "cpu_max": "100000 100000", "memory_current": 557821952, "memory_peak": 557821952, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 554733568, "memory_file": 49152}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14368.52109935, "extra": {"mean_cores": 0.9052095771291716, "cpu_max": "100000 100000", "memory_current": 563060736, "memory_peak": 563060736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 559910912, "memory_file": 49152}}
+{"stage": "brain", "event": "warm_up", "turn": -1, "t": 14368.829180688, "extra": {"ms": 779.4, "base_tokens": 84}}
+{"stage": "brain", "event": "ready", "turn": -1, "t": 14368.829514453, "extra": {"tier": "T0"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14369.099538138, "extra": {"mean_cores": 0.9996113884406329, "cpu_max": "100000 100000", "memory_current": 636461056, "memory_peak": 636461056, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 633081856, "memory_file": 49152}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14369.605974204, "extra": {"mean_cores": 0.9994252660514932, "cpu_max": "100000 100000", "memory_current": 652976128, "memory_peak": 652976128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 649609216, "memory_file": 49152}}
+{"stage": "voice", "event": "cache_ready", "turn": null, "t": 14369.888931762, "extra": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 0, "missing": 0, "build_ms": 125, "mb": 14.6}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 14369.889903936, "extra": {"pack": "vits-piper-en_US-lessac-medium", "tier": 0, "ready_s": 1.06, "cache": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 0, "missing": 0, "build_ms": 125, "mb": 14.6}, "out_latency_ms": 0.0, "sr": 22050}}
+{"stage": "spine", "event": "ready", "turn": null, "t": 14369.889993363, "extra": {"startup_s": 3.96, "tier": 0, "ears_tier": 2, "pid": 33062}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14370.107598134, "extra": {"mean_cores": 0.577350845283317, "cpu_max": "100000 100000", "memory_current": 676564992, "memory_peak": 676569088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 672878592, "memory_file": 57344}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14370.608454198, "extra": {"mean_cores": 0.017783552282202075, "cpu_max": "100000 100000", "memory_current": 676560896, "memory_peak": 676569088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 672878592, "memory_file": 57344}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14371.11004451, "extra": {"mean_cores": 0.15773630013804993, "cpu_max": "100000 100000", "memory_current": 684949504, "memory_peak": 684949504, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 681418752, "memory_file": 57344}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14371.611837292, "extra": {"mean_cores": 0.05627023945524715, "cpu_max": "100000 100000", "memory_current": 685211648, "memory_peak": 685211648, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 681738240, "memory_file": 61440}}
+{"stage": "ears", "event": "wake_detected", "turn": 1, "t": 14371.765050481, "extra": {"via": "kws"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14372.113049249, "extra": {"mean_cores": 0.06920225967392768, "cpu_max": "100000 100000", "memory_current": 685473792, "memory_peak": 685473792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 681738240, "memory_file": 61440}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14372.614017002, "extra": {"mean_cores": 0.0422981317121527, "cpu_max": "100000 100000", "memory_current": 685735936, "memory_peak": 685735936, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 682049536, "memory_file": 65536}}
+{"stage": "brain", "event": "prefill", "turn": 1, "t": 14372.842937468, "extra": {"kind": "stable", "prompt_n": 6, "cache_n": 84, "prompt_ms": 81.899}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14373.120550454, "extra": {"mean_cores": 0.25627922398371716, "cpu_max": "100000 100000", "memory_current": 685735936, "memory_peak": 685735936, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 682102784, "memory_file": 65536}}
+{"stage": "brain", "event": "prefill", "turn": 1, "t": 14373.134358244, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 90, "prompt_ms": 31.729}}
+{"stage": "brain", "event": "prefill", "turn": 1, "t": 14373.492436136, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 91, "prompt_ms": 34.067}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 1, "t": 14373.505628601, "extra": {"ms": 16.0}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14373.626627854, "extra": {"mean_cores": 0.4013259631817302, "cpu_max": "100000 100000", "memory_current": 704348160, "memory_peak": 704348160, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 700731392, "memory_file": 69632}}
+{"stage": "ears", "event": "t_eos", "turn": 1, "t": 14373.262950328999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 1, "t": 14373.664605521, "extra": {"gen": 1, "chars": 472, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 1, "t": 14373.668509321, "extra": {"p_done": 0.9854345321655273}}
+{"stage": "ears", "event": "asr_final", "turn": 1, "t": 14373.6685865, "extra": {"text": "WHAT IS THE CAPITAL OF JAPAN"}}
+{"stage": "brain", "event": "route", "turn": 1, "t": 14373.668815757, "extra": {"gen": 2, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 1, "t": 14373.66886422, "extra": {"gen": 1, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 1, "t": 14373.668875617, "extra": {"gen": 1}}
+{"stage": "voice", "event": "commit_recv", "turn": 1, "t": 14373.668919614, "extra": {"gen": 1}}
+{"stage": "ears", "event": "endpoint", "turn": 1, "t": 14373.668668999, "extra": {"delay_s": 0.40571867000107886}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 14373.782291374, "extra": {"gen": 1, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 1, "t": 14373.930627087, "extra": {"gen": 1, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 1, "t": 14373.930905681, "extra": {"gen": 1, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 14373.932021433, "extra": {"gen": 1, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 14373.96382362, "extra": {"gen": 1, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 14373.964022301, "extra": {"gen": 1, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 1, "t": 14373.965251149, "extra": {"gen": 1, "text": "The capital of Japan is Tokyo."}}
+{"stage": "brain", "event": "gen_done", "turn": 1, "t": 14374.033928091, "extra": {"gen": 1, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 107, "predicted_n": 2, "decode_tps": 28.9}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14374.128901834, "extra": {"mean_cores": 0.9999124382298472, "cpu_max": "100000 100000", "memory_current": 710901760, "memory_peak": 710901760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 707182592, "memory_file": 77824}}
+{"stage": "voice", "event": "synth_end", "turn": 1, "t": 14374.230089254, "extra": {"gen": 1, "ms": 264.8, "audio_s": 1.95, "rtf": 0.136}}
+{"stage": "voice", "event": "pcm_ready", "turn": 1, "t": 14374.23023474, "extra": {"gen": 1, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 14374.230402978, "extra": {"gen": 1, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 1, "t": 14374.230368895, "extra": {"gen": 1, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 1, "t": 14374.230592513, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14373.93201224, "t_commit": 14373.932009717, "t_pcm_ready": 14374.230228732, "t_first_audio": 14374.230368895, "first_synth_ms": 264.8, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [264.8], "audio_s": 1.95, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 1, "held_used": true, "first_dur_s": 1.9510657596371883}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14374.631927723, "extra": {"mean_cores": 0.21616978843005907, "cpu_max": "100000 100000", "memory_current": 723484672, "memory_peak": 723484672, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 719691776, "memory_file": 77824}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14375.133483372, "extra": {"mean_cores": 0.025135795051139866, "cpu_max": "100000 100000", "memory_current": 724008960, "memory_peak": 724008960, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 719691776, "memory_file": 77824}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14375.63529028, "extra": {"mean_cores": 0.04691844537127889, "cpu_max": "100000 100000", "memory_current": 724533248, "memory_peak": 724533248, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720637952, "memory_file": 77824}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14376.136413116, "extra": {"mean_cores": 0.05885782463125384, "cpu_max": "100000 100000", "memory_current": 724795392, "memory_peak": 724795392, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720637952, "memory_file": 77824}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14376.637615711, "extra": {"mean_cores": 0.044056036860703425, "cpu_max": "100000 100000", "memory_current": 724791296, "memory_peak": 724795392, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720855040, "memory_file": 77824}}
+{"stage": "brain", "event": "prefill", "turn": 2, "t": 14376.830685178, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 109, "prompt_ms": 91.08}}
+{"stage": "brain", "event": "prefill", "turn": 2, "t": 14377.14179172, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 116, "prompt_ms": 32.257}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14377.142854402, "extra": {"mean_cores": 0.3194351558484262, "cpu_max": "100000 100000", "memory_current": 725053440, "memory_peak": 725053440, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720855040, "memory_file": 77824}}
+{"stage": "brain", "event": "prefill", "turn": 2, "t": 14377.529809996, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 117, "prompt_ms": 51.438}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14377.644013234, "extra": {"mean_cores": 0.14130450363904215, "cpu_max": "100000 100000", "memory_current": 724799488, "memory_peak": 725053440, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720855040, "memory_file": 77824}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 2, "t": 14377.737377742, "extra": {"ms": 16.3}}
+{"stage": "ears", "event": "t_eos", "turn": 2, "t": 14377.494226412, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 2, "t": 14377.852276216, "extra": {"p_done": 0.9875311851501465}}
+{"stage": "ears", "event": "asr_final", "turn": 2, "t": 14377.852309402, "extra": {"text": "HOW MANY DAYS ARE IN A LEAP YEAR"}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 14377.852219126, "extra": {"gen": 3, "chars": 614, "held": true}}
+{"stage": "brain", "event": "route", "turn": 2, "t": 14377.852504785, "extra": {"gen": 4, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 2, "t": 14377.852607072, "extra": {"gen": 3, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 2, "t": 14377.852618192, "extra": {"gen": 3}}
+{"stage": "voice", "event": "commit_recv", "turn": 2, "t": 14377.852881937, "extra": {"gen": 3}}
+{"stage": "ears", "event": "endpoint", "turn": 2, "t": 14377.852327638, "extra": {"delay_s": 0.3581012260001444}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 14377.988005918, "extra": {"gen": 3, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14378.156019774, "extra": {"mean_cores": 0.853571128211568, "cpu_max": "100000 100000", "memory_current": 724938752, "memory_peak": 738955264, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 720879616, "memory_file": 86016}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 14378.172919501, "extra": {"gen": 3, "words": 2, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 2, "t": 14378.173138026, "extra": {"gen": 3, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 14378.173490165, "extra": {"gen": 3, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 14378.244465562, "extra": {"gen": 3, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 14378.401011028, "extra": {"gen": 3, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 2, "t": 14378.401251321, "extra": {"gen": 3, "text": "There are three hundred and sixty-six days in a leap year."}}
+{"stage": "brain", "event": "gen_done", "turn": 2, "t": 14378.478778153, "extra": {"gen": 3, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 136, "predicted_n": 7, "decode_tps": 29.9}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14378.659677453, "extra": {"mean_cores": 0.9957576761164605, "cpu_max": "100000 100000", "memory_current": 748503040, "memory_peak": 748503040, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 744493056, "memory_file": 90112}}
+{"stage": "voice", "event": "synth_end", "turn": 2, "t": 14378.684855616, "extra": {"gen": 3, "ms": 283.6, "audio_s": 2.9, "rtf": 0.098}}
+{"stage": "voice", "event": "pcm_ready", "turn": 2, "t": 14378.684962196, "extra": {"gen": 3, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 14378.6851581, "extra": {"gen": 3, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 2, "t": 14378.685025901, "extra": {"gen": 3, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 2, "t": 14378.685474604, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14378.173486162, "t_commit": 14378.173483803, "t_pcm_ready": 14378.68495765, "t_first_audio": 14378.685025901, "first_synth_ms": 283.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [283.6], "audio_s": 2.9, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 3, "held_used": true, "first_dur_s": 2.8978684807256236}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14379.160796853, "extra": {"mean_cores": 0.06865828782523341, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745758720, "memory_file": 94208}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14379.662058121, "extra": {"mean_cores": 0.022936142754190644, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745758720, "memory_file": 94208}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14380.16279859, "extra": {"mean_cores": 0.05459914205591174, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745758720, "memory_file": 94208}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14380.664673324, "extra": {"mean_cores": 0.04186502841563549, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745758720, "memory_file": 94208}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14381.167234895, "extra": {"mean_cores": 0.039967242143143115, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745758720, "memory_file": 94208}}
+{"stage": "brain", "event": "prefill", "turn": 3, "t": 14381.300549092, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 143, "prompt_ms": 106.554}}
+{"stage": "brain", "event": "prefill", "turn": 3, "t": 14381.582409084, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 150, "prompt_ms": 31.88}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14381.668906622, "extra": {"mean_cores": 0.3316072862915962, "cpu_max": "100000 100000", "memory_current": 749813760, "memory_peak": 749813760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745775104, "memory_file": 94208}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 3, "t": 14381.806496985, "extra": {"ms": 14.1}}
+{"stage": "ears", "event": "t_eos", "turn": 3, "t": 14381.565712931999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 3, "t": 14381.856844923, "extra": {"gen": 5, "chars": 753, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 3, "t": 14381.862130771, "extra": {"p_done": 0.9485659599304199}}
+{"stage": "ears", "event": "asr_final", "turn": 3, "t": 14381.862229122, "extra": {"text": "WHO PAINTED THE MONA LISA"}}
+{"stage": "brain", "event": "route", "turn": 3, "t": 14381.863148403, "extra": {"gen": 6, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 3, "t": 14381.864038286, "extra": {"gen": 5, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 3, "t": 14381.864070801, "extra": {"gen": 5}}
+{"stage": "voice", "event": "commit_recv", "turn": 3, "t": 14381.864131045, "extra": {"gen": 5}}
+{"stage": "ears", "event": "endpoint", "turn": 3, "t": 14381.8622528, "extra": {"delay_s": 0.2965398680007638}}
+{"stage": "brain", "event": "first_token", "turn": 3, "t": 14382.012560772, "extra": {"gen": 5, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 3, "t": 14382.15919665, "extra": {"gen": 5, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 3, "t": 14382.159639971, "extra": {"gen": 5, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 3, "t": 14382.161231055, "extra": {"gen": 5, "seq": 0, "held": true}}
+{"stage": "voice", "event": "synth_start", "turn": 3, "t": 14382.161376478, "extra": {"gen": 5, "text": "Leonardo da Vinci."}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14382.174751066, "extra": {"mean_cores": 0.7601052152703311, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745775104, "memory_file": 94208}}
+{"stage": "brain", "event": "gen_done", "turn": 3, "t": 14382.233168814, "extra": {"gen": 5, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 168, "predicted_n": 1, "decode_tps": 1000000.0}}
+{"stage": "voice", "event": "synth_end", "turn": 3, "t": 14382.281259592, "extra": {"gen": 5, "ms": 119.9, "audio_s": 1.33, "rtf": 0.09}}
+{"stage": "voice", "event": "pcm_ready", "turn": 3, "t": 14382.28144602, "extra": {"gen": 5, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 3, "t": 14382.281605571, "extra": {"gen": 5, "seq": 1, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 3, "t": 14382.28157939, "extra": {"gen": 5, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 3, "t": 14382.281720994, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14382.161225124, "t_commit": 14382.161222191, "t_pcm_ready": 14382.281438399, "t_first_audio": 14382.28157939, "first_synth_ms": 119.9, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [119.9], "audio_s": 1.33, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 5, "held_used": true, "first_dur_s": 1.3321541950113378}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14382.675767883, "extra": {"mean_cores": 0.22705625068902507, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14383.180003499, "extra": {"mean_cores": 0.02099415365378546, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14383.681535252, "extra": {"mean_cores": 0.03662579665209365, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14384.183958541, "extra": {"mean_cores": 0.05083562119678028, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14384.685472005, "extra": {"mean_cores": 0.0346112342858395, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "brain", "event": "prefill", "turn": 4, "t": 14384.989270951, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 169, "prompt_ms": 109.22}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14385.186398255, "extra": {"mean_cores": 0.2527677477469436, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745959424, "memory_file": 102400}}
+{"stage": "brain", "event": "prefill", "turn": 4, "t": 14385.290718253, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 177, "prompt_ms": 30.36}}
+{"stage": "brain", "event": "prefill", "turn": 4, "t": 14385.646508663, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 178, "prompt_ms": 38.536}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14385.689540666, "extra": {"mean_cores": 0.19981619080796348, "cpu_max": "100000 100000", "memory_current": 750075904, "memory_peak": 750075904, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 745963520, "memory_file": 114688}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 4, "t": 14385.832173812, "extra": {"ms": 14.7}}
+{"stage": "ears", "event": "t_eos", "turn": 4, "t": 14385.590648491, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 4, "t": 14385.882152257, "extra": {"gen": 7, "chars": 884, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 4, "t": 14385.883906032, "extra": {"p_done": 0.9875311851501465}}
+{"stage": "ears", "event": "asr_final", "turn": 4, "t": 14385.883983151, "extra": {"text": "WHY IS THE BOILING POINT OF WATER"}}
+{"stage": "brain", "event": "route", "turn": 4, "t": 14385.884129944, "extra": {"gen": 8, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 4, "t": 14385.88414744, "extra": {"gen": 7, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 4, "t": 14385.884182377, "extra": {"gen": 7}}
+{"stage": "voice", "event": "commit_recv", "turn": 4, "t": 14385.884207035, "extra": {"gen": 7}}
+{"stage": "ears", "event": "endpoint", "turn": 4, "t": 14385.884014394, "extra": {"delay_s": 0.2933659030004492}}
+{"stage": "brain", "event": "first_token", "turn": 4, "t": 14386.028059532, "extra": {"gen": 7, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 4, "t": 14386.181416546, "extra": {"gen": 7, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 4, "t": 14386.181601572, "extra": {"gen": 7, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 4, "t": 14386.182866901, "extra": {"gen": 7, "seq": 0, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14386.199272621, "extra": {"mean_cores": 0.7548555593322079, "cpu_max": "100000 100000", "memory_current": 750338048, "memory_peak": 750338048, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 746307584, "memory_file": 114688}}
+{"stage": "brain", "event": "first_token", "turn": 4, "t": 14386.215121973, "extra": {"gen": 7, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 4, "t": 14386.306182001, "extra": {"gen": 7, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 4, "t": 14386.306301636, "extra": {"gen": 7, "text": "Water boils at two hundred and twelve degrees Fahrenheit."}}
+{"stage": "brain", "event": "history_trim", "turn": 4, "t": 14386.377468856, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 4, "t": 14386.377508831, "extra": {"gen": 7, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 195, "predicted_n": 5, "decode_tps": 30.9}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14386.709126679, "extra": {"mean_cores": 0.9982032936958589, "cpu_max": "100000 100000", "memory_current": 759611392, "memory_peak": 759611392, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 755568640, "memory_file": 114688}}
+{"stage": "brain", "event": "prefill", "turn": 4, "t": 14386.837922961, "extra": {"kind": "base", "prompt_n": 28, "cache_n": 87, "prompt_ms": 419.744}}
+{"stage": "voice", "event": "synth_end", "turn": 4, "t": 14386.917626967, "extra": {"gen": 7, "ms": 611.3, "audio_s": 3.14, "rtf": 0.195}}
+{"stage": "voice", "event": "pcm_ready", "turn": 4, "t": 14386.917811515, "extra": {"gen": 7, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 4, "t": 14386.917898023, "extra": {"gen": 7, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 4, "t": 14386.917873043, "extra": {"gen": 7, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 4, "t": 14386.918048475, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14386.182861357, "t_commit": 14386.182859351, "t_pcm_ready": 14386.917803274, "t_first_audio": 14386.917873043, "first_synth_ms": 611.3, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [611.3], "audio_s": 3.14, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 7, "held_used": true, "first_dur_s": 3.1415873015873017}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14387.210738153, "extra": {"mean_cores": 0.4323625180861616, "cpu_max": "100000 100000", "memory_current": 776912896, "memory_peak": 776912896, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772395008, "memory_file": 118784}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14387.7147843, "extra": {"mean_cores": 0.027441931819795793, "cpu_max": "100000 100000", "memory_current": 776912896, "memory_peak": 776912896, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772395008, "memory_file": 118784}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14388.215768672, "extra": {"mean_cores": 0.05346673768099652, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772788224, "memory_file": 118784}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14388.718704761, "extra": {"mean_cores": 0.04759053987868899, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772788224, "memory_file": 118784}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14389.243297944, "extra": {"mean_cores": 0.0435689992563642, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772792320, "memory_file": 118784}}
+{"stage": "brain", "event": "prefill", "turn": 5, "t": 14389.634597182, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 115, "prompt_ms": 75.677}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14389.747346645, "extra": {"mean_cores": 0.18257759581082128, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772792320, "memory_file": 118784}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14390.248867229, "extra": {"mean_cores": 0.04519654969926281, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772792320, "memory_file": 118784}}
+{"stage": "brain", "event": "prefill", "turn": 5, "t": 14390.27504302, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 120, "prompt_ms": 34.365}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 5, "t": 14390.520513248, "extra": {"ms": 15.0}}
+{"stage": "ears", "event": "t_eos", "turn": 5, "t": 14390.278772303, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 5, "t": 14390.56976266, "extra": {"p_done": 0.9889053702354431}}
+{"stage": "ears", "event": "asr_final", "turn": 5, "t": 14390.569771794, "extra": {"text": "WHY IS THE SKY BLUE"}}
+{"stage": "brain", "event": "route", "turn": 5, "t": 14390.569900584, "extra": {"gen": 10, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 5, "t": 14390.569949992, "extra": {"gen": 9, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 5, "t": 14390.569959887, "extra": {"gen": 9}}
+{"stage": "voice", "event": "commit_recv", "turn": 5, "t": 14390.569976348, "extra": {"gen": 9}}
+{"stage": "ears", "event": "endpoint", "turn": 5, "t": 14390.569799518, "extra": {"delay_s": 0.2910272150002129}}
+{"stage": "brain", "event": "prompt_ready", "turn": 5, "t": 14390.57003592, "extra": {"gen": 9, "chars": 614, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 5, "t": 14390.721631811, "extra": {"gen": 9, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14390.755698216, "extra": {"mean_cores": 0.5541413354820037, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772796416, "memory_file": 126976}}
+{"stage": "brain", "event": "first_chunk", "turn": 5, "t": 14390.86763763, "extra": {"gen": 9, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 5, "t": 14390.867847159, "extra": {"gen": 9, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 5, "t": 14390.869308901, "extra": {"gen": 9, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 5, "t": 14390.901604504, "extra": {"gen": 9, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14393.040699602, "extra": {"mean_cores": 0.08098244540850094, "cpu_max": "100000 100000", "memory_current": 776921088, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772796416, "memory_file": 126976}}
+{"stage": "voice", "event": "stall_finish", "turn": 5, "t": 14393.040877179, "extra": {"gen": 9}}
+{"stage": "voice", "event": "turn_done", "turn": 5, "t": 14393.040926859, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14390.869302816, "t_commit": 14390.869300306, "t_pcm_ready": null, "t_first_audio": null, "first_synth_ms": null, "first_layer": null, "hits": {}, "phrases": 0, "synth_ms": [], "audio_s": 0.0, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 9, "held_used": true, "first_dur_s": null}}
+{"stage": "voice", "event": "chunk_recv", "turn": 5, "t": 14393.372849568, "extra": {"gen": 9, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 5, "t": 14393.372924928, "extra": {"gen": 9, "text": "The sky appears blue because of the way light is scattered by the Earth's atmosphere."}}
+{"stage": "brain", "event": "gen_done", "turn": 5, "t": 14393.449725159, "extra": {"gen": 9, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 137, "predicted_n": 12, "decode_tps": 4.7}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14393.541708889, "extra": {"mean_cores": 0.9995283780007478, "cpu_max": "100000 100000", "memory_current": 776658944, "memory_peak": 776921088, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 772796416, "memory_file": 131072}}
+{"stage": "voice", "event": "synth_end", "turn": 5, "t": 14393.876136912, "extra": {"gen": 9, "ms": 503.2, "audio_s": 4.43, "rtf": 0.113}}
+{"stage": "voice", "event": "pcm_ready", "turn": 5, "t": 14393.876281233, "extra": {"gen": 9, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 5, "t": 14393.87639764, "extra": {"gen": 9, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 5, "t": 14393.876352149, "extra": {"gen": 9, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14394.042551243, "extra": {"mean_cores": 0.6757156164972561, "cpu_max": "100000 100000", "memory_current": 801300480, "memory_peak": 801300480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797347840, "memory_file": 131072}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14394.543296872, "extra": {"mean_cores": 0.05256561111185742, "cpu_max": "100000 100000", "memory_current": 801300480, "memory_peak": 801300480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797347840, "memory_file": 135168}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14395.043968921, "extra": {"mean_cores": 0.036972305597986005, "cpu_max": "100000 100000", "memory_current": 801300480, "memory_peak": 801300480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797347840, "memory_file": 135168}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14395.548103103, "extra": {"mean_cores": 0.03710321709550643, "cpu_max": "100000 100000", "memory_current": 801300480, "memory_peak": 801300480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797347840, "memory_file": 135168}}
+{"stage": "brain", "event": "prefill", "turn": 6, "t": 14395.717630549, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 149, "prompt_ms": 96.629}}
+{"stage": "brain", "event": "prefill", "turn": 6, "t": 14396.018391072, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 156, "prompt_ms": 48.218}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14396.049098314, "extra": {"mean_cores": 0.3481530285517115, "cpu_max": "100000 100000", "memory_current": 801296384, "memory_peak": 801300480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797347840, "memory_file": 135168}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 6, "t": 14396.391304992, "extra": {"ms": 24.2}}
+{"stage": "brain", "event": "prefill", "turn": 6, "t": 14396.392835832, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 158, "prompt_ms": 62.713}}
+{"stage": "ears", "event": "t_eos", "turn": 6, "t": 14396.140591526, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 6, "t": 14396.441030994, "extra": {"gen": 11, "chars": 813, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 6, "t": 14396.448625527, "extra": {"p_done": 0.9875311851501465}}
+{"stage": "ears", "event": "asr_final", "turn": 6, "t": 14396.448705768, "extra": {"text": "HOW FAR IS THE MOON FROM THE EARTH"}}
+{"stage": "brain", "event": "route", "turn": 6, "t": 14396.448964348, "extra": {"gen": 12, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 6, "t": 14396.448984591, "extra": {"gen": 11, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 6, "t": 14396.448991497, "extra": {"gen": 11}}
+{"stage": "voice", "event": "commit_recv", "turn": 6, "t": 14396.449008476, "extra": {"gen": 11}}
+{"stage": "ears", "event": "endpoint", "turn": 6, "t": 14396.448724688, "extra": {"delay_s": 0.308133161999649}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14396.550666538, "extra": {"mean_cores": 0.4695472893442485, "cpu_max": "100000 100000", "memory_current": 801558528, "memory_peak": 801558528, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797519872, "memory_file": 139264}}
+{"stage": "brain", "event": "first_token", "turn": 6, "t": 14396.582952572, "extra": {"gen": 11, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 6, "t": 14396.741851324, "extra": {"gen": 11, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 6, "t": 14396.742039669, "extra": {"gen": 11, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 6, "t": 14396.743331835, "extra": {"gen": 11, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 6, "t": 14396.774579719, "extra": {"gen": 11, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14397.054081008, "extra": {"mean_cores": 0.9996931554226487, "cpu_max": "100000 100000", "memory_current": 801558528, "memory_peak": 801558528, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 797519872, "memory_file": 139264}}
+{"stage": "voice", "event": "chunk_recv", "turn": 6, "t": 14397.196685171, "extra": {"gen": 11, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 6, "t": 14397.196799787, "extra": {"gen": 11, "text": "The distance from the Earth to the Moon is approximately three lakh eighty-four thousand four hundred kilometers."}}
+{"stage": "brain", "event": "gen_done", "turn": 6, "t": 14397.267034014, "extra": {"gen": 11, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 176, "predicted_n": 15, "decode_tps": 30.5}}
+{"stage": "voice", "event": "synth_end", "turn": 6, "t": 14397.561983547, "extra": {"gen": 11, "ms": 365.2, "audio_s": 5.05, "rtf": 0.072}}
+{"stage": "voice", "event": "pcm_ready", "turn": 6, "t": 14397.562207614, "extra": {"gen": 11, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14397.562787314, "extra": {"mean_cores": 0.9973495394412865, "cpu_max": "100000 100000", "memory_current": 807325696, "memory_peak": 807325696, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803274752, "memory_file": 147456}}
+{"stage": "voice", "event": "chunk_recv", "turn": 6, "t": 14397.562446464, "extra": {"gen": 11, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 6, "t": 14397.562275859, "extra": {"gen": 11, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 6, "t": 14397.563205598, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14396.743326645, "t_commit": 14396.743324581, "t_pcm_ready": 14397.562187448, "t_first_audio": 14397.562275859, "first_synth_ms": 365.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [365.2], "audio_s": 5.05, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 11, "held_used": true, "first_dur_s": 5.0489342403628115}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14398.118355452, "extra": {"mean_cores": 0.012657313332122578, "cpu_max": "100000 100000", "memory_current": 807325696, "memory_peak": 807325696, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803278848, "memory_file": 147456}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14398.620496145, "extra": {"mean_cores": 0.03117253833074949, "cpu_max": "100000 100000", "memory_current": 807849984, "memory_peak": 807849984, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 147456}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14399.121783336, "extra": {"mean_cores": 0.04254846400012478, "cpu_max": "100000 100000", "memory_current": 808112128, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 147456}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14399.622568799, "extra": {"mean_cores": 0.057717330345077554, "cpu_max": "100000 100000", "memory_current": 808112128, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 147456}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14400.124230867, "extra": {"mean_cores": 0.01811578068127436, "cpu_max": "100000 100000", "memory_current": 808112128, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 147456}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14400.630174559, "extra": {"mean_cores": 0.036015865575802754, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 163840}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14400.798942272, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 191, "prompt_ms": 123.284}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14401.082399538, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 199, "prompt_ms": 33.1}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14401.131289568, "extra": {"mean_cores": 0.36319207513537055, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803508224, "memory_file": 163840}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14401.649438711, "extra": {"mean_cores": 0.008954950640544536, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803524608, "memory_file": 172032}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14402.160886334, "extra": {"mean_cores": 0.040133141844633624, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803524608, "memory_file": 172032}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14402.229382821, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 200, "prompt_ms": 57.493}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14402.631385682, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 202, "prompt_ms": 34.407}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14402.664818689, "extra": {"mean_cores": 0.2365277776225033, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803524608, "memory_file": 172032}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14403.166386125, "extra": {"mean_cores": 0.012233649076049099, "cpu_max": "100000 100000", "memory_current": 808099840, "memory_peak": 808112128, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803540992, "memory_file": 176128}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14403.217393913, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 203, "prompt_ms": 39.272}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 7, "t": 14403.434903781, "extra": {"ms": 22.8}}
+{"stage": "ears", "event": "t_eos", "turn": 7, "t": 14403.185559512, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 7, "t": 14403.497151146, "extra": {"gen": 13, "chars": 1015, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 7, "t": 14403.500473825, "extra": {"p_done": 0.9836374521255493}}
+{"stage": "ears", "event": "asr_final", "turn": 7, "t": 14403.500658955, "extra": {"text": "WHAT IS THE LARGEST PLANET IN OUR SOLAR SYSTEM"}}
+{"stage": "brain", "event": "route", "turn": 7, "t": 14403.500988949, "extra": {"gen": 14, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 7, "t": 14403.501072339, "extra": {"gen": 13, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 7, "t": 14403.50108844, "extra": {"gen": 13}}
+{"stage": "voice", "event": "commit_recv", "turn": 7, "t": 14403.501145188, "extra": {"gen": 13}}
+{"stage": "ears", "event": "endpoint", "turn": 7, "t": 14403.500781869, "extra": {"delay_s": 0.315222356999584}}
+{"stage": "brain", "event": "first_token", "turn": 7, "t": 14403.653165724, "extra": {"gen": 13, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14403.669563606, "extra": {"mean_cores": 0.6056133501735462, "cpu_max": "100000 100000", "memory_current": 808353792, "memory_peak": 808353792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 803860480, "memory_file": 167936}}
+{"stage": "brain", "event": "first_chunk", "turn": 7, "t": 14403.833881233, "extra": {"gen": 13, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 7, "t": 14403.834394364, "extra": {"gen": 13, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 7, "t": 14403.835539033, "extra": {"gen": 13, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 7, "t": 14404.0206926, "extra": {"gen": 13, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 7, "t": 14404.135194562, "extra": {"gen": 13, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 7, "t": 14404.135348372, "extra": {"gen": 13, "text": "The largest planet in our solar system is Jupiter."}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14404.173729029, "extra": {"mean_cores": 0.9726906638720616, "cpu_max": "100000 100000", "memory_current": 821723136, "memory_peak": 821723136, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817217536, "memory_file": 172032}}
+{"stage": "brain", "event": "history_trim", "turn": 7, "t": 14404.218502371, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 7, "t": 14404.218545152, "extra": {"gen": 13, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 219, "predicted_n": 5, "decode_tps": 25.7}}
+{"stage": "voice", "event": "synth_end", "turn": 7, "t": 14404.590063401, "extra": {"gen": 13, "ms": 454.7, "audio_s": 2.92, "rtf": 0.156}}
+{"stage": "voice", "event": "pcm_ready", "turn": 7, "t": 14404.595560025, "extra": {"gen": 13, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 7, "t": 14404.595705603, "extra": {"gen": 13, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 7, "t": 14404.595625163, "extra": {"gen": 13, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 7, "t": 14404.595900164, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14403.835534646, "t_commit": 14403.835532913, "t_pcm_ready": 14404.595550582, "t_first_audio": 14404.595625163, "first_synth_ms": 454.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [454.7], "audio_s": 2.92, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 13, "held_used": true, "first_dur_s": 2.9234920634920636}}
+{"stage": "brain", "event": "prefill", "turn": 7, "t": 14404.64178426, "extra": {"kind": "base", "prompt_n": 27, "cache_n": 90, "prompt_ms": 391.364}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14404.674458343, "extra": {"mean_cores": 0.9351339873810633, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 176128}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14405.175959104, "extra": {"mean_cores": 0.013970068531960138, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 176128}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14405.678270891, "extra": {"mean_cores": 0.01864578981106896, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 176128}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14406.179292804, "extra": {"mean_cores": 0.055670219757441665, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 176128}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14406.680138134, "extra": {"mean_cores": 0.03788994099238304, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 180224}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14407.18159685, "extra": {"mean_cores": 0.05134021840390624, "cpu_max": "100000 100000", "memory_current": 809816064, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 180224}}
+{"stage": "brain", "event": "prefill", "turn": 8, "t": 14407.607397915, "extra": {"kind": "stable", "prompt_n": 6, "cache_n": 117, "prompt_ms": 86.325}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14407.683448973, "extra": {"mean_cores": 0.20803140051622276, "cpu_max": "100000 100000", "memory_current": 809558016, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 180224}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 8, "t": 14407.701069633, "extra": {"ms": 13.7}}
+{"stage": "ears", "event": "t_eos", "turn": 8, "t": 14407.460913181, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 8, "t": 14407.751723709, "extra": {"gen": 15, "chars": 646, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 8, "t": 14407.751959851, "extra": {"p_done": 0.9719371795654297}}
+{"stage": "ears", "event": "asr_final", "turn": 8, "t": 14407.751978697, "extra": {"text": "WHO INVENTED THE TELEPHONE"}}
+{"stage": "brain", "event": "route", "turn": 8, "t": 14407.752235029, "extra": {"gen": 16, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 8, "t": 14407.753446899, "extra": {"gen": 15, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 8, "t": 14407.754083189, "extra": {"gen": 15}}
+{"stage": "voice", "event": "commit_recv", "turn": 8, "t": 14407.754183418, "extra": {"gen": 15}}
+{"stage": "ears", "event": "endpoint", "turn": 8, "t": 14407.751992282, "extra": {"delay_s": 0.29107910099992296}}
+{"stage": "brain", "event": "first_token", "turn": 8, "t": 14407.888682803, "extra": {"gen": 15, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 8, "t": 14408.051158408, "extra": {"gen": 15, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 8, "t": 14408.051464259, "extra": {"gen": 15, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 8, "t": 14408.052489683, "extra": {"gen": 15, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 8, "t": 14408.088931348, "extra": {"gen": 15, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14408.184697182, "extra": {"mean_cores": 0.9920713751642719, "cpu_max": "100000 100000", "memory_current": 809558016, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805355520, "memory_file": 180224}}
+{"stage": "voice", "event": "chunk_recv", "turn": 8, "t": 14408.190361618, "extra": {"gen": 15, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 8, "t": 14408.19044043, "extra": {"gen": 15, "text": "The invention of the telephone was by Thomas Edison."}}
+{"stage": "brain", "event": "gen_done", "turn": 8, "t": 14408.262182673, "extra": {"gen": 15, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 138, "predicted_n": 5, "decode_tps": 28.5}}
+{"stage": "voice", "event": "synth_end", "turn": 8, "t": 14408.414116717, "extra": {"gen": 15, "ms": 223.7, "audio_s": 2.75, "rtf": 0.081}}
+{"stage": "voice", "event": "pcm_ready", "turn": 8, "t": 14408.414288683, "extra": {"gen": 15, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 8, "t": 14408.41439378, "extra": {"gen": 15, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 8, "t": 14408.414368529, "extra": {"gen": 15, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 8, "t": 14408.414642703, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14408.052484339, "t_commit": 14408.052482484, "t_pcm_ready": 14408.41428177, "t_first_audio": 14408.414368529, "first_synth_ms": 223.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [223.7], "audio_s": 2.75, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 15, "held_used": true, "first_dur_s": 2.754965986394558}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14408.68553246, "extra": {"mean_cores": 0.4676347898954427, "cpu_max": "100000 100000", "memory_current": 809820160, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14409.190753526, "extra": {"mean_cores": 0.015670367949394852, "cpu_max": "100000 100000", "memory_current": 809820160, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14409.692430309, "extra": {"mean_cores": 0.03709759078085901, "cpu_max": "100000 100000", "memory_current": 810082304, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14410.193015725, "extra": {"mean_cores": 0.06002172464399185, "cpu_max": "100000 100000", "memory_current": 809828352, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14410.69392473, "extra": {"mean_cores": 0.03723031491526261, "cpu_max": "100000 100000", "memory_current": 809828352, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "brain", "event": "prefill", "turn": 9, "t": 14410.993052844, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 143, "prompt_ms": 107.748}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14411.198015061, "extra": {"mean_cores": 0.254728155061536, "cpu_max": "100000 100000", "memory_current": 809824256, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 192512}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 9, "t": 14411.490507253, "extra": {"ms": 17.1}}
+{"stage": "ears", "event": "t_eos", "turn": 9, "t": 14411.246852606, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 9, "t": 14411.544468231, "extra": {"gen": 17, "chars": 807, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 9, "t": 14411.547102297, "extra": {"p_done": 0.9749865531921387}}
+{"stage": "ears", "event": "asr_final", "turn": 9, "t": 14411.547188071, "extra": {"text": "HOW MANY CONTINENTS ARE THERE"}}
+{"stage": "brain", "event": "route", "turn": 9, "t": 14411.547495286, "extra": {"gen": 18, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 9, "t": 14411.547553591, "extra": {"gen": 17, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 9, "t": 14411.547568354, "extra": {"gen": 17}}
+{"stage": "voice", "event": "commit_recv", "turn": 9, "t": 14411.547594364, "extra": {"gen": 17}}
+{"stage": "ears", "event": "endpoint", "turn": 9, "t": 14411.547225782, "extra": {"delay_s": 0.3003731759999937}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14411.700350566, "extra": {"mean_cores": 0.4779315768255312, "cpu_max": "100000 100000", "memory_current": 809824256, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 805597184, "memory_file": 196608}}
+{"stage": "brain", "event": "first_token", "turn": 9, "t": 14411.703338117, "extra": {"gen": 17, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 9, "t": 14411.884058888, "extra": {"gen": 17, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 9, "t": 14411.884370313, "extra": {"gen": 17, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 9, "t": 14411.884589405, "extra": {"gen": 17, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 9, "t": 14411.99931469, "extra": {"gen": 17, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 9, "t": 14412.096570575, "extra": {"gen": 17, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 9, "t": 14412.09666589, "extra": {"gen": 17, "text": "There are seven continents in our solar system."}}
+{"stage": "brain", "event": "gen_done", "turn": 9, "t": 14412.162762048, "extra": {"gen": 17, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 167, "predicted_n": 5, "decode_tps": 30.8}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14412.201768809, "extra": {"mean_cores": 0.9989584682892293, "cpu_max": "100000 100000", "memory_current": 820047872, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815775744, "memory_file": 196608}}
+{"stage": "voice", "event": "synth_end", "turn": 9, "t": 14412.299848221, "extra": {"gen": 17, "ms": 203.2, "audio_s": 2.49, "rtf": 0.081}}
+{"stage": "voice", "event": "pcm_ready", "turn": 9, "t": 14412.300076538, "extra": {"gen": 17, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 9, "t": 14412.300158124, "extra": {"gen": 17, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 9, "t": 14412.300136254, "extra": {"gen": 17, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 9, "t": 14412.300303025, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14411.884586042, "t_commit": 14411.884584565, "t_pcm_ready": 14412.300068542, "t_first_audio": 14412.300136254, "first_synth_ms": 203.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [203.2], "audio_s": 2.49, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 17, "held_used": true, "first_dur_s": 2.4940589569160996}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14412.703599476, "extra": {"mean_cores": 0.21032592653375073, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815775744, "memory_file": 196608}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14413.205891917, "extra": {"mean_cores": 0.016104164306987512, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815996928, "memory_file": 196608}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14413.70648196, "extra": {"mean_cores": 0.03586168013329828, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815996928, "memory_file": 196608}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14414.208045677, "extra": {"mean_cores": 0.05239414078272019, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815996928, "memory_file": 196608}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14414.70953759, "extra": {"mean_cores": 0.04290398198298775, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815996928, "memory_file": 196608}}
+{"stage": "brain", "event": "prefill", "turn": 10, "t": 14414.918303436, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 172, "prompt_ms": 105.842}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 10, "t": 14415.099586205, "extra": {"ms": 15.9}}
+{"stage": "ears", "event": "t_eos", "turn": 10, "t": 14414.857246427999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 10, "t": 14415.150494287, "extra": {"gen": 19, "chars": 947, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 10, "t": 14415.152448041, "extra": {"p_done": 0.9777120351791382}}
+{"stage": "ears", "event": "asr_final", "turn": 10, "t": 14415.152538329, "extra": {"text": "WHAT TO BEES MAKE"}}
+{"stage": "brain", "event": "route", "turn": 10, "t": 14415.15267344, "extra": {"gen": 20, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 10, "t": 14415.152784775, "extra": {"gen": 19, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 10, "t": 14415.152895595, "extra": {"gen": 19}}
+{"stage": "voice", "event": "commit_recv", "turn": 10, "t": 14415.15314097, "extra": {"gen": 19}}
+{"stage": "ears", "event": "endpoint", "turn": 10, "t": 14415.152560202, "extra": {"delay_s": 0.29531377400053316}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14415.211030474, "extra": {"mean_cores": 0.49457730690434715, "cpu_max": "100000 100000", "memory_current": 820301824, "memory_peak": 822005760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 815996928, "memory_file": 196608}}
+{"stage": "brain", "event": "first_token", "turn": 10, "t": 14415.310576062, "extra": {"gen": 19, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 10, "t": 14415.463480373, "extra": {"gen": 19, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 10, "t": 14415.463686815, "extra": {"gen": 19, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 10, "t": 14415.464797127, "extra": {"gen": 19, "seq": 0, "held": true}}
+{"stage": "voice", "event": "synth_start", "turn": 10, "t": 14415.464887483, "extra": {"gen": 19, "text": "Bees make honey."}}
+{"stage": "brain", "event": "history_trim", "turn": 10, "t": 14415.560286736, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 10, "t": 14415.560327281, "extra": {"gen": 19, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 194, "predicted_n": 1, "decode_tps": 1000000.0}}
+{"stage": "voice", "event": "synth_end", "turn": 10, "t": 14415.616018794, "extra": {"gen": 19, "ms": 151.1, "audio_s": 1.01, "rtf": 0.15}}
+{"stage": "voice", "event": "pcm_ready", "turn": 10, "t": 14415.61690208, "extra": {"gen": 19, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 10, "t": 14415.617012551, "extra": {"gen": 19, "seq": 1, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 10, "t": 14415.616996386, "extra": {"gen": 19, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 10, "t": 14415.617312102, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14415.464791967, "t_commit": 14415.464789763, "t_pcm_ready": 14415.616890697, "t_first_audio": 14415.616996386, "first_synth_ms": 151.1, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [151.1], "audio_s": 1.01, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 19, "held_used": true, "first_dur_s": 1.0081632653061225}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14415.713706256, "extra": {"mean_cores": 0.9985521840802697, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "brain", "event": "prefill", "turn": 10, "t": 14415.768242987, "extra": {"kind": "base", "prompt_n": 19, "cache_n": 88, "prompt_ms": 200.334}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14416.216187324, "extra": {"mean_cores": 0.12212400408272214, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14416.717595389, "extra": {"mean_cores": 0.035504016075220704, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14417.220468967, "extra": {"mean_cores": 0.03314948473989955, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14417.721852701, "extra": {"mean_cores": 0.03260775907014746, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "brain", "event": "prefill", "turn": 11, "t": 14418.202400584, "extra": {"kind": "stable", "prompt_n": 6, "cache_n": 107, "prompt_ms": 85.604}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14418.22316205, "extra": {"mean_cores": 0.22451207068963858, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "brain", "event": "prefill", "turn": 11, "t": 14418.48872457, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 113, "prompt_ms": 31.479}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14418.723921, "extra": {"mean_cores": 0.09782551065735552, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "brain", "event": "prefill", "turn": 11, "t": 14418.836178641, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 114, "prompt_ms": 32.651}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 11, "t": 14419.220569759, "extra": {"ms": 20.3}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14419.229080811, "extra": {"mean_cores": 0.1509304547590451, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "ears", "event": "t_eos", "turn": 11, "t": 14418.973794706999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 11, "t": 14419.275910411, "extra": {"gen": 21, "chars": 598, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 11, "t": 14419.27754074, "extra": {"p_done": 0.9889053702354431}}
+{"stage": "ears", "event": "asr_final", "turn": 11, "t": 14419.277615643, "extra": {"text": "WHAT IS THE TALLEST MOUNTAIN IN THE WORLD"}}
+{"stage": "brain", "event": "route", "turn": 11, "t": 14419.278289798, "extra": {"gen": 22, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 11, "t": 14419.278432416, "extra": {"gen": 21, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 11, "t": 14419.278455846, "extra": {"gen": 21}}
+{"stage": "voice", "event": "commit_recv", "turn": 11, "t": 14419.278511656, "extra": {"gen": 21}}
+{"stage": "ears", "event": "endpoint", "turn": 11, "t": 14419.278097103, "extra": {"delay_s": 0.3043023960017308}}
+{"stage": "brain", "event": "first_token", "turn": 11, "t": 14419.453727923, "extra": {"gen": 21, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 11, "t": 14419.587362863, "extra": {"gen": 21, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 11, "t": 14419.587689559, "extra": {"gen": 21, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 11, "t": 14419.587908286, "extra": {"gen": 21, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 11, "t": 14419.6215477, "extra": {"gen": 21, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 11, "t": 14419.716315822, "extra": {"gen": 21, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 11, "t": 14419.71650295, "extra": {"gen": 21, "text": "The tallest mountain in the world is Mount Everest."}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14419.732425891, "extra": {"mean_cores": 0.99489399995696, "cpu_max": "100000 100000", "memory_current": 822132736, "memory_peak": 822132736, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817729536, "memory_file": 217088}}
+{"stage": "brain", "event": "gen_done", "turn": 11, "t": 14419.79283469, "extra": {"gen": 21, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 132, "predicted_n": 5, "decode_tps": 29.3}}
+{"stage": "voice", "event": "synth_end", "turn": 11, "t": 14419.91306679, "extra": {"gen": 21, "ms": 196.5, "audio_s": 2.53, "rtf": 0.078}}
+{"stage": "voice", "event": "pcm_ready", "turn": 11, "t": 14419.913391856, "extra": {"gen": 21, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 11, "t": 14419.913627544, "extra": {"gen": 21, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 11, "t": 14419.913497957, "extra": {"gen": 21, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 11, "t": 14419.913851188, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14419.587904891, "t_commit": 14419.587903352, "t_pcm_ready": 14419.913381704, "t_first_audio": 14419.913497957, "first_synth_ms": 196.5, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [196.5], "audio_s": 2.53, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 21, "held_used": true, "first_dur_s": 2.527528344671202}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14420.248168246, "extra": {"mean_cores": 0.3578298315245018, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 229376}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14420.80923911, "extra": {"mean_cores": 0.008629925933923676, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 229376}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14421.315718523, "extra": {"mean_cores": 0.01239142172202658, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 229376}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14421.817069911, "extra": {"mean_cores": 0.02627897382023668, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 229376}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14422.441787774, "extra": {"mean_cores": 0.005335208415513788, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14422.94364824, "extra": {"mean_cores": 0.03763994432668224, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14423.444715965, "extra": {"mean_cores": 0.05068975456350369, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14423.946514089, "extra": {"mean_cores": 0.03611811031801708, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "brain", "event": "prefill", "turn": 12, "t": 14424.143175324, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 137, "prompt_ms": 96.31}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14424.448963556, "extra": {"mean_cores": 0.3134225635472727, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "brain", "event": "prefill", "turn": 12, "t": 14424.472025594, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 144, "prompt_ms": 57.015}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 12, "t": 14424.569372011, "extra": {"ms": 19.5}}
+{"stage": "ears", "event": "t_eos", "turn": 12, "t": 14424.323288632, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 12, "t": 14424.622501829, "extra": {"gen": 23, "chars": 757, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 12, "t": 14424.625133017, "extra": {"p_done": 0.9854345321655273}}
+{"stage": "ears", "event": "asr_final", "turn": 12, "t": 14424.625218896, "extra": {"text": "HOW MANY HOURS ARE IN A WEEK"}}
+{"stage": "brain", "event": "route", "turn": 12, "t": 14424.625352867, "extra": {"gen": 24, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 12, "t": 14424.625365761, "extra": {"gen": 23, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 12, "t": 14424.62537141, "extra": {"gen": 23}}
+{"stage": "voice", "event": "commit_recv", "turn": 12, "t": 14424.625385458, "extra": {"gen": 23}}
+{"stage": "ears", "event": "endpoint", "turn": 12, "t": 14424.625243392, "extra": {"delay_s": 0.30195475999971677}}
+{"stage": "brain", "event": "first_token", "turn": 12, "t": 14424.762118433, "extra": {"gen": 23, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 12, "t": 14424.93151845, "extra": {"gen": 23, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 12, "t": 14424.931679417, "extra": {"gen": 23, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 12, "t": 14424.93258983, "extra": {"gen": 23, "seq": 0, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14424.950532262, "extra": {"mean_cores": 0.8200053055137642, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817946624, "memory_file": 233472}}
+{"stage": "brain", "event": "first_token", "turn": 12, "t": 14424.969690983, "extra": {"gen": 23, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 12, "t": 14425.277885791, "extra": {"gen": 23, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 12, "t": 14425.277975657, "extra": {"gen": 23, "text": "A week has seven days,"}}
+{"stage": "brain", "event": "gen_done", "turn": 12, "t": 14425.350219943, "extra": {"gen": 23, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 163, "predicted_n": 12, "decode_tps": 31.6}}
+{"stage": "voice", "event": "synth_end", "turn": 12, "t": 14425.414835178, "extra": {"gen": 23, "ms": 136.8, "audio_s": 1.27, "rtf": 0.108}}
+{"stage": "voice", "event": "pcm_ready", "turn": 12, "t": 14425.415012754, "extra": {"gen": 23, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "synth_start", "turn": 12, "t": 14425.41514199, "extra": {"gen": 23, "text": "so there are seven hours in a week."}}
+{"stage": "voice", "event": "first_audio_out", "turn": 12, "t": 14425.415064568, "extra": {"gen": 23, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14425.453900916, "extra": {"mean_cores": 0.9976942267065875, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817963008, "memory_file": 237568}}
+{"stage": "voice", "event": "synth_end", "turn": 12, "t": 14425.528237303, "extra": {"gen": 23, "ms": 113.1, "audio_s": 1.87, "rtf": 0.06}}
+{"stage": "voice", "event": "chunk_recv", "turn": 12, "t": 14425.528426636, "extra": {"gen": 23, "seq": 2, "held": false}}
+{"stage": "voice", "event": "turn_done", "turn": 12, "t": 14425.528502206, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14424.932584642, "t_commit": 14424.932582357, "t_pcm_ready": 14425.415005292, "t_first_audio": 14425.415064568, "first_synth_ms": 136.8, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [136.8, 113.1], "audio_s": 3.14, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 23, "held_used": true, "first_dur_s": 1.266122448979592}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14425.954516133, "extra": {"mean_cores": 0.16436775632384798, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 817963008, "memory_file": 237568}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14426.456865687, "extra": {"mean_cores": 0.020035849379931605, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14426.958076709, "extra": {"mean_cores": 0.032808536281579814, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14427.469230492, "extra": {"mean_cores": 0.055386462824845877, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14427.970302685, "extra": {"mean_cores": 0.03725012136130331, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14428.47137555, "extra": {"mean_cores": 0.1393290375044908, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "brain", "event": "prefill", "turn": 13, "t": 14428.538728291, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 175, "prompt_ms": 111.036}}
+{"stage": "brain", "event": "prefill", "turn": 13, "t": 14428.807692636, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 183, "prompt_ms": 36.827}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14428.976839424, "extra": {"mean_cores": 0.24217952319958394, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818069504, "memory_file": 241664}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 13, "t": 14429.024066416, "extra": {"ms": 13.9}}
+{"stage": "ears", "event": "t_eos", "turn": 13, "t": 14428.783549107, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 13, "t": 14429.07545288, "extra": {"gen": 25, "chars": 920, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 13, "t": 14429.077290251, "extra": {"p_done": 0.9889053702354431}}
+{"stage": "ears", "event": "asr_final", "turn": 13, "t": 14429.077374279, "extra": {"text": "WHAT LANGUAGE IS SPOKEN IN BRAZIL"}}
+{"stage": "brain", "event": "route", "turn": 13, "t": 14429.078358895, "extra": {"gen": 26, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 13, "t": 14429.078414957, "extra": {"gen": 25, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 13, "t": 14429.078426257, "extra": {"gen": 25}}
+{"stage": "voice", "event": "commit_recv", "turn": 13, "t": 14429.078448717, "extra": {"gen": 25}}
+{"stage": "ears", "event": "endpoint", "turn": 13, "t": 14429.077394789, "extra": {"delay_s": 0.2938456819993007}}
+{"stage": "brain", "event": "first_token", "turn": 13, "t": 14429.233711797, "extra": {"gen": 25, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 13, "t": 14429.385690639, "extra": {"gen": 25, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 13, "t": 14429.385894261, "extra": {"gen": 25, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 13, "t": 14429.386255618, "extra": {"gen": 25, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 13, "t": 14429.423620139, "extra": {"gen": 25, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 13, "t": 14429.461729262, "extra": {"gen": 25, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 13, "t": 14429.461865437, "extra": {"gen": 25, "text": "Portuguese is spoken in Brazil."}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14429.481611278, "extra": {"mean_cores": 0.927387286532815, "cpu_max": "100000 100000", "memory_current": 822390784, "memory_peak": 822394880, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 818081792, "memory_file": 253952}}
+{"stage": "brain", "event": "history_trim", "turn": 13, "t": 14429.543547491, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 13, "t": 14429.543591742, "extra": {"gen": 25, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 200, "predicted_n": 3, "decode_tps": 27.5}}
+{"stage": "voice", "event": "synth_end", "turn": 13, "t": 14429.727056853, "extra": {"gen": 25, "ms": 265.2, "audio_s": 1.95, "rtf": 0.136}}
+{"stage": "voice", "event": "pcm_ready", "turn": 13, "t": 14429.727276916, "extra": {"gen": 25, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "first_audio_out", "turn": 13, "t": 14429.727348927, "extra": {"gen": 25, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 13, "t": 14429.740484297, "extra": {"gen": 25, "seq": 2, "held": false}}
+{"stage": "voice", "event": "turn_done", "turn": 13, "t": 14429.741168665, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14429.386250596, "t_commit": 14429.386248469, "t_pcm_ready": 14429.727269311, "t_first_audio": 14429.727348927, "first_synth_ms": 265.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [265.2], "audio_s": 1.95, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 25, "held_used": true, "first_dur_s": 1.9502947845804988}}
+{"stage": "brain", "event": "prefill", "turn": 13, "t": 14429.832552401, "extra": {"kind": "base", "prompt_n": 24, "cache_n": 88, "prompt_ms": 283.135}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14429.982917291, "extra": {"mean_cores": 0.7053555928541781, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14430.48587295, "extra": {"mean_cores": 0.024218834766118625, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14430.987696158, "extra": {"mean_cores": 0.03727209045300881, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14431.488817155, "extra": {"mean_cores": 0.03529686464126843, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14431.989847248, "extra": {"mean_cores": 0.054152435909593434, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "brain", "event": "prefill", "turn": 14, "t": 14432.333612012, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 112, "prompt_ms": 78.918}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14432.490492496, "extra": {"mean_cores": 0.18343927235305216, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 14, "t": 14432.637024648, "extra": {"ms": 30.4}}
+{"stage": "brain", "event": "prefill", "turn": 14, "t": 14432.671791454, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 117, "prompt_ms": 63.429}}
+{"stage": "ears", "event": "t_eos", "turn": 14, "t": 14432.370721297, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 14, "t": 14432.703702385, "extra": {"gen": 27, "chars": 611, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 14, "t": 14432.708167315, "extra": {"p_done": 0.9865230321884155}}
+{"stage": "ears", "event": "asr_final", "turn": 14, "t": 14432.708273844, "extra": {"text": "WHAT IS PHOTO SYNTHESIS"}}
+{"stage": "brain", "event": "route", "turn": 14, "t": 14432.708470679, "extra": {"gen": 28, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 14, "t": 14432.708941499, "extra": {"gen": 27, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 14, "t": 14432.708959197, "extra": {"gen": 27}}
+{"stage": "voice", "event": "commit_recv", "turn": 14, "t": 14432.709005318, "extra": {"gen": 27}}
+{"stage": "ears", "event": "endpoint", "turn": 14, "t": 14432.70829633, "extra": {"delay_s": 0.3375750329996663}}
+{"stage": "brain", "event": "first_token", "turn": 14, "t": 14432.826291823, "extra": {"gen": 27, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14432.996953422, "extra": {"mean_cores": 0.7813495171776227, "cpu_max": "100000 100000", "memory_current": 835235840, "memory_peak": 835235840, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 830799872, "memory_file": 258048}}
+{"stage": "brain", "event": "first_chunk", "turn": 14, "t": 14432.99786123, "extra": {"gen": 27, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 14, "t": 14432.998109167, "extra": {"gen": 27, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 14, "t": 14432.9990158, "extra": {"gen": 27, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 14, "t": 14433.073913543, "extra": {"gen": 27, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 14, "t": 14433.290235523, "extra": {"gen": 27, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 14, "t": 14433.290509686, "extra": {"gen": 27, "text": "Photo synthesis is the process of converting light energy into chemical energy."}}
+{"stage": "brain", "event": "gen_done", "turn": 14, "t": 14433.358553005, "extra": {"gen": 27, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 133, "predicted_n": 8, "decode_tps": 28.2}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14433.49962903, "extra": {"mean_cores": 0.977918944496388, "cpu_max": "100000 100000", "memory_current": 843362304, "memory_peak": 843362304, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 838975488, "memory_file": 266240}}
+{"stage": "voice", "event": "synth_end", "turn": 14, "t": 14433.59930445, "extra": {"gen": 27, "ms": 308.8, "audio_s": 4.3, "rtf": 0.072}}
+{"stage": "voice", "event": "pcm_ready", "turn": 14, "t": 14433.599641249, "extra": {"gen": 27, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 14, "t": 14433.599854862, "extra": {"gen": 27, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 14, "t": 14433.599823474, "extra": {"gen": 27, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 14, "t": 14433.600186905, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14432.999011487, "t_commit": 14432.999009808, "t_pcm_ready": 14433.599631774, "t_first_audio": 14433.599823474, "first_synth_ms": 308.8, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [308.8], "audio_s": 4.3, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 27, "held_used": true, "first_dur_s": 4.303356009070295}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14434.002075716, "extra": {"mean_cores": 0.21459590241998502, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 270336}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14434.510931168, "extra": {"mean_cores": 0.02102561731024734, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 270336}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14435.015935218, "extra": {"mean_cores": 0.04112442266559322, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 270336}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14435.516794477, "extra": {"mean_cores": 0.052034577641678716, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 270336}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14436.019427004, "extra": {"mean_cores": 0.03663511414578852, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 274432}}
+{"stage": "brain", "event": "prefill", "turn": 15, "t": 14436.239238565, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 141, "prompt_ms": 98.437}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14436.523260152, "extra": {"mean_cores": 0.3116170514444054, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840589312, "memory_file": 274432}}
+{"stage": "brain", "event": "prefill", "turn": 15, "t": 14436.542783913, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 148, "prompt_ms": 49.611}}
+{"stage": "brain", "event": "prefill", "turn": 15, "t": 14436.870440598, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 150, "prompt_ms": 30.809}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14437.031989846, "extra": {"mean_cores": 0.14165086262880994, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840597504, "memory_file": 274432}}
+{"stage": "brain", "event": "prefill", "turn": 15, "t": 14437.211462257, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 151, "prompt_ms": 29.247}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14437.533322129, "extra": {"mean_cores": 0.12333337009537582, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840597504, "memory_file": 274432}}
+{"stage": "brain", "event": "prefill", "turn": 15, "t": 14437.565978839, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 152, "prompt_ms": 31.081}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 15, "t": 14437.712645972, "extra": {"ms": 14.1}}
+{"stage": "ears", "event": "t_eos", "turn": 15, "t": 14437.471524417999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 15, "t": 14437.761435097, "extra": {"gen": 29, "chars": 814, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 15, "t": 14437.764319499, "extra": {"p_done": 0.9816229343414307}}
+{"stage": "ears", "event": "asr_final", "turn": 15, "t": 14437.76444569, "extra": {"text": "WHO WAS THE FIRST PERSON TO WALK ON THE MOON"}}
+{"stage": "brain", "event": "route", "turn": 15, "t": 14437.764584757, "extra": {"gen": 30, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 15, "t": 14437.764628446, "extra": {"gen": 29, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 15, "t": 14437.76463937, "extra": {"gen": 29}}
+{"stage": "voice", "event": "commit_recv", "turn": 15, "t": 14437.764665143, "extra": {"gen": 29}}
+{"stage": "ears", "event": "endpoint", "turn": 15, "t": 14437.764468716, "extra": {"delay_s": 0.2929442980002932}}
+{"stage": "brain", "event": "first_token", "turn": 15, "t": 14437.904345385, "extra": {"gen": 29, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14438.037028071, "extra": {"mean_cores": 0.743376181972028, "cpu_max": "100000 100000", "memory_current": 844935168, "memory_peak": 844935168, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840597504, "memory_file": 274432}}
+{"stage": "brain", "event": "first_chunk", "turn": 15, "t": 14438.075296819, "extra": {"gen": 29, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 15, "t": 14438.07559814, "extra": {"gen": 29, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 15, "t": 14438.07684177, "extra": {"gen": 29, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 15, "t": 14438.11108344, "extra": {"gen": 29, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 15, "t": 14438.269994341, "extra": {"gen": 29, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 15, "t": 14438.270184275, "extra": {"gen": 29, "text": "Neil Armstrong was the first person to walk on the moon."}}
+{"stage": "brain", "event": "gen_done", "turn": 15, "t": 14438.336628982, "extra": {"gen": 29, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 170, "predicted_n": 7, "decode_tps": 31.1}}
+{"stage": "voice", "event": "synth_end", "turn": 15, "t": 14438.498254192, "extra": {"gen": 29, "ms": 228.0, "audio_s": 2.99, "rtf": 0.076}}
+{"stage": "voice", "event": "pcm_ready", "turn": 15, "t": 14438.498614356, "extra": {"gen": 29, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 15, "t": 14438.498725731, "extra": {"gen": 29, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 15, "t": 14438.498688346, "extra": {"gen": 29, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 15, "t": 14438.498940713, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14438.076835596, "t_commit": 14438.076833576, "t_pcm_ready": 14438.498606271, "t_first_audio": 14438.498688346, "first_synth_ms": 228.0, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [228.0], "audio_s": 2.99, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 29, "held_used": true, "first_dur_s": 2.9884353741496597}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14438.537784635, "extra": {"mean_cores": 0.9232969335561059, "cpu_max": "100000 100000", "memory_current": 845180928, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840638464, "memory_file": 282624}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14439.038530534, "extra": {"mean_cores": 0.01720832864972593, "cpu_max": "100000 100000", "memory_current": 845180928, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14439.53971888, "extra": {"mean_cores": 0.02399696660148981, "cpu_max": "100000 100000", "memory_current": 845180928, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14440.043849281, "extra": {"mean_cores": 0.056386204727102825, "cpu_max": "100000 100000", "memory_current": 845180928, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14440.549342305, "extra": {"mean_cores": 0.0342121437467185, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14441.060237131, "extra": {"mean_cores": 0.02625393587366328, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14441.562169536, "extra": {"mean_cores": 0.24006419748849947, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "brain", "event": "prefill", "turn": 16, "t": 14441.575578865, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 177, "prompt_ms": 121.568}}
+{"stage": "brain", "event": "prefill", "turn": 16, "t": 14441.985588111, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 185, "prompt_ms": 36.847}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14442.070019306, "extra": {"mean_cores": 0.13341740806546895, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840650752, "memory_file": 286720}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14442.585490907, "extra": {"mean_cores": 0.022327127193174232, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840658944, "memory_file": 290816}}
+{"stage": "brain", "event": "prefill", "turn": 16, "t": 14442.656080215, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 186, "prompt_ms": 56.4}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14443.095151538, "extra": {"mean_cores": 0.16248459261516443, "cpu_max": "100000 100000", "memory_current": 845197312, "memory_peak": 845197312, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 840658944, "memory_file": 299008}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 16, "t": 14443.104576744, "extra": {"ms": 50.5}}
+{"stage": "ears", "event": "t_eos", "turn": 16, "t": 14442.827449852999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 16, "t": 14443.162876716, "extra": {"gen": 31, "chars": 987, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 16, "t": 14443.170197786, "extra": {"p_done": 0.9836374521255493}}
+{"stage": "ears", "event": "asr_final", "turn": 16, "t": 14443.17042358, "extra": {"text": "WHAT IS THE SQUARE ROOT OF EIGHTY ONE"}}
+{"stage": "brain", "event": "route", "turn": 16, "t": 14443.170624082, "extra": {"gen": 32, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 16, "t": 14443.1706763, "extra": {"gen": 31, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 16, "t": 14443.170687677, "extra": {"gen": 31}}
+{"stage": "voice", "event": "commit_recv", "turn": 16, "t": 14443.170708886, "extra": {"gen": 31}}
+{"stage": "ears", "event": "endpoint", "turn": 16, "t": 14443.170451481, "extra": {"delay_s": 0.34300162800172984}}
+{"stage": "brain", "event": "first_token", "turn": 16, "t": 14443.324140465, "extra": {"gen": 31, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 16, "t": 14443.511537798, "extra": {"gen": 31, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 16, "t": 14443.511731677, "extra": {"gen": 31, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 16, "t": 14443.513120814, "extra": {"gen": 31, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 16, "t": 14443.576672518, "extra": {"gen": 31, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14443.598267304, "extra": {"mean_cores": 0.9951486990379633, "cpu_max": "100000 100000", "memory_current": 849391616, "memory_peak": 849391616, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 844947456, "memory_file": 299008}}
+{"stage": "brain", "event": "history_trim", "turn": 16, "t": 14443.729844082, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 16, "t": 14443.729874223, "extra": {"gen": 31, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 204, "predicted_n": 5, "decode_tps": 32.7}}
+{"stage": "voice", "event": "chunk_recv", "turn": 16, "t": 14443.730054849, "extra": {"gen": 31, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 16, "t": 14443.730902638, "extra": {"gen": 31, "text": "The square root of eighty-one is"}}
+{"stage": "voice", "event": "synth_end", "turn": 16, "t": 14444.048182373, "extra": {"gen": 31, "ms": 317.3, "audio_s": 1.5, "rtf": 0.211}}
+{"stage": "voice", "event": "pcm_ready", "turn": 16, "t": 14444.048473589, "extra": {"gen": 31, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "synth_start", "turn": 16, "t": 14444.050908517, "extra": {"gen": 31, "text": "nine."}}
+{"stage": "voice", "event": "first_audio_out", "turn": 16, "t": 14444.048539082, "extra": {"gen": 31, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14444.100475062, "extra": {"mean_cores": 0.999731668821187, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "voice", "event": "synth_end", "turn": 16, "t": 14444.191087027, "extra": {"gen": 31, "ms": 140.2, "audio_s": 0.67, "rtf": 0.21}}
+{"stage": "voice", "event": "turn_done", "turn": 16, "t": 14444.191834428, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14443.513114959, "t_commit": 14443.513112817, "t_pcm_ready": 14444.048463728, "t_first_audio": 14444.048539082, "first_synth_ms": 317.3, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [317.3, 140.2], "audio_s": 2.17, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 31, "held_used": true, "first_dur_s": 1.5036281179138322}}
+{"stage": "brain", "event": "prefill", "turn": 16, "t": 14444.196356891, "extra": {"kind": "base", "prompt_n": 26, "cache_n": 90, "prompt_ms": 436.293}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14444.608499329, "extra": {"mean_cores": 0.18461125991804603, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14445.109773679, "extra": {"mean_cores": 0.011251323751172911, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14445.611390359, "extra": {"mean_cores": 0.037821708799662554, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14446.113868836, "extra": {"mean_cores": 0.033840255410500356, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14446.61493229, "extra": {"mean_cores": 0.03554240457540843, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14447.116747603, "extra": {"mean_cores": 0.04897817855147853, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "brain", "event": "prefill", "turn": 17, "t": 14447.463862917, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 116, "prompt_ms": 101.163}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 17, "t": 14447.615786003, "extra": {"ms": 15.6}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14447.617438571, "extra": {"mean_cores": 0.2734121618908546, "cpu_max": "100000 100000", "memory_current": 849408000, "memory_peak": 849653760, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845258752, "memory_file": 303104}}
+{"stage": "ears", "event": "t_eos", "turn": 17, "t": 14447.373603494, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 17, "t": 14447.666875936, "extra": {"gen": 33, "chars": 622, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 17, "t": 14447.667250438, "extra": {"p_done": 0.9589470624923706}}
+{"stage": "ears", "event": "asr_final", "turn": 17, "t": 14447.667300174, "extra": {"text": "WHICH OCEAN IS THE LARGEST"}}
+{"stage": "brain", "event": "route", "turn": 17, "t": 14447.667435264, "extra": {"gen": 34, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 17, "t": 14447.66749199, "extra": {"gen": 33, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 17, "t": 14447.667502458, "extra": {"gen": 33}}
+{"stage": "voice", "event": "commit_recv", "turn": 17, "t": 14447.667519382, "extra": {"gen": 33}}
+{"stage": "ears", "event": "endpoint", "turn": 17, "t": 14447.667316597, "extra": {"delay_s": 0.2937131030012097}}
+{"stage": "brain", "event": "first_token", "turn": 17, "t": 14447.800779647, "extra": {"gen": 33, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 17, "t": 14447.977561863, "extra": {"gen": 33, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 17, "t": 14447.97773508, "extra": {"gen": 33, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 17, "t": 14447.978724091, "extra": {"gen": 33, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 17, "t": 14448.010158569, "extra": {"gen": 33, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 17, "t": 14448.043051286, "extra": {"gen": 33, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 17, "t": 14448.043217552, "extra": {"gen": 33, "text": "The largest ocean is the Atlantic Ocean."}}
+{"stage": "brain", "event": "gen_done", "turn": 17, "t": 14448.108402723, "extra": {"gen": 33, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 138, "predicted_n": 3, "decode_tps": 30.8}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14448.120511087, "extra": {"mean_cores": 0.9996471363593233, "cpu_max": "100000 100000", "memory_current": 849670144, "memory_peak": 849670144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845275136, "memory_file": 307200}}
+{"stage": "voice", "event": "synth_end", "turn": 17, "t": 14448.228115123, "extra": {"gen": 33, "ms": 184.9, "audio_s": 2.21, "rtf": 0.084}}
+{"stage": "voice", "event": "pcm_ready", "turn": 17, "t": 14448.228258865, "extra": {"gen": 33, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 17, "t": 14448.228343753, "extra": {"gen": 33, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 17, "t": 14448.228311376, "extra": {"gen": 33, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 17, "t": 14448.2286417, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14447.97871894, "t_commit": 14447.978716398, "t_pcm_ready": 14448.228251734, "t_first_audio": 14448.228311376, "first_synth_ms": 184.9, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [184.9], "audio_s": 2.21, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 33, "held_used": true, "first_dur_s": 2.2100226757369614}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14448.621865298, "extra": {"mean_cores": 0.23876532274658532, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850190336, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 315392}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14449.123030418, "extra": {"mean_cores": 0.020757629740863377, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850190336, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 315392}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14449.625279354, "extra": {"mean_cores": 0.0406033712334327, "cpu_max": "100000 100000", "memory_current": 849932288, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 319488}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14450.127737984, "extra": {"mean_cores": 0.03588554146247952, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 319488}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14450.629484109, "extra": {"mean_cores": 0.042421852286279954, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 319488}}
+{"stage": "brain", "event": "prefill", "turn": 18, "t": 14451.09987385, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 141, "prompt_ms": 101.75}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14451.131539323, "extra": {"mean_cores": 0.2560196496637365, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845668352, "memory_file": 319488}}
+{"stage": "brain", "event": "prefill", "turn": 18, "t": 14451.391945172, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 148, "prompt_ms": 30.787}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14451.632848352, "extra": {"mean_cores": 0.10056471574154414, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845672448, "memory_file": 327680}}
+{"stage": "brain", "event": "prefill", "turn": 18, "t": 14451.786187374, "extra": {"kind": "stable", "prompt_n": 3, "cache_n": 149, "prompt_ms": 68.938}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 18, "t": 14452.125011625, "extra": {"ms": 17.3}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14452.135367237, "extra": {"mean_cores": 0.244394795231772, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845684736, "memory_file": 327680}}
+{"stage": "ears", "event": "t_eos", "turn": 18, "t": 14451.880780182999, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 18, "t": 14452.174896633, "extra": {"p_done": 0.9865230321884155}}
+{"stage": "brain", "event": "prompt_ready", "turn": 18, "t": 14452.174876049, "extra": {"gen": 35, "chars": 778, "held": true}}
+{"stage": "ears", "event": "asr_final", "turn": 18, "t": 14452.174927837, "extra": {"text": "HOW MANY PLAYERS ARE ON A CRICKETINE"}}
+{"stage": "brain", "event": "route", "turn": 18, "t": 14452.175535628, "extra": {"gen": 36, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 18, "t": 14452.175567987, "extra": {"gen": 35, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 18, "t": 14452.175579, "extra": {"gen": 35}}
+{"stage": "voice", "event": "commit_recv", "turn": 18, "t": 14452.175602796, "extra": {"gen": 35}}
+{"stage": "ears", "event": "endpoint", "turn": 18, "t": 14452.17534982, "extra": {"delay_s": 0.2945696370006772}}
+{"stage": "brain", "event": "first_token", "turn": 18, "t": 14452.32543595, "extra": {"gen": 35, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 18, "t": 14452.489668917, "extra": {"gen": 35, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 18, "t": 14452.489975978, "extra": {"gen": 35, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 18, "t": 14452.491140511, "extra": {"gen": 35, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 18, "t": 14452.562843895, "extra": {"gen": 35, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14452.636326811, "extra": {"mean_cores": 0.9960604126524679, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845684736, "memory_file": 327680}}
+{"stage": "voice", "event": "chunk_recv", "turn": 18, "t": 14452.703128611, "extra": {"gen": 35, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 18, "t": 14452.703209422, "extra": {"gen": 35, "text": "There are ten players on a cricket team."}}
+{"stage": "brain", "event": "gen_done", "turn": 18, "t": 14452.774799563, "extra": {"gen": 35, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 168, "predicted_n": 6, "decode_tps": 28.4}}
+{"stage": "voice", "event": "synth_end", "turn": 18, "t": 14452.87083341, "extra": {"gen": 35, "ms": 167.6, "audio_s": 2.0, "rtf": 0.084}}
+{"stage": "voice", "event": "pcm_ready", "turn": 18, "t": 14452.871001109, "extra": {"gen": 35, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 18, "t": 14452.87108303, "extra": {"gen": 35, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 18, "t": 14452.871053939, "extra": {"gen": 35, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 18, "t": 14452.871235321, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14452.49113423, "t_commit": 14452.491131711, "t_pcm_ready": 14452.870994314, "t_first_audio": 14452.871053939, "first_synth_ms": 167.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [167.6], "audio_s": 2.0, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 35, "held_used": true, "first_dur_s": 2.002358276643991}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14453.138717303, "extra": {"mean_cores": 0.4775906467593854, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845684736, "memory_file": 327680}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14453.640314905, "extra": {"mean_cores": 0.017284771628539513, "cpu_max": "100000 100000", "memory_current": 850190336, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 331776}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14454.145181671, "extra": {"mean_cores": 0.016404327948989852, "cpu_max": "100000 100000", "memory_current": 850288640, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 331776}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14454.645803138, "extra": {"mean_cores": 0.050555163268585654, "cpu_max": "100000 100000", "memory_current": 850042880, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 331776}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14455.148013418, "extra": {"mean_cores": 0.037474342420911494, "cpu_max": "100000 100000", "memory_current": 850042880, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 331776}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14455.650319067, "extra": {"mean_cores": 0.12182423216211642, "cpu_max": "100000 100000", "memory_current": 850042880, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 335872}}
+{"stage": "brain", "event": "prefill", "turn": 19, "t": 14455.742911388, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 174, "prompt_ms": 125.242}}
+{"stage": "brain", "event": "prefill", "turn": 19, "t": 14456.013532503, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 182, "prompt_ms": 37.667}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14456.151617883, "extra": {"mean_cores": 0.29740943972138045, "cpu_max": "100000 100000", "memory_current": 850042880, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 339968}}
+{"stage": "brain", "event": "prefill", "turn": 19, "t": 14456.357895474, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 183, "prompt_ms": 37.769}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 19, "t": 14456.502763154, "extra": {"ms": 17.1}}
+{"stage": "ears", "event": "t_eos", "turn": 19, "t": 14456.259159166999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 19, "t": 14456.554588692, "extra": {"gen": 37, "chars": 929, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 19, "t": 14456.554981674, "extra": {"p_done": 0.978554368019104}}
+{"stage": "ears", "event": "asr_final", "turn": 19, "t": 14456.55503243, "extra": {"text": "WHAT IS THE CAPITAL OF AUSTRALIA"}}
+{"stage": "brain", "event": "route", "turn": 19, "t": 14456.555300893, "extra": {"gen": 38, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 19, "t": 14456.555349703, "extra": {"gen": 37, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 19, "t": 14456.555360612, "extra": {"gen": 37}}
+{"stage": "voice", "event": "commit_recv", "turn": 19, "t": 14456.555377302, "extra": {"gen": 37}}
+{"stage": "ears", "event": "endpoint", "turn": 19, "t": 14456.555147382, "extra": {"delay_s": 0.29598821500076156}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14456.654414977, "extra": {"mean_cores": 0.41795189850555, "cpu_max": "100000 100000", "memory_current": 850042880, "memory_peak": 850452480, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 845688832, "memory_file": 339968}}
+{"stage": "brain", "event": "first_token", "turn": 19, "t": 14456.757188999, "extra": {"gen": 37, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 19, "t": 14456.913977031, "extra": {"gen": 37, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 19, "t": 14456.914166764, "extra": {"gen": 37, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 19, "t": 14456.915526831, "extra": {"gen": 37, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 19, "t": 14456.958707216, "extra": {"gen": 37, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 19, "t": 14456.958894125, "extra": {"gen": 37, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 19, "t": 14456.958987954, "extra": {"gen": 37, "text": "The capital of Australia is Canberra."}}
+{"stage": "brain", "event": "history_trim", "turn": 19, "t": 14457.030157315, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 19, "t": 14457.030193943, "extra": {"gen": 37, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 199, "predicted_n": 2, "decode_tps": 28.2}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14457.16119266, "extra": {"mean_cores": 0.992962036175321, "cpu_max": "100000 100000", "memory_current": 862363648, "memory_peak": 862363648, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 857632768, "memory_file": 344064}}
+{"stage": "voice", "event": "synth_end", "turn": 19, "t": 14457.2875261, "extra": {"gen": 37, "ms": 328.4, "audio_s": 2.08, "rtf": 0.158}}
+{"stage": "voice", "event": "pcm_ready", "turn": 19, "t": 14457.287659503, "extra": {"gen": 37, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 19, "t": 14457.291097565, "extra": {"gen": 37, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 19, "t": 14457.287711596, "extra": {"gen": 37, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 19, "t": 14457.291433291, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14456.915521242, "t_commit": 14456.915518905, "t_pcm_ready": 14457.287653267, "t_first_audio": 14457.287711596, "first_synth_ms": 328.4, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [328.4], "audio_s": 2.08, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 37, "held_used": true, "first_dur_s": 2.0797732426303854}}
+{"stage": "brain", "event": "prefill", "turn": 19, "t": 14457.388333014, "extra": {"kind": "base", "prompt_n": 21, "cache_n": 90, "prompt_ms": 287.128}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14457.661923943, "extra": {"mean_cores": 0.4578803198119199, "cpu_max": "100000 100000", "memory_current": 862625792, "memory_peak": 862625792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14458.162554937, "extra": {"mean_cores": 0.009629847248331769, "cpu_max": "100000 100000", "memory_current": 862625792, "memory_peak": 862625792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14458.663203813, "extra": {"mean_cores": 0.03487074641915552, "cpu_max": "100000 100000", "memory_current": 862625792, "memory_peak": 862625792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14459.163805764, "extra": {"mean_cores": 0.03815606383842248, "cpu_max": "100000 100000", "memory_current": 862621696, "memory_peak": 862625792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14459.664805351, "extra": {"mean_cores": 0.04347907775816029, "cpu_max": "100000 100000", "memory_current": 862621696, "memory_peak": 862625792, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "brain", "event": "prefill", "turn": 20, "t": 14460.093374754, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 111, "prompt_ms": 77.423}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14460.165826542, "extra": {"mean_cores": 0.20280978494605323, "cpu_max": "100000 100000", "memory_current": 862674944, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "brain", "event": "prefill", "turn": 20, "t": 14460.394387842, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 116, "prompt_ms": 33.005}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14460.667433674, "extra": {"mean_cores": 0.10717750320970054, "cpu_max": "100000 100000", "memory_current": 862674944, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 348160}}
+{"stage": "brain", "event": "prefill", "turn": 20, "t": 14460.759672905, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 117, "prompt_ms": 38.61}}
+{"stage": "brain", "event": "prefill", "turn": 20, "t": 14461.100824159, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 118, "prompt_ms": 35.583}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14461.168181927, "extra": {"mean_cores": 0.20653691626559392, "cpu_max": "100000 100000", "memory_current": 862670848, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 356352}}
+{"stage": "brain", "event": "prefill", "turn": 20, "t": 14461.455062124, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 119, "prompt_ms": 37.261}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 20, "t": 14461.56355219, "extra": {"ms": 14.7}}
+{"stage": "ears", "event": "t_eos", "turn": 20, "t": 14461.322265076, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 20, "t": 14461.61531211, "extra": {"gen": 39, "chars": 631, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 20, "t": 14461.615626898, "extra": {"p_done": 0.9823201894760132}}
+{"stage": "ears", "event": "asr_final", "turn": 20, "t": 14461.615674128, "extra": {"text": "CAN YOU SUGGEST A QUICK BREAKFAST IDEA"}}
+{"stage": "brain", "event": "route", "turn": 20, "t": 14461.615841922, "extra": {"gen": 40, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 20, "t": 14461.615865226, "extra": {"gen": 39, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 20, "t": 14461.615874954, "extra": {"gen": 39}}
+{"stage": "voice", "event": "commit_recv", "turn": 20, "t": 14461.615897507, "extra": {"gen": 39}}
+{"stage": "ears", "event": "endpoint", "turn": 20, "t": 14461.615691151, "extra": {"delay_s": 0.29342607500075246}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14461.669275454, "extra": {"mean_cores": 0.34751396818568897, "cpu_max": "100000 100000", "memory_current": 862670848, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858271744, "memory_file": 356352}}
+{"stage": "brain", "event": "first_token", "turn": 20, "t": 14461.758942907, "extra": {"gen": 39, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 20, "t": 14461.944264136, "extra": {"gen": 39, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 20, "t": 14461.944458075, "extra": {"gen": 39, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 20, "t": 14461.944908517, "extra": {"gen": 39, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 20, "t": 14461.986176635, "extra": {"gen": 39, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14462.171061378, "extra": {"mean_cores": 0.9996474113934984, "cpu_max": "100000 100000", "memory_current": 862670848, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858275840, "memory_file": 360448}}
+{"stage": "voice", "event": "chunk_recv", "turn": 20, "t": 14462.440615486, "extra": {"gen": 39, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 20, "t": 14462.440720491, "extra": {"gen": 39, "text": "A quick breakfast idea could be a bowl of cereal with a banana and a slice of toast."}}
+{"stage": "brain", "event": "gen_done", "turn": 20, "t": 14462.514554129, "extra": {"gen": 39, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 135, "predicted_n": 14, "decode_tps": 26.5}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14462.672503572, "extra": {"mean_cores": 1.0002070148896622, "cpu_max": "100000 100000", "memory_current": 862670848, "memory_peak": 862674944, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 858275840, "memory_file": 360448}}
+{"stage": "voice", "event": "synth_end", "turn": 20, "t": 14462.813982043, "extra": {"gen": 39, "ms": 373.2, "audio_s": 4.57, "rtf": 0.082}}
+{"stage": "voice", "event": "pcm_ready", "turn": 20, "t": 14462.814246914, "extra": {"gen": 39, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 20, "t": 14462.814354773, "extra": {"gen": 39, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 20, "t": 14462.814330375, "extra": {"gen": 39, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 20, "t": 14462.814547881, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14461.944903275, "t_commit": 14461.944901085, "t_pcm_ready": 14462.814238153, "t_first_audio": 14462.814330375, "first_synth_ms": 373.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [373.2], "audio_s": 4.57, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 39, "held_used": true, "first_dur_s": 4.574784580498866}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14463.176642974, "extra": {"mean_cores": 0.29554920605023793, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14463.678707128, "extra": {"mean_cores": 0.01949950005793329, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14464.181402277, "extra": {"mean_cores": 0.03391319775795716, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14464.682360452, "extra": {"mean_cores": 0.03530434451937672, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14465.183537098, "extra": {"mean_cores": 0.05199962968733807, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14465.684657248, "extra": {"mean_cores": 0.03859353889480367, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 368640}}
+{"stage": "brain", "event": "prefill", "turn": 21, "t": 14465.892375407, "extra": {"kind": "stable", "prompt_n": 8, "cache_n": 149, "prompt_ms": 126.728}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14466.193647085, "extra": {"mean_cores": 0.28618646073348064, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 372736}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 21, "t": 14466.611069477, "extra": {"ms": 16.2}}
+{"stage": "ears", "event": "t_eos", "turn": 21, "t": 14466.368282518999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 21, "t": 14466.663124842, "extra": {"gen": 41, "chars": 822, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 21, "t": 14466.664304932, "extra": {"p_done": 0.7652381658554077}}
+{"stage": "ears", "event": "asr_final", "turn": 21, "t": 14466.664593567, "extra": {"text": "WHAT CAST DO PLANTS TAKE IN"}}
+{"stage": "brain", "event": "route", "turn": 21, "t": 14466.664845174, "extra": {"gen": 42, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 21, "t": 14466.668715264, "extra": {"gen": 41, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 21, "t": 14466.669637315, "extra": {"gen": 41}}
+{"stage": "voice", "event": "commit_recv", "turn": 21, "t": 14466.670420115, "extra": {"gen": 41}}
+{"stage": "ears", "event": "endpoint", "turn": 21, "t": 14466.664628383, "extra": {"delay_s": 0.2963458640006138}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14466.694457143, "extra": {"mean_cores": 0.21083841730677297, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 372736}}
+{"stage": "brain", "event": "first_token", "turn": 21, "t": 14466.853734688, "extra": {"gen": 41, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 21, "t": 14467.11385972, "extra": {"gen": 41, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 21, "t": 14467.114245684, "extra": {"gen": 41, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 21, "t": 14467.116111393, "extra": {"gen": 41, "seq": 0, "held": true}}
+{"stage": "voice", "event": "synth_start", "turn": 21, "t": 14467.116253112, "extra": {"gen": 41, "text": "Plants take in sunlight."}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14467.195817671, "extra": {"mean_cores": 0.9996558803686327, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 376832}}
+{"stage": "brain", "event": "gen_done", "turn": 21, "t": 14467.219054125, "extra": {"gen": 41, "status": "ok", "chunks": 2, "prompt_n": 1, "cache_n": 174, "predicted_n": 1, "decode_tps": 1000000.0}}
+{"stage": "voice", "event": "synth_end", "turn": 21, "t": 14467.275837427, "extra": {"gen": 41, "ms": 159.6, "audio_s": 1.34, "rtf": 0.119}}
+{"stage": "voice", "event": "pcm_ready", "turn": 21, "t": 14467.276023257, "extra": {"gen": 41, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 21, "t": 14467.276116348, "extra": {"gen": 41, "seq": 1, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 21, "t": 14467.276078271, "extra": {"gen": 41, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 21, "t": 14467.276390446, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14467.11610186, "t_commit": 14467.116099227, "t_pcm_ready": 14467.276016594, "t_first_audio": 14467.276078271, "first_synth_ms": 159.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [159.6], "audio_s": 1.34, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 41, "held_used": true, "first_dur_s": 1.3410884353741497}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14467.6965078, "extra": {"mean_cores": 0.1771714576782213, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859525120, "memory_file": 376832}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14468.217095086, "extra": {"mean_cores": 0.016635058582644996, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859529216, "memory_file": 376832}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14468.717734784, "extra": {"mean_cores": 0.03349914133253094, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859529216, "memory_file": 376832}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14469.218680644, "extra": {"mean_cores": 0.053129493873872904, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859529216, "memory_file": 376832}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14469.720161905, "extra": {"mean_cores": 0.038158953261553906, "cpu_max": "100000 100000", "memory_current": 863719424, "memory_peak": 863719424, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859529216, "memory_file": 380928}}
+{"stage": "brain", "event": "prefill", "turn": 22, "t": 14469.956832139, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 175, "prompt_ms": 110.462}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14470.222254367, "extra": {"mean_cores": 0.300430720268237, "cpu_max": "100000 100000", "memory_current": 863977472, "memory_peak": 863981568, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859529216, "memory_file": 380928}}
+{"stage": "brain", "event": "prefill", "turn": 22, "t": 14470.245453422, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 182, "prompt_ms": 34.069}}
+{"stage": "brain", "event": "prefill", "turn": 22, "t": 14470.614593393, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 183, "prompt_ms": 52.193}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14470.759654297, "extra": {"mean_cores": 0.1750986458071219, "cpu_max": "100000 100000", "memory_current": 863973376, "memory_peak": 863981568, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859533312, "memory_file": 385024}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 22, "t": 14471.133003155, "extra": {"ms": 15.4}}
+{"stage": "ears", "event": "t_eos", "turn": 22, "t": 14470.890921590999, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 22, "t": 14471.18817985, "extra": {"p_done": 0.9589470624923706}}
+{"stage": "ears", "event": "asr_final", "turn": 22, "t": 14471.188189496, "extra": {"text": "HOW MANY LEGS DOES AN INSECT HAVE"}}
+{"stage": "brain", "event": "prompt_ready", "turn": 22, "t": 14471.188154189, "extra": {"gen": 43, "chars": 959, "held": true}}
+{"stage": "brain", "event": "route", "turn": 22, "t": 14471.188446642, "extra": {"gen": 44, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 22, "t": 14471.19025182, "extra": {"gen": 43, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 22, "t": 14471.19028101, "extra": {"gen": 43}}
+{"stage": "voice", "event": "commit_recv", "turn": 22, "t": 14471.190305416, "extra": {"gen": 43}}
+{"stage": "ears", "event": "endpoint", "turn": 22, "t": 14471.188200518, "extra": {"delay_s": 0.2972789270006615}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14471.260918697, "extra": {"mean_cores": 0.31232419457684496, "cpu_max": "100000 100000", "memory_current": 863973376, "memory_peak": 863981568, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 859537408, "memory_file": 385024}}
+{"stage": "brain", "event": "first_token", "turn": 22, "t": 14471.351691011, "extra": {"gen": 43, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 22, "t": 14471.533520375, "extra": {"gen": 43, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 22, "t": 14471.533718156, "extra": {"gen": 43, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 22, "t": 14471.533938456, "extra": {"gen": 43, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 22, "t": 14471.629191425, "extra": {"gen": 43, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 22, "t": 14471.629495701, "extra": {"gen": 43, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 22, "t": 14471.629614785, "extra": {"gen": 43, "text": "An insect has six legs."}}
+{"stage": "brain", "event": "history_trim", "turn": 22, "t": 14471.70835078, "extra": {"kept": 1}}
+{"stage": "brain", "event": "gen_done", "turn": 22, "t": 14471.708383683, "extra": {"gen": 43, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 201, "predicted_n": 2, "decode_tps": 25.4}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14471.765514726, "extra": {"mean_cores": 0.9966824372313743, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 393216}}
+{"stage": "voice", "event": "synth_end", "turn": 22, "t": 14471.887373728, "extra": {"gen": 43, "ms": 257.7, "audio_s": 1.64, "rtf": 0.158}}
+{"stage": "voice", "event": "pcm_ready", "turn": 22, "t": 14471.887538004, "extra": {"gen": 43, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 22, "t": 14471.887612596, "extra": {"gen": 43, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 22, "t": 14471.887591248, "extra": {"gen": 43, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 22, "t": 14471.887939319, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14471.533934799, "t_commit": 14471.533932995, "t_pcm_ready": 14471.887531411, "t_first_audio": 14471.887591248, "first_synth_ms": 257.7, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [257.7], "audio_s": 1.64, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 43, "held_used": true, "first_dur_s": 1.6361904761904762}}
+{"stage": "brain", "event": "prefill", "turn": 22, "t": 14472.027954522, "extra": {"kind": "base", "prompt_n": 25, "cache_n": 87, "prompt_ms": 303.602}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14472.26733827, "extra": {"mean_cores": 0.5308021179649648, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14472.768447246, "extra": {"mean_cores": 0.018668593954664543, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14473.269361808, "extra": {"mean_cores": 0.03387603652864205, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14473.770388543, "extra": {"mean_cores": 0.04957020906271885, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14474.272421023, "extra": {"mean_cores": 0.03354962212798715, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "brain", "event": "prefill", "turn": 23, "t": 14474.462446848, "extra": {"kind": "stable", "prompt_n": 5, "cache_n": 112, "prompt_ms": 72.616}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14474.775753689, "extra": {"mean_cores": 0.1857081932371212, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "brain", "event": "prefill", "turn": 23, "t": 14474.817563975, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 117, "prompt_ms": 32.795}}
+{"stage": "brain", "event": "prefill", "turn": 23, "t": 14475.175789751, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 118, "prompt_ms": 30.493}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14475.27836458, "extra": {"mean_cores": 0.17914852545489487, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "brain", "event": "prefill", "turn": 23, "t": 14475.527289319, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 119, "prompt_ms": 34.42}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 23, "t": 14475.610844759, "extra": {"ms": 15.1}}
+{"stage": "ears", "event": "t_eos", "turn": 23, "t": 14475.368802867999, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 23, "t": 14475.666885046, "extra": {"gen": 45, "chars": 614, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 23, "t": 14475.667908387, "extra": {"p_done": 0.9893293380737305}}
+{"stage": "ears", "event": "asr_final", "turn": 23, "t": 14475.667947374, "extra": {"text": "WHAT IS THE CHEMICAL SYMBOL FOR GOLD"}}
+{"stage": "brain", "event": "route", "turn": 23, "t": 14475.668081139, "extra": {"gen": 46, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 23, "t": 14475.668093933, "extra": {"gen": 45, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 23, "t": 14475.668099711, "extra": {"gen": 45}}
+{"stage": "voice", "event": "commit_recv", "turn": 23, "t": 14475.668125361, "extra": {"gen": 45}}
+{"stage": "ears", "event": "endpoint", "turn": 23, "t": 14475.667959647, "extra": {"delay_s": 0.2991567790013505}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14475.780108349, "extra": {"mean_cores": 0.46466546154528193, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871923712, "memory_file": 397312}}
+{"stage": "brain", "event": "first_token", "turn": 23, "t": 14475.813978958, "extra": {"gen": 45, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 23, "t": 14475.845147366, "extra": {"gen": 45, "match": false}}
+{"stage": "brain", "event": "cancel", "turn": 23, "t": 14475.845226437, "extra": {"gen": 45, "source": "mismatch"}}
+{"stage": "voice", "event": "cancel", "turn": 23, "t": 14475.845261681, "extra": {"gen": 45, "matched": false}}
+{"stage": "brain", "event": "held_dropped", "turn": 23, "t": 14475.845278117, "extra": {"gen": 45, "reason": "mismatch"}}
+{"stage": "brain", "event": "final_valid", "turn": 23, "t": 14475.845285848, "extra": {"gen": 46, "path": "held_failed"}}
+{"stage": "spine", "event": "commit", "turn": 23, "t": 14475.84529025, "extra": {"gen": 46}}
+{"stage": "voice", "event": "commit_recv", "turn": 23, "t": 14475.845301297, "extra": {"gen": 46}}
+{"stage": "brain", "event": "prompt_ready", "turn": 23, "t": 14475.845319799, "extra": {"gen": 46, "chars": 614}}
+{"stage": "brain", "event": "first_token", "turn": 23, "t": 14475.878303803, "extra": {"gen": 46, "held": false}}
+{"stage": "brain", "event": "first_chunk", "turn": 23, "t": 14475.910317761, "extra": {"gen": 46, "words": 1, "held": false}}
+{"stage": "brain", "event": "gen_done", "turn": 23, "t": 14475.910431701, "extra": {"gen": 46, "status": "ok", "chunks": 1, "prompt_n": 1, "cache_n": 130, "predicted_n": 2, "decode_tps": 63.6}}
+{"stage": "voice", "event": "chunk_recv", "turn": 23, "t": 14475.910487975, "extra": {"gen": 46, "seq": 0, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 23, "t": 14475.910584044, "extra": {"gen": 46, "text": "Au"}}
+{"stage": "voice", "event": "synth_end", "turn": 23, "t": 14475.950625587, "extra": {"gen": 46, "ms": 40.0, "audio_s": 0.39, "rtf": 0.103}}
+{"stage": "voice", "event": "pcm_ready", "turn": 23, "t": 14475.95076535, "extra": {"gen": 46, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "first_audio_out", "turn": 23, "t": 14475.950801538, "extra": {"gen": 46, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 23, "t": 14475.950920755, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14475.91048489, "t_commit": null, "t_pcm_ready": 14475.950759944, "t_first_audio": 14475.950801538, "first_synth_ms": 40.0, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [40.0], "audio_s": 0.39, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 46, "held_used": false, "first_dur_s": 0.3895691609977324}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14476.281525748, "extra": {"mean_cores": 0.3570817453821581, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871927808, "memory_file": 409600}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14476.796360494, "extra": {"mean_cores": 0.015375807599437834, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14477.321972433, "extra": {"mean_cores": 0.013770615663288575, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14477.82381742, "extra": {"mean_cores": 0.051023723785809647, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14478.324940087, "extra": {"mean_cores": 0.034829795475917476, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14478.827498486, "extra": {"mean_cores": 0.1579716907689017, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "brain", "event": "prefill", "turn": 24, "t": 14478.873688711, "extra": {"kind": "stable", "prompt_n": 7, "cache_n": 132, "prompt_ms": 99.032}}
+{"stage": "brain", "event": "prefill", "turn": 24, "t": 14479.173885119, "extra": {"kind": "stable", "prompt_n": 2, "cache_n": 139, "prompt_ms": 50.077}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14479.329062568, "extra": {"mean_cores": 0.23077011323940258, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 413696}}
+{"stage": "brain", "event": "prefill", "turn": 24, "t": 14479.501439998, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 141, "prompt_ms": 32.244}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14479.832894048, "extra": {"mean_cores": 0.15719144821983247, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 417792}}
+{"stage": "brain", "event": "prefill", "turn": 24, "t": 14479.84665505, "extra": {"kind": "stable", "prompt_n": 1, "cache_n": 142, "prompt_ms": 33.703}}
+{"stage": "ears", "event": "asr_pause_finish", "turn": 24, "t": 14479.961103193, "extra": {"ms": 15.8}}
+{"stage": "ears", "event": "t_eos", "turn": 24, "t": 14479.718764812, "extra": {}}
+{"stage": "brain", "event": "prompt_ready", "turn": 24, "t": 14480.010671655, "extra": {"gen": 47, "chars": 730, "held": true}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 24, "t": 14480.013036585, "extra": {"p_done": 0.9901295900344849}}
+{"stage": "ears", "event": "asr_final", "turn": 24, "t": 14480.013114315, "extra": {"text": "TELL ME A FUN FACT ABOUT ELEPHANTS"}}
+{"stage": "brain", "event": "route", "turn": 24, "t": 14480.013315256, "extra": {"gen": 48, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "brain", "event": "final_valid", "turn": 24, "t": 14480.013371603, "extra": {"gen": 47, "path": "held"}}
+{"stage": "spine", "event": "commit", "turn": 24, "t": 14480.013382768, "extra": {"gen": 47}}
+{"stage": "voice", "event": "commit_recv", "turn": 24, "t": 14480.013400533, "extra": {"gen": 47}}
+{"stage": "ears", "event": "endpoint", "turn": 24, "t": 14480.013134835, "extra": {"delay_s": 0.294370023000738}}
+{"stage": "brain", "event": "first_token", "turn": 24, "t": 14480.151014793, "extra": {"gen": 47, "held": true}}
+{"stage": "brain", "event": "first_chunk", "turn": 24, "t": 14480.310524331, "extra": {"gen": 47, "words": 4, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 24, "t": 14480.310814529, "extra": {"gen": 47, "match": true}}
+{"stage": "voice", "event": "chunk_recv", "turn": 24, "t": 14480.311853911, "extra": {"gen": 47, "seq": 0, "held": true}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14480.333975051, "extra": {"mean_cores": 0.8076279036268276, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871960576, "memory_file": 417792}}
+{"stage": "brain", "event": "first_token", "turn": 24, "t": 14480.346088452, "extra": {"gen": 47, "held": false}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14480.834678958, "extra": {"mean_cores": 0.999748540011389, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871968768, "memory_file": 421888}}
+{"stage": "voice", "event": "chunk_recv", "turn": 24, "t": 14480.977001363, "extra": {"gen": 47, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 24, "t": 14480.977148063, "extra": {"gen": 47, "text": "Elephants have a strong sense of smell,"}}
+{"stage": "brain", "event": "gen_done", "turn": 24, "t": 14481.068029495, "extra": {"gen": 47, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 158, "predicted_n": 20, "decode_tps": 27.8}}
+{"stage": "voice", "event": "synth_end", "turn": 24, "t": 14481.176875622, "extra": {"gen": 47, "ms": 199.7, "audio_s": 1.98, "rtf": 0.101}}
+{"stage": "voice", "event": "pcm_ready", "turn": 24, "t": 14481.177044825, "extra": {"gen": 47, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "synth_start", "turn": 24, "t": 14481.177162542, "extra": {"gen": 47, "text": "which helps them detect the presence of other animals in their vast and complex habitat."}}
+{"stage": "voice", "event": "first_audio_out", "turn": 24, "t": 14481.177105333, "extra": {"gen": 47, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "spine", "event": "resources", "turn": null, "t": 14481.335695334, "extra": {"mean_cores": 0.99633270270264, "cpu_max": "100000 100000", "memory_current": 876294144, "memory_peak": 876294144, "memory_max": 2147483648, "swap_max": "0", "oom_kill": 0, "cgroup": "pecko-031248.scope", "memory_anon": 871968768, "memory_file": 421888}}
+{"stage": "voice", "event": "synth_end", "turn": 24, "t": 14481.517240941, "extra": {"gen": 47, "ms": 340.1, "audio_s": 4.4, "rtf": 0.077}}
+{"stage": "voice", "event": "chunk_recv", "turn": 24, "t": 14481.517431359, "extra": {"gen": 47, "seq": 2, "held": false}}
+{"stage": "voice", "event": "turn_done", "turn": 24, "t": 14481.517515441, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 14480.311848771, "t_commit": 14480.311846649, "t_pcm_ready": 14481.177037687, "t_first_audio": 14481.177105333, "first_synth_ms": 199.7, "first_layer": "synth", "hits": {}, "phrases": 2, "synth_ms": [199.7, 340.1], "audio_s": 6.37, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 47, "held_used": true, "first_dur_s": 1.97718820861678}}
+{"stage": "brain", "event": "stopped", "turn": -1, "t": 14481.608685933, "extra": {}}
