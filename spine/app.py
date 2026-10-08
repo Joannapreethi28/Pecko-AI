@@ -164,7 +164,7 @@ def build(args, out_dir: Path) -> tuple[Pecko, Any]:
     app.voice = VoiceStage(on_event=app.from_voice, tier=args.tier, audio=not args.no_audio,
                            barge_in=not args.half_duplex)
     vlog.add_sink(lambda rec: shared.stream.write(json.dumps(rec) + "\n"))   # Voice lines into the run log
-    app.ears = Ears(tier=0, out_stream=LineSink(app.from_ears))
+    app.ears = Ears(tier=0, out_stream=LineSink(app.from_ears))   # set_tier(ears_tier) in start_all
     app.ears._elog = EventLog(events)   # Ears diagnostics (t_eos, endpoint, asr_final) into the run log
     return app, events
 
@@ -190,14 +190,15 @@ def sample_resources(log: EventLog, stop: threading.Event, period: float = 0.5) 
         before = snap
 
 
-def start_all(app: Pecko, tier: int) -> None:
+def start_all(app: Pecko, tier: int, ears_tier: Optional[int] = None) -> None:
     t0 = now()
     app.ears.start()
-    if tier:
-        app.ears.set_tier(tier)
+    et = tier if ears_tier is None else ears_tier
+    if et:
+        app.ears.set_tier(et)
     app.brain.start()
     app.voice.start()
-    app.log.emit("spine", "ready", None, startup_s=round(now() - t0, 2), tier=tier,
+    app.log.emit("spine", "ready", None, startup_s=round(now() - t0, 2), tier=tier, ears_tier=et,
                  pid=os.getpid())
 
 
@@ -257,6 +258,8 @@ def main() -> None:
     src.add_argument("--mic", action="store_true", help="live microphone")
     src.add_argument("--wav", type=Path, nargs="+", help="16 kHz mono WAV(s), played at real-time speed")
     ap.add_argument("--tier", type=int, default=0, help="start tier T0-T3 (docs/CONTRACT.md)")
+    ap.add_argument("--ears-tier", type=int, default=None,
+                    help="Ears ASR tier if different (2 = Zipformer 20M, much lighter than Moonshine)")
     ap.add_argument("--port", type=int, default=8080)
     ap.add_argument("--no-wake", action="store_true", help="WAV runs: skip the wake word (push-to-talk)")
     ap.add_argument("--no-audio", action="store_true", help="no speaker (Voice still synthesizes)")
@@ -273,7 +276,7 @@ def main() -> None:
     stop = threading.Event()
     threading.Thread(target=sample_resources, args=(app.log, stop), name="spine-resources", daemon=True).start()
     try:
-        start_all(app, args.tier)
+        start_all(app, args.tier, args.ears_tier)
         if args.mic:
             run_mic(app)
         else:
