@@ -82,12 +82,12 @@ B0 = a typical serial stack with the **same LLM and flags** (Qwen3-0.6B Q4_K_M o
 | Paired gap B0 − Pecko | | p50 **1199 ms**, p90 1472 ms, min 837 ms | |
 | Pecko faster | | **24 / 24 pairs** | |
 | CPU-seconds per turn | 1.96 | **1.20** (1.63× less) | |
-| Peak RAM (cgroup, incl. model load) <!-- RAM row: update from data/results/run-syn24-pecko-ram if re-measured --> | 917 MiB | **846 MiB** (−71 MiB; repeat run 848) | |
+| Peak RAM (cgroup, incl. model load) <!-- RAM row: update from data/results/run-syn24-pecko-ram if re-measured --> | 917 MiB | 846 MiB (about the same: identical Pecko runs ranged 839–928 MiB, so ±90 MiB is noise) | ablation repeats |
 | Energy per turn | not yet measured | not yet measured | needs native Ubuntu RAPL; this VM has none |
 
 Source: [`data/results/run-syn24-pecko-ram/compare_vs_baseline-syn24-b0.txt`](data/results/run-syn24-pecko-ram/compare_vs_baseline-syn24-b0.txt) (per-turn transcripts and answers included).
 
-**RAM history (honest):** the first integrated build peaked at 1140 MiB, *above* B0 (`data/results/run-syn24-pecko`). Profiling each component showed Moonshine Small loading and then being thrown away at `--ears-tier 2` (+217 MiB) and `import torch` used only for Silero VAD (+128 MiB). Building Ears at the requested tier and running Silero on onnxruntime brought the peak to 846 MiB. B0 still uses the stock torch Silero, so part of the 71 MiB lead is that choice. Model files were already in the page cache, so a cold start was not measured, and that holds for both stacks.
+**RAM history (honest):** the first integrated build peaked at 1140 MiB, *above* B0 (`data/results/run-syn24-pecko`). Profiling each component showed Moonshine Small loading and then being thrown away at `--ears-tier 2` (+217 MiB) and `import torch` used only for Silero VAD (+128 MiB). Building Ears at the requested tier and running Silero on onnxruntime brought the peak to 846 MiB. **But this is not a RAM win over B0:** peak RAM moves about ±90 MiB between identical runs (full Pecko 928 vs 839 MiB in the ablation repeats), so 846 vs 917 MiB is "about the same". The profiling fixed a real regression (1140 → ~850 MiB); it did not create a measurable lead. Model files were already in the page cache, so a cold start was not measured, and that holds for both stacks.
 
 ### Where Pecko's time goes: C vs R (first audio = max(C, R) + d)
 From `python3 scripts/turn_report.py data/results/run-loop6-commitfix` (4 real-voice WAV turns, same cap, peak 996 MiB, `oom_kill 0`):
@@ -101,13 +101,43 @@ From `python3 scripts/turn_report.py data/results/run-loop6-commitfix` (4 real-v
 - **LLM quantization** (same source): Q4_K_M beats Q8_0 on first chunk p50, 177 vs 261 ms. Q8 answer quality not scored yet.
 - **TTS quantization** ([`voice/RESULTS.md`](voice/RESULTS.md), **Windows dev laptop, not the judged machine**): Piper int8 is 2.4-3.2× *slower* than fp32 under co-run, so we ship fp32 with 1 ONNX thread.
 - Ears: [`ears/RESULTS.md`](ears/RESULTS.md). Spine status: [`spine/BUILD_STATUS.md`](spine/BUILD_STATUS.md).
-- The A0→A7 end-to-end ablation waterfall, the degradation curve under tighter caps, and the 60 held-out human turns are **not yet measured**.
+- The 60 held-out human turns are **not yet measured**. End-to-end ablation and degradation: below.
+
+### End-to-end ablation (leave-one-out), 24 synthetic turns
+Full table, flags and commands: [`data/results/ablation-e2e-summary.md`](data/results/ablation-e2e-summary.md). Same cap (`PECKO_CPUS=2,3`, 2 CPU / 2 GB, swap 0), `--ears-tier 2`, `--no-audio`, same LLM as B0. **One run of 24 turns per row**; three full-Pecko runs gave p50 835 / 882 / 880 ms, so treat differences under ~±50 ms (p50) and ~±150 ms (p90) as noise. No failures in any row.
+
+| Turn one thing off (from full Pecko, p50 882 / p90 1375 ms, C 297 ms, 1.33 CPU-s/turn) | first audio p50 / p90 (ms) | C p50 (ms) | CPU-s/turn | Reading |
+|---|---|---|---|---|
+| Fusion endpointer → fixed 800 ms timer | 1400 / 1796 | 815 | 1.24 | **Biggest step:** +518 ms p50 |
+| System-prompt KV cache (fair row: cache AND early prefill off) | 1374 / 1717 | 294 | 1.97 | +492 ms p50, and 1.97 vs 1.33 CPU-s |
+| Early prefill (no speculation) | 828 / 1156, repeat 851 / 1360 | 295 | 1.04, 1.15 | no measurable change |
+| Hold-and-release | 872 / 1425, repeat 901 / 1318 | 298 | 1.28, 1.25 | no measurable change |
+| Answer cache/router | 956 / 1282 | 296 | 1.28 | router never fired (0 cache hits on this set); delta is noise |
+| All four off | 1810 / 2180 | 816 | 1.87 | still 191 ms p50 faster than B0 (2059) |
+
+- **Wins we can attribute:** the fusion endpointer (C 297 → 815 ms without it) and the system-prompt KV cache. The plain "KV cache off" row (2256 ms) is inflated because early prefill keeps re-prefilling the full prompt (6.15 CPU-s/turn), so we quote the fair row.
+- **Honest negative result: speculation (early prefill, hold-and-release) shows no measurable gain on this set** and costs about 0.1–0.3 CPU-s/turn. That fits `first audio = max(C, R) + d`: once the prompt is cached, prefilling a ~10-token question after C is cheap, and C (~300 ms) is rarely the later term, so starting early buys nothing. Short synthetic questions are the easy case for "no speculation"; longer or human turns may differ (not measured).
+- **~190 ms of the win vs B0 is unattributed:** streaming ASR (vs whole-utterance decode) and first-clause TTS chunking have no off switch yet, so that leftover is not split.
+
+### Degradation at 1 CPU (24 synthetic turns, one run per row)
+Full table and commands: [`data/results/degradation-summary.md`](data/results/degradation-summary.md). Pinned to one CPU (`taskset -c 4`, `CPUQuota=100%`), swap 0, same LLM.
+
+| Cap | B0 p50 / p90 | Pecko T0 p50 / p90 | Pecko T2 p50 / p90 | Pecko faster (T2) | Failures |
+|---|---|---|---|---|---|
+| 1 CPU / 2 GB | 2643 / 3455 ms | 1027 / 1458 ms | **996 / 1302 ms** | 24/24 | 0 / 0 / 0 |
+| 1 CPU / 1.25 GiB | 2745 / 3195 ms | 980 / 1481 ms | 947 / 1256 ms | 24/24 | 0 / 0 / 0 |
+
+- From 2 CPU to 1 CPU (2 GB): B0 p50 +584 ms, Pecko T2 +161 ms. CPU-s/turn at 1 CPU: B0 2.05, Pecko T2 0.95.
+- **One loss:** fixed T0 at 1 CPU / 2 GB lost one turn by 52 ms (turn 5, 3598 vs 3546 ms; a 2.5 s gap between Brain chunks, cause not diagnosed). T2 won all 24.
+- T2 here still uses **Qwen3-0.6B** (ctx 512, n_predict 25, 1 thread, Piper lessac-low), not the 350M-class model the ladder names. Shorter answers; quality not scored.
+- The **1.25 GiB cap never bound** (all peaks 801–974 MiB, oom_kill 0), so this is not a memory-pressure test.
+- Tiers were set at launch (`--tier 2`); there is **no automatic tier switching** in a run. The Ears tier-switch test (`scripts/test_tier_switch.py`) **failed its own sanity check** (empty transcripts at T0 and T1), so the switch is timed (1.43 s) but not shown to work.
 
 ### Honest caveats
 - **Synthetic speech.** Questions are Piper TTS ("Hey Pecko, ..."), not human voices; a sanity set, not the held-out set. Real voices will be harder.
 - **VM, not native.** VirtualBox may add scheduling noise; no RAPL, so no energy numbers yet.
 - **No speaker.** d = 0 ms on both stacks; a real device adds its output latency to both.
-- **RAM lead is thin** (846 vs 917 MiB). Part of it is that Pecko's Silero VAD runs on onnxruntime without torch, while B0 uses the stock torch Silero (~128 MiB for `import torch`). Both stacks share the same llama-server and Piper memory.
+- **No RAM lead.** 846 vs 917 MiB is inside run-to-run noise (identical full-Pecko runs: 928 vs 839 MiB). Both stacks share the same llama-server and Piper memory; we claim "about the same RAM", not less.
 - **One run each, n = 24.** p90 of 24 turns is a rough estimate.
 - **ASR mishears** in both stacks: "Romeo **when** Juliette" (loop5/loop6), "**why** is the boiling point of water", "what **cast** do plants take in", "cricket**ine**"; B0 twice kept the wake word ("PACKO ...").
 - **Some answers are wrong** (same 0.6B model in both): Pecko said "a week has 7 hours", "0 players on a cricket", "7 continents in our solar system", "Juliette wrote Romeo"; B0 said the Mona Lisa was by Van Gogh. Latency is not answer quality; quality is not scored yet.
