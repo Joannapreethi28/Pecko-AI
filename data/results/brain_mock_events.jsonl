@@ -1,0 +1,15 @@
+{"stage": "brain", "event": "warm_up", "turn": -1, "t": 2568.0686135, "extra": {"ms": 519.8, "base_tokens": 84}}
+{"stage": "brain", "event": "ready", "turn": -1, "t": 2568.06965745, "extra": {"tier": "T0"}}
+{"stage": "brain", "event": "prompt_ready", "turn": 1, "t": 2568.07009704, "extra": {"gen": 1, "chars": 473}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 2568.171217381, "extra": {"gen": 1, "held": false}}
+{"stage": "brain", "event": "first_chunk", "turn": 1, "t": 2568.320757762, "extra": {"gen": 1, "words": 5, "held": false}}
+{"stage": "brain", "event": "gen_done", "turn": 1, "t": 2568.382350138, "extra": {"gen": 1, "status": "ok", "chunks": 3, "prompt_n": 18, "cache_n": 84, "predicted_n": 8, "decode_tps": 37.9}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 2568.589372116, "extra": {"gen": 2, "chars": 603}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 2568.702580238, "extra": {"gen": 2, "held": false}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 2568.873933749, "extra": {"gen": 2, "words": 5, "held": false}}
+{"stage": "brain", "event": "gen_done", "turn": 2, "t": 2569.382234611, "extra": {"gen": 2, "status": "ok", "chunks": 4, "prompt_n": 19, "cache_n": 109, "predicted_n": 20, "decode_tps": 29.5}}
+{"stage": "brain", "event": "prompt_ready", "turn": 3, "t": 2569.586317952, "extra": {"gen": 3, "chars": 807}}
+{"stage": "brain", "event": "first_token", "turn": 3, "t": 2569.717925943, "extra": {"gen": 3, "held": false}}
+{"stage": "brain", "event": "first_chunk", "turn": 3, "t": 2569.910425343, "extra": {"gen": 3, "words": 4, "held": false}}
+{"stage": "brain", "event": "gen_done", "turn": 3, "t": 2570.08657167, "extra": {"gen": 3, "status": "ok", "chunks": 3, "prompt_n": 22, "cache_n": 147, "predicted_n": 11, "decode_tps": 29.9}}
+{"stage": "brain", "event": "stopped", "turn": -1, "t": 2570.288661426, "extra": {}}
