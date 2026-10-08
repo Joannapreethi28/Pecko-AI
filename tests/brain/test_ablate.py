@@ -47,6 +47,12 @@ def test_turn_without_gen_done_counts_no_useful_tokens():
     assert m["wasted_prefill_pct"] == 100.0
 
 
+def test_base_warm_up_is_not_wasted_prefill():
+    records = [rec("prefill", 1, 1.0, kind="base", prompt_n=30), rec("prefill", 1, 1.5, kind="stable", prompt_n=8)]
+    m = measure(records, {1: 2.0}, {1: 50})
+    assert m["warm_tokens"] == 30 and m["prefill_tokens"] == 8
+
+
 def test_ablation_turns_file():
     turns = load_turns()
     kinds = [t["kind"] for t in turns]

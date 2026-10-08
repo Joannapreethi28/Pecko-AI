@@ -40,11 +40,14 @@ def measure(records: list[dict], finals: dict[int, float], base_ns: dict[int, in
     cached base prompt. Router-only turns have no first_token and are skipped for that column."""
     by_turn: dict[int, dict[str, dict]] = {}
     prefilled: dict[int, int] = {}
+    warm_total = 0   # idle base-prompt warm-ups after a history trim: real CPU, but not speculation
     for r in records:
         turn = r["turn"]
         if turn not in finals:
             continue
-        if r["event"] == "prefill":
+        if r["event"] == "prefill" and r["extra"].get("kind") == "base":
+            warm_total += r["extra"].get("prompt_n", 0)
+        elif r["event"] == "prefill":
             prefilled[turn] = prefilled.get(turn, 0) + r["extra"].get("prompt_n", 0)
         else:
             by_turn.setdefault(turn, {}).setdefault(r["event"], r)   # first occurrence wins
@@ -67,7 +70,8 @@ def measure(records: list[dict], finals: dict[int, float], base_ns: dict[int, in
     return {"n": len(finals), "n_first_token": len(first_token),
             "first_token_p50": percentile(first_token, 50), "first_token_p90": percentile(first_token, 90),
             "first_audio_p50": percentile(first_audio, 50), "first_audio_p90": percentile(first_audio, 90),
-            "prefill_tokens": prefill_total, "useful_tokens": useful_total, "wasted_prefill_pct": wasted}
+            "prefill_tokens": prefill_total, "useful_tokens": useful_total, "wasted_prefill_pct": wasted,
+            "warm_tokens": warm_total}
 
 
 def _fmt(x: Optional[float]) -> str:

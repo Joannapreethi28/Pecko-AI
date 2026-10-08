@@ -252,7 +252,10 @@ class BrainStage:
         self._log.event("warm_up", -1, ms=round((now() - t0) * 1000, 1), base_tokens=t.prompt_n + t.cache_n)
 
     def _prefill(self, turn: int, kind: str, text: str) -> None:
-        prompt = self._prompt.partial(text) if kind == "stable" else self._prompt.final(text)
+        if kind == "base":
+            prompt = self._prompt.base()
+        else:
+            prompt = self._prompt.partial(text) if kind == "stable" else self._prompt.final(text)
         try:
             t = self._client.prefill(prompt, cache_prompt=self.cache_prompt)
         except LLM_ERRORS as e:
@@ -272,9 +275,18 @@ class BrainStage:
         self._log.event("prompt_ready", turn, gen=gen, chars=len(prompt))
         raw, seq, status, t = self._stream_reply(turn, gen, prompt, cancel)
         if status == "ok":
-            self._prompt.add_turn(user, raw)   # exact generated text keeps the KV prefix valid
+            self._remember(turn, user, raw)   # exact generated text keeps the KV prefix valid
         self._finish(gen)
         self._log_done(turn, gen, status, seq, t)
+
+    def _remember(self, turn: int, user: str, reply: str) -> None:
+        """Add the turn to history; after a trim, warm the new base prompt while idle so the next
+        turn hits the KV cache (coalesce() drops this job if the user is already speaking)."""
+        if not self._prompt.add_turn(user, reply):
+            return
+        self._log.event("history_trim", turn, kept=self._prompt.n_turns)
+        if self.cache_prompt and self._tier.model is not None:
+            self._jobs.put(("prefill", turn, "base", ""))
 
     def _log_done(self, turn: int, gen: int, status: str, seq: int, t: Optional[Timings]) -> None:
         t = t or Timings()
@@ -312,7 +324,7 @@ class BrainStage:
         raw, seq, status, t = self._stream_reply(turn, held_gen, prompt, cancel, seq0=h["seq"],
                                                  first_done=True, sentences0=count_sentence_ends(sent))
         if status == "ok":
-            self._prompt.add_turn(user, sent + raw)
+            self._remember(turn, user, sent + raw)
         self._finish(held_gen)
         self._log_done(turn, held_gen, status, seq, t)
 

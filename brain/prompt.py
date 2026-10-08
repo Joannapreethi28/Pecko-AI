@@ -1,5 +1,5 @@
 """Byte-stable prompts. The KV cache is reused only for an identical byte prefix, so: the system
-prompt never changes, history is append-only, and a past reply is rendered exactly as generated
+prompt never changes, history is append-only between block trims, and a past reply is rendered exactly as generated
 (including the empty think block) so the next turn's prompt extends the previous one."""
 from __future__ import annotations
 
@@ -41,8 +41,10 @@ TEMPLATES = {
 
 
 class PromptBuilder:
-    def __init__(self, family: str = "qwen3", system: str = SYSTEM_PROMPT, max_turns: int = 3):
+    def __init__(self, family: str = "qwen3", system: str = SYSTEM_PROMPT, max_turns: int = 3,
+                 keep_after_trim: int = 1):
         self.family, self.max_turns, self._system_text = family, max_turns, system
+        self.keep_after_trim = keep_after_trim
         self.t = TEMPLATES[family]
         self._system = self.t.system.format(sys=system)
         self._turns: list[tuple[str, str]] = []
@@ -60,15 +62,24 @@ class PromptBuilder:
     def final(self, user: str) -> str:
         return self.partial(user) + self.t.user_close + self.t.assistant_open
 
-    def add_turn(self, user: str, reply: str) -> None:
+    def add_turn(self, user: str, reply: str) -> bool:
+        """Append a turn. On overflow cut history to the last `keep_after_trim` turns in one block and
+        return True: a sliding window would shift the prefix (and miss the KV cache) on every turn."""
         self._turns.append((user, reply))
-        if len(self._turns) > self.max_turns:
-            self._turns = self._turns[len(self._turns) - self.max_turns:]
+        if len(self._turns) <= self.max_turns:
+            return False
+        keep = min(self.keep_after_trim, self.max_turns)
+        self._turns = self._turns[len(self._turns) - keep:] if keep else []
+        return True
 
     def rebuild(self, family: str) -> "PromptBuilder":
-        nb = PromptBuilder(family, self._system_text, self.max_turns)
+        nb = PromptBuilder(family, self._system_text, self.max_turns, self.keep_after_trim)
         nb._turns = list(self._turns)
         return nb
+
+    @property
+    def n_turns(self) -> int:
+        return len(self._turns)
 
     def clear(self) -> None:
         self._turns.clear()

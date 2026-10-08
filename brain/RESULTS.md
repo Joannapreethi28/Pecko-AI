@@ -34,10 +34,15 @@ Decision (rule in SPEC.md; **provisional until the blind quality scores are in**
 | Q8: + system-prompt KV cache | 139 / 788 ms | 316 / 976 ms | n/a | 36 | |
 | Q8: + tentative_final prefill | 51 / 61 ms | 261 / 319 ms | 0.0% | 36 | Q4 is 84 ms faster at p50 first chunk |
 
-Cgroup `memory.peak` (server + harness, whole run): Q4 981 MB, Q8 933 MB; `oom_kill 0` both.
+| **after history fix**: + system-prompt KV cache | 115 / 143 ms | 271 / **324** ms | re-measure | 36 | was 290 / 813 ms; prompt computed ≈ 24 tokens/turn on turns 5-12 (was 90-100) |
+| **after history fix**: + tentative_final prefill | 38 / 41 ms | 205 / 222 ms | re-measure | 36 | was 177 / 213 ms, see finding 5 |
+
+Cgroup `memory.peak` (server + harness, whole run): Q4 981 MB, Q8 933 MB, Q4 after history fix 848 MB; `oom_kill 0` both.
 
 Findings:
-1. **History rewrite breaks the cache.** In `sys_cache`, from turn 5 on `cache_n` falls back to ≈ 106-110 (system prompt only) and 90-100 tokens are recomputed per turn → the 671 ms p90. Likely the history window drops the oldest turn and shifts everything after the system prompt. Early prefill hides it (recompute happens during speech), but T2 (speculation off) would pay it. Not fixed yet.
+1. **(FIXED 9 Oct, see rows "after history fix")** **History rewrite breaks the cache.** In `sys_cache`, from turn 5 on `cache_n` falls back to ≈ 106-110 (system prompt only) and 90-100 tokens are recomputed per turn → the 671 ms p90. Likely the history window drops the oldest turn and shifts everything after the system prompt. Early prefill hides it (recompute happens during speech), but T2 (speculation off) would pay it. Not fixed yet.
 2. Each feature cuts first-chunk p50: 1024 → 290 → 231 → 177 ms. Early prefill on `tentative_final` costs 10.8% wasted prefill (correction turns).
 3. Q4_K_M beats Q8_0 on latency (first chunk p50 177 vs 261 ms). Q8 quality on the 20 questions is not scored yet.
 4. Not understood yet (do not quote): Q8 `early_tentative` wasted 0.0% vs Q4 10.8% on the same turns; Q8 cgroup peak lower than Q4 despite the larger file (the Q4 run also ran 3 more configs).
+5. **History fix** (`brain/prompt.py`: on overflow cut history to the last 1 turn in one block, not a sliding window; `brain/stage.py`: after a trim, prefill the new base prompt while idle). `sys_cache` first-chunk p90 813 → 324 ms. `early_tentative` first-chunk p50 got 28 ms slower (177 → 205 ms) although first_token is unchanged (36 → 38 ms): the shorter history changes the replies, and mean first-clause length went 3.58 → 3.83 words. That is a content difference, not proven to be pipeline cost; re-run with a fixed reply set to separate the two. Wasted % for these rows needs a re-run: the run counted the new base warm-ups as wasted (100% / 21.5%); `ablate.measure()` now excludes `prefill kind=base` and reports it as `warm_tokens`. Raw: `data/results/ablation_q4-histfix-ubuntu-vm-cg.jsonl`.
+6. Brain stops the stream at the 2-sentence limit, so `gen_done` then has no server timings (prompt_n = cache_n = 0). Latency events are unaffected; cache stats on those turns are missing.
