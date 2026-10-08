@@ -1,0 +1,19 @@
+Pecko: run-loop5-zip   B0: baseline-loop5-b0   (ms after end of speech t_eos)
+turn | P C/endp Pecko 1st | B0 endpt  B0 1st | B0-Pecko | transcript (Pecko / B0) -> answer
+   1 |      531       749 |      803    1757 |     1008 | 'WHAT IS THE CAPITAL OF FRANCE' / 'WHAT IS THE CAPITAL OF FRANCE'
+       Pecko: 'The capital of France is Paris. '   B0: 'The capital of France is Paris.'
+   2 |      589       700 |      802    1743 |     1043 | 'HOW MANY LEGS DOES A SPIDER HAVE' / 'HOW MANY LEGS DOES A SPIDER HAVE'
+       Pecko: 'A spider has eight legs. '   B0: 'A spider has eight legs.'
+   3 |      330       664 |      803    1957 |     1293 | 'WHO WROTE ROMEO WHEN JULIETTE' / 'WHO WROTE ROMEO AND JULIET'
+       Pecko: 'Juliette wrote Romeo. '   B0: 'William Shakespeare wrote " Romeo and Juliet ".'
+   4 |     1224      1225 |      803    1766 |      541 | 'THANK YOU' / 'THANK YOU' [Pecko cached]
+       Pecko: '[cached:thanks]'   B0: "You're welcome."
+
+first audio  Pecko: n=4 p50 700 ms  p90 1225 ms  max 1225 ms
+first audio  B0   : n=4 p50 1757 ms  p90 1957 ms  max 1957 ms
+paired gap (B0 - Pecko): n=4 p50 1008 ms  p90 1293 ms  min 541 ms   Pecko faster in 4/4 pairs
+failures (no first audio, kept in n): none
+Pecko: CPU-s/turn 0.85 | peak RAM 1481 MiB (incl. load) | max RAM during turns 1481 MiB | J/turn n/a | cap cpu.max 200000 100000 memory.max 2147483648 | oom_kill 0
+B0   : CPU-s/turn 1.74 | peak RAM 813 MiB (incl. load) | max RAM during turns 813 MiB | J/turn n/a | cap cpu.max 200000 100000 memory.max 2147483648 | oom_kill 0
+B0 exact cpu.stat per turn (speech start -> first audio): [1.446, 1.547, 1.85, 1.727]
+note: n=4 turns; p90 of so few turns is close to the max, not a stable estimate
