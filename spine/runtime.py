@@ -7,6 +7,9 @@ from pathlib import Path
 from spine.bus import EventBus
 from spine.experiment import ExperimentRunner
 from spine.placeholders import FACTORIES
+from spine.wav_placeholder import WavPlaceholderEars
+
+BUILTIN_FACTORIES = dict(FACTORIES, **{"ears:wav-placeholder": WavPlaceholderEars})
 
 
 class StageContext:
@@ -63,7 +66,7 @@ def make_factory(profile, registry=None):
     Stage construction must not load/start workers; that belongs in start().
     A mixed runtime remains synthetic until every placeholder has been replaced.
     """
-    registry = dict(FACTORIES if registry is None else registry)
+    registry = dict(BUILTIN_FACTORIES if registry is None else registry)
     validate_profile(profile, registry)
     def create(log):
         bus = None
@@ -96,6 +99,10 @@ def main():
     try:
         profile = json.loads(args.profile.read_text(encoding="utf-8-sig"))
         plan = json.loads(args.plan.read_text(encoding="utf-8-sig"))
+        for case in plan.get("cases", []):
+            if "wav" in case:
+                path = Path(case["wav"])
+                case["wav"] = str((args.plan.parent / path).resolve() if not path.is_absolute() else path)
         factory = make_factory(profile)
         if plan.get("synthetic") != profile["synthetic"]:
             raise ValueError("Plan and runtime synthetic declarations must match")

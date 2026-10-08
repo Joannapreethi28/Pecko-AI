@@ -4,6 +4,9 @@
 project acceptance remains 0/8; Ubuntu VM and real-engine checks happen at the end.
 See [delivery checklist and deferred gates](BUILD_STATUS.md).
 
+The recorded-input milestone is also built: real-time WAV ingress, repeated
+paired execution and strict comparisons. See [recorded-input instructions](RECORDED_INPUT.md).
+
 Run the contract-faithful placeholders now:
 
 ```sh

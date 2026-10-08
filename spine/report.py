@@ -68,6 +68,8 @@ def validate_manifest(manifest: dict) -> None:
         raise ValueError("Manifest needs a turns list")
     if not manifest["turns"]:
         raise ValueError("Manifest must contain expected turns")
+    if "conditions" in manifest and not isinstance(manifest["conditions"], dict):
+        raise ValueError("Manifest conditions must be an object")
     if type(manifest.get("synthetic")) is not bool:
         raise ValueError("Manifest must declare synthetic true/false")
     for field in ("run_id", "platform", "configuration"):
@@ -165,6 +167,8 @@ def turn_report(row: dict, events: list[dict]) -> dict:
     # This is declared failure scoring, NOT an observed latency for missing audio.
     scored = latency if success else max(row["timeout_s"], latency or 0)
     return {"turn": row["turn"], "case_id": row["case_id"], "success": success,
+            "timeout_s": row["timeout_s"],
+            "input_sha256": (first(events, "ears", "input_clip") or {}).get("extra", {}).get("sha256"),
             "issues": issues, "failure_reason": end.get("extra", {}).get("reason") if end else None,
             "observed_first_audio_s": latency, "timeout_scored_latency_s": scored,
             "commit_s": None if commit is None or eos is None else commit["t"] - eos,
@@ -199,6 +203,7 @@ def build_report(manifest: dict, events: Iterable[dict]) -> dict:
     return {
         "run_id": manifest["run_id"], "platform": manifest["platform"],
         "configuration": manifest["configuration"], "synthetic": synthetic,
+        "conditions": manifest.get("conditions", {}),
         "expected_turns": len(turns), "successful_turns": len(turns) - failures,
         "failed_or_incomplete_turns": failures, "unexpected_turns": unexpected,
         "headline_ready": headline_ready,

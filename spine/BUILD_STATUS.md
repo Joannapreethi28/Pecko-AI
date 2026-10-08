@@ -18,13 +18,24 @@ This counts software deliverables only. Advanced action selection, speculation
 admission and chunk optimization remain gated on real C-versus-R measurements.
 The required end-to-end baseline still needs actual engine adapters.
 
+## Recorded-input integration milestone: 3 of 3 built
+
+| Addition | Acceptance evidence | Status |
+|---|---|---|
+| Real-time WAV ingress | Bounded PCM frames, capture timestamps, EOS labels, cancellation, integrity checks and reference-text placeholder | Built; fixture run and tests |
+| Paired comparison | Input/model/cap/timeout matching; failed/missing cases retained; synthetic gains withheld | Built; matching/mismatch tests |
+| Repeated execution | Shared seeded case order, rotating profile order, six retained runs, three comparisons and suite review page | Built; end-to-end batch run |
+
+See [recorded input instructions](RECORDED_INPUT.md). Actual engines and recorded
+human speech remain deferred; the smoke input is tone/reference text only.
+
 ## Original project phases: hardware-inclusive acceptance remains 0 of 8
 
 | Project phase | Built Spine software | Deferred acceptance |
 |---|---|---|
 | 1. L0 foundations | Clock/log, launcher, preflight | Ubuntu cap/offline check; local weights |
 | 2. L1 real loop | Swappable placeholder runtime, hold/release, engine supervision | Ears/Brain/Voice replacement, actual audible capped loop |
-| 3. L2 baseline + decisive experiment | Runner, report, resource/energy sampling | Real B0, paired traces at 1 and 2 CPUs |
+| 3. L2 baseline + decisive experiment | WAV ingress, repeated paired runner, comparisons, reports, accounting | Real B0, paired traces at 1 and 2 CPUs |
 | 4. Phone feasibility spike | Shared runtime contract remains portable | Termux feasibility check after L1 |
 | 5. PC2 core improvements | Reactive ladder, monitoring, dashboard and private release plumbing | Profile calibration, engine streaming/cache improvements, A0–A4 measurements |
 | 6. L4 stability | Failure paths and synthetic degradation wired | Integrated real-loop stability, A5–A7, feature freeze |

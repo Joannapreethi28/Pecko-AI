@@ -21,6 +21,9 @@ _TODO: exact commands that worked (Python version, venv, models download to `mod
 
 ## Run
 
+Recorded-input and paired evaluation tooling is available on Windows.
+See [WAV ingress and repeated comparisons](spine/RECORDED_INPUT.md).
+
 Start the configurable placeholder runtime and generate its dashboard:
 
 ```sh

@@ -37,6 +37,8 @@ def validate_plan(plan: dict) -> None:
             raise ValueError(f"Plan needs {field}")
     if type(plan.get("synthetic")) is not bool:
         raise ValueError("Plan needs explicit synthetic true/false")
+    if "conditions" in plan and not isinstance(plan["conditions"], dict):
+        raise ValueError("Experiment conditions must be an object")
     if not isinstance(plan.get("cases"), list) or not plan["cases"]:
         raise ValueError("Plan needs a nonempty cases list")
     seen = set()
@@ -69,6 +71,7 @@ class ExperimentRunner:
         self.output.mkdir(parents=True, exist_ok=False)
         write_json(self.output / "plan.json", self.plan)
         manifest = {k: self.plan[k] for k in ("run_id", "platform", "configuration", "synthetic")}
+        manifest["conditions"] = self.plan.get("conditions", {})
         manifest["turns"] = [{"turn": i, "case_id": c["case_id"],
                               "t_eos": None, "not_started": True,
                               "timeout_s": c["timeout_s"]}
