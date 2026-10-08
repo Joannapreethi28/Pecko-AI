@@ -62,6 +62,7 @@ class BrainStage:
         self.hold_release = hold_release
         self._held_info: Optional[tuple[int, int]] = None
         self._held: Optional[dict] = None
+        self._carry = ""
         self._worker = threading.Thread(target=self._run, name="brain-llm", daemon=True)
 
     # ---- lifecycle (stage interface) -------------------------------------------------------
@@ -302,7 +303,8 @@ class BrainStage:
         prompt = self._prompt.final(text)
         self._log.event("prompt_ready", turn, gen=gen, chars=len(prompt), held=True)
         raw, seq, status, _ = self._stream_reply(turn, gen, prompt, cancel, held=True, first_only=True)
-        self._held = {"turn": turn, "gen": gen, "text": text, "raw": raw, "seq": seq, "status": status}
+        self._held = {"turn": turn, "gen": gen, "text": text, "raw": raw, "seq": seq, "status": status,
+                      "carry": self._carry if status == "held" else ""}
         if status != "held":
             self._finish(gen)
 
@@ -322,7 +324,8 @@ class BrainStage:
         sent = h["raw"]
         prompt = self._prompt.final(user) + sent   # the KV already holds this exact prefix
         raw, seq, status, t = self._stream_reply(turn, held_gen, prompt, cancel, seq0=h["seq"],
-                                                 first_done=True, sentences0=count_sentence_ends(sent))
+                                                 first_done=True, sentences0=count_sentence_ends(sent),
+                                                 carry=h["carry"])
         if status == "ok":
             self._remember(turn, user, sent + raw)
         self._finish(held_gen)
@@ -330,10 +333,14 @@ class BrainStage:
 
     def _stream_reply(self, turn: int, gen: int, prompt: str, cancel: threading.Event, *,
                       seq0: int = 0, held: bool = False, first_only: bool = False,
-                      first_done: bool = False, sentences0: int = 0) -> tuple[str, int, str, Optional[Timings]]:
+                      first_done: bool = False, sentences0: int = 0,
+                      carry: str = "") -> tuple[str, int, str, Optional[Timings]]:
         chunker, think = Chunker(first_done=first_done), ThinkFilter()
         raw: list[str] = []
         seq, sentences, timings, got_token, stopped = seq0, sentences0, None, False, False
+        for chunk in chunker.push(carry):   # text a held stream had read but not yet sent
+            seq = self._send_chunk(turn, gen, seq, chunk, cancel, held=held)
+            sentences += count_sentence_ends(chunk)
         it = self._client.stream(prompt, n_predict=self._tier.n_predict, temperature=self.temperature,
                                  cancel=cancel, cache_prompt=self.cache_prompt)
         try:
@@ -362,6 +369,7 @@ class BrainStage:
             self._log.event("gen_cancelled", turn, gen=gen, chunks=seq)
             return "".join(raw), seq, "cancelled", timings
         if first_only:
+            self._carry = chunker.flush() or ""   # read past the first chunk: must still be spoken
             return "".join(raw), seq, "held", timings
         if not stopped:
             for chunk in chunker.push(think.flush()):

@@ -93,3 +93,18 @@ def test_hold_release_off_keeps_plain_prefill(tmp_path):
     assert wait_until(lambda: events(log, "prefill", 1))
     stage.stop()
     assert not held_chunks(out) and streams(client) == []
+
+
+def test_text_read_past_the_held_chunk_is_still_spoken(tmp_path):
+    """Regression (first real loop run): the held stream stops after the first chunk, but the chunker had
+    already read " Paris"; the continuation prompt contains it, so it must reach Voice too."""
+    pieces = ["The", " capital", " of", " France", " is", " Paris", "."]
+    client = FakeClient(replies={"Paris": ["."], "france": pieces})   # continuation sees "Paris" already
+    stage, out, log = make(tmp_path, client, hold_release=True)
+    stage.feed(tentative(1, Q))
+    assert wait_until(lambda: held_chunks(out))
+    stage.feed(final(1, "What is the capital of France?", norm=Q))
+    assert wait_until(lambda: done(out))
+    stage.stop()
+    spoken = "".join(m["text"] for m in out if m["type"] == "chunk")
+    assert "Paris" in spoken, spoken
