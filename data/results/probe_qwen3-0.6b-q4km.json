@@ -1,0 +1,11 @@
+{
+  "n_predict_0_ok": false,
+  "cache_reuse_tokens": 34,
+  "system_tokens": 31,
+  "disconnect_prefill_ms": 124.1,
+  "disconnect_stops_generation": true,
+  "rewind_cache_n": 37,
+  "rewind_lcp_tokens": 37,
+  "think_leak": false,
+  "sample_reply": "The capital of France is Paris."
+}
