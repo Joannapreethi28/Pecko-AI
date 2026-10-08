@@ -1,0 +1,10 @@
+{
+  "run_id": "synthetic-report-example",
+  "platform": "synthetic",
+  "configuration": "illustration-only",
+  "synthetic": true,
+  "turns": [
+    {"turn": 1, "case_id": "example-answer-late", "t_eos": 10, "timeout_s": 5},
+    {"turn": 2, "case_id": "example-missing-turn", "t_eos": 20, "timeout_s": 5}
+  ]
+}

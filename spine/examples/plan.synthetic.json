@@ -1,0 +1,11 @@
+{
+  "run_id": "mock-multi-turn",
+  "platform": "synthetic",
+  "configuration": "mock-stages",
+  "synthetic": true,
+  "cases": [
+    {"case_id": "ordinary", "text": "Hello Pecko", "timeout_s": 2},
+    {"case_id": "correction-text", "text": "Actually, I meant tomorrow", "timeout_s": 2},
+    {"case_id": "short", "text": "Thanks", "timeout_s": 2}
+  ]
+}

@@ -33,7 +33,10 @@ Required events: Ears `t_eos`, `endpoint`, `asr_final`; Brain `prompt_ready`, `f
 
 **Stage interface (all roles):** `start()` (load + warm up, report ready), `feed(msg)`, `stop()`, `set_tier(n)`. Each stage runs standalone with a mock: Ears from a WAV at real-time speed, Brain from typed text, Voice from a sentence file.
 
-## v2.1 proposal: hold-and-release (agree with all four before building)
+## v2.1: hold-and-release (team approval confirmed)
+
+Sir Jabin confirmed all four roles agreed to this extension in the Spine build
+chat on 8 Oct 2026. Message shapes and rules below are unchanged.
 ```json
 {"type":"chunk","turn":7,"gen":2,"seq":0,"text":"Paris is the capital, ","held":true}   // Brain → Voice: prepare privately, do not play
 {"type":"commit","turn":7,"gen":2,"t":13.21}                                          // Spine → Voice, Brain: final validated, release gen 2

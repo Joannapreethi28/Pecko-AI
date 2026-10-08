@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "stages": {
+    "ears": {"adapter": "placeholder"},
+    "brain": {"adapter": "placeholder"},
+    "voice": {"adapter": "placeholder", "config": {"max_held_bytes": 1048576}}
+  }
+}

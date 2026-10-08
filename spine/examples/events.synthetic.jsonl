@@ -1,0 +1,8 @@
+{"stage":"ears","event":"endpoint","turn":1,"t":10.2,"extra":{"synthetic":true}}
+{"stage":"ears","event":"asr_final","turn":1,"t":10.25,"extra":{"synthetic":true}}
+{"stage":"brain","event":"prompt_ready","turn":1,"t":10.28,"extra":{"synthetic":true}}
+{"stage":"brain","event":"first_token","turn":1,"t":10.35,"extra":{"synthetic":true}}
+{"stage":"spine","event":"commit","turn":1,"t":10.3,"extra":{"gen":2,"synthetic":true}}
+{"stage":"voice","event":"pcm_ready","turn":1,"t":10.5,"extra":{"gen":2,"seq":0,"synthetic":true}}
+{"stage":"voice","event":"first_audio_out","turn":1,"t":10.55,"extra":{"gen":2,"content":true,"sustained":true,"synthetic":true}}
+{"stage":"spine","event":"turn_end","turn":1,"t":11.5,"extra":{"success":true,"gap_s":0,"synthetic":true}}
