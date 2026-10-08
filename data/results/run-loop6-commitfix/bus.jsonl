@@ -1,0 +1,49 @@
+{"t": 10669.632536921, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "PECKLE", "stable": "PECKLE", "t": 10669.626026741}}
+{"t": 10670.099148012, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE", "stable": "PECKLE", "t": 10670.089770836}}
+{"t": 10670.099258143, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 1, "intent": "question", "t": 10670.089770836}}
+{"t": 10670.652637184, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPIT", "stable": "WHAT IS THE", "t": 10670.644021411}}
+{"t": 10671.236099332, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF", "stable": "WHAT IS THE", "t": 10671.226410892}}
+{"t": 10671.824467653, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "stable": "WHAT IS THE CAPITAL OF", "t": 10671.814113178}}
+{"t": 10672.067043171, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "t_eos": 10671.6308768, "p_done": 0.8971817493438721}}
+{"t": 10672.067433588, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 1, "text": "WHAT IS THE CAPITAL OF FRANCE", "norm": "what is the capital of france", "t_eos": 10671.6308768, "t_endpoint": 10672.06741191}}
+{"t": 10672.068219709, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 1, "gen": 1, "t": 10672.068205409}}
+{"t": 10672.302492296, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 0, "text": "The capital of France is ", "held": true}}
+{"t": 10672.41054624, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 1, "text": "Paris. "}}
+{"t": 10672.451447503, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 1, "gen": 1, "seq": 2, "text": "", "last": true}}
+{"t": 10672.588089619, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": true, "t": 10672.587225}}
+{"t": 10672.588844864, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 1, "playing": false, "t": 10672.588841}}
+{"t": 10672.588887468, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 1, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 10672.303030555, "t_commit": 10672.303028448, "t_pcm_ready": 10672.587155351, "t_first_audio": 10672.587224885, "first_synth_ms": 175.3, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [175.3], "audio_s": 1.74, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 1, "held_used": true, "first_dur_s": 1.7378684807256235}}
+{"t": 10675.42793321, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW", "stable": "", "t": 10675.416614296}}
+{"t": 10675.869796365, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY", "stable": "HOW", "t": 10675.860241852}}
+{"t": 10676.573012751, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY LEGS", "stable": "HOW MANY", "t": 10676.563090272}}
+{"t": 10676.972756954, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY LEGS DOES A SP", "stable": "HOW MANY LEGS", "t": 10676.963433036}}
+{"t": 10677.506883498, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 2, "text": "HOW MANY LEGS DOES A SPIDER", "stable": "HOW MANY LEGS DOES A", "t": 10677.498828915}}
+{"t": 10678.099979499, "src": "ears", "dst": ["brain"], "msg": {"type": "tentative_final", "turn": 2, "text": "HOW MANY LEGS DOES A SPIDER HAVE", "t_eos": 10677.703613095999, "p_done": 0.9859892129898071}}
+{"t": 10678.100919495, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 2, "text": "HOW MANY LEGS DOES A SPIDER HAVE", "norm": "how many legs does a spider have", "t_eos": 10677.703613095999, "t_endpoint": 10678.100897644}}
+{"t": 10678.101237369, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 2, "gen": 3, "t": 10678.101229093}}
+{"t": 10678.338680155, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 2, "gen": 3, "seq": 0, "text": "A spider has eight legs. ", "held": true}}
+{"t": 10678.373892942, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 2, "gen": 3, "seq": 1, "text": "", "last": true}}
+{"t": 10678.457487079, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": true, "t": 10678.457235}}
+{"t": 10678.457707884, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 2, "playing": false, "t": 10678.457704}}
+{"t": 10678.457742573, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 2, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 10678.339046757, "t_commit": 10678.339043222, "t_pcm_ready": 10678.457058433, "t_first_audio": 10678.457234725, "first_synth_ms": 117.6, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [117.6], "audio_s": 1.55, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 3, "held_used": true, "first_dur_s": 1.547437641723356}}
+{"t": 10680.280692062, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO", "stable": "", "t": 10680.271702121}}
+{"t": 10680.621841016, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO WROTE", "stable": "WHO", "t": 10680.613493031}}
+{"t": 10680.980975385, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO WROTE ROMEO", "stable": "WHO WROTE", "t": 10680.9715484}}
+{"t": 10681.329054257, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO WROTE ROMEO WHEN", "stable": "WHO WROTE ROMEO", "t": 10681.320693888}}
+{"t": 10681.905315022, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 3, "text": "WHO WROTE ROMEO WHEN JULI", "stable": "WHO WROTE ROMEO WHEN", "t": 10681.89744501}}
+{"t": 10682.09472301, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 3, "text": "WHO WROTE ROMEO WHEN JULIETTE", "norm": "who wrote romeo when juliette", "t_eos": 10681.793187976, "t_endpoint": 10682.094692014}}
+{"t": 10682.094871555, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 3, "gen": 5, "t": 10682.094865039}}
+{"t": 10682.357533007, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 3, "gen": 5, "seq": 0, "text": "Juliette wrote Romeo. "}}
+{"t": 10682.402764832, "src": "brain", "dst": ["voice"], "msg": {"type": "chunk", "turn": 3, "gen": 5, "seq": 1, "text": "", "last": true}}
+{"t": 10682.4694865, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 3, "playing": true, "t": 10682.469259}}
+{"t": 10682.469677736, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 3, "playing": false, "t": 10682.469675}}
+{"t": 10682.469709032, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 3, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 10682.357777123, "t_commit": null, "t_pcm_ready": 10682.469173513, "t_first_audio": 10682.469259464, "first_synth_ms": 111.0, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [111.0], "audio_s": 1.43, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 5, "held_used": false, "first_dur_s": 1.4268934240362812}}
+{"t": 10684.232150348, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "THAN", "stable": "", "t": 10684.222731676}}
+{"t": 10684.578646232, "src": "ears", "dst": ["brain"], "msg": {"type": "partial", "turn": 4, "text": "THANK YOU", "stable": "O", "t": 10684.570531329}}
+{"t": 10684.578705357, "src": "ears", "dst": ["voice"], "msg": {"type": "intent_hint", "turn": 4, "intent": "thanks", "t": 10684.570531329}}
+{"t": 10685.55313505, "src": "ears", "dst": ["brain"], "msg": {"type": "final", "turn": 4, "text": "THANK YOU", "norm": "thank you", "t_eos": 10684.344531329, "t_endpoint": 10685.553106631}}
+{"t": 10685.553379843, "src": "spine", "dst": ["voice"], "msg": {"type": "commit", "turn": 4, "gen": 6, "t": 10685.55337216}}
+{"t": 10685.553527526, "src": "brain", "dst": ["voice"], "msg": {"type": "cached", "turn": 4, "gen": 6, "clip": "thanks", "last": true}}
+{"t": 10685.553985117, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 4, "playing": true, "t": 10685.553829}}
+{"t": 10685.554219579, "src": "voice", "dst": ["ears"], "msg": {"type": "playback_state", "turn": 4, "playing": false, "t": 10685.554217}}
+{"t": 10685.554248949, "src": "voice", "dst": [], "msg": {"type": "turn_summary", "turn": 4, "tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 10685.553671093, "t_commit": null, "t_pcm_ready": 10685.553765922, "t_first_audio": 10685.553829324, "first_synth_ms": 0.0, "first_layer": "L4", "hits": {"L4": 1}, "phrases": 1, "synth_ms": [], "audio_s": 0.91, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 6, "held_used": false, "first_dur_s": 0.905079365079365}}
