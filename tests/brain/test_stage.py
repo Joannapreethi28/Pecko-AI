@@ -195,3 +195,21 @@ def test_count_sentence_ends():
     assert count_sentence_ends("Hi. Bye.") == 2
     assert count_sentence_ends("and its largest city.") == 1
     assert count_sentence_ends("It is 3.5 degrees") == 0
+
+
+def test_router_hits_skip_the_llm_and_history(tmp_path):
+    from datetime import datetime
+    from brain.prompt import PromptBuilder
+    from brain.router import Router
+    client = FakeClient()
+    router = Router.load(clock=lambda: datetime(2026, 10, 8, 15, 45))
+    stage, out, log = make(tmp_path, client, router=router)
+    stage.feed(final(1, "Hello Pecko!"))
+    assert wait_until(lambda: done(out, turn=1))
+    stage.feed(final(2, "what time is it"))
+    assert wait_until(lambda: done(out, turn=2))
+    stage.stop()
+    assert out[0]["type"] == "cached" and out[0]["clip"] == "greeting"
+    assert out[1]["type"] == "chunk" and out[1]["text"] == "It's three forty-five in the afternoon." and out[1]["last"]
+    assert streams(client) == [] and stage.base_prompt() == PromptBuilder().base()
+    assert [r["extra"]["kind"] for r in events(log, "route")] == ["cached", "composed"]

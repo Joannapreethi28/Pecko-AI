@@ -109,10 +109,21 @@ class BrainStage:
         user = normalize(msg.get("norm") or msg.get("text", ""))
         self._last_prefill = ""
         self._cancel_live("new_turn")
-        gen, _ = self._new_gen(turn)
+        gen, ev = self._new_gen(turn)
         if not user:
             self._send_cached(turn, gen, "didnt_catch")
             return
+        if self._router is not None:   # tier 0 of the Brain: common intents never reach the LLM
+            r = self._router.route(user, threshold=self._tier.router_threshold)
+            self._log.event("route", turn, gen=gen, kind=r.kind, intent=r.intent, score=round(r.score, 1))
+            if r.kind == "cached":
+                self._send_cached(turn, gen, r.clip)
+                return
+            if r.kind == "composed":
+                self._log.event("cache_hit", turn, gen=gen, clip=r.intent, composed=True)
+                self._send_chunk(turn, gen, 0, r.text, ev, last=True)
+                self._finish(gen)
+                return
         self._jobs.put(("generate", turn, gen, user))
 
     def _on_partial(self, msg: dict) -> None:
