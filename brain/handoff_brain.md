@@ -1,5 +1,5 @@
 # Brain handoff (a NEW Claude session can resume from this file alone)
-Owner: Sir Jabin · Last update: 8 Oct, night · Branch `main` (everyone pushes to main, own folders only, `git pull --rebase` before push, never force-push). Update this file whenever you push.
+Owner: Sir Jabin · Last update: 8 Oct, late night (Ubuntu VM session) · Branch `main` (everyone pushes to main, own folders only, `git pull --rebase` before push, never force-push). Update this file whenever you push.
 
 ## 1. Resume in 60 s
 Read in this order: `brain/CLAUDE.md` → this file → `brain/gotcha.md` (G1-G12) → plan `docs/superpowers/plans/2026-10-08-brain-stage.md` (only the task you work on + Global Constraints + Review Focus).
@@ -22,13 +22,18 @@ Read in this order: `brain/CLAUDE.md` → this file → `brain/gotcha.md` (G1-G1
 | 8 router + intents | DONE | `router.py`, `intents.yaml`, stage wiring (commit dea3294) |
 | 10 tier switching | DONE (logic + fake-server tests) | live VM switch timing NOT measured |
 | 12 ablation | CODE DONE, not run | `brain/ablate.py`, `ablation_turns.jsonl` |
-| 9 bake-off | IN PROGRESS | code by w1 |
-| 11 hold-and-release | NOT STARTED | gated: all four roles must agree contract v2.1 |
-| 9 / 10 / 12 real runs | NOT STARTED | Ubuntu VM under Spine's cgroup only |
+| 9 bake-off | PARTLY RUN | Qwen3-0.6B Q4_K_M measured under the cap (RESULTS.md). Qwen3-1.7B, LFM2.5-1.2B, LFM2.5-350M not downloaded/run; blind quality scores not done |
+| 11 hold-and-release | DONE | commit b54f2c1; contract v2.1 approved by all four (CONTRACT.md) |
+| 10 / 12 real runs | NOT STARTED | Ubuntu VM under the cap only (command in section 3) |
 
-Tests: 92 pass, 3 live skipped.
+Tests (Ubuntu VM): 199 pass, 4 skipped (1 Windows-only, 3 live). Live tests with llama-server on :8080: 3/3 pass.
 
-## 3. Measured so far (all `windows-dev, not judged`)
+## 3. Measured so far
+### ubuntu-vm (8 Oct)
+- **Cap command (no sudo needed):** `systemd-run --user --scope --unit=pecko-bakeoff -p CPUQuota=200% -p MemoryMax=2G -p MemorySwapMax=0 --setenv=HF_HUB_OFFLINE=1 -- taskset -c 0,1 .venv/bin/python -m brain.bakeoff --model models/Qwen3-0.6B-Q4_K_M.gguf --family qwen3 --label <label>`. Inside: `cpu.max 200000 100000`, `memory.max 2147483648`, `memory.swap.max 0`. `AllowedCPUs` is ignored in a user scope, hence `taskset`. Evict the model from page cache first (G17).
+- **Bake-off, Qwen3-0.6B Q4_K_M, ubuntu-vm, 2 CPU / 2 GB cgroup:** TTFT p50 103 / p90 123 ms (n=20), rewind TTFT p50 103 ms, no reprocessing, decode 34.1 tok/s, cgroup peak 814 MB.
+- **Live mock, no cap (`ubuntu-vm, uncapped, not judged`), same 3 questions as Windows:** first_token 101 / 113 / 132 ms (Windows 110 / 127 / 157); first_chunk 251 / 285 / 324 ms (Windows 268 / 296 / 325); computed 18-22 tokens, reused 84-147; decode 30-38 tok/s. Same wrong sky answer and "366" digits.
+### windows-dev, not judged
 - Probe: `n_predict:0` yields 1 token, so `DEFAULT_PREFILL_N_PREDICT=1` (G11). q8_0 V cache works without `-fa`. Client disconnect stops generation in 92 ms. Rewind keeps the full common prefix (cache_n 37 == lcp 37).
 - Live mock, 3 turns: first_token 110 / 127 / 157 ms; first_chunk 268 / 296 / 325 ms; prompt computed 18-22 tokens, reused 84-148; decode 32-37 tok/s.
 - Router held-out (36 rows): 18/18 hits, 0 wrong, 0/18 false hits.
@@ -39,7 +44,7 @@ Tests: 92 pass, 3 live skipped.
 | To | Ask | Why |
 |---|---|---|
 | **Spine** | `common/clock.py` (`now()`) and `common/log.py` (`EventLog`) exist, exactly the CONTRACT line format. Extend, don't change. Root `pyproject.toml` is pytest config only. | Everyone imports them. |
-| **Spine** | Bake-off (Task 9) and ablation (Task 12) must run inside your cgroup wrapper; need the working `systemd-run` command in the VM. | Judged numbers only under the cap. |
+| **Spine** | Brain used a `--user` scope + `taskset` (no passwordless sudo in the VM). For the judged run, confirm the sudo `AllowedCPUs` form, and evict model files from page cache before reading `memory.peak` (G17). | `memory.peak` silently under-reports cached model pages. |
 | **Ears** | `partial.stable`, `tentative_final.text` and `final.norm` must use the **same normalization** (lowercase, no punctuation, same filler handling). Brain builds the prompt from them. | If they differ, early prefill misses the KV cache and saves 0 ms. |
 | **Voice** | `brain/intents.yaml` is pushed: each `clip` + exact `say` text is a reply to pre-synthesize (incl. `didnt_catch`, `low_power`). Brain sends a final **empty** chunk with `last:true` at reply end. | Cached replies skip the LLM; empty last = end of turn. |
 | **Voice** | Normalise digits to words before TTS (the 0.6B model writes "366"). Every chunk ends with a space except the last; first chunk is cut at the first `, . ? ! ; :` after ≥ 2 words. | Phrase boundaries you can trust. |
@@ -56,7 +61,7 @@ Tests: 92 pass, 3 live skipped.
 - Judged numbers: Ubuntu under the 2 CPU / 2 GB cgroup only.
 
 ## 7. Open decisions (Sir Jabin / team)
-1. Contract v2.1 (hold-and-release): all four must agree before Task 11.
+1. ~~Contract v2.1~~ approved by all four; Task 11 done.
 2. Dashboard owner. Proposal: local offline web page on :8765, served by Python reading the JSONL logs; panels: pipeline, transcript, C-vs-R race chart, CPU/RAM vs cap, controls.
 3. Bake-off T0 choice (rule in `brain/SPEC.md`; default Qwen3-0.6B).
 4. Hyper-V off or not (section 6).
