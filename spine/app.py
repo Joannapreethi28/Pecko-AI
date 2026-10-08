@@ -166,7 +166,8 @@ def build(args, out_dir: Path) -> tuple[Pecko, Any]:
     app.voice = VoiceStage(on_event=app.from_voice, tier=args.tier, audio=not args.no_audio,
                            barge_in=not args.half_duplex)
     vlog.add_sink(lambda rec: shared.stream.write(json.dumps(rec) + "\n"))   # Voice lines into the run log
-    app.ears = Ears(tier=0, out_stream=LineSink(app.from_ears))   # set_tier(ears_tier) in start_all
+    ears_tier = args.tier if args.ears_tier is None else args.ears_tier
+    app.ears = Ears(tier=ears_tier, out_stream=LineSink(app.from_ears))   # never loads Moonshine at T2/T3
     app.ears._elog = EventLog(events)   # Ears diagnostics (t_eos, endpoint, asr_final) into the run log
     return app, events
 
@@ -181,6 +182,13 @@ def sample_resources(log: EventLog, stop: threading.Event, period: float = 0.5) 
     except OSError as e:
         log.emit("spine", "resources_unavailable", None, error=str(e))
         return
+    def mem_split() -> dict:   # anon (process memory) vs file (page cache: model reads, logs) in the cgroup
+        try:
+            st = dict(line.split() for line in (path / "memory.stat").read_text().splitlines())
+            return {"memory_anon": int(st["anon"]), "memory_file": int(st["file"])}
+        except (OSError, KeyError, ValueError):
+            return {}
+
     before = read_snapshot(path)
     while not stop.wait(period):
         snap = read_snapshot(path)
@@ -188,15 +196,15 @@ def sample_resources(log: EventLog, stop: threading.Event, period: float = 0.5) 
         log.emit("spine", "resources", None, t=snap.t, mean_cores=d["mean_cores"], cpu_max=snap.cpu_max,
                  memory_current=snap.memory_current, memory_peak=snap.memory_peak,
                  memory_max=snap.memory_max, swap_max=snap.swap_max, oom_kill=snap.oom_kill,
-                 cgroup=path.name)
+                 cgroup=path.name, **mem_split())
         before = snap
 
 
 def start_all(app: Pecko, tier: int, ears_tier: Optional[int] = None) -> None:
     t0 = now()
-    app.ears.start()
     et = tier if ears_tier is None else ears_tier
-    if et:
+    app.ears.start()
+    if getattr(app.ears, "tier", et) != et:   # build() already constructs Ears at et; only fix a mismatch
         app.ears.set_tier(et)
     app.brain.start()
     app.voice.start()

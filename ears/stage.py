@@ -52,7 +52,7 @@ from ears.backends.asr_vosk import VoskASR
 from ears.backends.asr_zipformer import ZipformerASR
 from ears.backends.kws_sherpa import SherpaKWS
 from ears.backends.turn_smartturn import WINDOW_SAMPLES, SmartTurn
-from ears.backends.vad_silero import SileroVAD
+from ears.backends.vad_silero_ort import SileroVADOrt as SileroVAD  # torch-free, same events
 from ears.backends.vad_webrtc import WebRTCVAD
 from ears.config import (
     FOLLOWUP_WINDOW_S,
@@ -87,8 +87,11 @@ class Ears:
         self.out_stream = out_stream or sys.stdout
         self._elog = EventLog(sys.stderr)
         self.tier = tier
-        self.vad = SileroVAD(threshold=0.5)
-        self.asr = MoonshineASR(tier=tier)
+        # Build the requested tier's backends directly (no load here; start() loads). Constructing
+        # T0 and then set_tier(2) used to load Moonshine Small (~217 MiB anon, measured) only to
+        # throw it away -- it inflated startup RAM and was never used at T2/T3.
+        self.vad = WebRTCVAD() if tier == 3 else SileroVAD(threshold=0.5)
+        self.asr = VoskASR() if tier == 3 else ZipformerASR() if tier == 2 else MoonshineASR(tier=tier)
         self.endpointer = Endpointer(mode=endpointer_mode)
         self.smart_turn: SmartTurn | None = None  # loaded best-effort in start()
         self.kws: SherpaKWS | None = None  # loaded best-effort in start()
