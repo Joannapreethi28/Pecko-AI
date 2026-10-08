@@ -1,0 +1,96 @@
+loading model (first run downloads weights)...
+{"stage": "ears", "event": "ready", "t": 0.0}
+{"stage": "ears", "event": "endpoint", "t": 11.936000000000009, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000000003}}}
+hindi10.mp3: 1 final(s), wer=0.88 cpu_s=300.17
+{"stage": "ears", "event": "endpoint", "t": 36.35199999999954, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 41.79199999999894, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 49.15199999999813, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+hindi11.mp3: 3 final(s), wer=0.70 cpu_s=334.97
+{"stage": "ears", "event": "endpoint", "t": 62.59199999999665, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 67.35999999999613, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 71.3279999999957, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+hindi1.mp3: 3 final(s), wer=0.68 cpu_s=373.69
+{"stage": "ears", "event": "endpoint", "t": 77.85599999999498, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 81.08799999999462, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 88.89599999999376, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 93.50399999999325, "turn": 4, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 99.96799999999254, "turn": 5, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+tamil10a.mp3: 5 final(s), wer=0.48 cpu_s=344.17
+{"stage": "ears", "event": "endpoint", "t": 120.51199999999028, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+tamil11a.mp3: 1 final(s), wer=0.71 cpu_s=251.95
+{"stage": "ears", "event": "endpoint", "t": 127.13599999998955, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "endpoint", "t": 133.63199999999134, "turn": 2, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 137.05599999999248, "turn": 3, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 141.567999999994, "turn": 4, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 145.08799999999516, "turn": 5, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 150.81599999999708, "turn": 6, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+tamil1.mp3: 6 final(s), wer=0.59 cpu_s=486.91
+telugu10.mp3: 0 final(s), wer=n/a cpu_s=291.61
+{"stage": "ears", "event": "endpoint", "t": 185.0560000000085, "turn": 1, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 186.88000000000912, "turn": 2, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 190.1120000000102, "turn": 3, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 194.5920000000117, "turn": 4, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 207.55200000001602, "turn": 5, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+telugu11.mp3: 5 final(s), wer=0.49 cpu_s=310.70
+{"stage": "ears", "event": "endpoint", "t": 232.22400000002426, "turn": 1, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+telugu1.mp3: 1 final(s), wer=0.87 cpu_s=339.28
+{"stage": "ears", "event": "endpoint", "t": 244.76800000002845, "turn": 1, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "endpoint", "t": 250.68800000003043, "turn": 2, "extra": {"extra": {"delay_s": 0.512000000000171}}}
+{"stage": "ears", "event": "endpoint", "t": 257.4080000000314, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+malayalam2.mp3: 3 final(s), wer=0.55 cpu_s=299.27
+{"stage": "ears", "event": "endpoint", "t": 278.20800000001987, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+malayalam3.mp3: 1 final(s), wer=0.71 cpu_s=221.55
+{"stage": "ears", "event": "endpoint", "t": 281.08800000001827, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 285.44000000001586, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 288.54400000001414, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 295.2960000000104, "turn": 4, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 301.72800000000683, "turn": 5, "extra": {"extra": {"delay_s": 0.5119999999997162}}}
+{"stage": "ears", "event": "endpoint", "t": 309.5680000000025, "turn": 6, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+malayalam1.mp3: 6 final(s), wer=0.51 cpu_s=431.45
+{"stage": "ears", "event": "endpoint", "t": 322.11199999999553, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 333.1519999999894, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+kannada2.mp3: 2 final(s), wer=0.75 cpu_s=285.33
+{"stage": "ears", "event": "endpoint", "t": 349.6319999999803, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 356.4799999999765, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+kannada3.mp3: 2 final(s), wer=0.67 cpu_s=344.12
+{"stage": "ears", "event": "endpoint", "t": 380.6079999999631, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+kannada1.mp3: 1 final(s), wer=0.77 cpu_s=301.69
+bengali10.mp3: 0 final(s), wer=n/a cpu_s=229.84
+{"stage": "ears", "event": "endpoint", "t": 426.6879999999376, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+bengali11.mp3: 1 final(s), wer=0.71 cpu_s=275.36
+{"stage": "ears", "event": "endpoint", "t": 436.1599999999323, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 455.3279999999217, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+bengali_1.mp3: 2 final(s), wer=0.70 cpu_s=337.19
+{"stage": "ears", "event": "endpoint", "t": 476.15999999991016, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+punjabi10.mp3: 1 final(s), wer=0.78 cpu_s=382.41
+{"stage": "ears", "event": "endpoint", "t": 487.0719999999041, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 492.5119999999011, "turn": 2, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 498.52799999989776, "turn": 3, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+{"stage": "ears", "event": "endpoint", "t": 510.11199999989134, "turn": 4, "extra": {"extra": {"delay_s": 0.31999999999982265}}}
+punjabi11.mp3: 4 final(s), wer=0.72 cpu_s=301.47
+{"stage": "ears", "event": "endpoint", "t": 519.0719999998989, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 526.5919999999081, "turn": 2, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 530.9119999999134, "turn": 3, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 538.5599999999228, "turn": 4, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 540.7359999999254, "turn": 5, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 547.1999999999333, "turn": 6, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 548.3839999999348, "turn": 7, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 551.6159999999387, "turn": 8, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+punjabi_1.mp3: 8 final(s), wer=0.71 cpu_s=445.91
+{"stage": "ears", "event": "endpoint", "t": 558.6879999999474, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 579.4879999999728, "turn": 2, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+gujarati10.mp3: 2 final(s), wer=0.61 cpu_s=318.25
+{"stage": "ears", "event": "endpoint", "t": 583.3279999999775, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 593.5039999999899, "turn": 2, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 597.8559999999952, "turn": 3, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 604.0000000000027, "turn": 4, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+gujarati11.mp3: 4 final(s), wer=0.30 cpu_s=262.44
+{"stage": "ears", "event": "endpoint", "t": 614.7840000000159, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 617.6960000000195, "turn": 2, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 622.7840000000257, "turn": 3, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 628.1280000000322, "turn": 4, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 632.000000000037, "turn": 5, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 640.3520000000472, "turn": 6, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+gujarati1.mp3: 6 final(s), wer=0.72 cpu_s=390.25
+{"stage": "ears", "event": "endpoint", "t": 648.4800000000571, "turn": 1, "extra": {"extra": {"delay_s": 0.3200000000003911}}}
+{"stage": "ears", "event": "endpoint", "t": 656.544000000067, "turn": 2, "extra": {"extra": {"delay_s": 0.3200000000003911}}}

@@ -1,0 +1,7 @@
+
+=== ABLATION (scripts/ablation.py, 3 trimmed clips, real measurement) ===
+| Config | `final`s | delay p50 (ms) | delay p90 (ms) | suspected cutoffs | WER mean | wall s |
+|---|---|---|---|---|---|---|
+| fixed_800 | 0 | n/a | n/a | 0 | n/a | 51.1 |
+| fixed_400 | 0 | n/a | n/a | 0 | n/a | 52.2 |
+| fusion | 6 | 160 | 160 | 0 | 0.905 | 53.5 |

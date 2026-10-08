@@ -4,7 +4,7 @@
 
 HackNEX 2026 · HNX26EPS08 On-Device Conversational Stack · Team Plumbers
 
-> **STATUS: Spine's portable runtime is built.** Five software deliverables are verified with mocks/fixtures; real engines and Ubuntu VM validation are deferred. See [Spine delivery status](spine/BUILD_STATUS.md).
+> **STATUS: Spine's portable runtime is built; Ears' pipeline is built.** Five Spine deliverables are verified with mocks/fixtures; Ears' VAD/KWS/ASR/endpointer tier ladder (T0-T3) runs end-to-end against real audio. Real engines and Ubuntu VM validation are deferred for both. See [Spine delivery status](spine/BUILD_STATUS.md) and [`ears/RESULTS.md`](ears/RESULTS.md).
 
 ## What it is
 Fully offline, CPU-only voice loop (wake word/VAD → streaming ASR → small LLM → TTS) running under an enforced 2 CPU / 2 GB limit. It overlaps stages so the first audio of the answer starts far sooner than a default serial stack. See `docs/solution.md`.
@@ -76,6 +76,17 @@ Windows with Python 3.14.8. No model files are needed for placeholder developmen
 Real model downloads/builds remain the stage owners' setup work.
 _TODO: exact commands that worked (Python version, venv, models download to `models/`, llama.cpp build)._
 
+### Ears setup
+Ears (wake word/VAD/streaming ASR/endpointer) is implemented and runs standalone (Brain, Voice ship independently in this parallel-build hackathon and are not wired up yet). What actually worked on this machine, Python 3.12.5, Windows:
+
+```
+pip install -r requirements.txt
+```
+
+First run of anything that touches `MoonshineASR` (T0/T1 ASR backend) downloads ONNX model weights from Hugging Face on first use (one-time, cached after) -- expect a delay the first time, none after.
+
+Test clips are already provided, converted, and ready in `data/clips/` (33 real WAVs + `MANIFEST.csv`); see `data/clips/SOURCE.md` for provenance. No model build step (no llama.cpp yet -- that is Brain's role).
+
 ## Run
 
 Team integration: [Spine handoff](docs/handoff_spine.md).
@@ -124,8 +135,26 @@ python -m spine.experiment --plan spine/examples/plan.synthetic.json --output da
 It saves the plan, events, turn manifest, completion summary and report,
 preserving failures and unstarted cases. Its mock does not produce audio.
 
+### Ears run
+Ears runs standalone against a WAV file, pure contract JSONL on stdout, diagnostics on stderr:
+
+```
+python -m ears.mock data/clips/hindi10.wav --push-to-talk --fast
+```
+
+`--push-to-talk` force-arms immediately (the real clips don't say "hey pecko"); `--fast` uses a VirtualClock instead of real-time pacing. Drop `--fast` to replay at real-time speed, or add `--mic` to listen live. `--tier N` selects the tier (T0 default, T1-T3 the degraded tiers; see `docs/CONTRACT.md`'s tier ladder and `ears/RESULTS.md` for what each tier actually runs and its measured tradeoffs).
+
+Other scripts that work standalone today:
+```
+python scripts/measure.py              # WER + endpoint-delay + false-cutoff proxy + peak RSS + idle CPU over the clip set
+python scripts/ablation.py             # fixed-800ms vs fixed-400ms vs fusion endpointer, real measured comparison
+python scripts/test_tier_switch.py     # tier-switch timing + peak RSS, sanity-checks tiers transcribe
+```
+
+Brain/Voice/Spine mocks and the full end-to-end pipeline command do not exist yet -- not claimed here until built.
+
 ## Layout
-`ears/ brain/ voice/ spine/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`.
+`ears/ brain/ voice/ spine/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`. `ears/` and shared `common/`, `data/`, `scripts/` have real, tested code; see each role's own `RESULTS.md`/`BUILD_STATUS.md` for what's real vs. spec/skeleton in `brain/ voice/ spine/`.
 
 ## Limits and honesty
 _TODO: what is measured vs estimated, known failure cases, licenses (Piper GPL-3, MMS non-commercial, LFM Open License)._
