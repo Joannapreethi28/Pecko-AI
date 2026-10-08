@@ -1,0 +1,36 @@
+{"text": "Hello, Pecko!", "expect": "greeting"}
+{"text": "Hey, good morning to you", "expect": null}
+{"text": "Hi there, Pecko.", "expect": "greeting"}
+{"text": "Thank you very much!", "expect": "thanks"}
+{"text": "Okay, thanks Pecko", "expect": "thanks"}
+{"text": "Goodbye for now", "expect": null}
+{"text": "Bye bye, Pecko.", "expect": "bye"}
+{"text": "Hey, how are you doing today?", "expect": "how_are_you"}
+{"text": "Who are you, exactly?", "expect": null}
+{"text": "Pecko, what is your name?", "expect": "your_name"}
+{"text": "Hi, can you hear me?", "expect": "are_you_listening"}
+{"text": "Who made you, Pecko?", "expect": "who_made_you"}
+{"text": "Do you need the internet?", "expect": "are_you_online"}
+{"text": "Are you a robot?", "expect": "are_you_ai"}
+{"text": "Please tell me a joke", "expect": "joke"}
+{"text": "Tell me a joke about elephants", "expect": null}
+{"text": "Please play some music", "expect": "music"}
+{"text": "Play a song by A R Rahman", "expect": null}
+{"text": "What's the weather today?", "expect": "weather"}
+{"text": "Will it rain today?", "expect": "weather"}
+{"text": "Hi, what time is it now?", "expect": "time"}
+{"text": "What's the date today?", "expect": "date"}
+{"text": "Pecko, what day is it today?", "expect": "day"}
+{"text": "What is the capital of France?", "expect": null}
+{"text": "Thanks, but what is a black hole?", "expect": null}
+{"text": "Hello, can you book me a cab?", "expect": null}
+{"text": "Set an alarm for six thirty in the morning", "expect": null}
+{"text": "Call my mother", "expect": null}
+{"text": "How old is the moon?", "expect": null}
+{"text": "How are you going to help me with my homework?", "expect": null}
+{"text": "What time does the train leave?", "expect": null}
+{"text": "What is the date of the next full moon?", "expect": null}
+{"text": "Are you able to translate this into Tamil?", "expect": null}
+{"text": "Never mind, I will ask again later", "expect": null}
+{"text": "Sorry, what was my last question?", "expect": null}
+{"text": "Tell me about elephants", "expect": null}
