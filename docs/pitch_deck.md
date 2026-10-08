@@ -28,11 +28,11 @@ Do **not** submit the finale deck as the written deck: sparse live slides look e
 > *"On a 2-core budget, the models aren't slow. The waiting is. A normal voice assistant waits for silence, then transcribes, then reads the whole prompt, then writes the whole reply, then speaks. Each stage sits idle while the previous one finishes. Pecko does all of it at once, and starts thinking before you've finished talking."*
 
 **The arc in seven sentences:**
-1. **Hook:** Pecko is an offline voice assistant that answers in under a second on 2 CPU cores and 2 GB of RAM. *(target until measured)*
-2. **Problem:** Offline voice assistants on cheap hardware take several seconds to reply, which feels broken; a standard stack on our laptop takes `[MEASURE B0]` s.
+1. **Hook:** Pecko is an offline voice assistant that answers in under a second on 2 CPU cores and 2 GB of RAM. *(true for the median only: p50 0.88 s, p90 1.25 s on 24 synthetic turns in a VM; say "typically under a second")*
+2. **Problem:** Offline voice assistants on cheap hardware take several seconds to reply, which feels broken; a standard stack with the same LLM takes 2.06 s p50 / 2.50 s p90 after you stop talking (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency).
 3. **Insight:** That time is spent waiting between stages, not computing inside them.
 4. **Solution:** Pecko overlaps the stages: smart endpointing, streaming speech recognition, a language model that pre-reads your words while you speak, and speech that starts at the first clause.
-5. **Proof:** Live, in front of you, under an enforced 2-core limit with the network off: `[MEASURE]` ms vs `[MEASURE B0]` ms, at `[MEASURE]`× less CPU time and energy per turn.
+5. **Proof:** Under an enforced 2-core / 2 GB limit: first audio p50 875 ms vs 2059 ms (p90 1254 vs 2496 ms; paired gap p50 1200 ms, p90 1480 ms, min 804 ms; faster in 24/24 pairs), at 1.57× less CPU time per turn (1.25 vs 1.96 CPU-s). Peak RAM is *higher* (1140 vs 917 MiB). Energy per turn: not yet measured (needs native Ubuntu RAPL). (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency) Source: `data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt`.
 6. **Why it's new:** Speculative voice agents exist on GPUs; Pecko prices every early guess against the CPU and energy it steals on a tiny shared budget, and keeps working as the budget shrinks.
 7. **Impact + ask:** The same design runs voice assistants on ₹5,000-class hardware with no internet (rural clinics, kiosks, classrooms, assistive devices), and we'd like your vote to take it to a Raspberry Pi and Indian languages next.
 
@@ -60,7 +60,7 @@ Q to expect at PC1: "Which models?", "How will you measure energy?", "What's you
 
 | On the slide | Say |
 |---|---|
-| **Built:** ✅ loop offline under cap · ✅ baseline measured `[B0]` · ✅ streaming + smart endpoint · ✅ cache · ⏳ early prefill · ⏳ degradation controller | "Here's where we are. First real numbers: baseline `[B0]` s, Pecko so far `[now]` s. Tonight we add early prefill and the controller, then we only measure." |
+| **Built:** ✅ loop offline under cap · ✅ baseline measured (2.06 s p50) · ✅ streaming + smart endpoint · ✅ cache · ⏳ early prefill · ⏳ degradation controller | "Here's where we are. First real numbers: baseline 2.06 s p50, Pecko 0.88 s p50 (24 synthetic turns, VM, same cap). Tonight we add early prefill and the controller, then we only measure." |
 
 Show the dashboard live if it exists. Bring the waterfall with whatever rows are measured.
 
@@ -91,16 +91,16 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 - **Covers:** E-Pitch
 
 ### Slide 2 · Problem
-- **On slide:** one big number: **`[B0]` seconds** · caption "a standard offline assistant, same laptop, same limit"
-- **Say:** "We built the standard way first: a popular VAD, Whisper, a small language model, Piper speech. Same laptop, same 2-core limit. You wait `[B0]` seconds for every reply. In a conversation, anything over about a second feels broken."
-- **Land:** `[B0]` s, measured by us.
+- **On slide:** one big number: **2.06 seconds** (p50; p90 2.50 s) · caption "a standard offline assistant, same LLM, same 2 CPU / 2 GB limit" · footnote: (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency)
+- **Say:** "We built the standard way first: a popular VAD, Whisper, a small language model, Piper speech. Same laptop, same 2-core limit. You wait about 2 seconds for every reply (2.06 s median, 2.50 s p90). In a conversation, anything over about a second feels broken."
+- **Land:** 2.06 s p50 / 2.50 s p90, measured by us (VM, synthetic questions, no speaker).
 - **Transition:** "We expected the models to be the problem. They weren't."
 - **Covers:** P-Lat, E-Feas
 
 ### Slide 3 · Insight
 - **On slide:** **"The models aren't slow. The waiting is."** + the 5-block serial waterfall with idle gaps shaded
 - **Say:** "Here's where those seconds go. 800 ms waiting to be sure you've stopped. Then Whisper starts from zero. Then the model re-reads the whole prompt. Then it writes the full reply before anything is spoken. Every stage sits idle while the last one finishes."
-- **Land:** the share of baseline time that is waiting `[MEASURE %]`.
+- **Land:** the 800 ms silence timer alone is ~39% of the baseline's 2059 ms median (B0 endpoint ~803 ms on every turn). The full split of the remaining waiting is `[MEASURE %]` (not yet measured).
 - **Transition:** "So we stopped making models faster and started removing the waiting."
 - **Covers:** P-New, E-Innov
 
@@ -126,14 +126,14 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 
 ### Slide 7 · Proof: the waterfall
 - **On slide:** cumulative waterfall chart A0 → A7 (from `solution.md §6`), baseline bar on the left, Pecko bar on the right, each step labelled with its saving
-- **Say:** "Every bar is one technique added on its own, same test set, same limit. The biggest single win is `[MEASURE step]`. Together: `[B0]` to `[Pecko]`, p90 `[MEASURE]`."
-- **Land:** p50 and p90, with the test set size (60 held-out turns, 3 runs).
+- **Say:** "Every bar is one technique added on its own, same test set, same limit. The biggest single win is `[MEASURE step]`. Together: 2059 to 875 ms median, p90 2496 to 1254 ms." *(End-to-end A0→A7 steps not yet measured. Component-only fact we can say: in Brain alone, the system-prompt KV cache was the biggest step, first chunk p50 1024 → 290 ms; brain/RESULTS.md.)*
+- **Land:** p50 and p90, with the test set size: today 24 synthetic paired turns, 1 run each (60 held-out human turns × 3 not yet measured).
 - **Covers:** P-Lat, P-New, E-Tech
 
 ### Slide 8 · Proof: footprint
-- **On slide:** 3 numbers, baseline → Pecko: **CPU-seconds/turn** · **peak RAM** · **joules/turn**
-- **Say:** "Faster usually means burning more. Not here. Per turn, Pecko uses `[x]` CPU-seconds vs `[y]`, peaks at `[RAM]`, and spends `[J]` joules vs `[J0]`, measured with the CPU's own energy counters, idle subtracted. When Pecko is waiting for its wake word it uses almost no CPU at all."
-- **Land:** the energy ratio.
+- **On slide:** 3 numbers, baseline → Pecko: **CPU-seconds/turn 1.96 → 1.25** · **peak RAM 917 → 1140 MiB (worse)** · **joules/turn: not yet measured** (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency)
+- **Say:** "Faster usually means burning more. Not on CPU: per turn, Pecko uses 1.25 CPU-seconds vs 1.96, 1.57 times less. RAM is the honest cost: Pecko peaks at 1140 MiB vs 917, because more stays loaded, still well under the 2 GB cap. Energy per turn needs the CPU's RAPL counters, which our VM doesn't expose; `[J]` vs `[J0]` only once measured on native Ubuntu."
+- **Land:** 1.57× less CPU time per turn; RAM is a trade we state openly. (Energy ratio only if measured.)
 - **Covers:** P-Foot, E-Feas
 
 ### Slide 9 · Proof: squeeze the box
@@ -144,7 +144,7 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 
 ### Slide 10 · Honest numbers (one slide earns a lot of trust)
 - **On slide:** 3 small lines: *Same model in baseline and Pecko* · *Fillers off in every number* · *Held-out questions we never tuned on*
-- **Say:** "Three things we did to keep ourselves honest. Our baseline uses the same language model, so the gain is the system, not a smaller model. We don't count 'umm' sounds as an answer. And we tested on questions we never tuned on, including people outside our team." Mention one negative result here if we have one (e.g. "int8 was slower than float on our CPU, so we shipped float").
+- **Say:** "Three things we did to keep ourselves honest. Our baseline uses the same language model, so the gain is the system, not a smaller model. We don't count 'umm' sounds as an answer. And we tested on questions we never tuned on, including people outside our team." Negative results we have: Piper int8 was 2.4-3.2× *slower* than fp32 (Windows dev laptop, voice/RESULTS.md), so we ship fp32; and Pecko uses more RAM than the baseline (1140 vs 917 MiB). Quantization fact: LLM Q4_K_M beat Q8_0 on first chunk p50, 177 vs 261 ms (brain/RESULTS.md, VM, same cap).
 - **Covers:** E-Pitch, P-Quant (if the int8 finding exists)
 
 ### Slide 11 · Impact + ask
@@ -162,7 +162,7 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 | Step | What happens | What we say |
 |---|---|---|
 | 1 | Show `systemctl status pecko.scope` / `systemd-cgtop`: 2 CPUs, 2 GB, swap 0. Toggle Wi-Fi off on screen. | "The kernel is enforcing 2 cores and 2 gigs. The network is off. No GPU." |
-| 2 | Teammate: "Hey Pecko, what can you do?" (cache hit) | "That one came from a pre-made answer, about `[MEASURE]` ms." |
+| 2 | Teammate: "Hey Pecko, what can you do?" (cache hit) | "That one came from a pre-made answer." (Latency for this phrase `[MEASURE]`, not yet measured. The only cached turn measured end-to-end, "thank you" in run-loop6-commitfix, was 1209 ms after end of speech, all endpoint wait (C = R); don't quote a fast number.) |
 | 3 | Teammate: a real open question with a pause in the middle ("What's a good name for... a coffee shop near a college?") | "Notice it didn't cut in during the pause. That's the turn detector." Point at the waterfall on the dashboard. |
 | 4 | **Hand the mic to a judge:** "Ask it anything." | Read the latency off the dashboard after the reply. |
 | 5 | Barge-in: ask a long question, then interrupt Pecko mid-answer | "It stops in under a tenth of a second and listens." *(only if barge-in is reliable; otherwise skip)* |
@@ -172,7 +172,7 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 **Fallbacks (decide before going on stage):**
 - Wake word misfires → push-to-talk key, say nothing about it.
 - Echo makes Pecko interrupt itself → `--barge-in off` (half-duplex), skip step 5.
-- Something crashes → restart takes `[MEASURE]` s; if it's longer than 20 s, play the backup video of the same script and keep narrating.
+- Something crashes → restart takes `[MEASURE]` s (not yet measured); if it's longer than 20 s, play the backup video of the same script and keep narrating.
 - Judge asks something weird → that's fine; an honest "I'm offline and can't check that" is a good answer and shows the router.
 
 ---
@@ -202,16 +202,16 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 
 | Likely question | Short answer | Owner |
 |---|---|---|
-| "Isn't your baseline a straw man?" | "Same language model, same limit, and we also show a tuned baseline (B1) and a 'typical' one with a bigger model. Our gain over the tuned one is `[x]`." | Spine |
+| "Isn't your baseline a straw man?" | "Same language model, same limit, and we also show a tuned baseline (B1) and a 'typical' one with a bigger model. Our gain over the tuned one is `[x]`." *(B1 and the bigger-model baseline are not yet measured; until then say only: same model, same limit, B0 described in baseline/run.py.)* | Spine |
 | "Fillers fake latency, did you use them?" | "No. Every number is first audio of the actual answer. Fillers are off." | Voice |
-| "What happens if the user keeps talking after you started thinking?" | "Ears sends a cancel. The early work is thrown away and nothing was spoken. We measured how often that happens: `[%]`, and what it costs: `[ms/J]`." | Brain |
+| "What happens if the user keeps talking after you started thinking?" | "Ears sends a cancel. The early work is thrown away and nothing was spoken. On our 12-turn Brain test set, 10-19% of early prefill work was wasted (brain/RESULTS.md); the cost in ms/J is `[ms/J]` (not yet measured)." | Brain |
 | "Why not a bigger model for better answers?" | "An 8B model needs about 5 GB at 4-bit, more than double the whole budget, and writes a few words per second on 2 cores. We chose the best model that passes our latency, rewind and RAM checks." | Brain |
 | "Why that model?" | Bake-off table: TTFT, rewind works, RAM, answer score. "Hybrid models were faster but the runtime can't rewind their memory, which breaks early thinking." | Brain |
 | "How do you measure energy?" | "Intel RAPL package counters before and after a scripted session, idle power subtracted, charger in, same power mode. It's CPU package energy, not the whole laptop, and we say so." | Spine |
 | "How do you know the limit is really enforced?" | Show `cpu.max`, `memory.max`, `memory.peak`, `systemd-cgtop`, `oom_kill 0`. | Spine |
 | "How do you know when someone has finished speaking?" | "A tiny 8 MB model listens to intonation, plus silence length and whether the sentence ends on 'and' or 'the'. It adapts to each speaker's pause length." | Ears |
 | "Does it work with Indian accents?" | "We tested on all four of our voices plus `[n]` outsiders: WER `[x]`. We added hot-words for local names." | Ears |
-| "Is your cache cheating?" | "Only fixed intents (greetings, time, 'who are you'). We measured the wrong-answer rate on questions we never tuned on: `[x]`." | Voice |
+| "Is your cache cheating?" | "Only fixed intents (greetings, time, 'who are you'). On 18 held-out questions that should go to the LLM, the router answered from cache 0 times (0/18, voice/RESULTS.md)." | Voice |
 | "What's actually new? Pipecat/LiveKit do streaming." | "Streaming is the baseline we tuned, not our claim. Our claim is deciding when early work pays under a hard CPU cap, and staying alive as the cap shrinks. Speculative voice research runs on GPUs." | Sir Jabin |
 | "Did you write this or use a framework?" | "Open-source models and runtimes, our own orchestration, scheduler, endpointer, router, cache and controller, all in the repo history from today." | Spine |
 | "Will it run on a phone or Pi?" | "Every part has ARM builds. `[status: tested / next step]`." | Spine |
@@ -244,7 +244,7 @@ Rule for Q&A: if we don't know, say "we haven't measured that" and say how we wo
 ## 10. Submitted (read-alone) deck: differences
 
 Same 11 beats, but:
-- Every slide states its point as a full headline ("Pecko answers in `[x]` s vs `[B0]` s on the same 2-core limit").
+- Every slide states its point as a full headline ("Pecko answers in 0.88 s vs 2.06 s (p50) on the same 2-core limit").
 - Slides 7–9 carry the full tables, not just charts.
 - Add a **"How to run it"** slide (one command, README link) and a **"Built in 24 h"** slide (repo link, commit graph screenshot, what is ours vs open-source).
 - Add the demo video link on slide 1 and slide 7.

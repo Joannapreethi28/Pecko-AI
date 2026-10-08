@@ -69,13 +69,58 @@ Pass them through `scripts/run_pecko.sh`. Input is `--mic` or `--wav FILE...` (1
 6. First audio = `max(C, R) + d`: work on whichever of commit (C) or answer-ready (R) is later.
 
 ## Results
-Measured results are kept next to the code that produced them. Read them there; this README does not copy numbers.
-- Brain: [`brain/RESULTS.md`](brain/RESULTS.md)
-- Ears: [`ears/RESULTS.md`](ears/RESULTS.md)
-- Voice: [`voice/RESULTS.md`](voice/RESULTS.md)
-- Spine status: [`spine/BUILD_STATUS.md`](spine/BUILD_STATUS.md)
+**Conditions for every number in this section (unless a row says otherwise):** VirtualBox VM (Ubuntu, kernel 6.17) on an i7-14650HX host, run inside a **2 CPU / 2 GB cgroup, swap 0** (`cpu.max 200000 100000`, `memory.max 2147483648`, `oom_kill 0` in both runs), **synthetic Piper-voice questions** (`data/clips/synthetic24`, TTS speech, not human), **no speaker** (first audio = first non-silent PCM written, 0 ms device latency on both stacks). Times are ms after end of speech (`t_eos`). One run each, failures kept in n (there were none).
 
-The full baseline-vs-Pecko end-to-end comparison (p50/p90 latency, CPU-s/turn, peak RAM, J/turn, ablation table) is not in this README yet. Anything not in those files is not a measurement.
+### Pecko vs B0 (default stack), 24 paired turns
+B0 = a typical serial stack with the **same LLM and flags** (Qwen3-0.6B Q4_K_M on llama-server), same ASR files (Zipformer 20M int8), same Piper voice, same prompt/history/n_predict: Silero VAD with an 800 ms silence timer → whole-utterance ASR → full prompt, no KV reuse → full reply → whole-reply TTS (`baseline/run.py`). Pecko ran with `--ears-tier 2`.
+
+| Metric (24 paired turns) | B0 | Pecko | Source |
+|---|---|---|---|
+| First audio p50 | 2059 ms | **875 ms** | compare file below |
+| First audio p90 | 2496 ms | **1254 ms** | |
+| First audio max | 2815 ms | 1693 ms | |
+| Paired gap B0 − Pecko | | p50 **1200 ms**, p90 1480 ms, min 804 ms | |
+| Pecko faster | | **24 / 24 pairs** | |
+| CPU-seconds per turn | 1.96 | **1.25** (1.57× less) | |
+| Peak RAM (cgroup, incl. model load) <!-- RAM row: update from data/results/run-syn24-pecko-ram if re-measured --> | 917 MiB | **1140 MiB (worse: +223 MiB)** | |
+| Energy per turn | not yet measured | not yet measured | needs native Ubuntu RAPL; this VM has none |
+
+Source: [`data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt`](data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt) (per-turn transcripts and answers included).
+
+**Pecko uses more RAM than B0.** Likely cause (not yet profiled): Pecko keeps more resident (wake-word model, streaming endpointer, KV cache, audio cache). We traded ~220 MiB for 1.2 s; both stay well under the 2 GB cap.
+
+### Where Pecko's time goes: C vs R (first audio = max(C, R) + d)
+From `python3 scripts/turn_report.py data/results/run-loop6-commitfix` (4 real-voice WAV turns, same cap, peak 996 MiB, `oom_kill 0`):
+- **C (commit gate) lands 300-440 ms after end of speech** on LLM turns (437, 398, 302 ms). In the syn24 run (`turn_report.py data/results/run-syn24-pecko`) C was 291-323 ms on all 24 turns vs B0's fixed ~803 ms endpoint.
+- **R (first answer clause PCM ready) is later than C on every LLM turn**: 956, 753, 676 ms in loop6; 499-1693 ms in syn24 (R > C on 24/24, all on the held path). So the LLM + first-clause synthesis is now the critical path, not endpointing; making C faster would gain 0 ms on these turns.
+- The one cached turn ("thank you") had C = R = 1209 ms: the endpointer waited longer on a short utterance, so the cache saved nothing there. n = 1; not a cache latency claim.
+- Earlier 4-turn paired run (`data/results/baseline-loop5-b0/compare_vs_run-loop5-zip.txt`): Pecko p50 700 / p90 1225 ms vs B0 1757 / 1957 ms, faster 4/4, CPU-s/turn 0.85 vs 1.74, peak RAM 1481 vs 813 MiB. n = 4, so p90 ≈ max.
+
+### Component results (not end-to-end)
+- **Brain ablation** (Ubuntu VM, same cap, 12 scripted turns × 3 = 36, times from `final` to first chunk, [`brain/RESULTS.md`](brain/RESULTS.md)): no cache 1024 / 1198 ms (p50/p90) → + system-prompt KV cache 290 / 813 → + early prefill (stable) 231 / 265 → + `tentative_final` prefill 177 / 213 ms. After the history fix, re-run: tentative_final 178 / 220 ms, wasted prefill 10-19%.
+- **LLM quantization** (same source): Q4_K_M beats Q8_0 on first chunk p50, 177 vs 261 ms. Q8 answer quality not scored yet.
+- **TTS quantization** ([`voice/RESULTS.md`](voice/RESULTS.md), **Windows dev laptop, not the judged machine**): Piper int8 is 2.4-3.2× *slower* than fp32 under co-run, so we ship fp32 with 1 ONNX thread.
+- Ears: [`ears/RESULTS.md`](ears/RESULTS.md). Spine status: [`spine/BUILD_STATUS.md`](spine/BUILD_STATUS.md).
+- The A0→A7 end-to-end ablation waterfall, the degradation curve under tighter caps, and the 60 held-out human turns are **not yet measured**.
+
+### Honest caveats
+- **Synthetic speech.** Questions are Piper TTS ("Hey Pecko, ..."), not human voices; a sanity set, not the held-out set. Real voices will be harder.
+- **VM, not native.** VirtualBox may add scheduling noise; no RAPL, so no energy numbers yet.
+- **No speaker.** d = 0 ms on both stacks; a real device adds its output latency to both.
+- **RAM is a loss** (1140 vs 917 MiB), see above.
+- **One run each, n = 24.** p90 of 24 turns is a rough estimate.
+- **ASR mishears** in both stacks: "Romeo **when** Juliette" (loop5/loop6), "**why** is the boiling point of water", "what **cast** do plants take in", "cricket**ine**"; B0 twice kept the wake word ("PACKO ...").
+- **Some answers are wrong** (same 0.6B model in both): Pecko said "a week has 7 hours", "0 players on a cricket", "7 continents in our solar system", "Juliette wrote Romeo"; B0 said the Mona Lisa was by Van Gogh. Latency is not answer quality; quality is not scored yet.
+- Fillers are off in every number.
+
+### How to reproduce
+```sh
+.venv/bin/python scripts/make_question_set.py      # 24 synthetic WAVs -> data/clips/synthetic24/
+PECKO_CPUS=2,3 scripts/run_baseline.sh --wav data/clips/synthetic24/q*.wav --out data/results/baseline-syn24-b0
+PECKO_CPUS=2,3 scripts/run_pecko.sh --wav data/clips/synthetic24/q*.wav --ears-tier 2 --no-audio --out data/results/run-syn24-pecko
+.venv/bin/python scripts/compare_runs.py data/results/run-syn24-pecko data/results/baseline-syn24-b0
+python3 scripts/turn_report.py data/results/run-syn24-pecko   # per-turn C / R / path
+```
 
 ## Phone (in progress)
 A Flutter Android app is planned and under construction in `mobile/`. See [`mobile/PLAN.md`](mobile/PLAN.md). Not finished; no phone result is claimed.
@@ -126,6 +171,6 @@ localhost and serves explicitly allowed source/evidence files.
 `ears/ brain/ voice/ spine/ mobile/ frontend/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`. Models live in `models/` (gitignored).
 
 ## Limits and honesty
-- Only numbers in the `RESULTS.md` files are measurements; synthetic traces and replays are labelled as such.
+- Only numbers in the `RESULTS.md` files and in `data/results/` (as quoted in Results above, with their conditions) are measurements; synthetic traces and replays are labelled as such.
 - The frontend text demo does not run ASR or TTS and does not measure latency. General questions there need a running `llama-server` on `127.0.0.1:8080`; the default prompt family is Qwen3 (`--model-family lfm2` only with a matching model).
 - Licenses to respect: Piper (GPL-3), MMS (non-commercial), LFM Open License.
