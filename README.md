@@ -4,41 +4,94 @@
 
 HackNEX 2026 · HNX26EPS08 On-Device Conversational Stack · Team Plumbers
 
-> **STATUS: Spine's portable runtime is built; Ears' pipeline is built.** Five Spine deliverables are verified with mocks/fixtures; Ears' VAD/KWS/ASR/endpointer tier ladder (T0-T3) runs end-to-end against real audio. Real engines and Ubuntu VM validation are deferred for both. See [Spine delivery status](spine/BUILD_STATUS.md) and [`ears/RESULTS.md`](ears/RESULTS.md).
+Fully offline, CPU-only voice loop (wake word/VAD → streaming ASR → small LLM → TTS) that runs under an enforced 2 CPU / 2 GB / no-swap limit. It overlaps stages so the first audio of the answer starts sooner than in a serial stack.
 
-## What it is
-Fully offline, CPU-only voice loop (wake word/VAD → streaming ASR → small LLM → TTS) running under an enforced 2 CPU / 2 GB limit. It overlaps stages so the first audio of the answer starts far sooner than a default serial stack. See `docs/solution.md`.
+## Quickstart (Ubuntu, the judged platform)
 
-## Results (measured on our laptop, same cap, same test set)
-_TODO: baseline B0 vs Pecko: p50/p90 latency, CPU-s/turn, peak RAM, J/turn; master ablation table; degradation curve._
-
-## Evaluator frontend
-
-Pecko now includes a local presentation workspace: a working typed intent demo,
-seven recorded voice samples, four model comparisons, a synthetic pipeline
-replay, and a searchable evidence library. Design follows
-[Impeccable](https://github.com/pbakaus/impeccable). Fonts and assets are bundled;
-the frontend needs no Node build or internet connection at runtime.
-
-From the repository root on Windows:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r frontend/requirements.txt
-.\.venv\Scripts\python.exe -m frontend
-```
-
-On Ubuntu:
+Needs Python 3.10+, network **only during setup**.
 
 ```sh
+sudo apt install libportaudio2          # needed by sounddevice (mic/speaker)
 python3 -m venv .venv
-.venv/bin/python -m pip install -r frontend/requirements.txt
-.venv/bin/python -m frontend
+bash scripts/setup_models.sh            # Python deps + all speech models (see below)
+bash scripts/setup_vm_brain.sh          # llama.cpp b11501 + Qwen3-0.6B GGUF
+.venv/bin/python -m pytest -q           # sanity check
 ```
 
-Open **http://127.0.0.1:8765**. On this Windows checkout the environment and
-dependencies are already prepared, so only the final command is needed.
-Choose another port with `--port 8766` if required. Stop with Ctrl+C.
+Run the whole loop under the cap:
+
+```sh
+scripts/run_pecko.sh --mic                                               # say "hey Pecko, ..."
+scripts/run_pecko.sh --wav data/clips/synthetic/q1.wav --no-audio       # no mic/speaker needed
+```
+
+Turn the network off after setup if you want to show it works offline: `nmcli networking off` (turn back on with `nmcli networking on`).
+
+### What the setup scripts do
+- `scripts/setup_models.sh` (re-runnable): creates `.venv` if missing; installs the CPU-only `torch` wheel plus the root, `frontend/` and `voice/` requirements; downloads Piper lessac voices (`voice/get_models.py`), the sherpa-onnx Zipformer 20M streaming ASR, the sherpa KWS model with the wake phrase "hey pecko", Smart Turn v3.2 (int8 CPU build), Vosk small en-in, and the Moonshine small/tiny streaming models (cached in `~/.cache/moonshine_voice`); checks that Silero VAD loads. Models go to `models/` (gitignored). After this, nothing downloads at runtime (`HF_HUB_OFFLINE=1`).
+- `scripts/setup_vm_brain.sh` (re-runnable, each step skipped if done): installs apt basics (`python3-venv python3-pip git curl unzip gh`, uses sudo), warns if the CPU lacks AVX2, checks for RAPL energy counters, installs `brain/requirements.txt`, downloads the llama.cpp `b11501` Ubuntu build into `models/llama.cpp/`, downloads `Qwen3-0.6B-Q4_K_M.gguf` and `Q8_0.gguf` into `models/`, prints their sha256, and runs the Brain tests.
+
+### The cap and how to prove it live
+`scripts/run_pecko.sh` starts `spine.app` inside `systemd-run --user --scope` with `CPUQuota=200% MemoryMax=2G MemorySwapMax=0`, pinned with `taskset -c 0,1`. No sudo needed. `PECKO_SUDO=1` uses the system scope with `AllowedCPUs` instead (needs sudo). `PECKO_CPUS` and `PECKO_MEM` override the defaults (`0,1`, `2G`). The script prints the unit name (`pecko-HHMMSS`). In a second terminal:
+
+```sh
+systemd-cgtop
+cat /sys/fs/cgroup/user.slice/user-$(id -u).slice/user@$(id -u).service/app.slice/pecko-*.scope/{cpu.max,memory.max,memory.peak}
+```
+
+### Run options (`python -m spine.app --help`)
+Pass them through `scripts/run_pecko.sh`. Input is `--mic` or `--wav FILE...` (16 kHz mono, played in real time).
+
+| Option | Meaning |
+|---|---|
+| `--tier N` | start tier T0-T3 (see `docs/CONTRACT.md`) |
+| `--no-wake` | WAV runs: skip the wake word (push-to-talk) |
+| `--no-audio` | no speaker (Voice still synthesizes) |
+| `--no-hold` | disable hold-and-release (ablation) |
+| `--half-duplex` | ignore barge-in (use if echo makes Pecko stop itself) |
+| `--tail SEC` | seconds of silence after each WAV (default 15) |
+| `--port N` | llama-server port (default 8080) |
+| `--out DIR` | run folder (default `data/results/run-<time>`) |
+
+### What a run writes
+`data/results/run-<time>/` contains `events.jsonl` (contract log lines from all stages), `bus.jsonl` (every routed message) and `llama-server.log`. Watch a run live:
+
+```sh
+.venv/bin/python -m spine.dashboard data/results/run-<time>/events.jsonl --watch
+```
+
+## How it works (6 lines)
+1. Mic → **Ears**: Silero VAD, sherpa KWS wake word, Moonshine streaming ASR, Smart Turn + text-cue endpointer.
+2. **Brain**: router for common intents, Qwen3-0.6B Q4_K_M on llama.cpp (CPU), KV-cache + early prefill, hold-and-release.
+3. **Voice**: Piper via sherpa-onnx, audio cache, ring-buffer player, barge-in.
+4. **Spine** routes the contract messages ([`docs/CONTRACT.md`](docs/CONTRACT.md)).
+5. Spine sends `commit` (C) when the held answer matches the final transcript; nothing is audible before it.
+6. First audio = `max(C, R) + d`: work on whichever of commit (C) or answer-ready (R) is later.
+
+## Results
+Measured results are kept next to the code that produced them. Read them there; this README does not copy numbers.
+- Brain: [`brain/RESULTS.md`](brain/RESULTS.md)
+- Ears: [`ears/RESULTS.md`](ears/RESULTS.md)
+- Voice: [`voice/RESULTS.md`](voice/RESULTS.md)
+- Spine status: [`spine/BUILD_STATUS.md`](spine/BUILD_STATUS.md)
+
+The full baseline-vs-Pecko end-to-end comparison (p50/p90 latency, CPU-s/turn, peak RAM, J/turn, ablation table) is not in this README yet. Anything not in those files is not a measurement.
+
+## Phone (in progress)
+A Flutter Android app is planned and under construction in `mobile/`. See [`mobile/PLAN.md`](mobile/PLAN.md). Not finished; no phone result is claimed.
+
+## Other tools
+```sh
+.venv/bin/python -m pytest -q                     # all tests
+.venv/bin/python -m brain.mock_cli                # Brain from typed text
+.venv/bin/python -m ears.mock data/clips/hindi10.wav --push-to-talk --fast   # Ears from a WAV, contract JSONL on stdout
+.venv/bin/python -m frontend                      # typed-text evaluator demo, http://127.0.0.1:8765
+```
+
+Ears scripts: `scripts/measure.py` (WER, endpoint delay, false cut-offs, RSS, idle CPU over the clip set), `scripts/ablation.py` (fixed 800 ms vs 400 ms vs fusion endpointer), `scripts/test_tier_switch.py` (tier-switch time and peak RSS). Spine foundation checks: `python -m spine.mock`, `python -m spine.linux --cpus 0,1 --dry-run`. Synthetic Spine runtime and experiment commands: see [`spine/README.md`](spine/README.md) and [`spine/RECORDED_INPUT.md`](spine/RECORDED_INPUT.md). Their outputs are synthetic and labelled so.
+
+## Evaluator frontend
+A local presentation workspace: a typed intent demo, recorded voice samples, model comparisons, a synthetic pipeline replay and an evidence library. Fonts and assets are bundled; no Node build or internet is needed at runtime. Run `.venv/bin/python -m frontend`, open **http://127.0.0.1:8765** (`--port 8766` to change; Ctrl+C to stop).
 
 Suggested presentation flow:
 
@@ -69,92 +122,10 @@ python -m unittest tests.test_frontend_server -v
 Use the virtual environment's Python for the tests. The server only binds to
 localhost and serves explicitly allowed source/evidence files.
 
-## Core runtime setup
-
-Portable Spine requires Python 3.10+ and the standard library. Checks ran on
-Windows with Python 3.14.8. No model files are needed for placeholder development.
-Real model downloads/builds remain the stage owners' setup work.
-_TODO: exact commands that worked (Python version, venv, models download to `models/`, llama.cpp build)._
-
-### Ears setup
-Ears (wake word/VAD/streaming ASR/endpointer) is implemented and runs standalone (Brain, Voice ship independently in this parallel-build hackathon and are not wired up yet). What actually worked on this machine, Python 3.12.5, Windows:
-
-```
-pip install -r requirements.txt
-```
-
-First run of anything that touches `MoonshineASR` (T0/T1 ASR backend) downloads ONNX model weights from Hugging Face on first use (one-time, cached after) -- expect a delay the first time, none after.
-
-Test clips are already provided, converted, and ready in `data/clips/` (33 real WAVs + `MANIFEST.csv`); see `data/clips/SOURCE.md` for provenance. No model build step (no llama.cpp yet -- that is Brain's role).
-
-## Run
-
-Team integration: [Spine handoff](docs/handoff_spine.md).
-Development history and traps: [Spine gotchas](docs/gotcha_spine.md).
-
-Recorded-input and paired evaluation tooling is available on Windows.
-See [WAV ingress and repeated comparisons](spine/RECORDED_INPUT.md).
-
-Start the configurable placeholder runtime and generate its dashboard:
-
-```sh
-python -m spine.runtime --profile spine/examples/runtime.placeholder.json --plan spine/examples/plan.scripted.json --output data/results/mock-contract-01
-python -m spine.demo --output data/results/mock-control-01
-```
-
-Use new output directories. These commands work without Ubuntu and save explicit
-synthetic results. Open dashboard.html in the output directory to review the run.
-
-Spine foundation checks (Python 3.10+, from the repository root):
-
-```sh
-python -m spine.mock
-python -m unittest discover -s tests -v
-python -m spine.linux --cpus 0,1 --dry-run
-```
-
-This is a synthetic text-only wiring check, not a working voice loop or benchmark.
-See [Spine integration and remaining work](spine/README.md). Real engines,
-verified Ubuntu caps, baseline runs and measurement tables remain to be built.
-
-Inspect the synthetic measurement report:
-
-```sh
-python -m spine.report spine/examples/events.synthetic.jsonl --manifest spine/examples/experiment.synthetic.json
-```
-
-Spine also provides read-only cgroup accounting and a reactive tier ladder.
-The full eight-phase build remains in progress; hardware results are pending.
-
-Run the multi-turn synthetic experiment (choose a fresh output directory):
-
-```sh
-python -m spine.experiment --plan spine/examples/plan.synthetic.json --output data/results/mock-run-01
-```
-
-It saves the plan, events, turn manifest, completion summary and report,
-preserving failures and unstarted cases. Its mock does not produce audio.
-
-### Ears run
-Ears runs standalone against a WAV file, pure contract JSONL on stdout, diagnostics on stderr:
-
-```
-python -m ears.mock data/clips/hindi10.wav --push-to-talk --fast
-```
-
-`--push-to-talk` force-arms immediately (the real clips don't say "hey pecko"); `--fast` uses a VirtualClock instead of real-time pacing. Drop `--fast` to replay at real-time speed, or add `--mic` to listen live. `--tier N` selects the tier (T0 default, T1-T3 the degraded tiers; see `docs/CONTRACT.md`'s tier ladder and `ears/RESULTS.md` for what each tier actually runs and its measured tradeoffs).
-
-Other scripts that work standalone today:
-```
-python scripts/measure.py              # WER + endpoint-delay + false-cutoff proxy + peak RSS + idle CPU over the clip set
-python scripts/ablation.py             # fixed-800ms vs fixed-400ms vs fusion endpointer, real measured comparison
-python scripts/test_tier_switch.py     # tier-switch timing + peak RSS, sanity-checks tiers transcribe
-```
-
-Brain/Voice/Spine mocks and the full end-to-end pipeline command do not exist yet -- not claimed here until built.
-
 ## Layout
-`ears/ brain/ voice/ spine/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`. `ears/` and shared `common/`, `data/`, `scripts/` have real, tested code; see each role's own `RESULTS.md`/`BUILD_STATUS.md` for what's real vs. spec/skeleton in `brain/ voice/ spine/`.
+`ears/ brain/ voice/ spine/ mobile/ frontend/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`. Models live in `models/` (gitignored).
 
 ## Limits and honesty
-_TODO: what is measured vs estimated, known failure cases, licenses (Piper GPL-3, MMS non-commercial, LFM Open License)._
+- Only numbers in the `RESULTS.md` files are measurements; synthetic traces and replays are labelled as such.
+- The frontend text demo does not run ASR or TTS and does not measure latency. General questions there need a running `llama-server` on `127.0.0.1:8080`; the default prompt family is Qwen3 (`--model-family lfm2` only with a matching model).
+- Licenses to respect: Piper (GPL-3), MMS (non-commercial), LFM Open License.
