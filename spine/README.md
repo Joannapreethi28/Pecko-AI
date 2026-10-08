@@ -1,5 +1,8 @@
 # Spine portable runtime
 
+The complete team-facing operational guide is [docs/handoff_spine.md](../docs/handoff_spine.md).
+Development mistakes and remaining traps are in [docs/gotcha_spine.md](../docs/gotcha_spine.md).
+
 **Portable delivery: 5/5 built and verified with mocks/fixtures.** Hardware-inclusive
 project acceptance remains 0/8; Ubuntu VM and real-engine checks happen at the end.
 See [delivery checklist and deferred gates](BUILD_STATUS.md).

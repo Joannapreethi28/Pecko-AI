@@ -21,6 +21,9 @@ _TODO: exact commands that worked (Python version, venv, models download to `mod
 
 ## Run
 
+Team integration: [Spine handoff](docs/handoff_spine.md).
+Development history and traps: [Spine gotchas](docs/gotcha_spine.md).
+
 Recorded-input and paired evaluation tooling is available on Windows.
 See [WAV ingress and repeated comparisons](spine/RECORDED_INPUT.md).
 
