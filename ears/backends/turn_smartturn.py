@@ -96,6 +96,7 @@ class SmartTurn:
         so = ort.SessionOptions()
         so.intra_op_num_threads = 1
         so.inter_op_num_threads = 1
+        so.enable_cpu_mem_arena = False   # arena kept ~7 MiB extra for no speed gain (measured)
         so.add_session_config_entry("session.intra_op.allow_spinning", "0")
         so.add_session_config_entry("session.inter_op.allow_spinning", "0")
 
