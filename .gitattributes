@@ -1,0 +1,7 @@
+# Linux is the dev and judged platform: store text with LF so scripts run on Ubuntu.
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.wav binary
+*.gguf binary
+*.onnx binary

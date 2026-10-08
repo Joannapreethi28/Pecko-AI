@@ -1,0 +1,35 @@
+{
+  "scope": "Synthetic algorithm verification; no measured device or model speedups",
+  "seed": 81126,
+  "checks": {
+    "minimal_stall_free_start": 2000,
+    "chunk_graphs_vs_exhaustive_paths": 600,
+    "conformal_rank_edges": 3,
+    "exchangeable_rank_enumeration": 114,
+    "conditional_endpoint_monotonicity": 3,
+    "latency_first_and_constraints": 2,
+    "critical_path_saturation_and_contention": 3,
+    "invalid_trace_rejection": 3
+  },
+  "candidate_paths_enumerated": 11561,
+  "synthetic_chunk_example": {
+    "eight_word_response": true,
+    "one_word_first_ready_s": 0.225,
+    "one_word_stall_free_start_s": 0.7849999999999998,
+    "one_word_gaps_if_played_immediately_s": 0.5599999999999997,
+    "whole_response_start_s": 0.96,
+    "optimized_chunk_word_counts": [
+      3,
+      3,
+      2
+    ],
+    "optimized_stall_free_start_s": 0.435
+  },
+  "zero_failures_60_trials_95pct_upper": 0.048702913310097504,
+  "independent_zero_failure_trials_needed_for_2pct_at_95pct": 149,
+  "limitations": [
+    "Known-release chunk oracle is not causal future knowledge.",
+    "Calibrated deployment/prediction accuracy is untested.",
+    "No real latency, energy, quality or Linux enforcement measurement."
+  ]
+}

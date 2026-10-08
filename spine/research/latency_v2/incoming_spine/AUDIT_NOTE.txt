@@ -1,0 +1,2 @@
+# NOT SHIPPABLE AS-IS: audited in ../spine_latency_revision.md §1 (planner objective, alarm history, endpoint prior). Reference only.
+# The other verify_*.py and nice_test.py scripts from this bundle stay in the claude.ai Project (spine_latency_research_v2/incoming_spine/).

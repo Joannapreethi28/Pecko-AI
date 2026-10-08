@@ -1,0 +1,26 @@
+{
+  "scope": "Synthetic mathematical consistency checks; no measured model/controller gains",
+  "seed": 20261008,
+  "checks": {
+    "speculation_identity_and_signed_threshold": 100000,
+    "outcome_enumeration": 1,
+    "queue_conservation": 10000,
+    "unstable_queue_example": 1,
+    "playback_recurrence_vs_tick_simulation": 5000,
+    "pause_risk_exact_enumeration": 7,
+    "wilson_bounds_and_monotonicity": 5150,
+    "transition_counterexample": 1
+  },
+  "total_checks": 120160,
+  "maximum_speculation_identity_error": 2.6645352591003757e-15,
+  "toy_speculation_threshold": 0.4363636363636363,
+  "toy_speculation_utility_seconds": 0.22,
+  "high_pressure_threshold": 1.05,
+  "limitations": [
+    "No hardware, ASR, LLM, TTS or energy measurement.",
+    "Fluid queue and constant audio delay are simplified models.",
+    "Pause-risk enumeration assumes independent pauses.",
+    "Wilson bounds do not ensure validity under distribution shift.",
+    "No verification of real runtime prompt/KV reuse or Linux enforcement."
+  ]
+}

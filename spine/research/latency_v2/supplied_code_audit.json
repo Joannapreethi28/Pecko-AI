@@ -1,0 +1,25 @@
+{
+  "scope": "Reproductions from exact inspected original definitions; synthetic inputs",
+  "original_planner": {
+    "chosen_predicted_latency_s": 3.825124981702265,
+    "minimum_feasible_predicted_latency_s": 2.2490605195854303,
+    "chosen_threads": [
+      1,
+      1
+    ],
+    "fastest_serial_threads": [
+      2,
+      2
+    ],
+    "interpretation": "Original quality-then-CPU objective does not minimize latency. Thread sums above cap are valid only with its stated serial scheduling."
+  },
+  "cap_replan_retains_old_violation_history": [
+    true
+  ],
+  "level_after_one_new_regime_miss": 2,
+  "probability_two_misses_in_three_at_true_10pct_miss_rate": 0.028000000000000008,
+  "at_least_one_two_of_three_alarm_in_25_independent_blocks": 0.5083493437876592,
+  "endpoint_simulation_event_prior": 0.35714285714285715,
+  "endpoint_simulation_turn_weighted_prior_used": 0.3895765064331587,
+  "original_verification_output": "Provided by other agent; full NumPy/SciPy scripts not rerun"
+}
