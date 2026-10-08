@@ -1,0 +1,205 @@
+loading model (first run downloads weights)...
+{"stage": "ears", "event": "ready", "t": 0.0}
+{"stage": "ears", "event": "t_eos", "t": 1.7920000000000014, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 1.7920000000000014, "turn": 1, "extra": {"extra": {"p_done": 0.9903590679168701}}}
+{"stage": "ears", "event": "t_eos", "t": 3.744000000000003, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 3.744000000000003, "turn": 1, "extra": {"extra": {"p_done": 0.9721447229385376}}}
+{"stage": "ears", "event": "endpoint", "t": 3.904000000000003, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 5.280000000000004, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 5.280000000000004, "turn": 2, "extra": {"extra": {"p_done": 0.9900529384613037}}}
+{"stage": "ears", "event": "endpoint", "t": 5.440000000000004, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 9.408000000000007, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 9.408000000000007, "turn": 3, "extra": {"extra": {"p_done": 0.9819714426994324}}}
+{"stage": "ears", "event": "t_eos", "t": 11.616000000000009, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 11.616000000000009, "turn": 3, "extra": {"extra": {"p_done": 0.989931046962738}}}
+{"stage": "ears", "event": "endpoint", "t": 11.776000000000009, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 15.968000000000012, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 15.968000000000012, "turn": 4, "extra": {"extra": {"p_done": 0.9864848256111145}}}
+{"stage": "ears", "event": "endpoint", "t": 16.12800000000001, "turn": 4, "extra": {"extra": {"delay_s": 0.15999999999999837}}}
+{"stage": "ears", "event": "t_eos", "t": 19.008000000000013, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 19.008000000000013, "turn": 5, "extra": {"extra": {"p_done": 0.7426823377609253}}}
+{"stage": "ears", "event": "t_eos", "t": 21.888000000000016, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 21.888000000000016, "turn": 5, "extra": {"extra": {"p_done": 0.9724382162094116}}}
+hindi10.mp3: 4 final(s), wer=0.54 cpu_s=320.27
+{"stage": "ears", "event": "t_eos", "t": 24.352000000000018, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 24.352000000000018, "turn": 1, "extra": {"extra": {"p_done": 0.9898375868797302}}}
+{"stage": "ears", "event": "endpoint", "t": 24.512000000000018, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 27.90400000000002, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 27.90400000000002, "turn": 2, "extra": {"extra": {"p_done": 0.9905645847320557}}}
+{"stage": "ears", "event": "t_eos", "t": 30.720000000000024, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 30.720000000000024, "turn": 2, "extra": {"extra": {"p_done": 0.9429730176925659}}}
+{"stage": "ears", "event": "endpoint", "t": 30.880000000000024, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 33.53599999999985, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 33.53599999999985, "turn": 3, "extra": {"extra": {"p_done": 0.8767180442810059}}}
+{"stage": "ears", "event": "t_eos", "t": 36.03199999999958, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 36.03199999999958, "turn": 3, "extra": {"extra": {"p_done": 0.9897050261497498}}}
+{"stage": "ears", "event": "endpoint", "t": 36.19199999999956, "turn": 3, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 39.07199999999924, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 39.07199999999924, "turn": 4, "extra": {"extra": {"p_done": 0.9868147373199463}}}
+{"stage": "ears", "event": "endpoint", "t": 39.231999999999225, "turn": 4, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 41.47199999999898, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 41.47199999999898, "turn": 5, "extra": {"extra": {"p_done": 0.9864733219146729}}}
+{"stage": "ears", "event": "endpoint", "t": 41.63199999999896, "turn": 5, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 45.119999999998576, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 45.119999999998576, "turn": 6, "extra": {"extra": {"p_done": 0.7578632831573486}}}
+{"stage": "ears", "event": "t_eos", "t": 48.83199999999817, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 48.83199999999817, "turn": 6, "extra": {"extra": {"p_done": 0.983573317527771}}}
+{"stage": "ears", "event": "endpoint", "t": 48.99199999999815, "turn": 6, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+hindi11.mp3: 6 final(s), wer=0.46 cpu_s=407.86
+{"stage": "ears", "event": "t_eos", "t": 50.847999999997946, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 50.847999999997946, "turn": 1, "extra": {"extra": {"p_done": 0.9514566659927368}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 53.27999999999768, "turn": 1, "extra": {"extra": {"p_done": 0.03168722987174988}}}
+{"stage": "ears", "event": "t_eos", "t": 54.399999999997554, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 54.399999999997554, "turn": 1, "extra": {"extra": {"p_done": 0.9649799466133118}}}
+{"stage": "ears", "event": "t_eos", "t": 56.7039999999973, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 56.7039999999973, "turn": 1, "extra": {"extra": {"p_done": 0.9089010953903198}}}
+{"stage": "ears", "event": "t_eos", "t": 58.97599999999705, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 58.97599999999705, "turn": 1, "extra": {"extra": {"p_done": 0.8359347581863403}}}
+{"stage": "ears", "event": "endpoint", "t": 59.13599999999703, "turn": 1, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 62.27199999999669, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 62.27199999999669, "turn": 2, "extra": {"extra": {"p_done": 0.9860248565673828}}}
+{"stage": "ears", "event": "endpoint", "t": 62.43199999999667, "turn": 2, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 65.02399999999639, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 65.02399999999639, "turn": 3, "extra": {"extra": {"p_done": 0.9905380010604858}}}
+{"stage": "ears", "event": "endpoint", "t": 65.18399999999637, "turn": 3, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 67.03999999999617, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 67.03999999999617, "turn": 4, "extra": {"extra": {"p_done": 0.8289540410041809}}}
+{"stage": "ears", "event": "endpoint", "t": 67.19999999999615, "turn": 4, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 71.00799999999573, "turn": 5, "extra": {"extra": {"p_done": 0.9892386198043823}}}
+{"stage": "ears", "event": "t_eos", "t": 72.89599999999552, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 72.89599999999552, "turn": 5, "extra": {"extra": {"p_done": 0.8995171785354614}}}
+{"stage": "ears", "event": "endpoint", "t": 73.0559999999955, "turn": 5, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 74.46399999999535, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 74.46399999999535, "turn": 6, "extra": {"extra": {"p_done": 0.8506861925125122}}}
+{"stage": "ears", "event": "t_eos", "t": 75.35999999999525, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 75.35999999999525, "turn": 6, "extra": {"extra": {"p_done": 0.9905273914337158}}}
+{"stage": "ears", "event": "endpoint", "t": 75.51999999999524, "turn": 6, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+hindi1.mp3: 6 final(s), wer=0.52 cpu_s=361.97
+{"stage": "ears", "event": "smart_turn_score", "t": 77.53599999999501, "turn": 1, "extra": {"extra": {"p_done": 0.5864741802215576}}}
+{"stage": "ears", "event": "endpoint", "t": 77.85599999999498, "turn": 1, "extra": {"extra": {"delay_s": 0.31999999999996476}}}
+{"stage": "ears", "event": "t_eos", "t": 80.76799999999466, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 80.76799999999466, "turn": 2, "extra": {"extra": {"p_done": 0.9902205467224121}}}
+{"stage": "ears", "event": "endpoint", "t": 80.92799999999464, "turn": 2, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 83.83999999999432, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 83.83999999999432, "turn": 3, "extra": {"extra": {"p_done": 0.9891848564147949}}}
+{"stage": "ears", "event": "endpoint", "t": 83.9999999999943, "turn": 3, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 86.04799999999408, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 86.04799999999408, "turn": 4, "extra": {"extra": {"p_done": 0.9702505469322205}}}
+{"stage": "ears", "event": "endpoint", "t": 86.20799999999406, "turn": 4, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 88.5759999999938, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 88.5759999999938, "turn": 5, "extra": {"extra": {"p_done": 0.9857017993927002}}}
+{"stage": "ears", "event": "endpoint", "t": 88.73599999999378, "turn": 5, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 91.13599999999352, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 91.13599999999352, "turn": 6, "extra": {"extra": {"p_done": 0.9728832840919495}}}
+{"stage": "ears", "event": "t_eos", "t": 93.18399999999329, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 93.18399999999329, "turn": 6, "extra": {"extra": {"p_done": 0.986339807510376}}}
+{"stage": "ears", "event": "endpoint", "t": 93.34399999999327, "turn": 6, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 96.41599999999293, "turn": 7}
+{"stage": "ears", "event": "smart_turn_score", "t": 96.41599999999293, "turn": 7, "extra": {"extra": {"p_done": 0.9888563752174377}}}
+{"stage": "ears", "event": "endpoint", "t": 96.57599999999292, "turn": 7, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 99.64799999999258, "turn": 8}
+{"stage": "ears", "event": "smart_turn_score", "t": 99.64799999999258, "turn": 8, "extra": {"extra": {"p_done": 0.9839961528778076}}}
+{"stage": "ears", "event": "endpoint", "t": 99.80799999999256, "turn": 8, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+tamil10a.mp3: 8 final(s), wer=0.23 cpu_s=383.22
+{"stage": "ears", "event": "t_eos", "t": 102.07999999999231, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 102.07999999999231, "turn": 1, "extra": {"extra": {"p_done": 0.7023513317108154}}}
+{"stage": "ears", "event": "t_eos", "t": 110.43199999999139, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 110.43199999999139, "turn": 1, "extra": {"extra": {"p_done": 0.9560950994491577}}}
+{"stage": "ears", "event": "t_eos", "t": 114.8479999999909, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 114.8479999999909, "turn": 1, "extra": {"extra": {"p_done": 0.9881550669670105}}}
+{"stage": "ears", "event": "endpoint", "t": 115.00799999999089, "turn": 1, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 120.19199999999032, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 120.19199999999032, "turn": 2, "extra": {"extra": {"p_done": 0.976646363735199}}}
+{"stage": "ears", "event": "endpoint", "t": 120.3519999999903, "turn": 2, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+tamil11a.mp3: 2 final(s), wer=0.49 cpu_s=249.94
+{"stage": "ears", "event": "t_eos", "t": 122.52799999999006, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 122.52799999999006, "turn": 1, "extra": {"extra": {"p_done": 0.9803239107131958}}}
+{"stage": "ears", "event": "t_eos", "t": 124.70399999998982, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 124.70399999998982, "turn": 1, "extra": {"extra": {"p_done": 0.9609016180038452}}}
+{"stage": "ears", "event": "endpoint", "t": 124.8639999999898, "turn": 1, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 126.81599999998959, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 126.81599999998959, "turn": 2, "extra": {"extra": {"p_done": 0.954371452331543}}}
+{"stage": "ears", "event": "endpoint", "t": 126.97599999998957, "turn": 2, "extra": {"extra": {"delay_s": 0.15999999999998238}}}
+{"stage": "ears", "event": "t_eos", "t": 129.9519999999901, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 129.9519999999901, "turn": 3, "extra": {"extra": {"p_done": 0.967265248298645}}}
+{"stage": "ears", "event": "endpoint", "t": 130.11199999999016, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 130.94399999999044, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 130.94399999999044, "turn": 4, "extra": {"extra": {"p_done": 0.9778288006782532}}}
+{"stage": "ears", "event": "t_eos", "t": 133.31199999999123, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 133.31199999999123, "turn": 4, "extra": {"extra": {"p_done": 0.7304798364639282}}}
+{"stage": "ears", "event": "endpoint", "t": 133.47199999999128, "turn": 4, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 136.73599999999237, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 136.73599999999237, "turn": 5, "extra": {"extra": {"p_done": 0.9652726650238037}}}
+{"stage": "ears", "event": "endpoint", "t": 136.89599999999243, "turn": 5, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 140.25599999999355, "turn": 6, "extra": {"extra": {"p_done": 0.0871533751487732}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 141.24799999999388, "turn": 6, "extra": {"extra": {"p_done": 0.1064704954624176}}}
+{"stage": "ears", "event": "endpoint", "t": 141.75999999999405, "turn": 6, "extra": {"extra": {"delay_s": 0.512000000000171}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 143.55199999999465, "turn": 7, "extra": {"extra": {"p_done": 0.6363592147827148}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 144.76799999999506, "turn": 7, "extra": {"extra": {"p_done": 0.013826996088027954}}}
+{"stage": "ears", "event": "endpoint", "t": 145.27999999999523, "turn": 7, "extra": {"extra": {"delay_s": 0.512000000000171}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 146.30399999999557, "turn": 8, "extra": {"extra": {"p_done": 0.10949817299842834}}}
+{"stage": "ears", "event": "t_eos", "t": 150.49599999999697, "turn": 8}
+{"stage": "ears", "event": "smart_turn_score", "t": 150.49599999999697, "turn": 8, "extra": {"extra": {"p_done": 0.9695775508880615}}}
+{"stage": "ears", "event": "endpoint", "t": 150.65599999999702, "turn": 8, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 153.9199999999981, "turn": 9, "extra": {"extra": {"p_done": 0.3852028250694275}}}
+{"stage": "ears", "event": "t_eos", "t": 155.61599999999868, "turn": 9}
+{"stage": "ears", "event": "smart_turn_score", "t": 155.61599999999868, "turn": 9, "extra": {"extra": {"p_done": 0.9672063589096069}}}
+{"stage": "ears", "event": "endpoint", "t": 155.77599999999873, "turn": 9, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+tamil1.mp3: 9 final(s), wer=0.36 cpu_s=452.75
+{"stage": "ears", "event": "t_eos", "t": 157.7599999999994, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 157.7599999999994, "turn": 1, "extra": {"extra": {"p_done": 0.9725596904754639}}}
+{"stage": "ears", "event": "t_eos", "t": 160.8000000000004, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 160.8000000000004, "turn": 1, "extra": {"extra": {"p_done": 0.9884956479072571}}}
+{"stage": "ears", "event": "t_eos", "t": 162.97600000000114, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 162.97600000000114, "turn": 1, "extra": {"extra": {"p_done": 0.9803688526153564}}}
+{"stage": "ears", "event": "endpoint", "t": 163.1360000000012, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 165.18400000000187, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 165.18400000000187, "turn": 2, "extra": {"extra": {"p_done": 0.9859590530395508}}}
+{"stage": "ears", "event": "endpoint", "t": 165.34400000000193, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 167.77600000000274, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 167.77600000000274, "turn": 3, "extra": {"extra": {"p_done": 0.9759149551391602}}}
+{"stage": "ears", "event": "endpoint", "t": 167.9360000000028, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 179.16800000000654, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 179.16800000000654, "turn": 4, "extra": {"extra": {"p_done": 0.9840365648269653}}}
+{"stage": "ears", "event": "endpoint", "t": 179.3280000000066, "turn": 4, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+telugu10.mp3: 4 final(s), wer=0.51 cpu_s=324.50
+{"stage": "ears", "event": "t_eos", "t": 182.75200000000774, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 182.75200000000774, "turn": 1, "extra": {"extra": {"p_done": 0.6387051343917847}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 184.7360000000084, "turn": 1, "extra": {"extra": {"p_done": 0.5713949799537659}}}
+{"stage": "ears", "event": "endpoint", "t": 185.0560000000085, "turn": 1, "extra": {"extra": {"delay_s": 0.32000000000010687}}}
+{"stage": "ears", "event": "t_eos", "t": 186.560000000009, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 186.560000000009, "turn": 2, "extra": {"extra": {"p_done": 0.9589684009552002}}}
+{"stage": "ears", "event": "endpoint", "t": 186.72000000000907, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 189.7920000000101, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 189.7920000000101, "turn": 3, "extra": {"extra": {"p_done": 0.9260898232460022}}}
+{"stage": "ears", "event": "endpoint", "t": 189.95200000001014, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 194.2720000000116, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 194.2720000000116, "turn": 4, "extra": {"extra": {"p_done": 0.7947392463684082}}}
+{"stage": "ears", "event": "endpoint", "t": 194.43200000001164, "turn": 4, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 199.84000000001345, "turn": 5}
+{"stage": "ears", "event": "smart_turn_score", "t": 199.84000000001345, "turn": 5, "extra": {"extra": {"p_done": 0.7984599471092224}}}
+{"stage": "ears", "event": "endpoint", "t": 200.0000000000135, "turn": 5, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 204.44800000001499, "turn": 6, "extra": {"extra": {"p_done": 0.03478536009788513}}}
+{"stage": "ears", "event": "t_eos", "t": 207.23200000001592, "turn": 6}
+{"stage": "ears", "event": "smart_turn_score", "t": 207.23200000001592, "turn": 6, "extra": {"extra": {"p_done": 0.9193901419639587}}}
+{"stage": "ears", "event": "endpoint", "t": 207.39200000001597, "turn": 6, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+telugu11.mp3: 6 final(s), wer=0.33 cpu_s=353.83
+{"stage": "ears", "event": "t_eos", "t": 210.496000000017, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 210.496000000017, "turn": 1, "extra": {"extra": {"p_done": 0.8573958873748779}}}
+{"stage": "ears", "event": "endpoint", "t": 210.65600000001706, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 212.76800000001776, "turn": 2, "extra": {"extra": {"p_done": 0.5169820785522461}}}
+{"stage": "ears", "event": "t_eos", "t": 213.66400000001806, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 213.66400000001806, "turn": 2, "extra": {"extra": {"p_done": 0.9662761688232422}}}
+{"stage": "ears", "event": "t_eos", "t": 215.93600000001882, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 215.93600000001882, "turn": 2, "extra": {"extra": {"p_done": 0.9037679433822632}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 217.9840000000195, "turn": 2, "extra": {"extra": {"p_done": 0.22574353218078613}}}
+{"stage": "ears", "event": "t_eos", "t": 220.44800000002033, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 220.44800000002033, "turn": 2, "extra": {"extra": {"p_done": 0.9710896015167236}}}
+{"stage": "ears", "event": "endpoint", "t": 220.60800000002038, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 222.97600000002117, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 222.97600000002117, "turn": 3, "extra": {"extra": {"p_done": 0.980819046497345}}}
+{"stage": "ears", "event": "t_eos", "t": 225.21600000002192, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 225.21600000002192, "turn": 3, "extra": {"extra": {"p_done": 0.8924246430397034}}}
+{"stage": "ears", "event": "endpoint", "t": 225.37600000002197, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000005343}}}
+{"stage": "ears", "event": "t_eos", "t": 228.32000000002296, "turn": 4}
+{"stage": "ears", "event": "smart_turn_score", "t": 228.32000000002296, "turn": 4, "extra": {"extra": {"p_done": 0.8282943367958069}}}

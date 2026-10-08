@@ -13,13 +13,35 @@ Fully offline, CPU-only voice loop (wake word/VAD → streaming ASR → small LL
 _TODO: baseline B0 vs Pecko: p50/p90 latency, CPU-s/turn, peak RAM, J/turn; master ablation table; degradation curve._
 
 ## Setup
-_TODO: exact commands that worked (Python version, venv, models download to `models/`, llama.cpp build)._
+Only **Ears** is implemented so far (this is a parallel-build hackathon; Brain, Voice, and Spine ship independently and are not wired up yet). What actually worked on this machine, Python 3.12.5, Windows:
+
+```
+pip install -r requirements.txt
+```
+
+First run of anything that touches `MoonshineASR` (T0/T1 ASR backend) downloads ONNX model weights from Hugging Face on first use (one-time, cached after) -- expect a delay the first time, none after.
+
+Test clips are already provided, converted, and ready in `data/clips/` (33 real WAVs + `MANIFEST.csv`); see `data/clips/SOURCE.md` for provenance. No model build step (no llama.cpp yet -- that is Brain's role, not yet built).
 
 ## Run
-_TODO: one command under the cgroup limit; baseline command; how to run each stage's mock; how to reproduce the tables._
+Ears runs standalone against a WAV file, pure contract JSONL on stdout, diagnostics on stderr:
+
+```
+python -m ears.mock data/clips/hindi10.wav --push-to-talk --fast
+```
+
+`--push-to-talk` force-arms immediately (the real clips don't say "hey pecko"); `--fast` uses a VirtualClock instead of real-time pacing. Drop `--fast` to replay at real-time speed, or add `--mic` to listen live. `--tier N` selects the tier (T0 default; see `docs/CONTRACT.md`'s tier ladder).
+
+Other scripts that work standalone today:
+```
+python scripts/measure.py              # Phase 4: WER + endpoint-delay + peak RSS + idle CPU over all 33 clips
+python scripts/test_tier_switch.py     # tier-switch (T0->T1) timing + peak RSS, sanity-checks both tiers transcribe
+```
+
+Brain/Voice/Spine mocks and the full end-to-end pipeline command do not exist yet -- not claimed here until built.
 
 ## Layout
-`ears/ brain/ voice/ spine/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`.
+`ears/ brain/ voice/ spine/ common/ docs/ data/ scripts/ tests/`. Contract: `docs/CONTRACT.md`. Only `ears/` and shared `common/`, `data/`, `scripts/` have real code right now; `brain/ voice/ spine/` currently hold spec/skeleton files only.
 
 ## Limits and honesty
 _TODO: what is measured vs estimated, known failure cases, licenses (Piper GPL-3, MMS non-commercial, LFM Open License)._

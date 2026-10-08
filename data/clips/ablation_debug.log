@@ -1,0 +1,76 @@
+ablation sample: ['hindi1.wav', 'tamil1.wav', 'telugu10.wav'], each trimmed to 10.0s
+
+=== mode: fixed_800 ===
+{"stage": "ears", "event": "ready", "t": 0.0}
+{"stage": "ears", "event": "smart_turn_score", "t": 1.5680000000000012, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 4.000000000000003, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 5.120000000000004, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 7.424000000000006, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 9.696000000000007, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 12.000000000000009, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 14.17600000000001, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 16.28800000000001, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 19.424000000000014, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 21.984000000000016, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 25.02400000000002, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 27.20000000000002, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 29.408000000000023, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{'mode': 'fixed_800', 'finals': 0, 'delay_p50': None, 'delay_p90': None, 'suspected_cutoffs': 0, 'wer_mean': None, 'wall_s': 51.091289900003176}
+
+=== mode: fixed_400 ===
+{"stage": "ears", "event": "ready", "t": 0.0}
+{"stage": "ears", "event": "smart_turn_score", "t": 1.5680000000000012, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 4.000000000000003, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 5.120000000000004, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 7.424000000000006, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 9.696000000000007, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 12.000000000000009, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 14.17600000000001, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 16.28800000000001, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 19.424000000000014, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 21.984000000000016, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 25.02400000000002, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 27.20000000000002, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 29.408000000000023, "turn": 1, "extra": {"extra": {"p_done": 0.5}}}
+{'mode': 'fixed_400', 'finals': 0, 'delay_p50': None, 'delay_p90': None, 'suspected_cutoffs': 0, 'wer_mean': None, 'wall_s': 52.18246609999915}
+
+=== mode: fusion ===
+{"stage": "ears", "event": "ready", "t": 0.0}
+{"stage": "ears", "event": "t_eos", "t": 1.5680000000000012, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 1.5680000000000012, "turn": 1, "extra": {"extra": {"p_done": 0.8418099880218506}}}
+{"stage": "ears", "event": "smart_turn_score", "t": 4.000000000000003, "turn": 1, "extra": {"extra": {"p_done": 0.25898975133895874}}}
+{"stage": "ears", "event": "t_eos", "t": 5.120000000000004, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 5.120000000000004, "turn": 1, "extra": {"extra": {"p_done": 0.9649784564971924}}}
+{"stage": "ears", "event": "t_eos", "t": 7.424000000000006, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 7.424000000000006, "turn": 1, "extra": {"extra": {"p_done": 0.963333249092102}}}
+{"stage": "ears", "event": "t_eos", "t": 9.696000000000007, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 9.696000000000007, "turn": 1, "extra": {"extra": {"p_done": 0.8359347581863403}}}
+{"stage": "ears", "event": "asr_final", "t": 9.856000000000007, "turn": 1, "extra": {"extra": {"text": "5 ticks left of blue cheese"}}}
+{"stage": "ears", "event": "endpoint", "t": 9.856000000000007, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 12.000000000000009, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 12.000000000000009, "turn": 1, "extra": {"extra": {"p_done": 0.9780962467193604}}}
+{"stage": "ears", "event": "t_eos", "t": 14.17600000000001, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 14.17600000000001, "turn": 1, "extra": {"extra": {"p_done": 0.980219841003418}}}
+{"stage": "ears", "event": "asr_final", "t": 14.336000000000011, "turn": 1, "extra": {"extra": {"text": "Ask her to bring these things."}}}
+{"stage": "ears", "event": "endpoint", "t": 14.336000000000011, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 16.28800000000001, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 16.28800000000001, "turn": 2, "extra": {"extra": {"p_done": 0.954371452331543}}}
+{"stage": "ears", "event": "asr_final", "t": 16.44800000000001, "turn": 2, "extra": {"extra": {"text": "With the from the store"}}}
+{"stage": "ears", "event": "endpoint", "t": 16.44800000000001, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 19.424000000000014, "turn": 3}
+{"stage": "ears", "event": "smart_turn_score", "t": 19.424000000000014, "turn": 3, "extra": {"extra": {"p_done": 0.967265248298645}}}
+{"stage": "ears", "event": "asr_final", "t": 19.584000000000014, "turn": 3, "extra": {"extra": {"text": "Six spoons of fresh snow peas."}}}
+{"stage": "ears", "event": "endpoint", "t": 19.584000000000014, "turn": 3, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 21.984000000000016, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 21.984000000000016, "turn": 1, "extra": {"extra": {"p_done": 0.9812058210372925}}}
+{"stage": "ears", "event": "t_eos", "t": 25.02400000000002, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 25.02400000000002, "turn": 1, "extra": {"extra": {"p_done": 0.9891769886016846}}}
+{"stage": "ears", "event": "t_eos", "t": 27.20000000000002, "turn": 1}
+{"stage": "ears", "event": "smart_turn_score", "t": 27.20000000000002, "turn": 1, "extra": {"extra": {"p_done": 0.9769275784492493}}}
+{"stage": "ears", "event": "asr_final", "t": 27.36000000000002, "turn": 1, "extra": {"extra": {"text": "6 spoons of fresh no peas"}}}
+{"stage": "ears", "event": "endpoint", "t": 27.36000000000002, "turn": 1, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{"stage": "ears", "event": "t_eos", "t": 29.408000000000023, "turn": 2}
+{"stage": "ears", "event": "smart_turn_score", "t": 29.408000000000023, "turn": 2, "extra": {"extra": {"p_done": 0.9859590530395508}}}
+{"stage": "ears", "event": "asr_final", "t": 29.568000000000023, "turn": 2, "extra": {"extra": {"text": "5 ticks laps of blue cheese"}}}
+{"stage": "ears", "event": "endpoint", "t": 29.568000000000023, "turn": 2, "extra": {"extra": {"delay_s": 0.16000000000000014}}}
+{'mode': 'fusion', 'finals': 6, 'delay_p50': 160.00000000000014, 'delay_p90': 160.00000000000014, 'suspected_cutoffs': 0, 'wer_mean': 0.9047619047619048, 'wall_s': 53.510213399997156}
