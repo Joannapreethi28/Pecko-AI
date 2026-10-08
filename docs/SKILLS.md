@@ -25,3 +25,6 @@
 - `vercel-labs` **deploy-to-vercel** (uploads the whole project folder to a public Vercel URL), **vercel-cli-with-tokens**, **vercel-optimize**: Pecko is offline; no use, and an accidental upload is a real risk.
 - **agent-reach**: uses your logged-in account cookies (ban risk).
 - gstack **team mode** (would force gstack on every teammate via a committed hook) and its suggested CLAUDE.md rule banning the Claude-in-Chrome tools.
+
+## Team Board mod (Claude Code)
+A side pane + status line showing every role's handoff status, Brain modules on `main` and the latest pushes (refreshes from git every 60 s), toasts on new pushes or a changed contract, and a guard that blocks edits to `docs/CONTRACT.md`. Load it: `claude --plugin-dir tools/mods/team-board`, then `/team-board`. Tests: `claude plugin test tools/mods/team-board`.
