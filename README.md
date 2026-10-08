@@ -60,14 +60,25 @@ Pass them through `scripts/run_pecko.sh`. Input is `--mic` or `--wav FILE...` (1
 .venv/bin/python -m spine.dashboard data/results/run-<time>/events.jsonl --watch
 ```
 
-## Live demo (one command)
+## Live demo (two terminals)
 
 ```bash
-scripts/demo.sh          # live mic under the 2 CPU / 2 GB / swap 0 cap + live dashboard; say "Hey Pecko, ..."
-scripts/demo.sh --wav    # fallback: the 4 synthetic questions at real-time speed
+# Terminal 1: live mic under the 2 CPU / 2 GB / swap 0 cgroup cap (terminal dashboard opens too)
+scripts/demo.sh
+# Terminal 2: evaluator frontend, then open http://127.0.0.1:8765
+.venv/bin/python -m frontend
+```
+The "Live voice loop" panel at the top of Demo studio polls `/api/live`, which reads the newest `data/results/demo-*/events.jsonl`. It shows status, CPU and RAM against the cap, and for each turn "You said", the Pecko answer and first audio in ms (plus commit C and answer-ready R). Ctrl+C in terminal 1 stops the run and prints the per-turn report.
+
+**No wake word in the live demo.** Just ask, e.g. "What is the capital of France?". On a real voice through the VirtualBox mic the "hey pecko" keyword spotter never fired, so `demo.sh` runs `--mic --no-wake --ears-tier 0` (Moonshine recogniser; the tier 2 Zipformer misheard real voice badly). `--no-wake` now arms every mic turn.
+
+**Real voice, measured (one short session through the VM mic, not a benchmark):** first audio about 1.9–2.3 s after end of speech, mostly the endpointer waiting 1.4–2 s. The 835 ms vs 2059 ms headline below is on synthetic speech, not this live setup.
+
+```bash
+scripts/demo.sh --wav           # backup if the mic fails: 4 recorded synthetic questions, same pipeline; the frontend panel shows it the same way
 scripts/demo.sh --half-duplex   # if the speaker echo makes Pecko interrupt itself
 ```
-The dashboard shows live CPU cores and RAM against the cap, the transcript, and for each turn C (commit), R (first clause PCM ready) and first audio in ms after end of speech, plus the answer path (held / llm / cached). Ctrl+C stops it and prints the per-turn report. Checked 9 Oct 04:20 in the VM: the `--wav` run completed 4/4 turns with speaker on; `--mic` starts and listens (idle 0.03 cores) but a spoken turn through a live mic had not been verified then.
+If the VM mic records pure silence: VirtualBox menu Devices → Audio → tick Audio Input.
 
 ## How it works (6 lines)
 1. Mic → **Ears**: Silero VAD, sherpa KWS wake word, Moonshine streaming ASR, Smart Turn + text-cue endpointer.
