@@ -1,0 +1,14 @@
+{
+  "label": "lfm2.5-1.2b-q40-ubuntu-vm-cg",
+  "n_questions": 20,
+  "ttft_p50_ms": 231.9,
+  "ttft_p90_ms": 264.1,
+  "rewind_ttft_p50_ms": 221.3,
+  "rewind_reprocesses": true,
+  "decode_tps_median": 19.78,
+  "peak_rss_mb": 1339.3,
+  "cgroup_peak_mb": 1369.7,
+  "peak_mb": 1369.7,
+  "platform": "linux x86_64",
+  "server_start_s": 1.82
+}

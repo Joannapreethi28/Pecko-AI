@@ -22,7 +22,7 @@ Read in this order: `brain/CLAUDE.md` → this file → `brain/gotcha.md` (G1-G1
 | 8 router + intents | DONE | `router.py`, `intents.yaml`, stage wiring (commit dea3294) |
 | 10 tier switching | DONE (logic + fake-server tests) | live VM switch timing NOT measured |
 | 12 ablation | CODE DONE, not run | `brain/ablate.py`, `ablation_turns.jsonl` |
-| 9 bake-off | PARTLY RUN | Qwen3-0.6B Q4_K_M measured under the cap (RESULTS.md). Qwen3-1.7B, LFM2.5-1.2B, LFM2.5-350M not downloaded/run; blind quality scores not done |
+| 9 bake-off | RUN, quality pending | all 4 models measured under the cap (RESULTS.md). T0 provisionally Qwen3-0.6B. Blind sheet built: a teammate scores `data/results/blind_scores.csv` (never show `blind_scores_key.csv`), then `python -m brain.score_sheet --tally` |
 | 11 hold-and-release | DONE | commit b54f2c1; contract v2.1 approved by all four (CONTRACT.md) |
 | 10 / 12 real runs | NOT STARTED | Ubuntu VM under the cap only (command in section 3) |
 
@@ -32,6 +32,7 @@ Tests (Ubuntu VM): 199 pass, 4 skipped (1 Windows-only, 3 live). Live tests with
 ### ubuntu-vm (8 Oct)
 - **Cap command (no sudo needed):** `systemd-run --user --scope --unit=pecko-bakeoff -p CPUQuota=200% -p MemoryMax=2G -p MemorySwapMax=0 --setenv=HF_HUB_OFFLINE=1 -- taskset -c 0,1 .venv/bin/python -m brain.bakeoff --model models/Qwen3-0.6B-Q4_K_M.gguf --family qwen3 --label <label>`. Inside: `cpu.max 200000 100000`, `memory.max 2147483648`, `memory.swap.max 0`. `AllowedCPUs` is ignored in a user scope, hence `taskset`. Evict the model from page cache first (G17).
 - **Bake-off, Qwen3-0.6B Q4_K_M, ubuntu-vm, 2 CPU / 2 GB cgroup:** TTFT p50 103 / p90 123 ms (n=20), rewind TTFT p50 103 ms, no reprocessing, decode 34.1 tok/s, cgroup peak 814 MB.
+- **Bake-off, other 3 models, same cap:** Qwen3-1.7B Q4_K_M p50 256 ms, 13.6 tok/s, 2012 MB (fills the cap, fails RAM rule); LFM2.5-1.2B Q4_0 p50 232 ms, 19.8 tok/s, 1370 MB, rewind reprocesses; LFM2.5-350M Q4_0 p50 69 ms, 58.7 tok/s, 450 MB, rewind reprocesses. LFM replies are coherent (no BOS problem), but they invent live weather.
 - **Live mock, no cap (`ubuntu-vm, uncapped, not judged`), same 3 questions as Windows:** first_token 101 / 113 / 132 ms (Windows 110 / 127 / 157); first_chunk 251 / 285 / 324 ms (Windows 268 / 296 / 325); computed 18-22 tokens, reused 84-147; decode 30-38 tok/s. Same wrong sky answer and "366" digits.
 ### windows-dev, not judged
 - Probe: `n_predict:0` yields 1 token, so `DEFAULT_PREFILL_N_PREDICT=1` (G11). q8_0 V cache works without `-fa`. Client disconnect stops generation in 92 ms. Rewind keeps the full common prefix (cache_n 37 == lcp 37).

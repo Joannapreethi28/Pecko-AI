@@ -1,0 +1,14 @@
+{
+  "label": "qwen3-1.7b-q4km-ubuntu-vm-cg",
+  "n_questions": 20,
+  "ttft_p50_ms": 256.4,
+  "ttft_p90_ms": 276.2,
+  "rewind_ttft_p50_ms": 237.7,
+  "rewind_reprocesses": false,
+  "decode_tps_median": 13.565,
+  "peak_rss_mb": 1979.8,
+  "cgroup_peak_mb": 2011.8,
+  "peak_mb": 2011.8,
+  "platform": "linux x86_64",
+  "server_start_s": 7.29
+}
