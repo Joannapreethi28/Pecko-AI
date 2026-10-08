@@ -62,6 +62,7 @@ class BrainStage:
         self.hold_release = hold_release
         self._held_info: Optional[tuple[int, int]] = None
         self._held: Optional[dict] = None
+        self._held_text = ""   # the tentative transcript the held gen was prepared for
         self._carry = ""
         self._worker = threading.Thread(target=self._run, name="brain-llm", daemon=True)
 
@@ -133,6 +134,7 @@ class BrainStage:
             if held is not None:
                 self._drop_held(*held, reason="routed")
             kind, clip, text = routed
+            self._final_valid(turn, gen, kind)
             if kind == "cached":
                 self._send_cached(turn, gen, clip)
             else:
@@ -141,9 +143,18 @@ class BrainStage:
                 self._finish(gen)
             return
         if held is not None:   # the worker checks the prepared clause against this final
-            self._jobs.put(("resolve", turn, held[1], user, gen))
+            same = self._held_text == user
+            committed = held[1] if same else gen
+            self._final_valid(turn, committed, "held" if same else "held_mismatch")
+            self._jobs.put(("resolve", turn, held[1], user, gen, committed))
             return
+        self._final_valid(turn, gen, "llm")
         self._jobs.put(("generate", turn, gen, user))
+
+    def _final_valid(self, turn: int, gen: int, path: str) -> None:
+        """The final transcript is validated and `gen` is the one that will answer it. Spine's log hook
+        turns this into `commit` (= C) synchronously, so Voice has it before any chunk of `gen`."""
+        self._log.event("final_valid", turn, gen=gen, path=path)
 
     def _on_partial(self, msg: dict) -> None:
         if not self.early_prefill or self._tier.prefill == "off":
@@ -165,7 +176,7 @@ class BrainStage:
             if self._held_info is not None:   # a newer guess supersedes the older held clause
                 self._drop_held(*self._held_info, reason="superseded")
             gen, _ = self._new_gen(turn)
-            self._held_info = (turn, gen)
+            self._held_info, self._held_text = (turn, gen), text
             self._jobs.put(("held", turn, gen, text))
         else:
             self._jobs.put(("prefill", turn, "tentative", text))
@@ -308,7 +319,8 @@ class BrainStage:
         if status != "held":
             self._finish(gen)
 
-    def _resolve(self, turn: int, held_gen: int, user: str, fallback_gen: int) -> None:
+    def _resolve(self, turn: int, held_gen: int, user: str, fallback_gen: int,
+                 committed: Optional[int] = None) -> None:
         """On final: continue the held clause if the transcript matches, else drop it and answer fresh."""
         h, self._held = self._held, None
         cancel = self._event(held_gen)
@@ -318,6 +330,8 @@ class BrainStage:
         if not match:
             self._drop_held(turn, held_gen, reason="mismatch")
             self._finish(held_gen)
+            if committed != fallback_gen:   # the held clause failed after its text matched
+                self._final_valid(turn, fallback_gen, "held_failed")
             self._generate(turn, fallback_gen, user)
             return
         self._finish(fallback_gen)
@@ -360,8 +374,8 @@ class BrainStage:
                     break
         except LLM_ERRORS as e:
             self._log.event("llm_error", turn, gen=gen, error=repr(e)[:200])
-            if not cancel.is_set():
-                seq = self._send_chunk(turn, gen, seq, FALLBACK_TEXT, cancel, last=True)
+            if not cancel.is_set():   # a held stream's fallback stays held: never audible before commit
+                seq = self._send_chunk(turn, gen, seq, FALLBACK_TEXT, cancel, last=True, held=held)
             return "".join(raw), seq, "error", None
         finally:
             it.close()

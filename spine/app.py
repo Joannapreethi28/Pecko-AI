@@ -6,8 +6,10 @@
 
 Run it under the cap with scripts/run_pecko.sh. Every stage keeps its own threads; this file only routes
 contract messages (docs/CONTRACT.md) and owns the commit gate C (v2.1 hold-and-release): when Brain
-logs `held_valid{match:true}`, the final transcript matched what Brain prepared, so Spine sends
-`commit` and Voice may release the held audio. Nothing held is audible before that.
+logs `final_valid{gen}` (final transcript validated; `gen` is the generation that answers it: the
+held gen if the transcript matched what Brain prepared, else a fresh or cached gen), Spine sends
+`commit` and Voice may release that gen's audio. Every answered turn gets exactly this one gate, and
+it fires before Brain emits any audible chunk of that gen. Nothing held is audible before it.
 All stages log into one events.jsonl (contract log lines), and bus.jsonl records every routed message.
 """
 from __future__ import annotations
@@ -115,8 +117,8 @@ class Pecko:
             self._record("voice", (), msg)
 
     def on_brain_log(self, rec: dict) -> None:
-        """Commit gate C: Brain validated its held clause against the final transcript."""
-        if rec.get("event") == "held_valid" and rec["extra"].get("match"):
+        """Commit gate C: Brain validated the final transcript and named the gen that answers it."""
+        if rec.get("event") == "final_valid":
             msg = {"type": "commit", "turn": rec["turn"], "gen": rec["extra"]["gen"], "t": now()}
             self.log.emit("spine", "commit", rec["turn"], t=msg["t"], gen=msg["gen"])
             self._record("spine", ("voice",), msg)

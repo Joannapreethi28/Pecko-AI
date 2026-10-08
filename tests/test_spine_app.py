@@ -59,18 +59,53 @@ def test_matching_final_commits_the_held_gen():
     commits = [m for m in app.voice.got if m["type"] == "commit"]
     assert len(commits) == 1 and commits[0]["gen"] == held["gen"] and commits[0]["turn"] == 1
     assert app.voice.got.index(commits[0]) > app.voice.got.index(held)
+    assert_commit_before_audible(app.voice.got)
     app.brain.stop()
 
 
-def test_mismatching_final_cancels_and_never_commits():
+def test_mismatching_final_cancels_held_and_commits_only_the_fresh_gen():
     app = make()
     app.from_ears({"type": "tentative_final", "turn": 1, "text": "what is the capital of spain",
                    "t_eos": 0.0, "p_done": 0.9})
     assert wait_until(lambda: any(m.get("held") for m in app.voice.got))
+    held_gen = next(m for m in app.voice.got if m.get("held"))["gen"]
     app.from_ears(final(1, "what is the capital of italy"))
     assert wait_until(lambda: any(m.get("last") for m in app.voice.got))
-    assert not any(m["type"] == "commit" for m in app.voice.got)
+    commits = [m for m in app.voice.got if m["type"] == "commit"]
+    assert len(commits) == 1 and commits[0]["gen"] != held_gen
     assert any(m["type"] == "cancel" for m in app.voice.got)
+    assert_commit_before_audible(app.voice.got)
+    app.brain.stop()
+
+
+def assert_commit_before_audible(got):
+    """Every non-held chunk/cached of a gen arrives after that gen's commit (nothing audible before C)."""
+    committed = set()
+    for m in got:
+        if m["type"] == "commit":
+            committed.add((m["turn"], m["gen"]))
+        elif m["type"] in ("chunk", "cached") and not m.get("held"):
+            assert (m["turn"], m["gen"]) in committed, m
+
+
+def test_plain_llm_turn_commits_before_first_chunk():
+    app = make()
+    app.from_ears(final(1, "who wrote romeo and juliet"))
+    assert wait_until(lambda: any(m.get("last") for m in app.voice.got))
+    assert app.voice.got[0]["type"] == "commit"
+    assert_commit_before_audible(app.voice.got)
+    app.brain.stop()
+
+
+def test_cached_turn_commits_before_clip():
+    from brain.router import Router
+    app = make()
+    app.brain._router = Router.load()
+    app.from_ears(final(1, "thank you"))
+    assert wait_until(lambda: any(m.get("last") for m in app.voice.got))
+    assert app.voice.got[0]["type"] == "commit"
+    assert any(m["type"] == "cached" for m in app.voice.got)
+    assert_commit_before_audible(app.voice.got)
     app.brain.stop()
 
 

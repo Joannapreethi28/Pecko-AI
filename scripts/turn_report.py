@@ -23,7 +23,8 @@ for t, e in sorted(by.items()):
     if fa is not None:
         first_audio.append(fa)
     print(f"turn {t}: {text!r} | endpoint {ms('endpoint')} | C {ms('commit')} | R {ms('pcm_ready')} | "
-          f"first audio {fa} ms | held match {e.get('held_valid', {}).get('extra', {}).get('match')}")
+          f"first audio {fa} ms | held match {e.get('held_valid', {}).get('extra', {}).get('match')} | "
+          f"path {e.get('final_valid', {}).get('extra', {}).get('path')}")
 res = [r["extra"] for r in ev if r["event"] == "resources"]
 if res:
     print(f"cgroup: cpu.max {res[-1]['cpu_max']} | memory.max {res[-1]['memory_max']} | "
