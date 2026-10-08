@@ -76,18 +76,18 @@ B0 = a typical serial stack with the **same LLM and flags** (Qwen3-0.6B Q4_K_M o
 
 | Metric (24 paired turns) | B0 | Pecko | Source |
 |---|---|---|---|
-| First audio p50 | 2059 ms | **875 ms** | compare file below |
-| First audio p90 | 2496 ms | **1254 ms** | |
-| First audio max | 2815 ms | 1693 ms | |
-| Paired gap B0 − Pecko | | p50 **1200 ms**, p90 1480 ms, min 804 ms | |
+| First audio p50 | 2059 ms | **835 ms** | compare file below |
+| First audio p90 | 2496 ms | **1280 ms** | |
+| First audio max | 2815 ms | 1376 ms | |
+| Paired gap B0 − Pecko | | p50 **1199 ms**, p90 1472 ms, min 837 ms | |
 | Pecko faster | | **24 / 24 pairs** | |
-| CPU-seconds per turn | 1.96 | **1.25** (1.57× less) | |
-| Peak RAM (cgroup, incl. model load) <!-- RAM row: update from data/results/run-syn24-pecko-ram if re-measured --> | 917 MiB | **1140 MiB (worse: +223 MiB)** | |
+| CPU-seconds per turn | 1.96 | **1.20** (1.63× less) | |
+| Peak RAM (cgroup, incl. model load) <!-- RAM row: update from data/results/run-syn24-pecko-ram if re-measured --> | 917 MiB | **846 MiB** (−71 MiB; repeat run 848) | |
 | Energy per turn | not yet measured | not yet measured | needs native Ubuntu RAPL; this VM has none |
 
-Source: [`data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt`](data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt) (per-turn transcripts and answers included).
+Source: [`data/results/run-syn24-pecko-ram/compare_vs_baseline-syn24-b0.txt`](data/results/run-syn24-pecko-ram/compare_vs_baseline-syn24-b0.txt) (per-turn transcripts and answers included).
 
-**Pecko uses more RAM than B0.** Likely cause (not yet profiled): Pecko keeps more resident (wake-word model, streaming endpointer, KV cache, audio cache). We traded ~220 MiB for 1.2 s; both stay well under the 2 GB cap.
+**RAM history (honest):** the first integrated build peaked at 1140 MiB, *above* B0 (`data/results/run-syn24-pecko`). Profiling each component showed Moonshine Small loading and then being thrown away at `--ears-tier 2` (+217 MiB) and `import torch` used only for Silero VAD (+128 MiB). Building Ears at the requested tier and running Silero on onnxruntime brought the peak to 846 MiB. B0 still uses the stock torch Silero, so part of the 71 MiB lead is that choice. Model files were already in the page cache, so a cold start was not measured, and that holds for both stacks.
 
 ### Where Pecko's time goes: C vs R (first audio = max(C, R) + d)
 From `python3 scripts/turn_report.py data/results/run-loop6-commitfix` (4 real-voice WAV turns, same cap, peak 996 MiB, `oom_kill 0`):
@@ -107,7 +107,7 @@ From `python3 scripts/turn_report.py data/results/run-loop6-commitfix` (4 real-v
 - **Synthetic speech.** Questions are Piper TTS ("Hey Pecko, ..."), not human voices; a sanity set, not the held-out set. Real voices will be harder.
 - **VM, not native.** VirtualBox may add scheduling noise; no RAPL, so no energy numbers yet.
 - **No speaker.** d = 0 ms on both stacks; a real device adds its output latency to both.
-- **RAM is a loss** (1140 vs 917 MiB), see above.
+- **RAM lead is thin** (846 vs 917 MiB). Part of it is that Pecko's Silero VAD runs on onnxruntime without torch, while B0 uses the stock torch Silero (~128 MiB for `import torch`). Both stacks share the same llama-server and Piper memory.
 - **One run each, n = 24.** p90 of 24 turns is a rough estimate.
 - **ASR mishears** in both stacks: "Romeo **when** Juliette" (loop5/loop6), "**why** is the boiling point of water", "what **cast** do plants take in", "cricket**ine**"; B0 twice kept the wake word ("PACKO ...").
 - **Some answers are wrong** (same 0.6B model in both): Pecko said "a week has 7 hours", "0 players on a cricket", "7 continents in our solar system", "Juliette wrote Romeo"; B0 said the Mona Lisa was by Van Gogh. Latency is not answer quality; quality is not scored yet.

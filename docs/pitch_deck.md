@@ -28,11 +28,11 @@ Do **not** submit the finale deck as the written deck: sparse live slides look e
 > *"On a 2-core budget, the models aren't slow. The waiting is. A normal voice assistant waits for silence, then transcribes, then reads the whole prompt, then writes the whole reply, then speaks. Each stage sits idle while the previous one finishes. Pecko does all of it at once, and starts thinking before you've finished talking."*
 
 **The arc in seven sentences:**
-1. **Hook:** Pecko is an offline voice assistant that answers in under a second on 2 CPU cores and 2 GB of RAM. *(true for the median only: p50 0.88 s, p90 1.25 s on 24 synthetic turns in a VM; say "typically under a second")*
+1. **Hook:** Pecko is an offline voice assistant that answers in under a second on 2 CPU cores and 2 GB of RAM. *(true for the median only: p50 0.84 s, p90 1.28 s on 24 synthetic turns in a VM; say "typically under a second")*
 2. **Problem:** Offline voice assistants on cheap hardware take several seconds to reply, which feels broken; a standard stack with the same LLM takes 2.06 s p50 / 2.50 s p90 after you stop talking (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency).
 3. **Insight:** That time is spent waiting between stages, not computing inside them.
 4. **Solution:** Pecko overlaps the stages: smart endpointing, streaming speech recognition, a language model that pre-reads your words while you speak, and speech that starts at the first clause.
-5. **Proof:** Under an enforced 2-core / 2 GB limit: first audio p50 875 ms vs 2059 ms (p90 1254 vs 2496 ms; paired gap p50 1200 ms, p90 1480 ms, min 804 ms; faster in 24/24 pairs), at 1.57× less CPU time per turn (1.25 vs 1.96 CPU-s). Peak RAM is *higher* (1140 vs 917 MiB). Energy per turn: not yet measured (needs native Ubuntu RAPL). (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency) Source: `data/results/baseline-syn24-b0/compare_vs_run-syn24-pecko.txt`.
+5. **Proof:** Under an enforced 2-core / 2 GB limit: first audio p50 835 ms vs 2059 ms (p90 1280 vs 2496 ms; paired gap p50 1199 ms, p90 1472 ms, min 837 ms; faster in 24/24 pairs), at 1.63× less CPU time per turn (1.20 vs 1.96 CPU-s) and lower peak RAM (846 vs 917 MiB). Energy per turn: not yet measured (needs native Ubuntu RAPL). (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency) Source: `data/results/run-syn24-pecko-ram/compare_vs_baseline-syn24-b0.txt`.
 6. **Why it's new:** Speculative voice agents exist on GPUs; Pecko prices every early guess against the CPU and energy it steals on a tiny shared budget, and keeps working as the budget shrinks.
 7. **Impact + ask:** The same design runs voice assistants on ₹5,000-class hardware with no internet (rural clinics, kiosks, classrooms, assistive devices), and we'd like your vote to take it to a Raspberry Pi and Indian languages next.
 
@@ -126,14 +126,14 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 
 ### Slide 7 · Proof: the waterfall
 - **On slide:** cumulative waterfall chart A0 → A7 (from `solution.md §6`), baseline bar on the left, Pecko bar on the right, each step labelled with its saving
-- **Say:** "Every bar is one technique added on its own, same test set, same limit. The biggest single win is `[MEASURE step]`. Together: 2059 to 875 ms median, p90 2496 to 1254 ms." *(End-to-end A0→A7 steps not yet measured. Component-only fact we can say: in Brain alone, the system-prompt KV cache was the biggest step, first chunk p50 1024 → 290 ms; brain/RESULTS.md.)*
+- **Say:** "Every bar is one technique added on its own, same test set, same limit. The biggest single win is `[MEASURE step]`. Together: 2059 to 835 ms median, p90 2496 to 1280 ms." *(End-to-end A0→A7 steps not yet measured. Component-only fact we can say: in Brain alone, the system-prompt KV cache was the biggest step, first chunk p50 1024 → 290 ms; brain/RESULTS.md.)*
 - **Land:** p50 and p90, with the test set size: today 24 synthetic paired turns, 1 run each (60 held-out human turns × 3 not yet measured).
 - **Covers:** P-Lat, P-New, E-Tech
 
 ### Slide 8 · Proof: footprint
-- **On slide:** 3 numbers, baseline → Pecko: **CPU-seconds/turn 1.96 → 1.25** · **peak RAM 917 → 1140 MiB (worse)** · **joules/turn: not yet measured** (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency)
-- **Say:** "Faster usually means burning more. Not on CPU: per turn, Pecko uses 1.25 CPU-seconds vs 1.96, 1.57 times less. RAM is the honest cost: Pecko peaks at 1140 MiB vs 917, because more stays loaded, still well under the 2 GB cap. Energy per turn needs the CPU's RAPL counters, which our VM doesn't expose; `[J]` vs `[J0]` only once measured on native Ubuntu."
-- **Land:** 1.57× less CPU time per turn; RAM is a trade we state openly. (Energy ratio only if measured.)
+- **On slide:** 3 numbers, baseline → Pecko: **CPU-seconds/turn 1.96 → 1.20** · **peak RAM 917 → 846 MiB** · **joules/turn: not yet measured** (VirtualBox VM, 2 CPU / 2 GB cgroup, swap 0, 24 synthetic Piper-voice questions, no speaker = 0 ms device latency)
+- **Say:** "Faster usually means burning more. Not here: per turn, Pecko uses 1.20 CPU-seconds vs 1.96, 1.63 times less, and peaks at 846 MiB vs 917. The RAM lead is small, and we got it by measuring every component and dropping torch and an unused ASR model. Energy per turn needs the CPU's RAPL counters, which our VM doesn't expose; `[J]` vs `[J0]` only once measured on native Ubuntu."
+- **Land:** 1.63× less CPU time per turn, and less RAM. (Energy ratio only if measured.)
 - **Covers:** P-Foot, E-Feas
 
 ### Slide 9 · Proof: squeeze the box
@@ -144,7 +144,7 @@ Rubric key: **P** = problem rubric (Lat 25 · Foot 25 · New 20 · Quant 15 · D
 
 ### Slide 10 · Honest numbers (one slide earns a lot of trust)
 - **On slide:** 3 small lines: *Same model in baseline and Pecko* · *Fillers off in every number* · *Held-out questions we never tuned on*
-- **Say:** "Three things we did to keep ourselves honest. Our baseline uses the same language model, so the gain is the system, not a smaller model. We don't count 'umm' sounds as an answer. And we tested on questions we never tuned on, including people outside our team." Negative results we have: Piper int8 was 2.4-3.2× *slower* than fp32 (Windows dev laptop, voice/RESULTS.md), so we ship fp32; and Pecko uses more RAM than the baseline (1140 vs 917 MiB). Quantization fact: LLM Q4_K_M beat Q8_0 on first chunk p50, 177 vs 261 ms (brain/RESULTS.md, VM, same cap).
+- **Say:** "Three things we did to keep ourselves honest. Our baseline uses the same language model, so the gain is the system, not a smaller model. We don't count 'umm' sounds as an answer. And we tested on questions we never tuned on, including people outside our team." Negative results we have: Piper int8 was 2.4-3.2× *slower* than fp32 (Windows dev laptop, voice/RESULTS.md), so we ship fp32; and our first integrated build used *more* RAM than the baseline (1140 vs 917 MiB) until we profiled it (now 846). Quantization fact: LLM Q4_K_M beat Q8_0 on first chunk p50, 177 vs 261 ms (brain/RESULTS.md, VM, same cap).
 - **Covers:** E-Pitch, P-Quant (if the int8 finding exists)
 
 ### Slide 11 · Impact + ask
