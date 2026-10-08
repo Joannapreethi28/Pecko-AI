@@ -130,7 +130,7 @@ def test_prefill_returns_timings(fake):
     t = LlamaClient(port=fake.port).prefill("hello")
     assert t.cache_n == 10 and t.prompt_n == 3
     assert fake.last_body["stream"] is False
-    assert fake.last_body["n_predict"] == 0
+    assert fake.last_body["n_predict"] == LlamaClient().prefill_n_predict
 
 
 def test_http_error_raises_llama_error():
