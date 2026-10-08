@@ -8,3 +8,6 @@ models/*
 *.tar.bz2
 .env
 .DS_Store
+logs/
+voice/cache/
+*.npy

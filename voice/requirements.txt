@@ -1,0 +1,8 @@
+# Voice stage (Windows dev, Ubuntu judged). Ubuntu also needs: sudo apt install libportaudio2
+sherpa-onnx==1.13.8
+sounddevice>=0.4.6
+numpy>=1.26
+num2words>=0.5.13
+PyYAML>=6.0
+psutil>=5.9
+pytest>=8.0
