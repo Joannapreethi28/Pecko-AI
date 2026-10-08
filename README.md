@@ -12,7 +12,64 @@ Fully offline, CPU-only voice loop (wake word/VAD → streaming ASR → small LL
 ## Results (measured on our laptop, same cap, same test set)
 _TODO: baseline B0 vs Pecko: p50/p90 latency, CPU-s/turn, peak RAM, J/turn; master ablation table; degradation curve._
 
-## Setup
+## Evaluator frontend
+
+Pecko now includes a local presentation workspace: a working typed intent demo,
+seven recorded voice samples, four model comparisons, a synthetic pipeline
+replay, and a searchable evidence library. Design follows
+[Impeccable](https://github.com/pbakaus/impeccable). Fonts and assets are bundled;
+the frontend needs no Node build or internet connection at runtime.
+
+From the repository root on Windows:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r frontend/requirements.txt
+.\.venv\Scripts\python.exe -m frontend
+```
+
+On Ubuntu:
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r frontend/requirements.txt
+.venv/bin/python -m frontend
+```
+
+Open **http://127.0.0.1:8765**. On this Windows checkout the environment and
+dependencies are already prepared, so only the final command is needed.
+Choose another port with `--port 8766` if required. Stop with Ctrl+C.
+
+Suggested presentation flow:
+
+1. **Demo studio:** click “Introduce yourself”, ask the time, then play a recorded voice sample.
+2. **Benchmarks:** switch first-token latency, memory and decode speed; inspect the linked evidence.
+3. **How it works:** explain the commit gate and replay the labelled synthetic correction scenario.
+4. **Evidence library:** show measured, synthetic and unfinished work; export the source-backed JSON.
+
+The text demo calls the real `brain.router`; it does not transcribe microphone
+input or synthesize the chat reply. General questions need an existing
+`llama-server` on `127.0.0.1:8080`. The default prompt family is Qwen3; use
+`--model-family lfm2` only with a matching model. Without a model, cached intents
+and composed time/date replies still work. No weights are downloaded by the UI.
+Time/date replies use Asia/Kolkata. Each request is a single turn.
+
+Brain results are Ubuntu VM component benchmarks; voice results are Windows
+component experiments. Synthetic traces remain labelled. The displayed 2 CPU /
+2 GB budget is a target, not live resource enforcement. No end-to-end voice
+latency, microphone readiness or energy result is implied.
+
+Refresh evidence after new results are committed:
+
+```sh
+python frontend/build_evidence.py
+python -m unittest tests.test_frontend_server -v
+```
+
+Use the virtual environment's Python for the tests. The server only binds to
+localhost and serves explicitly allowed source/evidence files.
+
+## Core runtime setup
 
 Portable Spine requires Python 3.10+ and the standard library. Checks ran on
 Windows with Python 3.14.8. No model files are needed for placeholder development.

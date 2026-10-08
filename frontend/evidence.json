@@ -1,0 +1,2191 @@
+{
+  "schema_version": 1,
+  "title": "Pecko evaluator console",
+  "provenance": "Generated from committed repository results by frontend/build_evidence.py.",
+  "models": [
+    {
+      "id": "qwen3-0.6b-q4km",
+      "name": "Qwen3 0.6B",
+      "quantization": "Q4_K_M",
+      "ttft_p50_ms": 103.4,
+      "ttft_p90_ms": 123.2,
+      "decode_tps": 34.09,
+      "peak_memory_mb": 814.2,
+      "turns": 20,
+      "selected": true,
+      "rewind_reprocesses": false,
+      "source": "data/results/bakeoff_qwen3-0.6b-q4km-ubuntu-vm-cg_summary.json"
+    },
+    {
+      "id": "qwen3-1.7b-q4km",
+      "name": "Qwen3 1.7B",
+      "quantization": "Q4_K_M",
+      "ttft_p50_ms": 256.4,
+      "ttft_p90_ms": 276.2,
+      "decode_tps": 13.565,
+      "peak_memory_mb": 2011.8,
+      "turns": 20,
+      "selected": false,
+      "rewind_reprocesses": false,
+      "source": "data/results/bakeoff_qwen3-1.7b-q4km-ubuntu-vm-cg_summary.json"
+    },
+    {
+      "id": "lfm2.5-1.2b-q40",
+      "name": "LFM2.5 1.2B",
+      "quantization": "Q4_0",
+      "ttft_p50_ms": 231.9,
+      "ttft_p90_ms": 264.1,
+      "decode_tps": 19.78,
+      "peak_memory_mb": 1369.7,
+      "turns": 20,
+      "selected": false,
+      "rewind_reprocesses": true,
+      "source": "data/results/bakeoff_lfm2.5-1.2b-q40-ubuntu-vm-cg_summary.json"
+    },
+    {
+      "id": "lfm2.5-350m-q40",
+      "name": "LFM2.5 350M",
+      "quantization": "Q4_0",
+      "ttft_p50_ms": 69.1,
+      "ttft_p90_ms": 77.9,
+      "decode_tps": 58.72,
+      "peak_memory_mb": 450.2,
+      "turns": 20,
+      "selected": false,
+      "rewind_reprocesses": true,
+      "source": "data/results/bakeoff_lfm2.5-350m-q40-ubuntu-vm-cg_summary.json"
+    }
+  ],
+  "model_conditions": {
+    "label": "Brain only · Ubuntu VM · 2 CPU / 2 GB cgroup",
+    "summary": "Twenty questions per model; CPU, memory and swap caps verified in the benchmark scope. Network was not disabled during these runs. Quality scores are pending; the selected model is provisional.",
+    "source": "brain/RESULTS.md"
+  },
+  "voice": {
+    "label": "Windows component measurements",
+    "summary": "Recorded Piper speech, cache reuse and a working voice resource ladder.",
+    "cache": {
+      "turns": 39,
+      "first_pcm_from_cache": "30/39",
+      "cache_hit_percent": 76.9,
+      "p50_ms": 0.1,
+      "p90_ms": 149.6,
+      "cpu_ms_per_turn": 43.9,
+      "baseline_cpu_ms_per_turn": 171.7,
+      "baseline_p50_ms": 126.9,
+      "baseline_p90_ms": 189.2,
+      "cpu_reduction_percent": 74.4,
+      "false_router_hits": 0,
+      "router_miss_cases": 18,
+      "source": "data/results/voice_cache_windows-dev.json",
+      "caveat": "First pass: 39 unseen questions. Time is chunk received to first PCM ready; no speaker/device delay. Windows development machine, outside the judged cgroup."
+    },
+    "chunking": [
+      {
+        "policy": "word",
+        "p50_ms": 400.0,
+        "p90_ms": 400.0,
+        "synth_calls": 200,
+        "turns": 12,
+        "turns_with_gaps": 0,
+        "source": "data/results/voice_chunking_windows-dev.json"
+      },
+      {
+        "policy": "sentence",
+        "p50_ms": 813.3537500230595,
+        "p90_ms": 1325.5872999951243,
+        "synth_calls": 16,
+        "turns": 12,
+        "turns_with_gaps": 0,
+        "source": "data/results/voice_chunking_windows-dev.json"
+      },
+      {
+        "policy": "comma",
+        "p50_ms": 409.26395013555884,
+        "p90_ms": 572.9513999987394,
+        "synth_calls": 34,
+        "turns": 12,
+        "turns_with_gaps": 0,
+        "source": "data/results/voice_chunking_windows-dev.json"
+      },
+      {
+        "policy": "adaptive",
+        "p50_ms": 409.26395013555884,
+        "p90_ms": 460.29150002636015,
+        "synth_calls": 23,
+        "turns": 12,
+        "turns_with_gaps": 0,
+        "source": "data/results/voice_chunking_windows-dev.json"
+      }
+    ],
+    "chunking_caveat": "Real TTS synthesis with simulated Brain word arrivals, a fixed 400 ms commit gate and no device delay. This is a component experiment, not an end-to-end conversation benchmark.",
+    "tiers": [
+      {
+        "tier": 0,
+        "engine": "vits-piper-en_US-lessac-medium",
+        "memory_mb": 223,
+        "phrase_ms": 175.5,
+        "switch_ms": null,
+        "source": "data/results/voice_tiers_windows-dev.json"
+      },
+      {
+        "tier": 1,
+        "engine": "vits-piper-en_US-lessac-low",
+        "memory_mb": 198,
+        "phrase_ms": 117.3,
+        "switch_ms": 748,
+        "source": "data/results/voice_tiers_windows-dev.json"
+      },
+      {
+        "tier": 2,
+        "engine": "vits-piper-en_US-lessac-low",
+        "memory_mb": 211,
+        "phrase_ms": 120.2,
+        "switch_ms": 31,
+        "source": "data/results/voice_tiers_windows-dev.json"
+      },
+      {
+        "tier": 3,
+        "engine": "espeak-ng",
+        "memory_mb": 95,
+        "phrase_ms": 38.4,
+        "switch_ms": 92,
+        "source": "data/results/voice_tiers_windows-dev.json"
+      }
+    ],
+    "tiers_caveat": "Whole Python process RSS with silent NullPlayer on Windows; each phrase has eight words. Switches happen between turns.",
+    "sources": [
+      "data/results/voice_cache_windows-dev.json",
+      "data/results/voice_chunking_windows-dev.json",
+      "data/results/voice_tiers_windows-dev.json",
+      "voice/RESULTS.md"
+    ],
+    "caveat": "Voice component evidence comes from Windows development runs. Ubuntu capped whole-stack latency, memory and energy remain unmeasured."
+  },
+  "samples": [
+    {
+      "name": "Lessac medium · fp32",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-medium.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-medium.wav"
+    },
+    {
+      "name": "Lessac low · fp32",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-low.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-low.wav"
+    },
+    {
+      "name": "Lessac high · fp32",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-high.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-high.wav"
+    },
+    {
+      "name": "Lessac medium · int8",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-medium-int8.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-medium-int8.wav"
+    },
+    {
+      "name": "Lessac low · int8",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-low-int8.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-low-int8.wav"
+    },
+    {
+      "name": "Lessac high · fp16",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-high-fp16.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-high-fp16.wav"
+    },
+    {
+      "name": "Lessac high · int8",
+      "description": "Paris is the capital of France, and it is also the largest city in the country.",
+      "url": "/source/data/results/voice_samples/vits-piper-en_US-lessac-high-int8.wav",
+      "source": "data/results/voice_samples/vits-piper-en_US-lessac-high-int8.wav"
+    }
+  ],
+  "replay": {
+    "label": "Recorded contract replay",
+    "synthetic": true,
+    "source": "data/results/mock-placeholder-runtime-20261008-02/events.jsonl",
+    "plan_source": "data/results/mock-placeholder-runtime-20261008-02/plan.json",
+    "report_source": "data/results/mock-placeholder-runtime-20261008-02/report.json",
+    "caveat": "Placeholder engines demonstrate event routing, cancellation and commit checks. This trace produced no audible speech; its timing is not a voice benchmark.",
+    "turns": [
+      {
+        "id": 0,
+        "label": "Ordinary",
+        "text": "Hello Pecko",
+        "events": [],
+        "trace": [
+          {
+            "stage": "spine",
+            "event": "case_start",
+            "turn": 0,
+            "t": 327868.4522645,
+            "extra": {
+              "case_id": "ordinary"
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "endpoint",
+            "turn": 0,
+            "t": 327868.4525972,
+            "extra": {
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "asr_final",
+            "turn": 0,
+            "t": 327868.4527954,
+            "extra": {
+              "text": "Hello Pecko",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "transcript",
+            "turn": 0,
+            "t": 327868.4547828,
+            "extra": {
+              "text": "Hello Pecko",
+              "final": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_ready",
+            "turn": 0,
+            "t": 327868.4549718,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_token",
+            "turn": 0,
+            "t": 327868.4550125,
+            "extra": {
+              "gen": 0,
+              "tokenizer": "synthetic-byte-IDs",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_chunk",
+            "turn": 0,
+            "t": 327868.4550664,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 0,
+            "t": 327868.4551167,
+            "extra": {
+              "source": "ears",
+              "message_type": "final",
+              "playing": null
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "chunk_recv",
+            "turn": 0,
+            "t": 327868.4552086,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "pcm_ready",
+            "turn": 0,
+            "t": 327868.4552395,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "pcm": "synthetic bytes",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 0,
+            "t": 327868.4552863,
+            "extra": {
+              "source": "brain",
+              "message_type": "chunk",
+              "playing": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "commit",
+            "turn": 0,
+            "t": 327868.4553758,
+            "extra": {
+              "gen": 0
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "placeholder_release",
+            "turn": 0,
+            "t": 327868.45544,
+            "extra": {
+              "gen": 0,
+              "audio": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "placeholder_playback_feedback",
+            "turn": 0,
+            "t": 327868.4555267,
+            "extra": {
+              "playing": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 0,
+            "t": 327868.4555599,
+            "extra": {
+              "source": "voice",
+              "message_type": "playback_state",
+              "playing": false
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_end",
+            "turn": 0,
+            "t": 327868.455592,
+            "extra": {
+              "gen": 0,
+              "success": true,
+              "reason": null,
+              "gap_s": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_resources",
+            "turn": 0,
+            "t": 327868.4557895,
+            "extra": {
+              "gross_package_j": null
+            }
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Hesitation and correction",
+        "text": "Set it for Wednesday",
+        "events": [
+          {
+            "at_s": 0,
+            "type": "partial",
+            "text": "Set the time",
+            "stable": "Set the"
+          },
+          {
+            "at_s": 0.01,
+            "type": "tentative_final",
+            "text": "Set it for Tuesday"
+          },
+          {
+            "at_s": 0.02,
+            "type": "cancel"
+          },
+          {
+            "at_s": 0.03,
+            "type": "partial",
+            "text": "Actually Wednesday",
+            "stable": "Actually"
+          },
+          {
+            "at_s": 0.06,
+            "type": "final",
+            "text": "Set it for Wednesday"
+          }
+        ],
+        "trace": [
+          {
+            "stage": "spine",
+            "event": "case_start",
+            "turn": 1,
+            "t": 327868.4559689,
+            "extra": {
+              "case_id": "hesitation-and-correction"
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "transcript",
+            "turn": 1,
+            "t": 327868.4586587,
+            "extra": {
+              "text": "Set the time",
+              "final": false
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.4587292,
+            "extra": {
+              "source": "ears",
+              "message_type": "partial",
+              "playing": null
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_ready",
+            "turn": 1,
+            "t": 327868.4798691,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_token",
+            "turn": 1,
+            "t": 327868.4799439,
+            "extra": {
+              "gen": 0,
+              "tokenizer": "synthetic-byte-IDs",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_chunk",
+            "turn": 1,
+            "t": 327868.4800044,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.4800369,
+            "extra": {
+              "source": "ears",
+              "message_type": "tentative_final",
+              "playing": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.4801033,
+            "extra": {
+              "source": "ears",
+              "message_type": "cancel",
+              "playing": null
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "chunk_recv",
+            "turn": 1,
+            "t": 327868.4801655,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "pcm_ready",
+            "turn": 1,
+            "t": 327868.4801926,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "pcm": "synthetic bytes",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.4802357,
+            "extra": {
+              "source": "brain",
+              "message_type": "chunk",
+              "playing": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "transcript",
+            "turn": 1,
+            "t": 327868.495998,
+            "extra": {
+              "text": "Actually Wednesday",
+              "final": false
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.4961,
+            "extra": {
+              "source": "ears",
+              "message_type": "partial",
+              "playing": null
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "endpoint",
+            "turn": 1,
+            "t": 327868.5276012,
+            "extra": {
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "asr_final",
+            "turn": 1,
+            "t": 327868.5277784,
+            "extra": {
+              "text": "Set it for Wednesday",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "transcript",
+            "turn": 1,
+            "t": 327868.5280514,
+            "extra": {
+              "text": "Set it for Wednesday",
+              "final": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_ready",
+            "turn": 1,
+            "t": 327868.5282368,
+            "extra": {
+              "gen": 1,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_token",
+            "turn": 1,
+            "t": 327868.5282839,
+            "extra": {
+              "gen": 1,
+              "tokenizer": "synthetic-byte-IDs",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_chunk",
+            "turn": 1,
+            "t": 327868.5283379,
+            "extra": {
+              "gen": 1,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.5283908,
+            "extra": {
+              "source": "ears",
+              "message_type": "final",
+              "playing": null
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "chunk_recv",
+            "turn": 1,
+            "t": 327868.5285505,
+            "extra": {
+              "gen": 1,
+              "seq": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "pcm_ready",
+            "turn": 1,
+            "t": 327868.5286291,
+            "extra": {
+              "gen": 1,
+              "seq": 0,
+              "pcm": "synthetic bytes",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.5286765,
+            "extra": {
+              "source": "brain",
+              "message_type": "chunk",
+              "playing": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "commit",
+            "turn": 1,
+            "t": 327868.5287279,
+            "extra": {
+              "gen": 1
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "placeholder_release",
+            "turn": 1,
+            "t": 327868.5287819,
+            "extra": {
+              "gen": 1,
+              "audio": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "placeholder_playback_feedback",
+            "turn": 1,
+            "t": 327868.5288599,
+            "extra": {
+              "playing": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 1,
+            "t": 327868.5288904,
+            "extra": {
+              "source": "voice",
+              "message_type": "playback_state",
+              "playing": false
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_end",
+            "turn": 1,
+            "t": 327868.5290319,
+            "extra": {
+              "gen": 1,
+              "success": true,
+              "reason": null,
+              "gap_s": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_resources",
+            "turn": 1,
+            "t": 327868.5291546,
+            "extra": {
+              "gross_package_j": null
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "Prompt revision",
+        "text": "Explain the prompt cache",
+        "events": [
+          {
+            "at_s": 0,
+            "type": "tentative_final",
+            "text": "Explain the cache"
+          },
+          {
+            "at_s": 0.03,
+            "type": "final",
+            "text": "Explain the prompt cache"
+          }
+        ],
+        "trace": [
+          {
+            "stage": "spine",
+            "event": "case_start",
+            "turn": 2,
+            "t": 327868.5292384,
+            "extra": {
+              "case_id": "prompt-revision"
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_ready",
+            "turn": 2,
+            "t": 327868.5325739,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_token",
+            "turn": 2,
+            "t": 327868.5326494,
+            "extra": {
+              "gen": 0,
+              "tokenizer": "synthetic-byte-IDs",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_chunk",
+            "turn": 2,
+            "t": 327868.5327109,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 2,
+            "t": 327868.5327423,
+            "extra": {
+              "source": "ears",
+              "message_type": "tentative_final",
+              "playing": null
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "chunk_recv",
+            "turn": 2,
+            "t": 327868.532806,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "pcm_ready",
+            "turn": 2,
+            "t": 327868.5328355,
+            "extra": {
+              "gen": 0,
+              "seq": 0,
+              "pcm": "synthetic bytes",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 2,
+            "t": 327868.5328713,
+            "extra": {
+              "source": "brain",
+              "message_type": "chunk",
+              "playing": null
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "endpoint",
+            "turn": 2,
+            "t": 327868.5721366,
+            "extra": {
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "asr_final",
+            "turn": 2,
+            "t": 327868.5722675,
+            "extra": {
+              "text": "Explain the prompt cache",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "transcript",
+            "turn": 2,
+            "t": 327868.5724382,
+            "extra": {
+              "text": "Explain the prompt cache",
+              "final": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_mismatch",
+            "turn": 2,
+            "t": 327868.5726012,
+            "extra": {
+              "gen": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "prompt_ready",
+            "turn": 2,
+            "t": 327868.5726805,
+            "extra": {
+              "gen": 1,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_token",
+            "turn": 2,
+            "t": 327868.5727094,
+            "extra": {
+              "gen": 1,
+              "tokenizer": "synthetic-byte-IDs",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "brain",
+            "event": "first_chunk",
+            "turn": 2,
+            "t": 327868.5727537,
+            "extra": {
+              "gen": 1,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 2,
+            "t": 327868.5728,
+            "extra": {
+              "source": "ears",
+              "message_type": "final",
+              "playing": null
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "chunk_recv",
+            "turn": 2,
+            "t": 327868.572888,
+            "extra": {
+              "gen": 1,
+              "seq": 0,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "pcm_ready",
+            "turn": 2,
+            "t": 327868.5729177,
+            "extra": {
+              "gen": 1,
+              "seq": 0,
+              "pcm": "synthetic bytes",
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 2,
+            "t": 327868.5729493,
+            "extra": {
+              "source": "brain",
+              "message_type": "chunk",
+              "playing": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "commit",
+            "turn": 2,
+            "t": 327868.5729856,
+            "extra": {
+              "gen": 1
+            }
+          },
+          {
+            "stage": "voice",
+            "event": "placeholder_release",
+            "turn": 2,
+            "t": 327868.5730254,
+            "extra": {
+              "gen": 1,
+              "audio": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "ears",
+            "event": "placeholder_playback_feedback",
+            "turn": 2,
+            "t": 327868.5730924,
+            "extra": {
+              "playing": false,
+              "synthetic": true
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "routed",
+            "turn": 2,
+            "t": 327868.5731268,
+            "extra": {
+              "source": "voice",
+              "message_type": "playback_state",
+              "playing": false
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_end",
+            "turn": 2,
+            "t": 327868.5731661,
+            "extra": {
+              "gen": 1,
+              "success": true,
+              "reason": null,
+              "gap_s": null
+            }
+          },
+          {
+            "stage": "spine",
+            "event": "turn_resources",
+            "turn": 2,
+            "t": 327868.5732509,
+            "extra": {
+              "gross_package_j": null
+            }
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "stage": "spine",
+        "event": "run_start",
+        "turn": null,
+        "t": 327868.4490402,
+        "extra": {
+          "synthetic": true,
+          "platform": "portable-development",
+          "configuration": "all-placeholder-engines"
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "placeholder_start",
+        "turn": null,
+        "t": 327868.4493731,
+        "extra": {
+          "engine": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "ready",
+        "turn": null,
+        "t": 327868.449449,
+        "extra": {}
+      },
+      {
+        "stage": "brain",
+        "event": "placeholder_start",
+        "turn": null,
+        "t": 327868.4494932,
+        "extra": {
+          "engine": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "ready",
+        "turn": null,
+        "t": 327868.4495262,
+        "extra": {}
+      },
+      {
+        "stage": "ears",
+        "event": "placeholder_start",
+        "turn": null,
+        "t": 327868.4499935,
+        "extra": {
+          "engine": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "ready",
+        "turn": null,
+        "t": 327868.4500588,
+        "extra": {}
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.450329,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.4521657,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "case_start",
+        "turn": 0,
+        "t": 327868.4522645,
+        "extra": {
+          "case_id": "ordinary"
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "endpoint",
+        "turn": 0,
+        "t": 327868.4525972,
+        "extra": {
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "asr_final",
+        "turn": 0,
+        "t": 327868.4527954,
+        "extra": {
+          "text": "Hello Pecko",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "transcript",
+        "turn": 0,
+        "t": 327868.4547828,
+        "extra": {
+          "text": "Hello Pecko",
+          "final": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_ready",
+        "turn": 0,
+        "t": 327868.4549718,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_token",
+        "turn": 0,
+        "t": 327868.4550125,
+        "extra": {
+          "gen": 0,
+          "tokenizer": "synthetic-byte-IDs",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_chunk",
+        "turn": 0,
+        "t": 327868.4550664,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 0,
+        "t": 327868.4551167,
+        "extra": {
+          "source": "ears",
+          "message_type": "final",
+          "playing": null
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "chunk_recv",
+        "turn": 0,
+        "t": 327868.4552086,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "pcm_ready",
+        "turn": 0,
+        "t": 327868.4552395,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "pcm": "synthetic bytes",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 0,
+        "t": 327868.4552863,
+        "extra": {
+          "source": "brain",
+          "message_type": "chunk",
+          "playing": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "commit",
+        "turn": 0,
+        "t": 327868.4553758,
+        "extra": {
+          "gen": 0
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "placeholder_release",
+        "turn": 0,
+        "t": 327868.45544,
+        "extra": {
+          "gen": 0,
+          "audio": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "placeholder_playback_feedback",
+        "turn": 0,
+        "t": 327868.4555267,
+        "extra": {
+          "playing": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 0,
+        "t": 327868.4555599,
+        "extra": {
+          "source": "voice",
+          "message_type": "playback_state",
+          "playing": false
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_end",
+        "turn": 0,
+        "t": 327868.455592,
+        "extra": {
+          "gen": 0,
+          "success": true,
+          "reason": null,
+          "gap_s": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.4556436,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_resources",
+        "turn": 0,
+        "t": 327868.4557895,
+        "extra": {
+          "gross_package_j": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.455862,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "case_start",
+        "turn": 1,
+        "t": 327868.4559689,
+        "extra": {
+          "case_id": "hesitation-and-correction"
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "transcript",
+        "turn": 1,
+        "t": 327868.4586587,
+        "extra": {
+          "text": "Set the time",
+          "final": false
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.4587292,
+        "extra": {
+          "source": "ears",
+          "message_type": "partial",
+          "playing": null
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_ready",
+        "turn": 1,
+        "t": 327868.4798691,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_token",
+        "turn": 1,
+        "t": 327868.4799439,
+        "extra": {
+          "gen": 0,
+          "tokenizer": "synthetic-byte-IDs",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_chunk",
+        "turn": 1,
+        "t": 327868.4800044,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.4800369,
+        "extra": {
+          "source": "ears",
+          "message_type": "tentative_final",
+          "playing": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.4801033,
+        "extra": {
+          "source": "ears",
+          "message_type": "cancel",
+          "playing": null
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "chunk_recv",
+        "turn": 1,
+        "t": 327868.4801655,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "pcm_ready",
+        "turn": 1,
+        "t": 327868.4801926,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "pcm": "synthetic bytes",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.4802357,
+        "extra": {
+          "source": "brain",
+          "message_type": "chunk",
+          "playing": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "transcript",
+        "turn": 1,
+        "t": 327868.495998,
+        "extra": {
+          "text": "Actually Wednesday",
+          "final": false
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.4961,
+        "extra": {
+          "source": "ears",
+          "message_type": "partial",
+          "playing": null
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "endpoint",
+        "turn": 1,
+        "t": 327868.5276012,
+        "extra": {
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "asr_final",
+        "turn": 1,
+        "t": 327868.5277784,
+        "extra": {
+          "text": "Set it for Wednesday",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "transcript",
+        "turn": 1,
+        "t": 327868.5280514,
+        "extra": {
+          "text": "Set it for Wednesday",
+          "final": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_ready",
+        "turn": 1,
+        "t": 327868.5282368,
+        "extra": {
+          "gen": 1,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_token",
+        "turn": 1,
+        "t": 327868.5282839,
+        "extra": {
+          "gen": 1,
+          "tokenizer": "synthetic-byte-IDs",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_chunk",
+        "turn": 1,
+        "t": 327868.5283379,
+        "extra": {
+          "gen": 1,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.5283908,
+        "extra": {
+          "source": "ears",
+          "message_type": "final",
+          "playing": null
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "chunk_recv",
+        "turn": 1,
+        "t": 327868.5285505,
+        "extra": {
+          "gen": 1,
+          "seq": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "pcm_ready",
+        "turn": 1,
+        "t": 327868.5286291,
+        "extra": {
+          "gen": 1,
+          "seq": 0,
+          "pcm": "synthetic bytes",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.5286765,
+        "extra": {
+          "source": "brain",
+          "message_type": "chunk",
+          "playing": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "commit",
+        "turn": 1,
+        "t": 327868.5287279,
+        "extra": {
+          "gen": 1
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "placeholder_release",
+        "turn": 1,
+        "t": 327868.5287819,
+        "extra": {
+          "gen": 1,
+          "audio": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "placeholder_playback_feedback",
+        "turn": 1,
+        "t": 327868.5288599,
+        "extra": {
+          "playing": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 1,
+        "t": 327868.5288904,
+        "extra": {
+          "source": "voice",
+          "message_type": "playback_state",
+          "playing": false
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_end",
+        "turn": 1,
+        "t": 327868.5290319,
+        "extra": {
+          "gen": 1,
+          "success": true,
+          "reason": null,
+          "gap_s": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.5291044,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_resources",
+        "turn": 1,
+        "t": 327868.5291546,
+        "extra": {
+          "gross_package_j": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.5292038,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "case_start",
+        "turn": 2,
+        "t": 327868.5292384,
+        "extra": {
+          "case_id": "prompt-revision"
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_ready",
+        "turn": 2,
+        "t": 327868.5325739,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_token",
+        "turn": 2,
+        "t": 327868.5326494,
+        "extra": {
+          "gen": 0,
+          "tokenizer": "synthetic-byte-IDs",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_chunk",
+        "turn": 2,
+        "t": 327868.5327109,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 2,
+        "t": 327868.5327423,
+        "extra": {
+          "source": "ears",
+          "message_type": "tentative_final",
+          "playing": null
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "chunk_recv",
+        "turn": 2,
+        "t": 327868.532806,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "pcm_ready",
+        "turn": 2,
+        "t": 327868.5328355,
+        "extra": {
+          "gen": 0,
+          "seq": 0,
+          "pcm": "synthetic bytes",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 2,
+        "t": 327868.5328713,
+        "extra": {
+          "source": "brain",
+          "message_type": "chunk",
+          "playing": null
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "endpoint",
+        "turn": 2,
+        "t": 327868.5721366,
+        "extra": {
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "asr_final",
+        "turn": 2,
+        "t": 327868.5722675,
+        "extra": {
+          "text": "Explain the prompt cache",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "transcript",
+        "turn": 2,
+        "t": 327868.5724382,
+        "extra": {
+          "text": "Explain the prompt cache",
+          "final": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_mismatch",
+        "turn": 2,
+        "t": 327868.5726012,
+        "extra": {
+          "gen": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "prompt_ready",
+        "turn": 2,
+        "t": 327868.5726805,
+        "extra": {
+          "gen": 1,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_token",
+        "turn": 2,
+        "t": 327868.5727094,
+        "extra": {
+          "gen": 1,
+          "tokenizer": "synthetic-byte-IDs",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "brain",
+        "event": "first_chunk",
+        "turn": 2,
+        "t": 327868.5727537,
+        "extra": {
+          "gen": 1,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 2,
+        "t": 327868.5728,
+        "extra": {
+          "source": "ears",
+          "message_type": "final",
+          "playing": null
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "chunk_recv",
+        "turn": 2,
+        "t": 327868.572888,
+        "extra": {
+          "gen": 1,
+          "seq": 0,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "pcm_ready",
+        "turn": 2,
+        "t": 327868.5729177,
+        "extra": {
+          "gen": 1,
+          "seq": 0,
+          "pcm": "synthetic bytes",
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 2,
+        "t": 327868.5729493,
+        "extra": {
+          "source": "brain",
+          "message_type": "chunk",
+          "playing": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "commit",
+        "turn": 2,
+        "t": 327868.5729856,
+        "extra": {
+          "gen": 1
+        }
+      },
+      {
+        "stage": "voice",
+        "event": "placeholder_release",
+        "turn": 2,
+        "t": 327868.5730254,
+        "extra": {
+          "gen": 1,
+          "audio": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "ears",
+        "event": "placeholder_playback_feedback",
+        "turn": 2,
+        "t": 327868.5730924,
+        "extra": {
+          "playing": false,
+          "synthetic": true
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "routed",
+        "turn": 2,
+        "t": 327868.5731268,
+        "extra": {
+          "source": "voice",
+          "message_type": "playback_state",
+          "playing": false
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_end",
+        "turn": 2,
+        "t": 327868.5731661,
+        "extra": {
+          "gen": 1,
+          "success": true,
+          "reason": null,
+          "gap_s": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.5732119,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "turn_resources",
+        "turn": 2,
+        "t": 327868.5732509,
+        "extra": {
+          "gross_package_j": null
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "pressure",
+        "turn": null,
+        "t": 327868.573508,
+        "extra": {
+          "snapshot": null,
+          "delta": null,
+          "energy": {
+            "available": false,
+            "gross_j": null,
+            "domains": [],
+            "scope": "whole CPU packages",
+            "wrap_assumption": "less than one full counter wrap between samples",
+            "errors": [
+              "[WinError 3] The system cannot find the path specified: '\\\\sys\\\\class\\\\powercap'",
+              "No readable RAPL package domains"
+            ]
+          }
+        }
+      },
+      {
+        "stage": "spine",
+        "event": "run_end",
+        "turn": null,
+        "t": 327868.5758938,
+        "extra": {
+          "aborted": null,
+          "synthetic": true
+        }
+      }
+    ],
+    "headline_ready": false
+  },
+  "sources": [
+    {
+      "name": "Qwen3 0.6B benchmark",
+      "path": "data/results/bakeoff_qwen3-0.6b-q4km-ubuntu-vm-cg_summary.json",
+      "kind": "measured"
+    },
+    {
+      "name": "Qwen3 1.7B benchmark",
+      "path": "data/results/bakeoff_qwen3-1.7b-q4km-ubuntu-vm-cg_summary.json",
+      "kind": "measured"
+    },
+    {
+      "name": "LFM2.5 1.2B benchmark",
+      "path": "data/results/bakeoff_lfm2.5-1.2b-q40-ubuntu-vm-cg_summary.json",
+      "kind": "measured"
+    },
+    {
+      "name": "LFM2.5 350M benchmark",
+      "path": "data/results/bakeoff_lfm2.5-350m-q40-ubuntu-vm-cg_summary.json",
+      "kind": "measured"
+    },
+    {
+      "name": "Voice cache ablation",
+      "path": "data/results/voice_cache_windows-dev.json",
+      "kind": "measured"
+    },
+    {
+      "name": "Voice chunking experiment",
+      "path": "data/results/voice_chunking_windows-dev.json",
+      "kind": "component-simulation"
+    },
+    {
+      "name": "Voice resource ladder",
+      "path": "data/results/voice_tiers_windows-dev.json",
+      "kind": "measured"
+    },
+    {
+      "name": "Voice benchmark conditions",
+      "path": "voice/RESULTS.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Brain benchmark conditions",
+      "path": "brain/RESULTS.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Lessac medium · fp32 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-medium.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac low · fp32 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-low.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac high · fp32 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-high.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac medium · int8 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-medium-int8.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac low · int8 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-low-int8.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac high · fp16 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-high-fp16.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Lessac high · int8 audio",
+      "path": "data/results/voice_samples/vits-piper-en_US-lessac-high-int8.wav",
+      "kind": "recorded-audio"
+    },
+    {
+      "name": "Contract replay scenarios",
+      "path": "data/results/mock-placeholder-runtime-20261008-02/plan.json",
+      "kind": "synthetic"
+    },
+    {
+      "name": "Recorded contract trace",
+      "path": "data/results/mock-placeholder-runtime-20261008-02/events.jsonl",
+      "kind": "synthetic"
+    },
+    {
+      "name": "Contract replay report",
+      "path": "data/results/mock-placeholder-runtime-20261008-02/report.json",
+      "kind": "synthetic"
+    },
+    {
+      "name": "Project overview",
+      "path": "README.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Architecture and critical-path design",
+      "path": "docs/solution.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Message contract",
+      "path": "docs/CONTRACT.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Spine implementation status",
+      "path": "spine/BUILD_STATUS.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Voice implementation and setup",
+      "path": "voice/README.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Brain implementation handoff",
+      "path": "brain/handoff_brain.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Speech recognition specification",
+      "path": "ears/SPEC.md",
+      "kind": "documentation"
+    },
+    {
+      "name": "Phone target specification",
+      "path": "mobile/SPEC.md",
+      "kind": "documentation"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "Intent routing",
+      "status": "implemented",
+      "detail": "Common requests use cached intents; time and date are composed locally. Other questions need a local language model.",
+      "source": "brain/handoff_brain.md"
+    },
+    {
+      "name": "Brain",
+      "status": "component-measured",
+      "detail": "Four local language models benchmarked under an Ubuntu 2 CPU / 2 GB cap. Qwen3 0.6B is the provisional choice.",
+      "source": "brain/RESULTS.md"
+    },
+    {
+      "name": "Voice",
+      "status": "component-measured",
+      "detail": "Piper synthesis, held speech, caching and resource tiers implemented. Recorded samples and Windows component results are available.",
+      "source": "voice/README.md"
+    },
+    {
+      "name": "Spine",
+      "status": "synthetic-verified",
+      "detail": "Event bus, exact-token commit validation, cancellation and experiment tooling verified with placeholder runs.",
+      "source": "spine/BUILD_STATUS.md"
+    },
+    {
+      "name": "Ears",
+      "status": "planned",
+      "detail": "Speech recognition and microphone input are specified; this checkout contains no Ears engine implementation.",
+      "source": "ears/SPEC.md"
+    },
+    {
+      "name": "Phone",
+      "status": "planned",
+      "detail": "Android profile is a target; phone integration is not demonstrated in this checkout.",
+      "source": "mobile/SPEC.md"
+    },
+    {
+      "name": "End-to-end benchmark",
+      "status": "pending",
+      "detail": "A real full voice loop, paired baseline and whole-stack energy measurements remain pending.",
+      "source": "spine/BUILD_STATUS.md"
+    }
+  ]
+}

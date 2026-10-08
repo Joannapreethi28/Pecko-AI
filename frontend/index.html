@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20392f">
+  <meta name="description" content="Explore Pecko: a local voice-assistant project. Try the intent router, hear recorded speech and inspect measured component results.">
+  <title>Pecko · Demo studio</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <aside class="sidebar" aria-label="Workspace navigation">
+    <a class="brand" href="#studio" aria-label="Pecko home"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 24V16M16 30V10M24 26V14M32 22V18"/></svg><span>pecko<span class="brand-dot">.</span></span></a>
+    <p class="brand-caption">A little voice. A world of possibility.</p>
+    <nav id="navigation">
+      <a href="#studio" class="nav-item active" data-page="studio"><span data-icon="wave"></span>Demo studio</a>
+      <a href="#benchmarks" class="nav-item" data-page="benchmarks"><span data-icon="chart"></span>Benchmarks</a>
+      <a href="#pipeline" class="nav-item" data-page="pipeline"><span data-icon="layers"></span>How it works</a>
+      <a href="#evidence" class="nav-item" data-page="evidence"><span data-icon="folder"></span>Evidence library</a>
+    </nav>
+    <div class="sidebar-note"><span data-icon="leaf"></span><h2>Made for the edge.</h2><p>A small, local stack.<br>A more natural conversation.</p><div class="budget-tags"><span>CPU only</span><span>Local first</span></div></div>
+    <footer class="sidebar-footer"><span class="team-mark">P</span><div><strong>Team Plumbers</strong><span>HackNEX 2026 · PS08</span></div></footer>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-current">Demo studio</strong></div><div class="top-actions"><span class="local-status"><i></i> Local workspace</span><button class="button subtle" id="present-button"><span data-icon="expand"></span><span>Present</span></button></div></header>
+    <main id="main" tabindex="-1">
+      <div id="connection-banner" class="notice error" hidden role="alert"></div>
+      <section id="page-studio" class="page" aria-labelledby="studio-title">
+        <div class="page-heading"><div><h1 id="studio-title">Small footprint. Big conversation.</h1><p>Meet Pecko, the voice assistant built to think while you talk.</p></div><span class="tag neutral">Evaluator workspace</span></div>
+        <div class="studio-grid">
+          <section class="conversation-panel" aria-labelledby="conversation-title">
+            <div class="panel-top"><h2 id="conversation-title"><span class="status-dot"></span>Try Pecko</h2><span class="tag">Text demo</span></div>
+            <div class="conversation-body" id="conversation-body">
+              <div class="welcome" id="welcome"><div class="voice-emblem" aria-hidden="true"><svg viewBox="0 0 320 136" id="hero-wave"></svg></div><h3>A conversation starts with hello.</h3><p>Try a familiar question. Pecko’s local intent router<br class="desktop-break"> handles the little things without a language model.</p></div>
+              <div id="messages" class="messages" role="log" aria-label="Conversation" aria-live="polite"></div>
+            </div>
+            <div class="composer-area"><div class="suggestions" aria-label="Suggested questions"><button data-prompt="Who are you?">Introduce yourself <span>↗</span></button><button data-prompt="What time is it?">What time is it? <span>↗</span></button><button data-prompt="Tell me a joke">Tell me a joke <span>↗</span></button></div>
+              <form id="chat-form" class="composer"><label class="sr-only" for="prompt">Message Pecko</label><input id="prompt" name="text" type="text" placeholder="Ask Pecko something…" maxlength="1000" autocomplete="off" required><button type="submit" id="send-button" aria-label="Send message"><span data-icon="arrow-up"></span></button></form>
+              <div class="composer-foot"><span><span data-icon="lock"></span>Processed on this device</span><span id="composer-status">Typed input · no microphone</span></div>
+            </div>
+          </section>
+          <aside class="session-panel" aria-label="Demo information">
+            <div class="section-heading"><h2>Inside this demo</h2><button id="refresh-status" class="icon-button" aria-label="Refresh component status"><span data-icon="refresh"></span></button></div>
+            <p class="muted small">A clear view of what’s running.</p>
+            <dl class="component-status"><div><dt><span data-icon="route"></span>Intent router</dt><dd id="router-status">Checking…</dd></div><div><dt><span data-icon="brain"></span>Language model</dt><dd id="model-status">Checking…</dd></div><div><dt><span data-icon="volume"></span>Voice output</dt><dd>Recorded samples</dd></div><div><dt><span data-icon="mic"></span>Speech recognition</dt><dd>Not connected</dd></div></dl>
+            <div class="session-explainer"><h3>Small questions. Shorter paths.</h3><p>Greetings, time, dates and common requests can skip the language model entirely.</p><a href="#pipeline" class="text-link">Explore the architecture <span data-icon="arrow-right"></span></a></div>
+            <div class="target-budget"><div><span data-icon="chip"></span><h3>The design budget</h3><span class="tag neutral">Target</span></div><p><strong>2 <span>CPU cores</span></strong><strong>2 <span>GB RAM</span></strong></p><small>Full-stack enforcement is not active in this demo.</small></div>
+          </aside>
+        </div>
+        <section class="audio-panel" aria-labelledby="audio-title"><div class="audio-copy"><div class="audio-icon"><span data-icon="volume"></span></div><div><h2 id="audio-title">Hear the voice behind Pecko.</h2><p>Real speech, synthesized locally. Listen to a recorded sample.</p></div></div><div class="audio-controls"><label class="sr-only" for="sample-select">Voice sample</label><select id="sample-select"><option>Loading samples…</option></select><button id="audio-play" class="play-button" aria-label="Play recorded voice sample" disabled><span data-icon="play"></span></button></div><audio id="sample-audio" preload="none"></audio><div class="audio-progress"><div id="audio-progress-fill"></div></div><span id="audio-feedback" class="sr-only" aria-live="polite"></span></section>
+        <div class="studio-bottom"><span><span class="record-dot"></span>Built from this repository’s components and evidence.</span><a href="#evidence">See what’s ready <span data-icon="arrow-right"></span></a></div>
+      </section>
+
+      <section id="page-benchmarks" class="page" aria-labelledby="benchmarks-title" hidden>
+        <div class="page-heading"><div><h1 id="benchmarks-title">Good choices, backed by measurements.</h1><p>Explore the trade-offs behind a smaller conversational stack.</p></div><span class="tag neutral">Recorded evidence</span></div>
+        <section class="surface benchmark-surface"><div class="section-heading"><div><h2>Finding the right brain</h2><p class="muted small">Four local models · 20 questions each · Ubuntu VM</p></div><a href="/source/brain/RESULTS.md" target="_blank" rel="noopener" class="text-link">Read source <span data-icon="external"></span></a></div>
+          <div class="chart-toolbar"><div class="segmented" role="group" aria-label="Chart metric"><button data-metric="ttft_p50_ms" aria-pressed="true">First token</button><button data-metric="peak_memory_mb" aria-pressed="false">Memory</button><button data-metric="decode_tps" aria-pressed="false">Decode speed</button></div><span id="chart-unit" class="muted small">Milliseconds · lower is better</span></div>
+          <div id="model-chart" class="model-chart" aria-label="Model performance comparison"></div>
+          <div class="table-scroll"><table><caption class="sr-only">Recorded Brain model measurements</caption><thead><tr><th scope="col">Model</th><th scope="col">First token p50</th><th scope="col">First token p90</th><th scope="col">Decode</th><th scope="col">Peak memory</th></tr></thead><tbody id="model-table"></tbody></table></div>
+          <div class="evidence-note"><span data-icon="info"></span><p><strong>Component measurements, not full voice-loop latency.</strong> Brain runs used a 2 CPU / 2 GB cgroup. Network was not disabled. Qwen3 0.6B is the provisional choice for prompt-cache reuse; blind quality scoring is pending.</p></div>
+        </section>
+        <section class="surface voice-evidence"><div class="section-heading"><div><h2>Let the voice do less work</h2><p class="muted small">Voice experiments · Windows development machine</p></div><a href="/source/voice/RESULTS.md" target="_blank" rel="noopener" class="text-link">Read source <span data-icon="external"></span></a></div><div id="voice-comparison"></div><p class="footnote">Cache measurements cover 39 scripted turns. Chunking uses real synthesis with simulated Brain word arrivals, a fixed 400 ms commit and no device delay. These are separate component experiments.</p></section>
+      </section>
+
+      <section id="page-pipeline" class="page" aria-labelledby="pipeline-title" hidden>
+        <div class="page-heading"><div><h1 id="pipeline-title">Less waiting between the words.</h1><p>The idea: prepare an answer early, then speak only when it is safe to commit.</p></div><span class="tag neutral">Architecture &amp; replay</span></div>
+        <section class="surface architecture"><div class="section-heading"><h2>Four parts. One conversation.</h2><a href="/source/docs/solution.md" target="_blank" rel="noopener" class="text-link">Architecture notes <span data-icon="external"></span></a></div>
+          <div class="pipeline-stages"><article><span data-icon="mic"></span><h3>Ears</h3><p>Listen &amp; transcribe</p><span class="tag neutral">Specification</span></article><span class="stage-arrow" data-icon="arrow-right"></span><article><span data-icon="brain"></span><h3>Brain</h3><p>Route &amp; reason</p><span class="tag">Component measured</span></article><span class="stage-arrow" data-icon="arrow-right"></span><article><span data-icon="volume"></span><h3>Voice</h3><p>Prepare &amp; speak</p><span class="tag">Component measured</span></article></div>
+          <div class="spine-bar"><span data-icon="layers"></span><strong>Spine</strong><span>Coordinates the stages, validates the transcript and releases held audio.</span><span class="tag neutral">Synthetic tests</span></div>
+        </section>
+        <div class="pipeline-detail-grid"><section class="surface timing-surface"><h2>The last dependency sets the pace.</h2><p class="muted">The answer can be ready before the turn is committed. Playback waits for both.</p><div class="timing-chart" aria-label="Conceptual timing diagram, not measured durations"><div><span>Commit gate</span><div class="timing-track"><i class="timing-bar commit">Confirm the final words</i></div></div><div><span>Answer ready</span><div class="timing-track"><i class="timing-bar ready">Prepare the first clause</i></div></div><div><span>First audio</span><div class="timing-track"><i class="timing-bar release">Release</i></div></div></div><div class="formula">first audio = max(commit, ready) + device delay</div><p class="footnote">Conceptual illustration. No timing or speed-up is claimed.</p></section>
+          <section class="surface replay-surface"><div class="section-heading"><h2>A change of mind</h2><span class="tag amber">Synthetic replay</span></div><p class="muted small">Watch a recorded correction scenario. Old work is cancelled before the revised turn is committed.</p><div class="replay-transcript" id="replay-transcript">“Set it for Tuesday… actually, Wednesday.”</div><div id="replay-events" class="replay-events"></div><button class="button primary" id="replay-button"><span data-icon="play"></span>Replay scenario</button><p class="footnote">Recorded placeholder events. Animation is slowed for readability; this does not generate speech or set a reminder.</p></section></div>
+      </section>
+
+      <section id="page-evidence" class="page" aria-labelledby="evidence-title" hidden>
+        <div class="page-heading"><div><h1 id="evidence-title">The work, with the receipts.</h1><p>Every result has a source. Every unfinished piece has a clear boundary.</p></div><button class="button subtle" id="download-evidence"><span data-icon="download"></span>Export evidence</button></div>
+        <section class="surface readiness"><h2>Where the project stands</h2><div id="capabilities" class="capabilities"></div></section>
+        <section class="surface library"><div class="section-heading"><h2>Explore the source material</h2><label class="search-field"><span data-icon="search"></span><input id="evidence-search" type="search" placeholder="Find a source…" aria-label="Search evidence sources"></label></div><div id="source-list" class="source-list"></div><p id="source-empty" class="empty-state" hidden>No sources match. Try “voice”, “brain” or “runtime”.</p></section>
+      </section>
+      <footer class="workspace-footer"><span>Pecko <span class="footer-divider">/</span> Thoughtfully small.</span><span>Team Plumbers · HackNEX 2026</span></footer>
+    </main>
+  </div>
+  <noscript><div class="noscript">Enable JavaScript to use the interactive demo. Repository evidence remains available in the project’s data/results folder.</div></noscript>
+</body>
+</html>
