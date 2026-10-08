@@ -81,6 +81,9 @@ class ZipformerASR:
         self._state.text = self._recognizer.get_result(self._stream)
 
     def finish(self) -> tuple[str, list]:
+        # The streaming encoder holds back its last frames: without ~0.66 s of tail silence the last
+        # word is lost ("does a spider" for "...have"). sherpa-onnx's own examples pad the same way.
+        self._stream.accept_waveform(SAMPLE_RATE, [0.0] * int(SAMPLE_RATE * 0.66))
         self._stream.input_finished()
         self._drain()
         return self._state.text, self._state.words

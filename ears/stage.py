@@ -38,6 +38,7 @@ Silero's internal hangover state, and only when not already overridden by
 O9's 0.8-during-playback tier.
 """
 import collections
+import re
 
 import numpy as np
 
@@ -74,6 +75,9 @@ FRAME_SAMPLES = 512  # 32 ms @ 16 kHz
 MIN_SPEECH_FRAMES = max(1, MIN_SPEECH_MS // 32)
 
 
+_WAKE_LIKE = re.compile(r"^[\s,.]*((hey|hi|hay|a|okay|y|o)[\s,]+)?a?pe[ck]\w*[\s,.!?]+|^[\s,.]*(o|y)\s+(?=\w)", re.IGNORECASE)
+
+
 class Ears:
     def __init__(self, tier: int = 0, clock: Clock | None = None, out_stream=None,
                  endpointer_mode: str = "fusion"):
@@ -106,6 +110,12 @@ class Ears:
         self._followup_start = 0.0
         self._arming_frames: list = []
         self._turn_audio: collections.deque = collections.deque(maxlen=WINDOW_SAMPLES // FRAME_SAMPLES)
+        # Endpoint fix: the ASR stream is finalized ONCE at pause start (VAD
+        # end), not again at the deadline. These hold the whole turn's audio
+        # (so a resume can rebuild the stream) and the finalized text.
+        self._full_turn_audio: list = []
+        self._paused_frames: list = []
+        self._pause_text: str | None = None
 
     # --- stage interface -------------------------------------------------
     def start(self) -> None:
@@ -143,6 +153,9 @@ class Ears:
         self._last_partial_t = -1.0
         self._arming_frames = []
         self._turn_audio.clear()
+        self._full_turn_audio = []
+        self._paused_frames = []
+        self._pause_text = None
         self.vad.reset()
         self.vad.set_threshold(VAD_THRESHOLD_NORMAL)
         self.noise.reset()
@@ -243,22 +256,43 @@ class Ears:
         if self.state == "LISTENING":
             self.asr.accept_frame(frame)
             self._turn_audio.append(frame)
+            self._full_turn_audio.append(frame)
             self._maybe_check_wake(frame)
             self._maybe_emit_partial(t_cap)
             if vad_event and "end" in vad_event:
-                self._t_eos = t_cap
+                self._t_eos = self._eos_time(vad_event, t_cap)
                 self.state = "PAUSED"
                 self._on_pause_start()
+                # The deadline may already have passed (VAD's own min-silence
+                # hangover, or the decode above): fire now, not a frame later.
+                if self.state == "PAUSED" and self._pause_deadline is not None \
+                        and self.clock.now() >= self._pause_deadline:
+                    self._finalize()
             return
 
         if self.state == "PAUSED":
-            self.asr.accept_frame(frame)
+            # The ASR stream was already finalized at pause start: don't feed
+            # it (each fed frame could trigger another full decode on the
+            # critical path). Keep the frames so a resume loses nothing.
+            self._paused_frames.append(frame)
             self._turn_audio.append(frame)
             if vad_event and "start" in vad_event:
                 self._on_speech_resume(t_cap)
             elif self._pause_deadline is not None and t_cap >= self._pause_deadline:
                 self._finalize()
             return
+
+    def _eos_time(self, vad_event, t_cap: float) -> float:
+        """t_eos = when speech actually ended, not when VAD *noticed*. Silero's
+        'end' fires only after min_silence_ms (200 ms) of silence; its event
+        carries the real end sample. Convert it back to the capture clock."""
+        end = vad_event.get("end")
+        it = getattr(self.vad, "_iterator", None)
+        cur = getattr(it, "current_sample", None) if it is not None else getattr(self.vad, "_sample_pos", None)
+        if not isinstance(end, (int, float)) or cur is None:
+            return t_cap
+        lag_s = (cur - end) / 16000
+        return t_cap - lag_s if 0 <= lag_s < 2.0 else t_cap
 
     def _update_noise_tier(self, vad_event, frame) -> None:
         if vad_event and "start" in vad_event:
@@ -291,6 +325,9 @@ class Ears:
         self._last_partial_text = ""
         self._last_partial_t = -1.0
         self._turn_audio.clear()
+        self._full_turn_audio = []
+        self._paused_frames = []
+        self._pause_text = None
         if self.kws is not None:
             self.kws.reset()
         # Pre-roll (one concatenated chunk) + the buffered arming frames, so
@@ -300,9 +337,13 @@ class Ears:
         if preroll_audio.size:
             self.asr.accept_frame(preroll_audio)
             self._turn_audio.append(preroll_audio)
+            self._full_turn_audio.append(preroll_audio)
+            self._maybe_check_wake(preroll_audio)   # KWS must hear "hey" too, not only ASR
         for lead_frame in self._arming_frames:
             self.asr.accept_frame(lead_frame)
             self._turn_audio.append(lead_frame)
+            self._full_turn_audio.append(lead_frame)
+            self._maybe_check_wake(lead_frame)
         self._arming_frames = []
         self.state = "LISTENING"
 
@@ -323,9 +364,11 @@ class Ears:
         """Strip the wake phrase prefix so Brain never sees "hey pecko"."""
         low = text.lower()
         idx = low.find(WAKE_PHRASE.split()[-1])  # "pecko"
-        if idx == -1:
-            return text
-        return text[idx + len(WAKE_PHRASE.split()[-1]):].strip()
+        if idx != -1:
+            return text[idx + len(WAKE_PHRASE.split()[-1]):].strip(" ,.!?")
+        # ASR often misspells the name ("hey peckle", "hey pecker"): drop "hey/hi <one word>"
+        # that starts with "pe" at the very start of the utterance
+        return _WAKE_LIKE.sub("", text).strip(" ,.!?")
 
     def _maybe_emit_partial(self, t_cap: float) -> None:
         if not self._armed:
@@ -356,12 +399,23 @@ class Ears:
         if not self._armed:
             self.state = "IDLE"  # unarmed speech ended: drop it, nothing was sent
             return
-        self.asr.force_update()  # O1: speculative finish now, not on the next timer tick
+        # O1, endpoint fix (measured): finalize the ASR stream NOW, once.
+        # Before, force_update() here was often a no-op (stale/truncated text)
+        # and the real decode happened in finish() at the deadline (0.6-0.9 s
+        # for Moonshine Small), stacked on top of the silence threshold. Now
+        # that decode overlaps the threshold wait, tentative_final carries
+        # the same text final will, and the deadline fires with no work left.
+        t0 = self.clock.now()
+        text_raw, _words = self.asr.finish()
+        self._pause_text = self._visible_text(text_raw) or self._visible_text(self.asr.current_text())
+        self._paused_frames = []
+        self._elog.emit("ears", "asr_pause_finish", turn=self.turn, t=self.clock.now(),
+                         ms=round(1000 * (self.clock.now() - t0), 1))
         # O2: only the "fusion" mode pays for Smart Turn -- the fixed-timer
         # ablation baselines (scripts/ablation.py) ignore p_done entirely,
         # so scoring it would just be wasted CPU, skewing the cost comparison.
         p_done = self._score_smart_turn() if self.endpointer.mode == "fusion" else NEUTRAL_P_DONE
-        text = self._visible_text(self.asr.current_text())
+        text = self._pause_text
         if self.endpointer.should_send_tentative_final(text, p_done):
             emit(self.out_stream, **contract.tentative_final(self.turn, text, self._t_eos, p_done))
             self._sent_tentative_final = True
@@ -382,11 +436,24 @@ class Ears:
         if self._sent_tentative_final:
             emit(self.out_stream, **contract.cancel(self.turn, t_cap))
             self._sent_tentative_final = False
+        # The stream was finalized at pause start: rebuild it from the turn's
+        # audio so the transcript continues where it left off (rare path).
+        self.asr.begin_utterance()
+        for f in self._full_turn_audio:
+            self.asr.accept_frame(f)
+        for f in self._paused_frames:
+            self.asr.accept_frame(f)
+        self._full_turn_audio.extend(self._paused_frames)
+        self._paused_frames = []
+        self._pause_text = None
         self.state = "LISTENING"
 
     def _finalize(self) -> None:
-        text, _words = self.asr.finish()
-        text = self._visible_text(text) or self._visible_text(self.asr.current_text())
+        text = self._pause_text  # decoded once at pause start; nothing heavy here
+        if text is None:
+            text_raw, _words = self.asr.finish()
+            text = self._visible_text(text_raw) or self._visible_text(self.asr.current_text())
+        self._pause_text = None
         self._elog.emit("ears", "asr_final", turn=self.turn, t=self.clock.now(), text=text)
         norm = normalize(text)
         t_endpoint = self.clock.now()
