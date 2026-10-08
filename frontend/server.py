@@ -59,6 +59,55 @@ def permitted_source(relative: str) -> bool:
     return path.parts[:2] == ("spine", "examples") and path.suffix == ".json"
 
 
+LIVE_STALE_S = 5.0   # no resource sample for this long -> the voice loop has stopped
+
+
+def live_snapshot(root: Path) -> dict:
+    """The newest scripts/demo.sh run, read from its events.jsonl: status,
+    CPU/RAM under the cap, and each turn's transcript, answer and timings."""
+    runs = sorted((root / "data" / "results").glob("demo-*/events.jsonl"),
+                  key=lambda f: f.stat().st_mtime, reverse=True)
+    if not runs:
+        return {"running": False, "run": None, "turns": []}
+    from spine.dashboard import DashboardState
+    state, turns, last_t = DashboardState(), {}, None
+    try:
+        lines = runs[0].read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return {"running": False, "run": None, "turns": []}
+    for line in lines:
+        try:
+            event = json.loads(line)
+        except ValueError:
+            continue
+        state.update(event)
+        name, extra, turn = event.get("event"), event.get("extra") or {}, event.get("turn")
+        last_t = event.get("t", last_t)
+        if turn is None or turn < 1:
+            continue
+        row = turns.setdefault(turn, {"turn": turn, "heard": None, "answer": [], "path": None})
+        if name == "asr_final":
+            row["heard"] = extra.get("text", "")
+        elif name == "synth_start" and extra.get("text"):
+            row["answer"].append(extra["text"])
+        elif event.get("stage") == "voice" and name == "cache_hit" and extra.get("clip"):
+            row["answer"].append(f"[cached clip: {extra['clip']}]")
+        elif name == "final_valid":
+            row["path"] = extra.get("path")
+    for turn, row in turns.items():
+        t0, raw = state.t_eos.get(turn), state.raw.get(turn, {})
+        row["answer"] = " ".join(row["answer"])
+        row["ms"] = {} if t0 is None else {k: round((raw[k] - t0) * 1000) for k in ("C", "R", "first audio") if k in raw}
+    snap = (state.pressure.get("snapshot") or {})
+    running = last_t is not None and time.monotonic() - last_t < LIVE_STALE_S
+    return {"running": running, "run": runs[0].parent.name, "state": state.state if running else "Stopped",
+            "cpu_cores": snap.get("mean_cores"), "cpu_max": snap.get("cpu_max"),
+            "ram_mib": None if snap.get("memory_current") is None else snap["memory_current"] / 2**20,
+            "ram_cap_mib": None if snap.get("memory_max") is None else snap["memory_max"] / 2**20,
+            "peak_mib": None if snap.get("memory_peak") is None else snap["memory_peak"] / 2**20,
+            "turns": [r for r in sorted(turns.values(), key=lambda r: r["turn"]) if r["heard"] is not None][-8:]}
+
+
 class DemoRuntime:
     def __init__(self, root: Path = REPO_ROOT, model_family: str = "qwen3"):
         self.root = Path(root)
@@ -226,6 +275,9 @@ class DemoHandler(BaseHTTPRequestHandler):
         path = unquote(urlsplit(self.path).path)
         if path == "/api/status":
             self.json_response(200, self.runtime.status())
+            return
+        if path == "/api/live":
+            self.json_response(200, live_snapshot(self.runtime.root))
             return
         if path == "/api/evidence":
             evidence = safe_file(self.runtime.root / "frontend", "evidence.json")

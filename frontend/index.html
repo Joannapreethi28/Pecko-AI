@@ -30,6 +30,9 @@
       <div id="connection-banner" class="notice error" hidden role="alert"></div>
       <section id="page-studio" class="page" aria-labelledby="studio-title">
         <div class="page-heading"><div><h1 id="studio-title">Small footprint. Big conversation.</h1><p>Meet Pecko, the voice assistant built to think while you talk.</p></div><span class="tag neutral">Evaluator workspace</span></div>
+        <section class="surface live-surface" aria-labelledby="live-title"><div class="section-heading"><div><h2 id="live-title"><span class="status-dot" id="live-dot"></span>Live voice loop</h2><p class="muted small" id="live-sub">Start it with <code>scripts/demo.sh</code>, then just ask a question out loud.</p></div><span class="tag neutral" id="live-state">Not running</span></div>
+          <div class="live-meters"><div><span>CPU</span><strong id="live-cpu">–</strong><small id="live-cpu-cap">cap –</small></div><div><span>RAM</span><strong id="live-ram">–</strong><small id="live-ram-cap">cap –</small></div><div><span>First audio (last turn)</span><strong id="live-fa">–</strong><small id="live-cr">after you stop speaking</small></div></div>
+          <div id="live-turns" class="live-turns" role="log" aria-live="polite"></div></section>
         <div class="studio-grid">
           <section class="conversation-panel" aria-labelledby="conversation-title">
             <div class="panel-top"><h2 id="conversation-title"><span class="status-dot"></span>Try Pecko</h2><span class="tag">Text demo</span></div>
@@ -45,7 +48,7 @@
           <aside class="session-panel" aria-label="Demo information">
             <div class="section-heading"><h2>Inside this demo</h2><button id="refresh-status" class="icon-button" aria-label="Refresh component status"><span data-icon="refresh"></span></button></div>
             <p class="muted small">A clear view of what’s running.</p>
-            <dl class="component-status"><div><dt><span data-icon="route"></span>Intent router</dt><dd id="router-status">Checking…</dd></div><div><dt><span data-icon="brain"></span>Language model</dt><dd id="model-status">Checking…</dd></div><div><dt><span data-icon="volume"></span>Voice output</dt><dd>Recorded samples</dd></div><div><dt><span data-icon="mic"></span>Speech recognition</dt><dd>Not connected</dd></div></dl>
+            <dl class="component-status"><div><dt><span data-icon="route"></span>Intent router</dt><dd id="router-status">Checking…</dd></div><div><dt><span data-icon="brain"></span>Language model</dt><dd id="model-status">Checking…</dd></div><div><dt><span data-icon="volume"></span>Voice output</dt><dd>Recorded samples</dd></div><div><dt><span data-icon="mic"></span>Speech recognition</dt><dd>Live loop panel above</dd></div></dl>
             <div class="session-explainer"><h3>Small questions. Shorter paths.</h3><p>Greetings, time, dates and common requests can skip the language model entirely.</p><a href="#pipeline" class="text-link">Explore the architecture <span data-icon="arrow-right"></span></a></div>
             <div class="target-budget"><div><span data-icon="chip"></span><h3>The design budget</h3><span class="tag neutral">Target</span></div><p><strong>2 <span>CPU cores</span></strong><strong>2 <span>GB RAM</span></strong></p><small>Full-stack enforcement is not active in this demo.</small></div>
           </aside>

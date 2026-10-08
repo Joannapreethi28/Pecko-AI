@@ -260,3 +260,32 @@ async function loadWorkspace() {
   }
 }
 loadWorkspace();
+
+function fmt(value, digits, suffix) { return value == null ? '–' : value.toFixed(digits) + suffix; }
+async function pollLive() {
+  let live;
+  try { const response = await fetch('/api/live', {signal: AbortSignal.timeout(3000)}); if (!response.ok) return; live = await response.json(); }
+  catch { return; }
+  $('#live-dot').classList.toggle('on', live.running);
+  $('#live-state').textContent = live.running ? live.state : (live.run ? 'Stopped' : 'Not running');
+  $('#live-sub').textContent = live.run ? `Run ${live.run} · kernel-enforced cap${live.running ? '' : ' · start scripts/demo.sh to go live'}` : 'Start it with scripts/demo.sh, then just ask a question out loud.';
+  const cpuCap = live.cpu_max ? Number(live.cpu_max.split(' ')[0]) / Number(live.cpu_max.split(' ')[1]) : null;
+  $('#live-cpu').textContent = fmt(live.cpu_cores, 2, ' cores');
+  $('#live-cpu-cap').textContent = cpuCap ? `cap ${cpuCap} CPUs` : 'cap –';
+  $('#live-ram').textContent = fmt(live.ram_mib, 0, ' MiB');
+  $('#live-ram-cap').textContent = live.ram_cap_mib ? `cap ${live.ram_cap_mib.toFixed(0)} MiB · peak ${fmt(live.peak_mib, 0, ' MiB')}` : 'cap –';
+  const done = live.turns.filter(t => t.ms['first audio'] != null);
+  const last = done[done.length - 1];
+  $('#live-fa').textContent = last ? `${last.ms['first audio']} ms` : '–';
+  $('#live-cr').textContent = last ? `commit ${last.ms.C ?? '–'} ms · answer ready ${last.ms.R ?? '–'} ms` : 'after you stop speaking';
+  const list = $('#live-turns'); list.replaceChildren();
+  live.turns.slice().reverse().forEach(t => {
+    const row = node('div', 'live-turn');
+    const heard = node('p'); heard.append(node('em', '', 'You said'), document.createTextNode(t.heard || '(not caught)'));
+    const said = node('p'); said.append(node('em', '', 'Pecko'), document.createTextNode(t.answer || '…'));
+    const ms = node('div', 'ms'); ms.append(node('strong', '', t.ms['first audio'] != null ? `${t.ms['first audio']} ms` : '…'), document.createTextNode(t.path || ''));
+    row.append(heard, said, ms); list.append(row);
+  });
+}
+pollLive(); setInterval(pollLive, 500);
+
