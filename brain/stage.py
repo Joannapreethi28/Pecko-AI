@@ -43,7 +43,8 @@ class BrainStage:
     def __init__(self, emit: Callable[[dict], None], log: EventLog, client: Any, *,
                  tier: int = 0, tiers: Optional[dict[int, BrainTier]] = None, router: Any = None,
                  early_prefill: bool = True, cache_prompt: bool = True, temperature: float = 0.4,
-                 max_turns: int = 3, server_factory: Optional[Callable[[BrainTier], Any]] = None):
+                 max_turns: int = 3, server_factory: Optional[Callable[[BrainTier], Any]] = None,
+                 hold_release: bool = False):
         self._emit, self._log, self._client = emit, log, client
         self._tiers = dict(TIERS if tiers is None else tiers)
         self._tier = self._tiers[tier]
@@ -56,6 +57,11 @@ class BrainStage:
         self._gen = 0
         self._live: dict[int, tuple[int, threading.Event]] = {}   # gen -> (turn, cancel event)
         self._last_prefill = ""
+        # hold-and-release (contract v2.1): feed side knows which (turn, gen) is held,
+        # the worker stores what it prepared; they meet in the "resolve" job
+        self.hold_release = hold_release
+        self._held_info: Optional[tuple[int, int]] = None
+        self._held: Optional[dict] = None
         self._worker = threading.Thread(target=self._run, name="brain-llm", daemon=True)
 
     # ---- lifecycle (stage interface) -------------------------------------------------------
@@ -108,22 +114,34 @@ class BrainStage:
         turn = int(msg["turn"])
         user = normalize(msg.get("norm") or msg.get("text", ""))
         self._last_prefill = ""
-        self._cancel_live("new_turn")
+        held, self._held_info = self._held_info, None
+        if held is not None and held[0] != turn:
+            self._drop_held(*held, reason="stale")
+            held = None
+        self._cancel_live("new_turn", keep_turn=turn if held else None)
         gen, ev = self._new_gen(turn)
+        routed = None
         if not user:
-            self._send_cached(turn, gen, "didnt_catch")
-            return
-        if self._router is not None:   # tier 0 of the Brain: common intents never reach the LLM
+            routed = ("cached", "didnt_catch", None)
+        elif self._router is not None:   # tier 0 of the Brain: common intents never reach the LLM
             r = self._router.route(user, threshold=self._tier.router_threshold)
             self._log.event("route", turn, gen=gen, kind=r.kind, intent=r.intent, score=round(r.score, 1))
-            if r.kind == "cached":
-                self._send_cached(turn, gen, r.clip)
-                return
-            if r.kind == "composed":
-                self._log.event("cache_hit", turn, gen=gen, clip=r.intent, composed=True)
-                self._send_chunk(turn, gen, 0, r.text, ev, last=True)
+            if r.kind in ("cached", "composed"):
+                routed = (r.kind, r.clip or r.intent, r.text)
+        if routed is not None:
+            if held is not None:
+                self._drop_held(*held, reason="routed")
+            kind, clip, text = routed
+            if kind == "cached":
+                self._send_cached(turn, gen, clip)
+            else:
+                self._log.event("cache_hit", turn, gen=gen, clip=clip, composed=True)
+                self._send_chunk(turn, gen, 0, text, ev, last=True)
                 self._finish(gen)
-                return
+            return
+        if held is not None:   # the worker checks the prepared clause against this final
+            self._jobs.put(("resolve", turn, held[1], user, gen))
+            return
         self._jobs.put(("generate", turn, gen, user))
 
     def _on_partial(self, msg: dict) -> None:
@@ -139,8 +157,17 @@ class BrainStage:
         if not self.early_prefill or self._tier.prefill != "early":
             return
         text = normalize(msg.get("text", ""))
-        if text:
-            self._jobs.put(("prefill", int(msg["turn"]), "tentative", text))
+        if not text:
+            return
+        turn = int(msg["turn"])
+        if self.hold_release:
+            if self._held_info is not None:   # a newer guess supersedes the older held clause
+                self._drop_held(*self._held_info, reason="superseded")
+            gen, _ = self._new_gen(turn)
+            self._held_info = (turn, gen)
+            self._jobs.put(("held", turn, gen, text))
+        else:
+            self._jobs.put(("prefill", turn, "tentative", text))
 
     def _on_cancel(self, msg: dict) -> None:
         turn = int(msg.get("turn", -1))
@@ -149,6 +176,15 @@ class BrainStage:
         else:   # Ears: the user kept talking after a tentative_final
             self._last_prefill = ""
             self._log.event("spec_cancel", turn)
+            if self._held_info is not None and self._held_info[0] == turn:
+                self._drop_held(*self._held_info, reason="spec_cancel")
+                self._held_info = None
+
+    def _drop_held(self, turn: int, gen: int, *, reason: str) -> None:
+        """Stop the held clause and tell Voice to throw its private PCM away (contract v2.1)."""
+        self._cancel_live(reason, gen=gen)
+        self._emit({"type": "cancel", "turn": turn, "gen": gen})
+        self._log.event("held_dropped", turn, gen=gen, reason=reason)
 
     # ---- generation bookkeeping ------------------------------------------------------------
     def _new_gen(self, turn: int) -> tuple[int, threading.Event]:
@@ -202,6 +238,10 @@ class BrainStage:
             self._prefill(*job[1:])
         elif job[0] == "tier":
             self._apply_tier(job[1])
+        elif job[0] == "held":
+            self._prepare_held(*job[1:])
+        elif job[0] == "resolve":
+            self._resolve(*job[1:])
 
     def _warm_up(self) -> None:
         t0 = now()
@@ -234,16 +274,54 @@ class BrainStage:
         if status == "ok":
             self._prompt.add_turn(user, raw)   # exact generated text keeps the KV prefix valid
         self._finish(gen)
+        self._log_done(turn, gen, status, seq, t)
+
+    def _log_done(self, turn: int, gen: int, status: str, seq: int, t: Optional[Timings]) -> None:
         t = t or Timings()
         self._log.event("gen_done", turn, gen=gen, status=status, chunks=seq, prompt_n=t.prompt_n,
                         cache_n=t.cache_n, predicted_n=t.predicted_n, decode_tps=round(t.decode_tps, 1))
 
+    def _prepare_held(self, turn: int, gen: int, text: str) -> None:
+        """Write only the first clause for the guessed transcript and send it held (silent until commit)."""
+        cancel = self._event(gen)
+        if cancel is None or cancel.is_set() or self._tier.model is None:
+            self._finish(gen)   # resolve() then sees no live clause and answers fresh
+            return
+        prompt = self._prompt.final(text)
+        self._log.event("prompt_ready", turn, gen=gen, chars=len(prompt), held=True)
+        raw, seq, status, _ = self._stream_reply(turn, gen, prompt, cancel, held=True, first_only=True)
+        self._held = {"turn": turn, "gen": gen, "text": text, "raw": raw, "seq": seq, "status": status}
+        if status != "held":
+            self._finish(gen)
+
+    def _resolve(self, turn: int, held_gen: int, user: str, fallback_gen: int) -> None:
+        """On final: continue the held clause if the transcript matches, else drop it and answer fresh."""
+        h, self._held = self._held, None
+        cancel = self._event(held_gen)
+        match = (h is not None and h["gen"] == held_gen and h["text"] == user and h["status"] == "held"
+                 and h["seq"] > 0 and cancel is not None and not cancel.is_set())
+        self._log.event("held_valid", turn, gen=held_gen, match=match)   # Spine sends commit on match
+        if not match:
+            self._drop_held(turn, held_gen, reason="mismatch")
+            self._finish(held_gen)
+            self._generate(turn, fallback_gen, user)
+            return
+        self._finish(fallback_gen)
+        sent = h["raw"]
+        prompt = self._prompt.final(user) + sent   # the KV already holds this exact prefix
+        raw, seq, status, t = self._stream_reply(turn, held_gen, prompt, cancel, seq0=h["seq"],
+                                                 first_done=True, sentences0=count_sentence_ends(sent))
+        if status == "ok":
+            self._prompt.add_turn(user, sent + raw)
+        self._finish(held_gen)
+        self._log_done(turn, held_gen, status, seq, t)
+
     def _stream_reply(self, turn: int, gen: int, prompt: str, cancel: threading.Event, *,
                       seq0: int = 0, held: bool = False, first_only: bool = False,
-                      first_done: bool = False) -> tuple[str, int, str, Optional[Timings]]:
+                      first_done: bool = False, sentences0: int = 0) -> tuple[str, int, str, Optional[Timings]]:
         chunker, think = Chunker(first_done=first_done), ThinkFilter()
         raw: list[str] = []
-        seq, sentences, timings, got_token, stopped = seq0, 0, None, False, False
+        seq, sentences, timings, got_token, stopped = seq0, sentences0, None, False, False
         it = self._client.stream(prompt, n_predict=self._tier.n_predict, temperature=self.temperature,
                                  cancel=cancel, cache_prompt=self.cache_prompt)
         try:
