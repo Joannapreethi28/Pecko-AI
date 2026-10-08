@@ -1,61 +1,55 @@
-<<<<<<< HEAD
-"""Thread-safe contract event logging. The caller owns the output stream."""
+"""Thread-safe contract event log: one JSON object per line, {"stage","event","turn","t","extra"}.
 
-import json
-from threading import Lock
-from typing import TextIO
-=======
-"""Event log: one JSON object per line, {"stage","event","turn","t","extra"} (docs/CONTRACT.md)."""
+Two ways to build it, both write the same line format (docs/CONTRACT.md):
+  Spine:  EventLog(stream)                        -> log.emit("ears", "asr_final", 7, t=12.5, text=...)
+  Brain:  EventLog("brain", path=None, keep=False) -> log.event("first_token", 7, gen=2)
+"""
 from __future__ import annotations
 
 import json
 import sys
 import threading
 from pathlib import Path
-from typing import Any, Optional
->>>>>>> 3a2adf7ca39f96b880a25893e4fd995172134c07
+from typing import Any, Optional, TextIO, Union
 
 from common.clock import now
 
 
 class EventLog:
-<<<<<<< HEAD
-    def __init__(self, stream: TextIO):
-        self.stream = stream
-        self._lock = Lock()
-
-    def emit(self, stage: str, event: str, turn: int | None = None,
-             *, t: float | None = None, **extra) -> None:
-        line = json.dumps({"stage": stage, "event": event, "turn": turn,
-                           "t": now() if t is None else t, "extra": extra},
-                          allow_nan=False, ensure_ascii=False)
-        with self._lock:
-            self.stream.write(line + "\n")
-            self.stream.flush()
-=======
-    def __init__(self, stage: str, path: Optional[Path] = None, keep: bool = False):
-        self.stage = stage
+    def __init__(self, stream_or_stage: Union[TextIO, str], path: Optional[Path] = None, keep: bool = False):
         self.records: list[dict] = []
         self._keep = keep
         self._lock = threading.Lock()
-        if path is not None:
-            Path(path).parent.mkdir(parents=True, exist_ok=True)
-            self._fp = open(path, "a", encoding="utf-8", buffering=1)
-        else:
-            self._fp = sys.stdout
-        self._owns = path is not None
+        self._owns = False
+        if isinstance(stream_or_stage, str):          # Brain style: bound to one stage
+            self.stage: Optional[str] = stream_or_stage
+            if path is not None:
+                Path(path).parent.mkdir(parents=True, exist_ok=True)
+                self.stream: TextIO = open(path, "a", encoding="utf-8", buffering=1)
+                self._owns = True
+            else:
+                self.stream = sys.stdout
+        else:                                         # Spine style: caller owns the stream
+            self.stage = None
+            self.stream = stream_or_stage
 
-    def event(self, event: str, turn: int, t: Optional[float] = None, **extra: Any) -> dict:
-        rec = {"stage": self.stage, "event": event, "turn": turn,
+    def emit(self, stage: str, event: str, turn: Optional[int] = None,
+             *, t: Optional[float] = None, **extra: Any) -> dict:
+        rec = {"stage": stage, "event": event, "turn": turn,
                "t": now() if t is None else t, "extra": extra}
-        line = json.dumps(rec, separators=(",", ":"), ensure_ascii=False)
+        line = json.dumps(rec, allow_nan=False, ensure_ascii=False)
         with self._lock:
-            self._fp.write(line + "\n")
+            self.stream.write(line + "\n")
+            self.stream.flush()
             if self._keep:
                 self.records.append(rec)
         return rec
 
+    def event(self, event: str, turn: int, t: Optional[float] = None, **extra: Any) -> dict:
+        if self.stage is None:
+            raise TypeError("event() needs EventLog(stage, ...); use emit(stage, ...) with a stream log")
+        return self.emit(self.stage, event, turn, t=t, **extra)
+
     def close(self) -> None:
         if self._owns:
-            self._fp.close()
->>>>>>> 3a2adf7ca39f96b880a25893e4fd995172134c07
+            self.stream.close()
