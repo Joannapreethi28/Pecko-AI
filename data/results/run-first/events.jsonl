@@ -1,0 +1,7 @@
+{"stage": "ears", "event": "ready", "turn": null, "t": 8217.472899534, "extra": {}}
+{"stage": "brain", "event": "warm_up", "turn": -1, "t": 8225.13658879, "extra": {"ms": 530.9, "base_tokens": 84}}
+{"stage": "brain", "event": "ready", "turn": -1, "t": 8225.137722635, "extra": {"tier": "T0"}}
+{"stage": "voice", "event": "cache_ready", "turn": null, "t": 8239.825640258, "extra": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 181, "missing": 0, "build_ms": 13751, "mb": 14.6}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 8239.826554046, "extra": {"pack": "vits-piper-en_US-lessac-medium", "tier": 0, "ready_s": 14.69, "cache": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 181, "missing": 0, "build_ms": 13751, "mb": 14.6}, "out_latency_ms": 0.0, "sr": 22050}}
+{"stage": "spine", "event": "ready", "turn": null, "t": 8239.826638094, "extra": {"startup_s": 86.27, "tier": 0, "pid": 19662}}
+{"stage": "brain", "event": "stopped", "turn": -1, "t": 8260.634618264, "extra": {}}

@@ -1,0 +1,27 @@
+0.00.013.481 I srv  llama_server: initializing ...
+0.00.185.664 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.189.885 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.196.529 I srv    load_model: loading model '/home/jabin/pecko/models/Qwen3-0.6B-Q4_K_M.gguf'
+0.01.292.123 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.06.403.510 I cmn          init: llama threadpool init, n_threads = 1
+0.06.922.939 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+0.06.947.756 I srv  llama_server: model loaded
+0.06.947.804 I srv  llama_server: listening on http://127.0.0.1:8080
+0.06.947.805 W srv  llama_server: notice: server default port will be changed to :9931 in a future release (ref: https://github.com/ggml-org/llama.cpp/pull/26508)
+0.07.043.075 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.07.043.734 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.07.534.873 I slot print_timing: id  0 | task 0 | prompt eval time =     391.66 ms /    97 tokens (    4.04 ms per token,   247.67 tokens per second)
+0.07.534.917 I slot print_timing: id  0 | task 0 |        eval time =      98.55 ms /     4 tokens (   32.85 ms per token,    30.44 tokens per second)
+0.07.534.917 I slot print_timing: id  0 | task 0 |       total time =     490.21 ms /   101 tokens
+0.07.534.923 I slot print_timing: id  0 | task 0 |    graphs reused =          3
+0.07.536.137 I slot      release: id  0 | task 0 | stop processing: n_tokens = 100, truncated = 0
+0.07.537.407 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.07.537.589 I slot launch_slot_: id  0 | task 5 | processing task, is_child = 0
+0.07.537.622 W slot   operator(): id  0 | task 5 | need to evaluate at least 1 token for each active slot (n_past = 84, task.n_tokens() = 84)
+0.07.537.622 W slot   operator(): id  0 | task 5 | n_past was set to 83
+0.07.567.399 I slot print_timing: id  0 | task 5 | prompt eval time =      29.77 ms /     1 tokens (   29.77 ms per token,    33.60 tokens per second)
+0.07.567.435 I slot print_timing: id  0 | task 5 |        eval time =       0.00 ms /     1 tokens (    0.00 ms per token,     0.00 tokens per second)
+0.07.567.436 I slot print_timing: id  0 | task 5 |       total time =      29.77 ms /     2 tokens
+0.07.567.437 I slot print_timing: id  0 | task 5 |    graphs reused =          4
+0.07.568.199 I slot      release: id  0 | task 5 | stop processing: n_tokens = 84, truncated = 0
+0.42.994.996 I srv    operator(): operator(): cleaning up before exit...

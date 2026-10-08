@@ -1,0 +1,64 @@
+{"stage": "ears", "event": "ready", "turn": null, "t": 8588.338906183, "extra": {}}
+{"stage": "brain", "event": "warm_up", "turn": -1, "t": 8592.751429184, "extra": {"ms": 686.1, "base_tokens": 84}}
+{"stage": "brain", "event": "ready", "turn": -1, "t": 8592.751956832, "extra": {"tier": "T0"}}
+{"stage": "voice", "event": "cache_ready", "turn": null, "t": 8594.358121586, "extra": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 0, "missing": 0, "build_ms": 245, "mb": 14.6}}
+{"stage": "voice", "event": "ready", "turn": null, "t": 8594.360792151, "extra": {"pack": "vits-piper-en_US-lessac-medium", "tier": 0, "ready_s": 1.61, "cache": {"pack": "vits-piper-en_US-lessac-medium", "clips": 181, "synthesized": 0, "missing": 0, "build_ms": 245, "mb": 14.6}, "out_latency_ms": 0.0, "sr": 22050}}
+{"stage": "spine", "event": "ready", "turn": null, "t": 8594.360914711, "extra": {"startup_s": 7.51, "tier": 0, "pid": 22873}}
+{"stage": "ears", "event": "wake_detected", "turn": 1, "t": 8597.623692771, "extra": {"via": "kws"}}
+{"stage": "ears", "event": "t_eos", "turn": 1, "t": 8599.872760419, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 1, "t": 8600.748746415, "extra": {"p_done": 0.8971817493438721}}
+{"stage": "brain", "event": "prompt_ready", "turn": 1, "t": 8600.748802662, "extra": {"gen": 1, "chars": 473, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 8601.902234265, "extra": {"gen": 1, "held": true}}
+{"stage": "ears", "event": "asr_final", "turn": 1, "t": 8602.73847166, "extra": {"text": "what is the capital of France"}}
+{"stage": "brain", "event": "route", "turn": 1, "t": 8602.802844039, "extra": {"gen": 2, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "ears", "event": "endpoint", "turn": 1, "t": 8602.802628783, "extra": {"delay_s": 2.9298683639990486}}
+{"stage": "brain", "event": "first_chunk", "turn": 1, "t": 8602.907708338, "extra": {"gen": 1, "words": 5, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 1, "t": 8602.908070452, "extra": {"gen": 1, "match": true}}
+{"stage": "spine", "event": "commit", "turn": 1, "t": 8602.908116522, "extra": {"gen": 1}}
+{"stage": "voice", "event": "commit_recv", "turn": 1, "t": 8602.908158409, "extra": {"gen": 1}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 8602.909569891, "extra": {"gen": 1, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 1, "t": 8602.984757614, "extra": {"gen": 1, "held": false}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 8602.985031064, "extra": {"gen": 1, "seq": 1, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 1, "t": 8602.985452447, "extra": {"gen": 1, "text": "The capital of France is ."}}
+{"stage": "brain", "event": "gen_done", "turn": 1, "t": 8603.024720392, "extra": {"gen": 1, "status": "ok", "chunks": 3, "prompt_n": 1, "cache_n": 107, "predicted_n": 2, "decode_tps": 50.7}}
+{"stage": "voice", "event": "synth_end", "turn": 1, "t": 8603.110693081, "extra": {"gen": 1, "ms": 125.2, "audio_s": 1.48, "rtf": 0.085}}
+{"stage": "voice", "event": "pcm_ready", "turn": 1, "t": 8603.11082111, "extra": {"gen": 1, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 1, "t": 8603.110982547, "extra": {"gen": 1, "seq": 2, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 1, "t": 8603.110942053, "extra": {"gen": 1, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 1, "t": 8603.111278284, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 8602.909564219, "t_commit": 8602.909561873, "t_pcm_ready": 8603.110813917, "t_first_audio": 8603.110942053, "first_synth_ms": 125.2, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [125.2], "audio_s": 1.48, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 1, "held_used": true, "first_dur_s": 1.4763718820861678}}
+{"stage": "ears", "event": "t_eos", "turn": 2, "t": 8609.816124787, "extra": {}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 2, "t": 8609.891208706, "extra": {"p_done": 0.9859892129898071}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 8609.891476475, "extra": {"gen": 3, "chars": 621, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 8611.138327698, "extra": {"gen": 3, "held": true}}
+{"stage": "ears", "event": "asr_final", "turn": 2, "t": 8612.242026777, "extra": {"text": "Apeco, how many legs does a spider have"}}
+{"stage": "brain", "event": "route", "turn": 2, "t": 8612.24307356, "extra": {"gen": 4, "kind": "llm", "intent": null, "score": 0.0}}
+{"stage": "ears", "event": "endpoint", "turn": 2, "t": 8612.242137927, "extra": {"delay_s": 2.4260131400005776}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 8612.243250179, "extra": {"gen": 3, "words": 3, "held": true}}
+{"stage": "brain", "event": "held_valid", "turn": 2, "t": 8612.243756248, "extra": {"gen": 3, "match": false}}
+{"stage": "brain", "event": "cancel", "turn": 2, "t": 8612.243821973, "extra": {"gen": 3, "source": "mismatch"}}
+{"stage": "voice", "event": "cancel", "turn": 2, "t": 8612.243857006, "extra": {"gen": 3, "matched": false}}
+{"stage": "brain", "event": "held_dropped", "turn": 2, "t": 8612.243882573, "extra": {"gen": 3, "reason": "mismatch"}}
+{"stage": "brain", "event": "prompt_ready", "turn": 2, "t": 8612.243900503, "extra": {"gen": 4, "chars": 622}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 8612.315733854, "extra": {"gen": 3, "seq": 0, "held": true}}
+{"stage": "brain", "event": "first_token", "turn": 2, "t": 8612.525783509, "extra": {"gen": 4, "held": false}}
+{"stage": "brain", "event": "first_chunk", "turn": 2, "t": 8612.7266856, "extra": {"gen": 4, "words": 5, "held": false}}
+{"stage": "voice", "event": "superseded", "turn": 2, "t": 8612.727007596, "extra": {"gen": 3, "by": 4}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 8612.727510818, "extra": {"gen": 4, "seq": 0, "held": false}}
+{"stage": "voice", "event": "synth_start", "turn": 2, "t": 8612.727613375, "extra": {"gen": 4, "text": "A spider has eight legs."}}
+{"stage": "brain", "event": "gen_done", "turn": 2, "t": 8612.77768817, "extra": {"gen": 4, "status": "ok", "chunks": 2, "prompt_n": 14, "cache_n": 119, "predicted_n": 7, "decode_tps": 27.6}}
+{"stage": "voice", "event": "synth_end", "turn": 2, "t": 8612.885457362, "extra": {"gen": 4, "ms": 157.8, "audio_s": 1.58, "rtf": 0.1}}
+{"stage": "voice", "event": "pcm_ready", "turn": 2, "t": 8612.885595291, "extra": {"gen": 4, "seq": 0, "held": false, "layer": "synth"}}
+{"stage": "voice", "event": "chunk_recv", "turn": 2, "t": 8612.885778353, "extra": {"gen": 4, "seq": 1, "held": false}}
+{"stage": "voice", "event": "first_audio_out", "turn": 2, "t": 8612.885659217, "extra": {"gen": 4, "content": true, "sustained": true, "layer": "synth"}}
+{"stage": "voice", "event": "turn_done", "turn": 2, "t": 8612.886238035, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 8612.727506281, "t_commit": null, "t_pcm_ready": 8612.885588705, "t_first_audio": 8612.885659217, "first_synth_ms": 157.8, "first_layer": "synth", "hits": {}, "phrases": 1, "synth_ms": [157.8], "audio_s": 1.58, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 2, "gen": 4, "held_used": true, "first_dur_s": 1.5753741496598639}}
+{"stage": "ears", "event": "smart_turn_score", "turn": 3, "t": 8616.377559011, "extra": {"p_done": 0.22776007652282715}}
+{"stage": "ears", "event": "asr_final", "turn": 3, "t": 8617.940697456, "extra": {"text": "thank you"}}
+{"stage": "brain", "event": "route", "turn": 3, "t": 8617.94088842, "extra": {"gen": 5, "kind": "cached", "intent": "thanks", "score": 100.0}}
+{"stage": "brain", "event": "cache_hit", "turn": 3, "t": 8618.002832857, "extra": {"gen": 5, "clip": "thanks"}}
+{"stage": "ears", "event": "endpoint", "turn": 3, "t": 8617.940806338, "extra": {"delay_s": 1.6358674749990314}}
+{"stage": "voice", "event": "chunk_recv", "turn": 3, "t": 8618.002940657, "extra": {"gen": 5, "clip": "thanks"}}
+{"stage": "voice", "event": "cache_hit", "turn": 3, "t": 8618.002977482, "extra": {"gen": 5, "layer": "L4", "clip": "thanks"}}
+{"stage": "voice", "event": "pcm_ready", "turn": 3, "t": 8618.002999757, "extra": {"gen": 5, "seq": 0, "held": false, "layer": "L4"}}
+{"stage": "voice", "event": "first_audio_out", "turn": 3, "t": 8618.003072844, "extra": {"gen": 5, "content": true, "sustained": true, "layer": "L4"}}
+{"stage": "voice", "event": "turn_done", "turn": 3, "t": 8618.003366214, "extra": {"tier": 0, "pack": "vits-piper-en_US-lessac-medium", "t_first_chunk": 8618.002937378, "t_commit": null, "t_pcm_ready": 8618.002989504, "t_first_audio": 8618.003072844, "first_synth_ms": 0.0, "first_layer": "L4", "hits": {"L4": 1}, "phrases": 1, "synth_ms": [], "audio_s": 0.91, "gaps_ms": [], "barge_stop_ms": null, "cancelled": null, "gens": 1, "gen": 5, "held_used": false, "first_dur_s": 0.905079365079365}}
+{"stage": "brain", "event": "stopped", "turn": -1, "t": 8618.174547246, "extra": {}}
