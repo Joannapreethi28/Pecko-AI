@@ -1,0 +1,80 @@
+{
+ "tag": "windows-dev",
+ "start": {
+  "pack": "vits-piper-en_US-lessac-medium",
+  "tier": 0,
+  "ready_s": 0.82,
+  "cache": {
+   "pack": "vits-piper-en_US-lessac-medium",
+   "clips": 181,
+   "synthesized": 0,
+   "missing": 0,
+   "build_ms": 34,
+   "mb": 14.7
+  },
+  "out_latency_ms": 0.0,
+  "sr": 22050
+ },
+ "rows": [
+  {
+   "tier": 0,
+   "engine": "vits-piper-en_US-lessac-medium",
+   "cache_voice": "vits-piper-en_US-lessac-medium",
+   "switch_ms": null,
+   "reloaded": null,
+   "rss_before_mb": null,
+   "rss_after_mb": 223,
+   "uncached_8w_ms": 175.5,
+   "cached_layer": "L4",
+   "cache_missing": null
+  },
+  {
+   "tier": 1,
+   "engine": "vits-piper-en_US-lessac-low",
+   "cache_voice": "vits-piper-en_US-lessac-low",
+   "switch_ms": 748,
+   "reloaded": true,
+   "rss_before_mb": 223,
+   "rss_after_mb": 198,
+   "uncached_8w_ms": 117.3,
+   "cached_layer": "L4",
+   "cache_missing": 0
+  },
+  {
+   "tier": 2,
+   "engine": "vits-piper-en_US-lessac-low",
+   "cache_voice": "vits-piper-en_US-lessac-low",
+   "switch_ms": 31,
+   "reloaded": false,
+   "rss_before_mb": 213,
+   "rss_after_mb": 211,
+   "uncached_8w_ms": 120.2,
+   "cached_layer": "L4",
+   "cache_missing": 0
+  },
+  {
+   "tier": 3,
+   "engine": "espeak-ng",
+   "cache_voice": "vits-piper-en_US-lessac-low",
+   "switch_ms": 92,
+   "reloaded": true,
+   "rss_before_mb": 213,
+   "rss_after_mb": 95,
+   "uncached_8w_ms": 38.4,
+   "cached_layer": "L4",
+   "cache_missing": 0
+  },
+  {
+   "tier": 0,
+   "engine": "vits-piper-en_US-lessac-medium",
+   "cache_voice": "vits-piper-en_US-lessac-medium",
+   "switch_ms": 768,
+   "reloaded": true,
+   "rss_before_mb": 96,
+   "rss_after_mb": 203,
+   "uncached_8w_ms": 181.8,
+   "cached_layer": "L4",
+   "cache_missing": 0
+  }
+ ]
+}

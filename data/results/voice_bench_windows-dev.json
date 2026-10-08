@@ -1,0 +1,1199 @@
+{
+ "info": {
+  "tag": "windows-dev",
+  "os": "Windows 11",
+  "cpu": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "logical_cpus": 12,
+  "ram_gb": 16.8,
+  "python": "3.13.15",
+  "sherpa_onnx": "1.13.8",
+  "bench_cores": [
+   0,
+   2
+  ],
+  "when": "2026-10-08 22:54",
+  "power": "plugged in"
+ },
+ "rows": [
+  {
+   "pack": "vits-piper-en_US-lessac-low",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 677.2,
+   "cold_8w_ms": 152.9,
+   "native_sr": 16000,
+   "rss_loaded_mb": 145.4,
+   "by_len": {
+    "3": {
+     "p50_ms": 65.1,
+     "p90_ms": 68.6,
+     "min_ms": 61.9,
+     "audio_s": 1.15,
+     "rtf": 0.056,
+     "cores_used": 0.96
+    },
+    "8": {
+     "p50_ms": 112.5,
+     "p90_ms": 129.6,
+     "min_ms": 110.8,
+     "audio_s": 2.3,
+     "rtf": 0.049,
+     "cores_used": 0.97
+    },
+    "20": {
+     "p50_ms": 314.1,
+     "p90_ms": 362.1,
+     "min_ms": 304.1,
+     "audio_s": 5.53,
+     "rtf": 0.057,
+     "cores_used": 0.95
+    }
+   },
+   "peak_rss_mb": 253.2
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 680.0,
+   "cold_8w_ms": 101.6,
+   "native_sr": 16000,
+   "rss_loaded_mb": 144.3,
+   "by_len": {
+    "3": {
+     "p50_ms": 51.0,
+     "p90_ms": 84.2,
+     "min_ms": 47.6,
+     "audio_s": 1.46,
+     "rtf": 0.035,
+     "cores_used": 1.84
+    },
+    "8": {
+     "p50_ms": 83.2,
+     "p90_ms": 84.0,
+     "min_ms": 79.0,
+     "audio_s": 2.24,
+     "rtf": 0.037,
+     "cores_used": 1.88
+    },
+    "20": {
+     "p50_ms": 239.9,
+     "p90_ms": 273.1,
+     "min_ms": 239.8,
+     "audio_s": 5.37,
+     "rtf": 0.045,
+     "cores_used": 1.82
+    }
+   },
+   "peak_rss_mb": 316.1
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-fp16",
+   "threads": 1,
+   "cond": "solo",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-low-fp16\\en_US-lessac-low.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-fp16",
+   "threads": 2,
+   "cond": "solo",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-low-fp16\\en_US-lessac-low.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-int8",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1232.3,
+   "cold_8w_ms": 364.3,
+   "native_sr": 16000,
+   "rss_loaded_mb": 105.5,
+   "by_len": {
+    "3": {
+     "p50_ms": 163.8,
+     "p90_ms": 170.8,
+     "min_ms": 145.6,
+     "audio_s": 1.34,
+     "rtf": 0.122,
+     "cores_used": 0.95
+    },
+    "8": {
+     "p50_ms": 370.6,
+     "p90_ms": 399.2,
+     "min_ms": 261.7,
+     "audio_s": 2.11,
+     "rtf": 0.176,
+     "cores_used": 0.89
+    },
+    "20": {
+     "p50_ms": 866.8,
+     "p90_ms": 955.5,
+     "min_ms": 847.2,
+     "audio_s": 5.41,
+     "rtf": 0.16,
+     "cores_used": 0.99
+    }
+   },
+   "peak_rss_mb": 226.6
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-int8",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1348.0,
+   "cold_8w_ms": 279.0,
+   "native_sr": 16000,
+   "rss_loaded_mb": 105.8,
+   "by_len": {
+    "3": {
+     "p50_ms": 133.7,
+     "p90_ms": 144.7,
+     "min_ms": 124.5,
+     "audio_s": 1.33,
+     "rtf": 0.101,
+     "cores_used": 2.1
+    },
+    "8": {
+     "p50_ms": 259.2,
+     "p90_ms": 343.2,
+     "min_ms": 245.5,
+     "audio_s": 2.14,
+     "rtf": 0.121,
+     "cores_used": 2.05
+    },
+    "20": {
+     "p50_ms": 704.6,
+     "p90_ms": 754.4,
+     "min_ms": 681.9,
+     "audio_s": 5.35,
+     "rtf": 0.132,
+     "cores_used": 1.93
+    }
+   },
+   "peak_rss_mb": 227.0
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 574.0,
+   "cold_8w_ms": 159.4,
+   "native_sr": 22050,
+   "rss_loaded_mb": 146.4,
+   "by_len": {
+    "3": {
+     "p50_ms": 70.2,
+     "p90_ms": 75.0,
+     "min_ms": 64.7,
+     "audio_s": 1.08,
+     "rtf": 0.065,
+     "cores_used": 0.89
+    },
+    "8": {
+     "p50_ms": 141.5,
+     "p90_ms": 149.3,
+     "min_ms": 138.5,
+     "audio_s": 2.21,
+     "rtf": 0.064,
+     "cores_used": 0.99
+    },
+    "20": {
+     "p50_ms": 409.7,
+     "p90_ms": 455.4,
+     "min_ms": 368.7,
+     "audio_s": 5.1,
+     "rtf": 0.08,
+     "cores_used": 0.99
+    }
+   },
+   "peak_rss_mb": 268.9
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 583.7,
+   "cold_8w_ms": 124.0,
+   "native_sr": 22050,
+   "rss_loaded_mb": 150.2,
+   "by_len": {
+    "3": {
+     "p50_ms": 52.1,
+     "p90_ms": 58.1,
+     "min_ms": 50.2,
+     "audio_s": 1.11,
+     "rtf": 0.047,
+     "cores_used": 1.8
+    },
+    "8": {
+     "p50_ms": 96.5,
+     "p90_ms": 100.5,
+     "min_ms": 94.2,
+     "audio_s": 2.26,
+     "rtf": 0.043,
+     "cores_used": 1.94
+    },
+    "20": {
+     "p50_ms": 241.9,
+     "p90_ms": 272.7,
+     "min_ms": 230.8,
+     "audio_s": 5.13,
+     "rtf": 0.047,
+     "cores_used": 2.07
+    }
+   },
+   "peak_rss_mb": 274.0
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-fp16",
+   "threads": 1,
+   "cond": "solo",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-medium-fp16\\en_US-lessac-medium.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-fp16",
+   "threads": 2,
+   "cond": "solo",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-medium-fp16\\en_US-lessac-medium.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-int8",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1120.9,
+   "cold_8w_ms": 382.3,
+   "native_sr": 22050,
+   "rss_loaded_mb": 105.6,
+   "by_len": {
+    "3": {
+     "p50_ms": 186.0,
+     "p90_ms": 199.1,
+     "min_ms": 173.6,
+     "audio_s": 1.13,
+     "rtf": 0.165,
+     "cores_used": 1.01
+    },
+    "8": {
+     "p50_ms": 446.5,
+     "p90_ms": 461.3,
+     "min_ms": 409.2,
+     "audio_s": 2.15,
+     "rtf": 0.208,
+     "cores_used": 0.94
+    },
+    "20": {
+     "p50_ms": 1137.2,
+     "p90_ms": 1160.9,
+     "min_ms": 1096.4,
+     "audio_s": 5.3,
+     "rtf": 0.215,
+     "cores_used": 0.96
+    }
+   },
+   "peak_rss_mb": 217.5
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-int8",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1129.7,
+   "cold_8w_ms": 386.9,
+   "native_sr": 22050,
+   "rss_loaded_mb": 106.3,
+   "by_len": {
+    "3": {
+     "p50_ms": 168.8,
+     "p90_ms": 171.1,
+     "min_ms": 158.9,
+     "audio_s": 1.04,
+     "rtf": 0.162,
+     "cores_used": 1.94
+    },
+    "8": {
+     "p50_ms": 351.3,
+     "p90_ms": 377.8,
+     "min_ms": 313.4,
+     "audio_s": 2.16,
+     "rtf": 0.163,
+     "cores_used": 1.82
+    },
+    "20": {
+     "p50_ms": 913.8,
+     "p90_ms": 1086.8,
+     "min_ms": 863.8,
+     "audio_s": 5.18,
+     "rtf": 0.176,
+     "cores_used": 2.0
+    }
+   },
+   "peak_rss_mb": 220.1
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 986.8,
+   "cold_8w_ms": 1031.8,
+   "native_sr": 22050,
+   "rss_loaded_mb": 197.1,
+   "by_len": {
+    "3": {
+     "p50_ms": 730.3,
+     "p90_ms": 815.4,
+     "min_ms": 590.3,
+     "audio_s": 1.24,
+     "rtf": 0.588,
+     "cores_used": 0.96
+    },
+    "8": {
+     "p50_ms": 1218.3,
+     "p90_ms": 1380.7,
+     "min_ms": 1132.0,
+     "audio_s": 1.99,
+     "rtf": 0.614,
+     "cores_used": 0.99
+    },
+    "20": {
+     "p50_ms": 3243.7,
+     "p90_ms": 3299.7,
+     "min_ms": 2803.8,
+     "audio_s": 5.27,
+     "rtf": 0.615,
+     "cores_used": 0.94
+    }
+   },
+   "peak_rss_mb": 334.5
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1068.5,
+   "cold_8w_ms": 648.3,
+   "native_sr": 22050,
+   "rss_loaded_mb": 196.9,
+   "by_len": {
+    "3": {
+     "p50_ms": 334.6,
+     "p90_ms": 382.0,
+     "min_ms": 326.1,
+     "audio_s": 1.28,
+     "rtf": 0.262,
+     "cores_used": 1.87
+    },
+    "8": {
+     "p50_ms": 578.9,
+     "p90_ms": 612.0,
+     "min_ms": 559.7,
+     "audio_s": 1.99,
+     "rtf": 0.291,
+     "cores_used": 1.97
+    },
+    "20": {
+     "p50_ms": 1511.4,
+     "p90_ms": 1576.6,
+     "min_ms": 1429.9,
+     "audio_s": 5.15,
+     "rtf": 0.293,
+     "cores_used": 1.95
+    }
+   },
+   "peak_rss_mb": 332.4
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-fp16",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1358.3,
+   "cold_8w_ms": 1139.3,
+   "native_sr": 22050,
+   "rss_loaded_mb": 224.6,
+   "by_len": {
+    "3": {
+     "p50_ms": 614.4,
+     "p90_ms": 662.6,
+     "min_ms": 561.8,
+     "audio_s": 1.29,
+     "rtf": 0.477,
+     "cores_used": 0.92
+    },
+    "8": {
+     "p50_ms": 1101.8,
+     "p90_ms": 1110.3,
+     "min_ms": 1094.7,
+     "audio_s": 2.19,
+     "rtf": 0.502,
+     "cores_used": 0.95
+    },
+    "20": {
+     "p50_ms": 2713.1,
+     "p90_ms": 2770.6,
+     "min_ms": 2614.4,
+     "audio_s": 5.18,
+     "rtf": 0.524,
+     "cores_used": 0.95
+    }
+   },
+   "peak_rss_mb": 346.3
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-fp16",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1534.9,
+   "cold_8w_ms": 667.3,
+   "native_sr": 22050,
+   "rss_loaded_mb": 224.6,
+   "by_len": {
+    "3": {
+     "p50_ms": 335.2,
+     "p90_ms": 360.9,
+     "min_ms": 290.3,
+     "audio_s": 1.08,
+     "rtf": 0.31,
+     "cores_used": 1.86
+    },
+    "8": {
+     "p50_ms": 635.3,
+     "p90_ms": 672.6,
+     "min_ms": 598.7,
+     "audio_s": 2.05,
+     "rtf": 0.309,
+     "cores_used": 1.92
+    },
+    "20": {
+     "p50_ms": 1730.4,
+     "p90_ms": 2546.2,
+     "min_ms": 1601.7,
+     "audio_s": 5.25,
+     "rtf": 0.33,
+     "cores_used": 1.92
+    }
+   },
+   "peak_rss_mb": 345.7
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-int8",
+   "threads": 1,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 2031.4,
+   "cold_8w_ms": 2743.1,
+   "native_sr": 22050,
+   "rss_loaded_mb": 134.8,
+   "by_len": {
+    "3": {
+     "p50_ms": 1665.3,
+     "p90_ms": 1865.1,
+     "min_ms": 1583.7,
+     "audio_s": 1.29,
+     "rtf": 1.292,
+     "cores_used": 0.98
+    },
+    "8": {
+     "p50_ms": 2892.8,
+     "p90_ms": 3260.5,
+     "min_ms": 2597.5,
+     "audio_s": 2.01,
+     "rtf": 1.442,
+     "cores_used": 0.95
+    },
+    "20": {
+     "p50_ms": 7717.6,
+     "p90_ms": 7940.8,
+     "min_ms": 7469.3,
+     "audio_s": 5.18,
+     "rtf": 1.49,
+     "cores_used": 0.95
+    }
+   },
+   "peak_rss_mb": 263.0
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-int8",
+   "threads": 2,
+   "cond": "solo",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1675.4,
+   "cold_8w_ms": 2225.1,
+   "native_sr": 22050,
+   "rss_loaded_mb": 136.6,
+   "by_len": {
+    "3": {
+     "p50_ms": 1356.4,
+     "p90_ms": 1461.0,
+     "min_ms": 1336.4,
+     "audio_s": 1.18,
+     "rtf": 1.145,
+     "cores_used": 1.95
+    },
+    "8": {
+     "p50_ms": 2685.0,
+     "p90_ms": 3144.7,
+     "min_ms": 2509.3,
+     "audio_s": 2.08,
+     "rtf": 1.292,
+     "cores_used": 1.83
+    },
+    "20": {
+     "p50_ms": 5759.5,
+     "p90_ms": 6378.7,
+     "min_ms": 5513.7,
+     "audio_s": 5.05,
+     "rtf": 1.14,
+     "cores_used": 1.87
+    }
+   },
+   "peak_rss_mb": 263.9
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 582.1,
+   "cold_8w_ms": 142.0,
+   "native_sr": 16000,
+   "rss_loaded_mb": 144.0,
+   "by_len": {
+    "3": {
+     "p50_ms": 69.0,
+     "p90_ms": 70.1,
+     "min_ms": 54.9,
+     "audio_s": 1.28,
+     "rtf": 0.054,
+     "cores_used": 0.91
+    },
+    "8": {
+     "p50_ms": 117.0,
+     "p90_ms": 124.7,
+     "min_ms": 115.4,
+     "audio_s": 2.3,
+     "rtf": 0.051,
+     "cores_used": 1.07
+    },
+    "20": {
+     "p50_ms": 302.9,
+     "p90_ms": 312.2,
+     "min_ms": 284.9,
+     "audio_s": 5.41,
+     "rtf": 0.056,
+     "cores_used": 0.98
+    }
+   },
+   "peak_rss_mb": 264.9
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 617.7,
+   "cold_8w_ms": 198.1,
+   "native_sr": 16000,
+   "rss_loaded_mb": 145.6,
+   "by_len": {
+    "3": {
+     "p50_ms": 143.5,
+     "p90_ms": 180.5,
+     "min_ms": 75.1,
+     "audio_s": 1.22,
+     "rtf": 0.118,
+     "cores_used": 0.98
+    },
+    "8": {
+     "p50_ms": 266.5,
+     "p90_ms": 269.0,
+     "min_ms": 262.8,
+     "audio_s": 2.24,
+     "rtf": 0.119,
+     "cores_used": 1.0
+    },
+    "20": {
+     "p50_ms": 675.7,
+     "p90_ms": 842.2,
+     "min_ms": 641.1,
+     "audio_s": 5.38,
+     "rtf": 0.126,
+     "cores_used": 0.93
+    }
+   },
+   "peak_rss_mb": 253.2
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-fp16",
+   "threads": 1,
+   "cond": "corun",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-low-fp16\\en_US-lessac-low.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-fp16",
+   "threads": 2,
+   "cond": "corun",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-low-fp16\\en_US-lessac-low.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-int8",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1356.4,
+   "cold_8w_ms": 334.8,
+   "native_sr": 16000,
+   "rss_loaded_mb": 105.5,
+   "by_len": {
+    "3": {
+     "p50_ms": 178.7,
+     "p90_ms": 197.3,
+     "min_ms": 161.4,
+     "audio_s": 1.3,
+     "rtf": 0.138,
+     "cores_used": 0.96
+    },
+    "8": {
+     "p50_ms": 325.0,
+     "p90_ms": 409.2,
+     "min_ms": 316.7,
+     "audio_s": 2.27,
+     "rtf": 0.143,
+     "cores_used": 1.01
+    },
+    "20": {
+     "p50_ms": 842.0,
+     "p90_ms": 890.0,
+     "min_ms": 780.5,
+     "audio_s": 5.45,
+     "rtf": 0.154,
+     "cores_used": 0.89
+    }
+   },
+   "peak_rss_mb": 231.3
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-low-int8",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1769.5,
+   "cold_8w_ms": 598.9,
+   "native_sr": 16000,
+   "rss_loaded_mb": 106.1,
+   "by_len": {
+    "3": {
+     "p50_ms": 331.5,
+     "p90_ms": 344.8,
+     "min_ms": 296.9,
+     "audio_s": 1.23,
+     "rtf": 0.269,
+     "cores_used": 0.99
+    },
+    "8": {
+     "p50_ms": 348.7,
+     "p90_ms": 618.8,
+     "min_ms": 291.6,
+     "audio_s": 2.3,
+     "rtf": 0.151,
+     "cores_used": 1.39
+    },
+    "20": {
+     "p50_ms": 1004.5,
+     "p90_ms": 1405.8,
+     "min_ms": 785.0,
+     "audio_s": 5.39,
+     "rtf": 0.186,
+     "cores_used": 1.35
+    }
+   },
+   "peak_rss_mb": 227.4
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 682.7,
+   "cold_8w_ms": 194.7,
+   "native_sr": 22050,
+   "rss_loaded_mb": 146.0,
+   "by_len": {
+    "3": {
+     "p50_ms": 90.0,
+     "p90_ms": 94.3,
+     "min_ms": 83.0,
+     "audio_s": 1.03,
+     "rtf": 0.087,
+     "cores_used": 0.87
+    },
+    "8": {
+     "p50_ms": 177.4,
+     "p90_ms": 187.3,
+     "min_ms": 169.4,
+     "audio_s": 2.03,
+     "rtf": 0.087,
+     "cores_used": 0.97
+    },
+    "20": {
+     "p50_ms": 470.7,
+     "p90_ms": 523.1,
+     "min_ms": 444.4,
+     "audio_s": 5.11,
+     "rtf": 0.092,
+     "cores_used": 0.9
+    }
+   },
+   "peak_rss_mb": 271.8
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1122.7,
+   "cold_8w_ms": 201.7,
+   "native_sr": 22050,
+   "rss_loaded_mb": 149.9,
+   "by_len": {
+    "3": {
+     "p50_ms": 111.4,
+     "p90_ms": 115.5,
+     "min_ms": 79.7,
+     "audio_s": 1.01,
+     "rtf": 0.11,
+     "cores_used": 1.4
+    },
+    "8": {
+     "p50_ms": 197.3,
+     "p90_ms": 231.6,
+     "min_ms": 160.5,
+     "audio_s": 2.12,
+     "rtf": 0.093,
+     "cores_used": 1.43
+    },
+    "20": {
+     "p50_ms": 462.3,
+     "p90_ms": 808.7,
+     "min_ms": 426.8,
+     "audio_s": 5.2,
+     "rtf": 0.089,
+     "cores_used": 1.49
+    }
+   },
+   "peak_rss_mb": 270.2
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-fp16",
+   "threads": 1,
+   "cond": "corun",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-medium-fp16\\en_US-lessac-medium.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-fp16",
+   "threads": 2,
+   "cond": "corun",
+   "error": "Load model from C:\\Users\\Jeevan\\Documents\\Hacknex'26\\Pecko-AI\\models\\vits-piper-en_US-lessac-medium-fp16\\en_US-lessac-medium.onnx failed:Type Error: Type (tensor(float16)) of output arg (/enc_p/Cast_1_output_0) of node (/enc_p/Cast_1) does not match expected type (tensor(float))."
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-int8",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1356.3,
+   "cold_8w_ms": 426.6,
+   "native_sr": 22050,
+   "rss_loaded_mb": 102.9,
+   "by_len": {
+    "3": {
+     "p50_ms": 218.8,
+     "p90_ms": 261.8,
+     "min_ms": 208.6,
+     "audio_s": 1.11,
+     "rtf": 0.196,
+     "cores_used": 1.0
+    },
+    "8": {
+     "p50_ms": 418.0,
+     "p90_ms": 437.3,
+     "min_ms": 408.7,
+     "audio_s": 2.23,
+     "rtf": 0.188,
+     "cores_used": 0.97
+    },
+    "20": {
+     "p50_ms": 1087.3,
+     "p90_ms": 1135.5,
+     "min_ms": 1069.6,
+     "audio_s": 4.88,
+     "rtf": 0.223,
+     "cores_used": 1.01
+    }
+   },
+   "peak_rss_mb": 219.2
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-medium-int8",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1385.6,
+   "cold_8w_ms": 706.5,
+   "native_sr": 22050,
+   "rss_loaded_mb": 103.2,
+   "by_len": {
+    "3": {
+     "p50_ms": 338.4,
+     "p90_ms": 362.7,
+     "min_ms": 241.8,
+     "audio_s": 1.02,
+     "rtf": 0.331,
+     "cores_used": 1.34
+    },
+    "8": {
+     "p50_ms": 626.9,
+     "p90_ms": 757.4,
+     "min_ms": 397.6,
+     "audio_s": 2.11,
+     "rtf": 0.297,
+     "cores_used": 1.17
+    },
+    "20": {
+     "p50_ms": 1754.0,
+     "p90_ms": 2002.3,
+     "min_ms": 1534.5,
+     "audio_s": 4.93,
+     "rtf": 0.356,
+     "cores_used": 1.24
+    }
+   },
+   "peak_rss_mb": 216.5
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1194.5,
+   "cold_8w_ms": 1314.2,
+   "native_sr": 22050,
+   "rss_loaded_mb": 197.8,
+   "by_len": {
+    "3": {
+     "p50_ms": 803.8,
+     "p90_ms": 886.1,
+     "min_ms": 750.2,
+     "audio_s": 1.14,
+     "rtf": 0.706,
+     "cores_used": 0.93
+    },
+    "8": {
+     "p50_ms": 1341.5,
+     "p90_ms": 1376.4,
+     "min_ms": 1231.2,
+     "audio_s": 2.17,
+     "rtf": 0.618,
+     "cores_used": 0.96
+    },
+    "20": {
+     "p50_ms": 3413.4,
+     "p90_ms": 3576.1,
+     "min_ms": 3261.6,
+     "audio_s": 4.98,
+     "rtf": 0.685,
+     "cores_used": 0.96
+    }
+   },
+   "peak_rss_mb": 331.0
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1112.5,
+   "cold_8w_ms": 1353.6,
+   "native_sr": 22050,
+   "rss_loaded_mb": 198.9,
+   "by_len": {
+    "3": {
+     "p50_ms": 941.1,
+     "p90_ms": 1198.8,
+     "min_ms": 706.4,
+     "audio_s": 1.23,
+     "rtf": 0.765,
+     "cores_used": 1.21
+    },
+    "8": {
+     "p50_ms": 1158.8,
+     "p90_ms": 1331.9,
+     "min_ms": 1113.3,
+     "audio_s": 2.24,
+     "rtf": 0.517,
+     "cores_used": 1.46
+    },
+    "20": {
+     "p50_ms": 3173.8,
+     "p90_ms": 3918.4,
+     "min_ms": 2897.6,
+     "audio_s": 5.37,
+     "rtf": 0.591,
+     "cores_used": 1.38
+    }
+   },
+   "peak_rss_mb": 333.6
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-fp16",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1524.5,
+   "cold_8w_ms": 1261.9,
+   "native_sr": 22050,
+   "rss_loaded_mb": 212.1,
+   "by_len": {
+    "3": {
+     "p50_ms": 723.8,
+     "p90_ms": 764.8,
+     "min_ms": 709.2,
+     "audio_s": 1.3,
+     "rtf": 0.557,
+     "cores_used": 1.01
+    },
+    "8": {
+     "p50_ms": 1252.1,
+     "p90_ms": 1348.7,
+     "min_ms": 1222.9,
+     "audio_s": 2.14,
+     "rtf": 0.586,
+     "cores_used": 0.99
+    },
+    "20": {
+     "p50_ms": 3327.6,
+     "p90_ms": 3468.1,
+     "min_ms": 3199.0,
+     "audio_s": 5.12,
+     "rtf": 0.65,
+     "cores_used": 0.97
+    }
+   },
+   "peak_rss_mb": 350.3
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-fp16",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1934.3,
+   "cold_8w_ms": 1341.6,
+   "native_sr": 22050,
+   "rss_loaded_mb": 211.5,
+   "by_len": {
+    "3": {
+     "p50_ms": 654.7,
+     "p90_ms": 754.9,
+     "min_ms": 612.3,
+     "audio_s": 1.17,
+     "rtf": 0.558,
+     "cores_used": 1.46
+    },
+    "8": {
+     "p50_ms": 1182.7,
+     "p90_ms": 1624.4,
+     "min_ms": 1127.4,
+     "audio_s": 2.19,
+     "rtf": 0.539,
+     "cores_used": 1.47
+    },
+    "20": {
+     "p50_ms": 2974.9,
+     "p90_ms": 4437.3,
+     "min_ms": 2705.8,
+     "audio_s": 5.21,
+     "rtf": 0.571,
+     "cores_used": 1.42
+    }
+   },
+   "peak_rss_mb": 347.9
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-int8",
+   "threads": 1,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 1994.4,
+   "cold_8w_ms": 2798.8,
+   "native_sr": 22050,
+   "rss_loaded_mb": 136.0,
+   "by_len": {
+    "3": {
+     "p50_ms": 1666.2,
+     "p90_ms": 1766.8,
+     "min_ms": 1623.7,
+     "audio_s": 1.31,
+     "rtf": 1.27,
+     "cores_used": 0.98
+    },
+    "8": {
+     "p50_ms": 3021.3,
+     "p90_ms": 3040.7,
+     "min_ms": 2893.4,
+     "audio_s": 2.03,
+     "rtf": 1.487,
+     "cores_used": 0.95
+    },
+    "20": {
+     "p50_ms": 7744.1,
+     "p90_ms": 7964.3,
+     "min_ms": 7502.1,
+     "audio_s": 5.3,
+     "rtf": 1.46,
+     "cores_used": 0.99
+    }
+   },
+   "peak_rss_mb": 261.5
+  },
+  {
+   "pack": "vits-piper-en_US-lessac-high-int8",
+   "threads": 2,
+   "cond": "corun",
+   "cores": [
+    0,
+    2
+   ],
+   "load_ms": 2078.6,
+   "cold_8w_ms": 4350.0,
+   "native_sr": 22050,
+   "rss_loaded_mb": 135.8,
+   "by_len": {
+    "3": {
+     "p50_ms": 2983.5,
+     "p90_ms": 3097.9,
+     "min_ms": 1882.1,
+     "audio_s": 1.25,
+     "rtf": 2.379,
+     "cores_used": 0.99
+    },
+    "8": {
+     "p50_ms": 4228.5,
+     "p90_ms": 4434.0,
+     "min_ms": 2691.2,
+     "audio_s": 2.18,
+     "rtf": 1.937,
+     "cores_used": 1.29
+    },
+    "20": {
+     "p50_ms": 8321.0,
+     "p90_ms": 12243.7,
+     "min_ms": 7496.1,
+     "audio_s": 5.15,
+     "rtf": 1.614,
+     "cores_used": 1.38
+    }
+   },
+   "peak_rss_mb": 265.6
+  }
+ ],
+ "decision": {
+  "precision": {
+   "low": "fp32",
+   "medium": "fp32",
+   "high": "fp32"
+  },
+  "T0": [
+   "low",
+   "fp32"
+  ],
+  "T1": null
+ }
+}

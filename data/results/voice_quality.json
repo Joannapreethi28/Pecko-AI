@@ -1,0 +1,24 @@
+{
+ "reference medium-vs-low": {
+  "mcd_db": 20.71
+ },
+ "reference medium-vs-high": {
+  "mcd_db": 13.33
+ },
+ "low-int8": {
+  "mcd_db": 10.9,
+  "dur_ratio": 0.994
+ },
+ "medium-int8": {
+  "mcd_db": 13.35,
+  "dur_ratio": 1.088
+ },
+ "high-fp16": {
+  "mcd_db": 9.55,
+  "dur_ratio": 0.976
+ },
+ "high-int8": {
+  "mcd_db": 10.85,
+  "dur_ratio": 0.997
+ }
+}

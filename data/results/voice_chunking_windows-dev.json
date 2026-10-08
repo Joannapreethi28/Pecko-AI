@@ -1,0 +1,90 @@
+{
+ "brain-measured|word": {
+  "first_p50": 400.0,
+  "first_p90": 400.0,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 200,
+  "synth_s": 7.669878198998049,
+  "words_per_phrase": 1.0,
+  "n": 12
+ },
+ "brain-measured|sentence": {
+  "first_p50": 813.3537500230595,
+  "first_p90": 1325.5872999951243,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 16,
+  "synth_s": 4.290499500464648,
+  "words_per_phrase": 13.375,
+  "n": 12
+ },
+ "brain-measured|comma": {
+  "first_p50": 409.26395013555884,
+  "first_p90": 572.9513999987394,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 34,
+  "synth_s": 4.368827900150791,
+  "words_per_phrase": 6.102777777777778,
+  "n": 12
+ },
+ "brain-measured|adaptive": {
+  "first_p50": 409.26395013555884,
+  "first_p90": 460.29150002636015,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 23,
+  "synth_s": 4.38264260138385,
+  "words_per_phrase": 8.583333333333334,
+  "n": 12
+ },
+ "brain-slow (assumed)|word": {
+  "first_p50": 400.0,
+  "first_p90": 400.0,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 200,
+  "synth_s": 7.669878198998049,
+  "words_per_phrase": 1.0,
+  "n": 12
+ },
+ "brain-slow (assumed)|sentence": {
+  "first_p50": 1477.8537500230595,
+  "first_p90": 2398.5872999951243,
+  "gap_total_ms": 1321.27622946873,
+  "turns_with_gaps": 3,
+  "gaps": 3,
+  "synth_calls": 16,
+  "synth_s": 4.290499500464648,
+  "words_per_phrase": 13.375,
+  "n": 12
+ },
+ "brain-slow (assumed)|comma": {
+  "first_p50": 752.4942500796169,
+  "first_p90": 1000.9513999987394,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 34,
+  "synth_s": 4.368827900150791,
+  "words_per_phrase": 6.102777777777778,
+  "n": 12
+ },
+ "brain-slow (assumed)|adaptive": {
+  "first_p50": 752.4942500796169,
+  "first_p90": 845.2915000263602,
+  "gap_total_ms": 0.0,
+  "turns_with_gaps": 0,
+  "gaps": 0,
+  "synth_calls": 32,
+  "synth_s": 4.365546900779009,
+  "words_per_phrase": 6.7,
+  "n": 12
+ }
+}
